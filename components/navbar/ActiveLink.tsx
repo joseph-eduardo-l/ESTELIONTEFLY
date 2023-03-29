@@ -2,6 +2,13 @@ import React from 'react'
 import Link from 'next/link';
 import { ListItem, Text, Button, useColorMode } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
+import { Exo_2 } from 'next/font/google';
+
+const exo2 = Exo_2({
+    weight: ['400', '700'],
+    subsets: ['latin'],
+    variable: '--font-montserrat'
+})
 
 export const ActiveLink = ({ url, title, color, darkcolor, locale2, condition }: any) => {
     const { asPath, locale } = useRouter();
@@ -16,7 +23,7 @@ export const ActiveLink = ({ url, title, color, darkcolor, locale2, condition }:
                     (<Text
                         display='inline-flex'
                         fontSize="2xl"
-                        fontFamily='"Exo 2"'
+                        className={exo2.className}
                         fontWeight="bold"
                         color={asPath == url ? darkcolor : color}
                         cursor='pointer'
@@ -34,7 +41,7 @@ export const ActiveLink = ({ url, title, color, darkcolor, locale2, condition }:
                                     position={"relative"}
                                     zIndex={10}
                                     color="#5BFCF3"
-                                    fontFamily='"Exo 2"'
+                                    className={exo2.className}
                                     fontWeight={700}
                                     variant='outline'
                                     mr="10px"
@@ -48,7 +55,7 @@ export const ActiveLink = ({ url, title, color, darkcolor, locale2, condition }:
                                     position={"relative"}
                                     zIndex={10}
                                     color={colorMode === 'light' ? '#fff' : '#FCF7F2'}
-                                    fontFamily='"Exo 2"'
+                                    className={exo2.className}
                                     fontWeight={400}
                                     variant='outline'
                                     mr="10px"

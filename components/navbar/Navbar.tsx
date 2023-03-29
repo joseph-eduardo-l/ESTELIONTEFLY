@@ -1,5 +1,6 @@
 import { ChevronDownIcon, HamburgerIcon, MoonIcon, SunIcon, } from "@chakra-ui/icons";
 import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, Menu, MenuButton, MenuDivider, MenuItem, MenuList, Text, UnorderedList, useColorMode, useDisclosure, Divider, useMediaQuery } from "@chakra-ui/react";
+import { Exo_2, Montserrat } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -7,6 +8,12 @@ import en from "../../locale/en";
 import es from "../../locale/es";
 import { ActiveLink } from "./ActiveLink";
 import Idiomas from "./Idiomas";
+
+const exo2 = Exo_2({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  variable: '--font-montserrat'
+})
 
 
 export const Navbar = () => {
@@ -32,11 +39,12 @@ export const Navbar = () => {
           justifyContent="space-between"
           maxW="1320px"
           w="95%"
+          h={{ base: '70px', sm: '75px' }}
           m="auto"
           alignItems="center"
 
         >
-          <Box>
+          <Box w={{ base: '70px', sm: '199px' }}>
             {logo ?
               <Box cursor='pointer'>
                 <Link href='/'>
@@ -46,7 +54,7 @@ export const Navbar = () => {
               :
               <Box cursor='pointer' m='0 auto' display={{ base: "flex", sm: "none" }}>
                 <Link href='/'>
-                  <Image width={70} height={70} src="/images/icono-1.webp" className="icono-Nabvar" alt="IconoEstelio" />
+                  <Image width={70} height={70} src="/images/icono-1.webp" style={{ padding: '10px' }} alt="IconoEstelio" />
                 </Link>
               </Box>
             }
@@ -56,7 +64,8 @@ export const Navbar = () => {
             w="760px"
             display={{ base: "none", xl: "flex" }}
             justifyContent="space-between"
-            fontFamily="'Exo 2'"
+            // fontFamily="'Exo 2'"
+            className={exo2.className}
             color={colorMode === 'light' ? '#fff' : 'white.100'}
           >
             {vinculos.map(

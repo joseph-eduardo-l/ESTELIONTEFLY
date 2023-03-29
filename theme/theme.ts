@@ -5,19 +5,17 @@ import { Montserrat, Exo_2 } from 'next/font/google'
 const montserrat = Montserrat({
     weight: ['400', '700'],
     subsets: ['latin'],
-    variable: '--font-montserrat'
 })
 const exo2 = Exo_2({
     weight: ['700'],
     subsets: ['latin'],
 })
 
+//theme
 const config: ThemeConfig = {
     initialColorMode: "system",
     useSystemColorMode: true,
 }
-
-//theme
 
 const theme = extendTheme({
     config,
@@ -45,10 +43,8 @@ const theme = extendTheme({
             "html, body": {
                 color: props.colorMode === "dark" ? "#FCF7F2" : "#052743",
                 bg: props.colorMode === "dark" ? "#192734" : "white",
-
             },
         }),
-
     },
 });
 

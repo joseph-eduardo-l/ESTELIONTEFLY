@@ -6,7 +6,6 @@ import en from "../../locale/en";
 import es from "../../locale/es";
 import dynamic from "next/dynamic";
 import { HiOutlineMail } from 'react-icons/hi';
-import { Exo_2, Montserrat } from "next/font/google";
 const ActiveLink = dynamic(() => import('../navbar/ActiveLink'))
 
 const itemColor = "#23BBB3"; //colorMode === "light" ? "#012643" : "#FFFFFFEB";
