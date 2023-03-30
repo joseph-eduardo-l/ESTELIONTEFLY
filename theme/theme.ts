@@ -32,7 +32,7 @@ export const theme = extendTheme({
         },
         blue: {
             cyan: "#5BFCF3",
-            700: "#052743"
+            700: "#052743",
         },
         orange: "#F97C0B",
         gray: "#666C78",

@@ -15,10 +15,12 @@ const exo2 = Exo_2({
 })
 
 
+const coloroscuro = "#052743";
+const colorMenuNavbar = "rgba(6,39,67,.9)";
+
 export const Navbar = () => {
   const [logo] = useMediaQuery('(min-width: 480px)')
   const { colorMode, toggleColorMode } = useColorMode();
-  const coloroscuro = "#052743";
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { locale } = useRouter();
   const t = locale === "en" ? en : es;
@@ -82,8 +84,8 @@ export const Navbar = () => {
                         <MenuButton
                           as={Button}
                           rightIcon={<ChevronDownIcon width='2em' height='2em' />}
-                          bgColor={coloroscuro}
-                          _hover={{ color: "#5bfcf3" }}
+                          // bgColor={coloroscuro}
+                          // _hover={{ color: "#5bfcf3" }}
                           _active={{ bgColor: coloroscuro, color: "#5bfcf3" }}
                           fontWeight="700"
                         >
@@ -91,8 +93,8 @@ export const Navbar = () => {
                         </MenuButton>
                         <MenuList
                           position="absolute"
-                          bg='rgba(6,39,67,.9)'
                           border="none"
+                          bg={colorMenuNavbar}
                           w="1180px"
                           left="-521px"
                           mt={3}
@@ -104,6 +106,7 @@ export const Navbar = () => {
                             display="flex"
                             justifyContent="space-evenly"
                             cursor='unset'
+                            bg='none'
                           // alignContent='center'
                           >
                             <UnorderedList
@@ -162,6 +165,7 @@ export const Navbar = () => {
                             display="flex"
                             justifyContent="space-evenly"
                             cursor='unset'
+                            bg='none'
                           >
                             <UnorderedList
                               h='220px'

@@ -6,12 +6,18 @@ const ButtonWhatsapp = dynamic(() => import('../buttonWhatsapp/ButtonWhatsapp'))
 const Footer = dynamic(() => import("../footer/Footer"));
 
 type Props = {
-  children: React.ReactNode,
-  title?: string,
+  children?: React.ReactNode;
+  title?: string;
   description?: string,
+  titleBlogOne?: string
+  titleBlogTwo?: string
+  dateBlogOne?: string
+  dateBlogTwo?: string
+  urlOne?: string
+  urlTwo?: string
 };
 
-export const Layout: React.FC<Props> = ({ children, title, description }) => {
+export const Layout: React.FC<Props> = ({ children, title, description, titleBlogOne, titleBlogTwo, dateBlogOne, dateBlogTwo, urlOne, urlTwo  }) => {
   return (
     <>
       <Head>
@@ -31,7 +37,7 @@ export const Layout: React.FC<Props> = ({ children, title, description }) => {
         <ButtonWhatsapp />
         {children}
       </div>
-      <Footer />
+      <Footer titleBlogOne={titleBlogOne} titleBlogTwo={titleBlogTwo} dateBlogOne={dateBlogOne} dateBlogTwo={dateBlogTwo} urlOne={urlOne} urlTwo={urlTwo} />
     </>
   );
 };

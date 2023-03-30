@@ -1,8 +1,9 @@
-import { ChakraProvider } from '@chakra-ui/react'
-import type { AppProps } from 'next/app'
-import { IpApiContextProvider } from '../context/IpApiContext';
 import { useState, useEffect } from 'react';
+import Head from 'next/head';
+import type { AppProps } from 'next/app'
+import { ChakraProvider } from '@chakra-ui/react'
 import { theme } from '@/theme';
+import { IpApiContextProvider } from '../context/IpApiContext';
 
 export default function App({ Component, pageProps }: AppProps) {
   const [showing, setShowing] = useState(false);
@@ -19,11 +20,17 @@ export default function App({ Component, pageProps }: AppProps) {
   } else {
 
     return (
-      <ChakraProvider theme={theme}>
-        <IpApiContextProvider>
-          <Component {...pageProps} />
-        </IpApiContextProvider>
-      </ChakraProvider>
+      <>
+        <Head>
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" ></meta>
+          <link rel="Icon" href="https://website-estelio.s3.amazonaws.com/images/estelio/icono.ico" />
+        </Head>
+        <ChakraProvider theme={theme}>
+          <IpApiContextProvider>
+            <Component {...pageProps} />
+          </IpApiContextProvider>
+        </ChakraProvider>
+      </>
     )
   }
 }
