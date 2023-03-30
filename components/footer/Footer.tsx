@@ -2,10 +2,9 @@ import { Box, Flex, Grid, GridItem, Heading, Image, Text, Link, UnorderedList, D
 import { FaTwitter, FaLinkedinIn, FaFacebookF, FaPhoneAlt } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 import { useRouter } from "next/router";
-import en from "../../locale/en";
-import es from "../../locale/es";
 import dynamic from "next/dynamic";
 import { HiOutlineMail } from 'react-icons/hi';
+import { en, es } from "@/locale";
 const ActiveLink = dynamic(() => import('../navbar/ActiveLink'))
 
 const itemColor = "#23BBB3"; //colorMode === "light" ? "#012643" : "#FFFFFFEB";

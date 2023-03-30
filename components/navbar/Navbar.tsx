@@ -1,11 +1,10 @@
+import { en, es } from "@/locale";
 import { ChevronDownIcon, HamburgerIcon, MoonIcon, SunIcon, } from "@chakra-ui/icons";
 import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, Menu, MenuButton, MenuDivider, MenuItem, MenuList, Text, UnorderedList, useColorMode, useDisclosure, Divider, useMediaQuery } from "@chakra-ui/react";
-import { Exo_2, Montserrat } from "next/font/google";
+import { Exo_2 } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import en from "../../locale/en";
-import es from "../../locale/es";
 import { ActiveLink } from "./ActiveLink";
 import Idiomas from "./Idiomas";
 

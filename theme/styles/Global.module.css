@@ -1,0 +1,29 @@
+/* Banners */
+
+.video__Banners {
+  height: calc(100vh - 110px);
+  width: 100%;
+  object-fit: cover;
+}
+@media (min-width: 912px) {
+  .video__Banners {
+    height: 65vh;
+  }
+}
+@media (min-width: 912px) and (min-height: 935px) {
+  .video__Banners {
+    height: 700px;
+  }
+}
+
+/* .video__Banners {
+  height: 37rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .video__Banners {
+    height: 40rem;
+  }
+} */

@@ -17,7 +17,7 @@ const config: ThemeConfig = {
     useSystemColorMode: true,
 }
 
-const theme = extendTheme({
+export const theme = extendTheme({
     config,
 
     fonts: {
@@ -48,4 +48,3 @@ const theme = extendTheme({
     },
 });
 
-export default theme

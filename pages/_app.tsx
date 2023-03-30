@@ -1,8 +1,8 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import type { AppProps } from 'next/app'
-import theme from '@/theme/theme'
 import { IpApiContextProvider } from '../context/IpApiContext';
 import { useState, useEffect } from 'react';
+import { theme } from '@/theme';
 
 export default function App({ Component, pageProps }: AppProps) {
   const [showing, setShowing] = useState(false);
@@ -18,12 +18,12 @@ export default function App({ Component, pageProps }: AppProps) {
     return <></>;
   } else {
 
-  return (
-    <ChakraProvider theme={theme}>
-      <IpApiContextProvider>
-      <Component {...pageProps} />
-      </IpApiContextProvider>
-    </ChakraProvider>
-  )
+    return (
+      <ChakraProvider theme={theme}>
+        <IpApiContextProvider>
+          <Component {...pageProps} />
+        </IpApiContextProvider>
+      </ChakraProvider>
+    )
   }
 }
