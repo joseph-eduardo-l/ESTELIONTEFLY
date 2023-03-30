@@ -28,7 +28,6 @@ export const Banner = () => {
                 >
                     {heading01}
                     <span style={{ display: 'block' }}>{heading02}</span>
-
                 </Heading>
             </Flex>
         </Box>

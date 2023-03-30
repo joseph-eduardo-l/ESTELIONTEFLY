@@ -7,7 +7,7 @@ const montserrat = Montserrat({
     subsets: ['latin'],
 })
 const exo2 = Exo_2({
-    weight: ['700'],
+    weight: ['400', '700'],
     subsets: ['latin'],
 })
 
@@ -35,6 +35,7 @@ export const theme = extendTheme({
             700: "#052743",
         },
         orange: "#F97C0B",
+        odoo: "#714B67",
         gray: "#666C78",
         white: { 100: "#FCF7F2" },
     },
