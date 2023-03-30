@@ -11,7 +11,6 @@ import Idiomas from "./Idiomas";
 const exo2 = Exo_2({
   weight: ['400', '700'],
   subsets: ['latin'],
-  variable: '--font-montserrat'
 })
 
 

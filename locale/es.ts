@@ -1,6 +1,7 @@
 import header from './es/header'
 import footer from './es/footer'
 import erp360 from './es/erp360'
+import buttons from './es/buttons'
 
 
 
@@ -8,6 +9,7 @@ export const es = {
     global: {
         header,
         footer,
+        buttons
     },
     pages: {
         erp360
