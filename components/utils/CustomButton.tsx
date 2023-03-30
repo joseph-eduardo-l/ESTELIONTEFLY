@@ -21,7 +21,7 @@ export const CustomButton = ({ bgColor, color, bgHover, text }: Custom) => {
             color={color}
             _hover={{ bg: bgHover }}
             size="lg"
-            m="20px auto 40px"
+            m="20px auto"
             fontSize={{ base: "15px", md: "18px" }}
         >
             {text}

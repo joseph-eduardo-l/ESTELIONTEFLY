@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 import { IpApiContextProvider } from '../context/IpApiContext';
 import { useState, useEffect } from 'react';
 import { theme } from '@/theme';
+import "@/styles/main.css"
 
 export default function App({ Component, pageProps }: AppProps) {
   const [showing, setShowing] = useState(false);

@@ -1,0 +1,32 @@
+/* carousel */
+
+.swiper-button-prev:after,
+.swiper-button-next:after,
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-rtl {
+  color: #23bbb3 !important;
+  display: none !important;
+}
+
+.swiper-pagination-bullet {
+  width: 50px !important;
+  background: #23bbb3 !important;
+  border-radius: 10px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #23bbb3 !important;
+}
+
+.carouselManage .swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px;
+  background: #23bbb3 !important;
+  border-radius: 10px !important;
+}
+
+.carouselManage .swiper-slide {
+  width: 100%;
+  height: 420px !important;
+}

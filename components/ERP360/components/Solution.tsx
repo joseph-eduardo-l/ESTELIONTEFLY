@@ -11,7 +11,7 @@ export const Solution = () => {
     const { global: { buttons }, pages: { erp360: { solution } } } = t;
 
     return (
-        <Box as='section' maxW='1280px' width='90%' m='50px auto'>
+        <Box as='section' maxW='1280px' width='90%' m='50px auto 0px' >
             <Box>
                 <Heading as='h1' textAlign='center' fontSize={{ base: '24px', md: '32px' }} fontWeight='bold' color='odoo'>
                     {solution.heading}
@@ -38,9 +38,8 @@ export const Solution = () => {
                     as={motion.div}
                     initial={{ opacity: 0, scale: 1, x: -200 }}
                     whileInView={{ opacity: 1, scale: 1, x: 0 }}
-                    transition='.9s linear'
+                    transition='.6s linear'
                     viewport={{ once: false }}
-
                 >
                     <Image src="/images/erp360/odoo-saas.webp" alt="odoo" w={{ base: '320px', sm: '380px' }} m='0 auto' />
                 </GridItem>
@@ -50,7 +49,7 @@ export const Solution = () => {
                         {solution.text}
                     </Text>
 
-                    <CustomButton bgColor="green.400" bgHover="oddo" color="white" text={buttons.button02} />
+                    <CustomButton bgColor="green.400" bgHover="odoo" color="white" text={buttons.button02} />
                 </GridItem>
             </Grid>
         </Box>
