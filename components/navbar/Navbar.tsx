@@ -218,7 +218,7 @@ export const Navbar = () => {
                       </MenuButton>
                       <MenuList
                         position="absolute"
-                        bg='rgba(6,39,67,.9)'
+                        bg={colorMenuNavbar}
                         border="none"
                         w="200px"
                         left="-55px"
@@ -233,6 +233,7 @@ export const Navbar = () => {
                                 _active={{ bgColor: "none" }}
                                 display="flex"
                                 justifyContent="space-evenly"
+                                bg='none'
                               >
                                 <Link href={url}>
                                   <Text fontWeight='700' color={colorMode === 'light' ? '#fff' : 'white.100'} _hover={{ color: '#F47C20' }} >{title}</Text>

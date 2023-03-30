@@ -1,10 +1,14 @@
-import { Banner, Solution } from "./components"
+import {Banner, Solution, Prices} from "./";
 
-export const Erp360 = () => {
+
+const Erp360 = () => {
     return (
         <>
             <Banner />
             <Solution />
+            <Prices />
         </>
     )
 }
+
+export default Erp360;

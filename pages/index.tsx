@@ -1,5 +1,5 @@
 import { Layout } from '@/components/layout'
-import { Erp360 } from '@/components/ERP360'
+import  Erp360  from '@/components/ERP360'
 import { GetStaticProps } from 'next';
 import { GraphQLClient, gql } from 'graphql-request';
 

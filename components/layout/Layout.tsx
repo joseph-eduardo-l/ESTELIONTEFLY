@@ -5,6 +5,8 @@ import Head from "next/head";
 const ButtonWhatsapp = dynamic(() => import('../buttonWhatsapp/ButtonWhatsapp'))
 const Footer = dynamic(() => import("../footer/Footer"));
 
+import '../'
+
 type Props = {
   children?: React.ReactNode;
   title?: string;
@@ -31,6 +33,7 @@ export const Layout: React.FC<Props> = ({ children, title, description, titleBlo
         <meta property="og:image:width" content='200' />
         <meta property="og:image:height" content='200' /> */}
       </Head>
+      
       <PhoneBar />
       <Navbar />
       <div>

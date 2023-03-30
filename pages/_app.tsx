@@ -4,6 +4,7 @@ import type { AppProps } from 'next/app'
 import { ChakraProvider } from '@chakra-ui/react'
 import { theme } from '@/theme';
 import { IpApiContextProvider } from '../context/IpApiContext';
+import '../css/main.css'
 
 export default function App({ Component, pageProps }: AppProps) {
   const [showing, setShowing] = useState(false);
@@ -27,6 +28,8 @@ export default function App({ Component, pageProps }: AppProps) {
         </Head>
         <ChakraProvider theme={theme}>
           <IpApiContextProvider>
+            <div className='progressbar'></div>
+            <div className='scrollPath'></div>
             <Component {...pageProps} />
           </IpApiContextProvider>
         </ChakraProvider>
