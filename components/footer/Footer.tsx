@@ -139,7 +139,7 @@ const Footer = ({ titleBlogOne, titleBlogTwo, dateBlogOne, dateBlogTwo, urlOne, 
               justifyContent="space-between"
               height="full"
             >
-              <Link href={locale == 'en' && asPath != `blog/` ? `/en/blog` : '/blog'} _hover={{ textDecoration: 'none' }}>
+              <Link href={locale === 'en' ? `https://www.estelio.com/en/blog` : 'https://www.estelio.com/blog'} _hover={{ textDecoration: 'none' }}>
                 <Heading
                   mt={{ base: "-5px", lg: '9px' }}
                   textAlign="center"
@@ -153,7 +153,6 @@ const Footer = ({ titleBlogOne, titleBlogTwo, dateBlogOne, dateBlogTwo, urlOne, 
               <Flex flexDirection='column'>
                 <Link
                   my='15px'
-
                   display={{ base: "none", lg: 'flex' }}
                   alignItems="center"
                   justifyContent={'center'}
@@ -161,12 +160,7 @@ const Footer = ({ titleBlogOne, titleBlogTwo, dateBlogOne, dateBlogTwo, urlOne, 
                   textAlign='center'
                   fontWeight='400'
                   fontSize='17px'
-                  href={((locale === "en") && (asPath == "/")) ? `en/blog/${urlOne}`
-                    : ((locale === "en") && (asPath != "/") && (asPath == `/blog/${urlOne}`) || (asPath == `/blog/${urlTwo}`)) ?
-                      urlOne
-                      : ((locale === "en") && (asPath != "/") && (asPath != `/blog/${urlOne}`)) ?
-                        `blog/${urlOne}`
-                        : ((locale === "es") && (asPath != "/") && (asPath == `/blog/${urlOne}`)) ? urlOne : `blog/${urlOne}`}
+                  href={locale === "en" ? `https://www.estelio.com/en/blog/${urlOne}` : `https://www.estelio.com/blog/${urlOne}`}
                   _hover={{ textDecoration: "none" }}
                 >
                   {titleBlogOne}
@@ -185,12 +179,7 @@ const Footer = ({ titleBlogOne, titleBlogTwo, dateBlogOne, dateBlogTwo, urlOne, 
                   fontWeight='400'
                   fontSize='17px'
                   textAlign='center'
-                  href={((locale === "en") && (asPath == "/")) ? `en/blog/${urlTwo}`
-                    : ((locale === "en") && (asPath != "/") && (asPath == `/blog/${urlTwo}`) || (asPath == `/blog/${urlOne}`)) ?
-                      urlTwo
-                      : ((locale === "en") && (asPath != "/") && (asPath != `/blog/${urlTwo}`)) ?
-                        `blog/${urlTwo}`
-                        : ((locale === "es") && (asPath != "/") && (asPath == `/blog/${urlTwo}`)) ? urlTwo : `blog/${urlTwo}`}
+                  href={locale === "en" ? `https://www.estelio.com/en/blog/${urlTwo}` : `https://www.estelio.com/blog/${urlTwo}`}
                   _hover={{ textDecoration: "none" }}
                 >
                   {titleBlogTwo}

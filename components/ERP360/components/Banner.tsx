@@ -1,7 +1,7 @@
-import { en, es } from '@/locale';
-import { Box, Flex, Heading } from '@chakra-ui/react'
-import styles from "@/theme/styles/Global.module.css"
 import { useRouter } from "next/router";
+import { Box, Flex, Heading } from '@chakra-ui/react'
+import { en, es } from '@/locale';
+import styles from "@/theme/styles/Global.module.css"
 
 export const Banner = () => {
     const { locale } = useRouter();
