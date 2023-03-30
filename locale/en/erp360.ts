@@ -19,4 +19,16 @@ export default {
             { id: 2, text: "Access your information from anywhere and at any time, ERP 360 is hosted in the cloud!", icon: "/images/erp360/accedeInfo.svg", iconHover: "/images/erp360/accessInfoHover.svg" },
         ]
     },
+    WhyimplementERP360: {
+        heading: "Why implement ",
+        headingSpan: "ERP 360",
+        subHeading: "It not only improves business efficiency and productivity, but also:",
+        cards: [
+            { id: 0, heading: "Efficient", text: "Forget investing in hardware, software and high maintenance costs.", icon: "/images/erp360/eficiente.svg" },
+            { id: 1, heading: "Flexible", text: "Adapt the platform to the needs of your business.", icon: "/images/erp360/flexible.svg" },
+            { id: 2, heading: "Accessible", text: "Login from anywhere with an internet connection.", icon: "/images/erp360/accesible.svg" },
+            { id: 3, heading: "Easy", text: "Intuitive and easy-to-use platform; extensive technical knowledge is not necessary.", icon: "/images/erp360/facil.svg" },
+            { id: 4, heading: "Scalable", text: "Start with a free plan today and upgrade to professional or enterprise plans as needed", icon: "/images/erp360/escalable.svg" },
+        ]
+    }
 }

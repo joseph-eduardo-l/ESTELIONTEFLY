@@ -23,5 +23,12 @@ export default {
         heading: "¿Por qué implementar ",
         headingSpan: "ERP 360",
         subHeading: "No solo mejora la eficiencia y la productividad del negocio, también:",
+        cards: [
+            { id: 0, heading: "Eficiente", text: "Olvídate de invertir en hardware, software y costos altos de mantenimiento.", icon: "/images/erp360/eficiente.svg" },
+            { id: 1, heading: "Flexible", text: "Adapta la plataforma a las necesidades de tu negocio.", icon: "/images/erp360/flexible.svg" },
+            { id: 2, heading: "Accesible", text: "Ingresa desde cualquier lugar con una conexión a internet.", icon: "/images/erp360/accesible.svg" },
+            { id: 3, heading: "Fácil", text: "Una plataforma intuitiva y fácil de usar; no es necesario tener amplio conocimiento técnico.", icon: "/images/erp360/facil.svg" },
+            { id: 4, heading: "Escalable", text: "Comienza con un plan gratuito hoy y actualiza según tus necesidades a planes profesionales o empresariales", icon: "/images/erp360/escalable.svg" },
+        ]
     }
 }
