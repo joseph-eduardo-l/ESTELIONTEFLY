@@ -13,7 +13,7 @@ export const Solution = () => {
     return (
         <Box as='section' maxW='1280px' width='90%' m='50px auto 0px' >
             <Box>
-                <Heading as='h1' textAlign='center' fontSize={{ base: '24px', md: '32px' }} fontWeight='bold' color='odoo'>
+                <Heading as='h1' textAlign='center' fontSize={{ base: '24px', md: '32px' }} fontWeight='bold' color={colorMode === 'light' ? 'odoo' : 'white.100'}>
                     {solution.heading}
                 </Heading>
 
@@ -25,12 +25,12 @@ export const Solution = () => {
                     m="10px auto 0"
                 >
                     {solution.subHeading01}
-                    <span style={{ color: colorMode === 'light' ? '#23BBB3' : 'white.100', display: "inline" }}>
+                    <span style={{ color: colorMode === 'light' ? '#23BBB3' : '#FCF7F2', display: "inline" }}>
                         {solution.subHeading02}
                     </span>
                 </Heading>
 
-                <Divider m="15px auto 0px" w="120px" h="6px" opacity="0.7" borderStyle="none" bgColor={colorMode === 'light' ? "odoo" : '#fff'} borderRadius='10px' />
+                <Divider m="15px auto 0px" w="120px" h="6px" opacity={colorMode === 'dark' ? "0.7" : 0.9} borderStyle="none" bgColor={colorMode === 'light' ? "odoo" : '#fff'} borderRadius='10px' />
             </Box>
 
             <Grid templateColumns={{ base: '1fr', lg: '1fr 1fr' }} gap="20px" m='40px auto' maxW="1000px">

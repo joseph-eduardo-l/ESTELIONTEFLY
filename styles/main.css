@@ -9,6 +9,13 @@
   display: none !important;
 }
 
+@media (min-width: 992px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: block !important;
+  }
+}
+
 .swiper-pagination-bullet {
   width: 50px !important;
   background: #23bbb3 !important;

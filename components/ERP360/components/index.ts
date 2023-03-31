@@ -1,3 +1,5 @@
 export * from "./Banner"
 export * from "./Solution"
 export * from "./Manage"
+export * from "./Implement"
+export * from "./Questions"
