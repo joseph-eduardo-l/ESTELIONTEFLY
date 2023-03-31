@@ -12,7 +12,7 @@ export const Implement = () => {
     const { global: { buttons }, pages: { erp360: { WhyimplementERP360: { cards, heading, headingSpan, subHeading } } } } = t;
 
     return (
-        <Box as='section' maxW='1280px' width='90%' m={{ base: "40px auto", md: '80px auto' }}>
+        <Box maxW='1280px' width='90%' m={{ base: "40px auto", md: '80px auto' }}>
             <Box>
                 <Heading as='h2' textAlign='center' fontSize={{ base: '24px', md: '32px' }} fontWeight={400} color='blue.700' maxW={{ base: '370px', md: '100%' }} m='0 auto'>
                     {heading}

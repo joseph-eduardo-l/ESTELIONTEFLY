@@ -11,7 +11,7 @@ export const Solution = () => {
     const { global: { buttons }, pages: { erp360: { solution } } } = t;
 
     return (
-        <Box as='section' maxW='1280px' width='90%' m='50px auto 0px' >
+        <Box as='main' maxW='1280px' width='90%' m='50px auto 0px' >
             <Box>
                 <Heading as='h1' textAlign='center' fontSize={{ base: '24px', md: '32px' }} fontWeight='bold' color={colorMode === 'light' ? 'odoo' : 'white.100'}>
                     {solution.heading}
