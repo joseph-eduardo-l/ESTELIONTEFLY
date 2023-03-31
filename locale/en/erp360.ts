@@ -14,9 +14,9 @@ export default {
         headingSpan: "efficiency and ease",
         subHeading: "Control all aspects of your business from a centralized platform",
         cards: [
-            { id: 0, text: "Integrate modules tailored to the specific needs of your organization.", icon: "/images/erp360/integraModulos.svg", iconDark: "/images/erp360/integraModulosDark.svg", iconHover: "/images/erp360/integraModulosHover.svg" },
-            { id: 1, text: "Covers all areas of business management including: purchasing, inventory, sales, billing, projects and more.", icon: "/images/erp360/areasGestion.svg", iconDark: "/images/erp360/integraModulosDark.svg", iconHover: "/images/erp360/areasGestionHover.svg" },
-            { id: 2, text: "Access your information from anywhere and at any time, ERP 360 is hosted in the cloud!", icon: "/images/erp360/accedeInfo.svg", iconDark: "/images/erp360/accedeInfoDark.svg", iconHover: "/images/erp360/accessInfoHover.svg" },
+            { id: 0, text: "Integrate modules tailored to the specific needs of your organization.", icon: "/images/erp360/integraModulos.svg", iconDark: "/images/erp360/integraModulosDark.svg", iconHover: "/images/erp360/integraModulosHover.svg", alt: "modules" },
+            { id: 1, text: "Covers all areas of business management including: purchasing, inventory, sales, billing, projects and more.", icon: "/images/erp360/areasGestion.svg", iconDark: "/images/erp360/integraModulosDark.svg", iconHover: "/images/erp360/areasGestionHover.svg", alt: "management" },
+            { id: 2, text: "Access your information from anywhere and at any time, ERP 360 is hosted in the cloud!", icon: "/images/erp360/accedeInfo.svg", iconDark: "/images/erp360/accedeInfoDark.svg", iconHover: "/images/erp360/accessInfoHover.svg", alt: "access" },
         ]
     },
     WhyimplementERP360: {

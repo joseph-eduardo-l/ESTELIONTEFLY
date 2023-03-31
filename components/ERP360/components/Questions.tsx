@@ -26,7 +26,7 @@ export const Questions = () => {
                 {accordion.map(({ id, heading, text }) => {
                     return (
                         <Accordion key={id} allowMultiple>
-                            <AccordionItem borderBlock={`1px solid ${useColorModeValue('#EDF2F7', 'gray.100')}`}>
+                            <AccordionItem borderBlock={`1px solid ${colorMode === 'light' ? '#EDF2F7' : 'gray.100'}`}>
                                 {({ isExpanded }) => (
                                     <>
                                         <AccordionButton position='relative' p={4} mb={'2px'} _expanded={{ bg: '#23BBB3', color: 'white' }} borderRadius='10px' _focus={{ boxShadow: 'none' }} >
