@@ -49,7 +49,7 @@ export const Solution = () => {
                         {solution.text}
                     </Text>
 
-                    <CustomButton bgColor="green.400" bgHover="odoo" color="white" text={buttons.button02} />
+                    <CustomButton bgColor="green.400" bgHover="odoo" color="white" text={buttons.button02} link="#vinculoContact" />
                 </GridItem>
             </Grid>
         </Box>

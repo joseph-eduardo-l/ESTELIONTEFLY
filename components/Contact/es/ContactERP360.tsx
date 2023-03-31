@@ -11,7 +11,7 @@ export const ContactERP360 = () => {
     const t = locale === "en" ? en : es;
     const { global: { buttons }, pages: { contact: { heading: { text01, text02 }, form: { name, lastName, email, phone, message } } } } = t;
     return (
-        <Box as='section' position="relative" zIndex="5" overflow="hidden">
+        <Box as='section' position="relative" zIndex="5" overflow="hidden" id="vinculoContact">
             <Box w="95%" m="0 auto" position="relative" zIndex="5">
                 <Box maxW="1200px" m="0 auto" lineHeight={1.2}>
                     <Box ml={{ md: "15px" }}>

@@ -57,7 +57,7 @@ export const Implement = () => {
 
             </Grid>
 
-            <CustomButton bgColor="green.400" bgHover="odoo" color="#fff" text={buttons.button03} margin={{ base: "30px auto", sm: '50px auto' }} />
+            <CustomButton bgColor="green.400" bgHover="odoo" color="#fff" text={buttons.button03} margin={{ base: "30px auto", sm: '50px auto' }} link="#vinculoContact" />
 
         </Box>
     )

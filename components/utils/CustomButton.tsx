@@ -16,7 +16,7 @@ type Custom = {
     link?: string
 }
 
-export const CustomButton = ({ bgColor, color = "#fff", bgHover, text, margin = "20px auto", link }: Custom) => {
+export const CustomButton = ({ bgColor, color = "#fff", bgHover, text, margin = "20px auto", link = "#" }: Custom) => {
     return (
         <Flex justifyContent='center' alignItems='center'>
             <Button
@@ -29,10 +29,9 @@ export const CustomButton = ({ bgColor, color = "#fff", bgHover, text, margin = 
                 fontSize={{ base: "15px", md: "18px" }}
                 transition='.3s'
             >
-                {/* <Link href={link}>
-
-</Link> */}
-                {text}
+                <Link href={link}>
+                    {text}
+                </Link>
             </Button>
         </Flex>
     )
