@@ -1,0 +1,46 @@
+/* Banners */
+
+.video__Banners {
+  height: calc(100vh - 110px);
+  width: 100%;
+  object-fit: cover;
+}
+@media (min-width: 912px) {
+  .video__Banners {
+    height: 65vh;
+  }
+}
+@media (min-width: 912px) and (min-height: 935px) {
+  .video__Banners {
+    height: 700px;
+  }
+}
+
+/* ::-webkit-scrollbar {
+  width: 10px;
+  background: #052743;
+}
+
+::-webkit-scrollbar-track {
+  background: #052743;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to top, #029b79, #23bbb3, #8bffed);
+  border-radius: 20px;
+} */
+
+
+
+/* .video__Banners {
+  height: 37rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .video__Banners {
+    height: 40rem;
+  }
+} */
