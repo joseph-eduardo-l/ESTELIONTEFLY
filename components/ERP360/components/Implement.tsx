@@ -37,7 +37,7 @@ export const Implement = () => {
                 initial={{ opacity: 0, scale: 1, y: -110 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 transition='.6s linear'
-                viewport={{ once: false }}
+                viewport={{ once: true }}
             >
                 {cards.map(({ id, icon, heading, text }) => {
                     return (
