@@ -4,7 +4,7 @@ import type { AppProps } from 'next/app'
 import { ChakraProvider } from '@chakra-ui/react'
 import { theme } from '@/theme';
 import { IpApiContextProvider } from '../context/IpApiContext';
-import '../css/main.css'
+import "@/styles/main.css"
 
 export default function App({ Component, pageProps }: AppProps) {
   const [showing, setShowing] = useState(false);

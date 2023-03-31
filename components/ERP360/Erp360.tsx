@@ -1,12 +1,21 @@
-import {Banner, Solution, Prices} from "./";
+import { useRouter } from "next/router";
+import { Box } from "@chakra-ui/react"
+import { Banner, Implement, Manage, Questions, Solution, Prices } from "./"
+import { ContactERP360, ContactERP360En } from "../Contact";
 
-
-const Erp360 = () => {
+export const Erp360 = () => {
+    const { locale } = useRouter();
     return (
         <>
             <Banner />
             <Solution />
+            <Box bgImage={'/images/erp360/background-odoo-saas.webp'} bgSize='cover' bgPosition='center' bgAttachment='fixed' h={{ base: '2360px', md: '1800px', xl: '1280px' }}>
+                <Manage />
+                <Implement />
+            </Box>
             <Prices />
+            <Questions />
+            {locale === 'en' ? <ContactERP360En /> : <ContactERP360 />}
         </>
     )
 }

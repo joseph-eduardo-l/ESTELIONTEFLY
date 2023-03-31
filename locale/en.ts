@@ -2,7 +2,7 @@ import header from './en/header'
 import footer from './en/footer'
 import erp360 from './en/erp360'
 import buttons from './en/buttons'
-
+import contact from './en/contact'
 
 export const en = {
     global: {
@@ -11,7 +11,8 @@ export const en = {
         buttons,
     },
     pages: {
-        erp360
+        erp360,
+        contact
     },
     blog: {
         heading: "Mantente informado de las últimas ",
