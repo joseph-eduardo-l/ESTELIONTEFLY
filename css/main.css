@@ -14,3 +14,46 @@
   background: linear-gradient(to top, #029b79, #23bbb3, #8bffed);
   border-radius: 20px;
 }
+
+.swiper-button-prev:after,
+.swiper-button-next:after,
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-rtl {
+  color: #23bbb3 !important;
+  display: none !important;
+}
+
+@media (min-width: 992px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: block !important;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 50px !important;
+  background: #23bbb3 !important;
+  border-radius: 10px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #23bbb3 !important;
+}
+
+.carouselManage .swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px;
+  background: #23bbb3 !important;
+  border-radius: 10px !important;
+}
+
+.blur-card {
+  background-color: #e9f8f94d !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+.blur-dark {
+  background-color: #f4fbfc40 !important;
+  backdrop-filter: blur(10px) !important;
+}
