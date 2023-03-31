@@ -37,3 +37,231 @@
   width: 100%;
   height: 420px !important;
 }
+
+/* Animacion Nova Forms */
+
+@keyframes float {
+  0% {
+    /* box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6); */
+    filter: drop-shadow(0px 4px 3px #00000099);
+    transform: translatey(0px);
+  }
+  50% {
+    /* box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2); */
+    filter: drop-shadow(0px 12px 3px #00000099);
+    transform: translatey(-20px);
+  }
+  100% {
+    /* box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6); */
+    filter: drop-shadow(0px 4px 3px #00000099);
+    transform: translatey(0px);
+  }
+}
+
+.nova {
+  filter: drop-shadow(0px 4px 3px #00000099);
+  /* filter: drop-shadow(0 5px 15px 0px rgba(0, 0, 0, 0.6)); */
+  /* box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6); */
+  transform: translatey(0px);
+  animation: float 2.5s ease-in-out infinite;
+}
+
+/* Contact Form */
+
+.blur-contact {
+  background-color: #ebf8f9 !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.blur-dark {
+  background-color: #f4fbfc40 !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Mautic */
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans);
+
+.mauticform_wrapper {
+  max-width: 600px;
+  margin: 10px auto;
+  font-family: "Droid Sans", "Helvetica Neue", "Arial", "sans-serif" !important;
+  color: #37302d;
+}
+
+.mauticform-name {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 3px;
+}
+
+.mauticform-description {
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+.mauticform-error {
+  margin-bottom: 10px;
+  color: red;
+}
+
+.mauticform-message {
+  margin-bottom: 10px;
+  color: green;
+}
+
+.mauticform-row {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.mauticform-label {
+  font-size: 1.1em;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.mauticform-row.mauticform-required .mauticform-label:after {
+  color: #fcf7f2;
+  content: " *";
+  display: inline;
+}
+
+.mauticform-helpmessage {
+  display: block;
+  font-size: 0.9em;
+  margin-bottom: 3px;
+}
+
+.mauticform-errormsg {
+  display: block;
+  color: red;
+  margin-top: 2px;
+}
+
+.mauticform-selectbox,
+.mauticform-input,
+.mauticform-textarea {
+  width: 100%;
+  padding: 0.5em 0.5em;
+  border: 1px solid #ccc;
+  background: #fff;
+  box-shadow: 0px 0px 0px #fff inset;
+  box-sizing: border-box;
+}
+
+.mauticform-checkboxgrp-label {
+  font-weight: normal;
+}
+
+.mauticform-radiogrp-label {
+  font-weight: normal;
+}
+
+.mauticform-button-wrapper .mauticform-button.btn-default {
+  color: #fff;
+  background-color: #4dbfbf;
+  border-color: #4dbfbf;
+}
+
+.mauticform-button-wrapper .mauticform-button {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 8px 16px;
+  font-size: 18px;
+  line-height: 1.3856;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.mauticform-button-wrapper .mauticform-button.btn-default[disabled] {
+  background-color: #ffffff;
+  border-color: #dddddd;
+}
+
+.mauticform-field-hidden {
+  display: none;
+}
+
+/* Formulario de mautic Contacto - Custom */
+
+.form-content {
+  margin: -10px auto 0;
+  display: "block";
+}
+
+.form-inputs-content {
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.form-inputs {
+  border: none;
+  border-radius: 10px;
+  outline-color: #23bbb3;
+  padding: 8px;
+  color: #00000099;
+}
+.areaInteres-text {
+  margin-left: 10px;
+}
+
+.label-required.mauticform-label:after {
+  content: "" !important;
+}
+
+.textArea-form {
+  border: none;
+  border-radius: 15px;
+  outline-color: #23bbb3;
+  padding: 10px;
+  color: #00000099;
+  height: 150px;
+  resize: none;
+}
+
+.form-button {
+  color: #00000099;
+  margin-left: 10px;
+  transition: 300ms;
+}
+
+.form-button:hover {
+  background-color: #1fa8a1 !important;
+  transform: scale(1.01);
+}
+
+.form-button-content {
+  margin: 0 auto;
+  width: fit-content;
+  display: block;
+  color: #fff;
+}
+
+.form-button {
+  border-radius: 10px;
+  background-color: #23bbb3;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+}
+
+.mauticForm-BgContent {
+  background-color: #505c66;
+}
+.mauticForm-BgInputs {
+  background-color: #fcf7f2;
+}
+.mauticForm-textColor {
+  color: #fcf7f2;
+}

@@ -1,7 +1,9 @@
 import { useRouter } from "next/router";
-import { Box, Divider, Grid, GridItem, Heading, Image, Text, useColorMode } from '@chakra-ui/react'
+import Image from "next/image";
+import { Box, Divider, Grid, GridItem, Heading, Text, useColorMode } from '@chakra-ui/react'
 import { en, es } from '@/locale';
 import { CustomButton } from "@/components/utils";
+import { motion } from "framer-motion";
 
 export const Implement = () => {
     const { colorMode } = useColorMode()
@@ -30,11 +32,17 @@ export const Implement = () => {
                 </Text>
             </Box>
 
-            <Grid templateColumns={{ base: 'repeat(1fr)', md: 'repeat(2, 1fr)', xl: 'repeat(5,1fr)' }} gap="30px" m='30px auto' maxW={{ md: '750px', xl: '100%' }}>
+            <Grid templateColumns={{ base: 'repeat(1fr)', md: 'repeat(2, 1fr)', xl: 'repeat(5,1fr)' }} gap="30px" m='30px auto' maxW={{ md: '750px', xl: '100%' }}
+                as={motion.div}
+                initial={{ opacity: 0, scale: 1, y: -110 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                transition='.6s linear'
+                viewport={{ once: false }}
+            >
                 {cards.map(({ id, icon, heading, text }) => {
                     return (
                         <GridItem key={id} colSpan={{ md: id === 4 ? 2 : 1, xl: 1 }} display="flex" flexDirection='column' justifyContent='center' alignItems='center'>
-                            <Image src={icon} alt={heading} w='140px' />
+                            <Image src={icon} alt={heading} width={140} height={140} />
 
                             <Heading as="h3" fontWeight='400' fontSize='24px' textAlign='center' color='blue.700'>
                                 {heading}

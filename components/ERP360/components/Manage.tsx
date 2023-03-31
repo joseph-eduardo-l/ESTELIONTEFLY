@@ -38,10 +38,10 @@ export const Manage = () => {
             {displayCards ?
 
                 <Grid templateColumns='repeat(3, 1fr)' gap={{ lg: '20px', xl: '50px' }} m='80px auto'>
-                    {cards.map(({ id, text, icon, iconHover }) => {
+                    {cards.map(({ id, text, icon, iconDark, iconHover }) => {
                         return (
                             <Flex key={id} direction='column' justifyContent='center' alignItems='center' m='0 auto' maxW='430px' h='315px' bgColor={colorMode === 'light' ? "white" : "white.100"} boxShadow='base' borderRadius='15px' position='relative' transition='0.3s' _hover={{ transform: 'scale(1.01)', boxShadow: 'xl' }} className="manageCards">
-                                <Image src={icon} w='80px' h='80px' m='0 auto' position='absolute' top='-40px'
+                                <Image src={colorMode === 'light' ? icon : iconDark} w='80px' h='80px' m='0 auto' position='absolute' top='-40px'
                                     sx={{
                                         ".manageCards:hover &": {
                                             display: 'none'

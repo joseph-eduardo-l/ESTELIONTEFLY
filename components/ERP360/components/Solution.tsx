@@ -39,9 +39,9 @@ export const Solution = () => {
                     initial={{ opacity: 0, scale: 1, x: -200 }}
                     whileInView={{ opacity: 1, scale: 1, x: 0 }}
                     transition='.6s linear'
-                    viewport={{ once: false }}
+                    viewport={{ once: true }}
                 >
-                    <Image src="/images/erp360/odoo-saas.webp" alt="odoo" w={{ base: '320px', sm: '380px' }} m='0 auto' />
+                    <Image src="/images/erp360/odoo-saas.webp" alt="odoo" w={{ base: '320px', sm: '380px' }} m='0 auto' loading='lazy' />
                 </GridItem>
 
                 <GridItem display='flex' flexDirection='column' justifyContent='center' alignItems='center'>
