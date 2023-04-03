@@ -1,4 +1,3 @@
-import React from 'react'
 import Link from 'next/link';
 import { ListItem, Text, Button, useColorMode } from '@chakra-ui/react';
 import { useRouter } from 'next/router';
