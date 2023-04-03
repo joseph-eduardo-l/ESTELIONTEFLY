@@ -41,7 +41,7 @@ export const ContactERP360 = () => {
                                 {text02}
                             </Heading>
 
-                            <Divider m={{ base: "15px auto 30px", md: "15px auto 0px" }} w="120px" h="5px" bgColor="odoo" opacity={colorMode === 'dark' ? "0.7" : 0.9} borderRadius='10px' />
+                            <Divider m={{ base: "15px auto 30px", md: "15px auto 0px" }} w="120px" h="5px" bgColor={colorMode === 'light' ? "odoo" : '#fff'} opacity={colorMode === 'dark' ? "0.7" : 0.9} borderRadius='10px' />
                         </Box>
                         <NovaImage loading='lazy' h='110px' src='/images/nova.webp' alt='nova' className="nova" />
                     </Flex>

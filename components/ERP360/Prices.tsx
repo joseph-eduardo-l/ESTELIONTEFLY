@@ -22,7 +22,7 @@ export const Prices = () => {
     const { colorMode } = useColorMode();
 
     return (
-        <Box maxW='1380px' w={{ base: '90%', lg: '80%', xl: '70%', '2xl': '90%' }} h='1750px' m='50px auto' mb={'40px'}>
+        <Box as='section' maxW='1380px' w={{ base: '90%', lg: '80%', xl: '70%', '2xl': '90%' }} h='1750px' m='80px auto' mb={'40px'}>
             {/* Heading of Component */}
             <Box>
                 <Heading as='h1' textAlign='center' fontSize={{ base: '24px', md: '32px' }} fontWeight='bold'>
@@ -134,8 +134,8 @@ export const Prices = () => {
                                     <Text display={id === 1 ? 'none' : 'block'}>
                                         {plan}
                                     </Text>
-                                    <Link href={'https://wa.me/message/EA3RA3DJC2NTA1'} position='absolute' bottom={'30px'} _hover={{ textDecoration: 'none'}}>
-                                        <Button  size='lg' bgColor='green.400' color='white.100' _hover={{ bgColor: 'green.500' }}>
+                                    <Link href={'https://wa.me/message/EA3RA3DJC2NTA1'} position='absolute' bottom={'30px'} _hover={{ textDecoration: 'none' }}>
+                                        <Button size='lg' bgColor='green.400' color='white.100' _hover={{ bgColor: 'green.500' }}>
                                             {buttons.button01}
                                         </Button>
                                     </Link>
@@ -158,8 +158,8 @@ export const Prices = () => {
                                 </Box>
 
                                 {/* Start Button 2 */}
-                                <Link href={'https://wa.me/message/EA3RA3DJC2NTA1'} position='absolute' bottom={'30px'} _hover={{ textDecoration: 'none'}}>
-                                    <Button  size='lg' bgColor='green.400' _hover={{ bgColor: 'green.500' }} color={colorMode === 'light' ? '#fff' : 'white.100'}>
+                                <Link href={'https://wa.me/message/EA3RA3DJC2NTA1'} position='absolute' bottom={'30px'} _hover={{ textDecoration: 'none' }}>
+                                    <Button size='lg' bgColor='green.400' _hover={{ bgColor: 'green.500' }} color={colorMode === 'light' ? '#fff' : 'white.100'}>
                                         {buttons.button01}
                                     </Button>
                                 </Link>

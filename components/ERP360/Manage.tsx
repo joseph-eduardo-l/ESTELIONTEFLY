@@ -15,7 +15,7 @@ export const Manage = () => {
     const { pages: { erp360: { manage: { cards, heading, headingSpan, subHeading } } } } = t;
 
     return (
-        <Box as='section' maxW='1280px' width='90%' m={{ base: "0px auto", md: '60px auto' }} pt='60px'>
+        <Box maxW='1280px' width='90%' m={{ base: "0px auto", md: '60px auto' }} pt='60px'>
             <Box>
                 <Heading as='h2' textAlign='center' fontSize={{ base: '24px', md: '32px' }} fontWeight={400} color='blue.700' maxW={{ base: '370px', md: '100%' }} m='0 auto' >
                     {heading}
