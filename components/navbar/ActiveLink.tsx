@@ -6,7 +6,6 @@ import { Exo_2 } from 'next/font/google';
 const exo2 = Exo_2({
     weight: ['400', '700'],
     subsets: ['latin'],
-    variable: '--font-montserrat'
 })
 
 export const ActiveLink = ({ url, title, color, darkcolor, locale2, condition }: any) => {
@@ -30,10 +29,10 @@ export const ActiveLink = ({ url, title, color, darkcolor, locale2, condition }:
                     >
                         {title}
                     </Text>) : ((condition == "3") && (asPath != '/construccion')) ?
-                        (<ListItem color={color} >
+                        (<ListItem color={color}>
                             <Text cursor='pointer' w='275px' color={asPath == url ? color : '#FCF7F2'} transitionDuration='.2s' _hover={{ fontWeight: '700', color: darkcolor }}>{title}</Text>
                         </ListItem>) : ((condition == "3") && (asPath == '/construccion')) ?
-                            (<ListItem color={color} >
+                            (<ListItem color={color}>
                                 <Text cursor='pointer' w='245px' transitionDuration='.2s' _hover={{ fontWeight: '700', color: darkcolor }}>{title}</Text>
                             </ListItem>) : locale == locale2 ?
                                 (<Button
