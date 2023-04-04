@@ -11,7 +11,7 @@ export default function HomePage(posts: any) {
   return (
     <>
       <Layout
-        title="ERP360"
+        title="ERP 360"
         titleBlogOne={posts.posts[0].title}
         titleBlogTwo={posts.posts[1].title}
         dateBlogOne={posts.posts[0].date}

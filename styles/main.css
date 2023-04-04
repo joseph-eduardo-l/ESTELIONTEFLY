@@ -1,3 +1,19 @@
+/* ScrollBar */
+::-webkit-scrollbar {
+  width: 10px;
+  background: #052743;
+}
+
+::-webkit-scrollbar-track {
+  background: #052743;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to top, #029b79, #23bbb3, #8bffed);
+  border-radius: 20px;
+}
+
 /* carousel */
 
 .swiper-button-prev:after,

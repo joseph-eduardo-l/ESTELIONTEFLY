@@ -13,7 +13,6 @@ const exo2 = Exo_2({
   subsets: ['latin'],
 })
 
-
 const coloroscuro = "#052743";
 const colorMenuNavbar = "rgba(6,39,67,.9)";
 
@@ -311,7 +310,7 @@ export const Navbar = () => {
           >
             <Flex
               flexDirection="column"
-              fontFamily="Montserrat"
+              className={exo2.className}
               fontSize="xl"
               pt="15px"
             >

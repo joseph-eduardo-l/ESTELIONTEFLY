@@ -17,7 +17,7 @@ export default {
                 { id: 1, title: 'POS', url: '/construccion', },
                 { id: 2, title: 'CRM', url: '/construccion', },
                 { id: 3, title: 'Proyectos: Remote Agility', url: '/construccion', },
-                { id: 4, title: 'ERP', url: '/construccion', }
+                { id: 4, title: 'ERP', url: '/', }
             ],
             sistit: [
                 { id: 0, subtitle: 'Sistemas IT', url: 'https://www.estelio.com/it-systems' },
