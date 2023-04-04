@@ -10,4 +10,9 @@ export default {
         phone: "Phone",
         message: "Message",
     },
+    message: {
+        maxW: "495px",
+        heading: "Thank you for your request!",
+        headingSpan: " We will contact you shortly",
+    },
 }
