@@ -26,6 +26,14 @@ export default function App({ Component, pageProps }: AppProps) {
         <Head>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" ></meta>
           <link rel="Icon" href="https://website-estelio.s3.amazonaws.com/images/estelio/icono.ico" />
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-K869MYHMBF"></script>
+          <script>
+            {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+              
+            gtag('config', 'G-K869MYHMBF');`}
+          </script>
         </Head>
         <ChakraProvider theme={theme}>
           <IpApiContextProvider>
@@ -35,7 +43,7 @@ export default function App({ Component, pageProps }: AppProps) {
           </IpApiContextProvider>
         </ChakraProvider>
 
-        {/* Google tag (gtag.js)  */}
+        {/* Google tag (gtag.js) 
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-05K3Q4MH5B" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`<script>
@@ -45,7 +53,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
               gtag('config', 'G-05K3Q4MH5B');
             </script>`}
-        </Script>
+        </Script> */}
       </>
     )
   }
