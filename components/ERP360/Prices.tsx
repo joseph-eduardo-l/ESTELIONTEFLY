@@ -22,7 +22,7 @@ export const Prices = () => {
     const { colorMode } = useColorMode();
 
     return (
-        <Box as='section' maxW='1380px' w={{ base: '90%', lg: '80%', xl: '70%', '2xl': '90%' }} h='1750px' m='80px auto' mb={'40px'}>
+        <Box as='section' maxW='1380px' w={{ base: '90%', lg: '80%', xl: '70%', '2xl': '90%' }} h='1780px' m='80px auto' mb={'40px'}>
             {/* Heading of Component */}
             <Box>
                 <Heading as='h1' textAlign='center' fontSize={{ base: '24px', md: '32px' }} fontWeight='bold'>
@@ -60,7 +60,7 @@ export const Prices = () => {
                 {cards.map(({ id, title, advantagesList, price, plan, learMoreText, learnMoreList, iconCard, iconCardDarkMode, iconCardHover }) => {
                     return (
                         <SwiperSlide className="swiper-slide" key={id}>
-                            <Flex alignItems='center' flexDirection='column' w={{ base: '300px', sm: '420px' }} h={'1660px'} position='relative' boxShadow='0px 0px 3px -2px black' borderRadius={'15px'} m={'30px auto'} p='35px' bgColor={'#f4fbfc40'}
+                            <Flex alignItems='center' flexDirection='column' w={{ base: '300px', sm: '420px' }} h={'1700px'} position='relative' boxShadow='0px 0px 3px -2px black' borderRadius={'15px'} m={'30px auto'} p='35px' bgColor={'#f4fbfc40'}
                                 transitionDuration='400ms'
                                 _hover={colorMode === 'light' ? { boxShadow: '0px 0px 20px -8px #a1a1a1' } : { bgColor: 'white.100', color: '#052743' }} className="cardPrice"
                             >
