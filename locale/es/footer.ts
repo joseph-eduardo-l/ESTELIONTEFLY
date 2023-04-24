@@ -18,15 +18,15 @@ export default {
         { id: 4, description: "Data Center" },
     ],
     linksFooter: [
-        { id: 1, url: "/consultancy", title: 'Consultoría' },
-        { id: 2, url: "/businessSystems", title: "Sistemas empresariales" },
-        { id: 3, url: "/it-systems", title: "Sistemas IT" },
-        { id: 4, url: "/iot-systems", title: "Sistemas IoT" },
-        { id: 5, url: "/learning", title: "Formación y gestión del conocimiento" },
+        { id: 1, url: "https://www.estelio.com/consultancy", title: 'Consultoría' },
+        { id: 2, url: "https://www.estelio.com/businessSystems", title: "Sistemas empresariales" },
+        { id: 3, url: "https://www.estelio.com/it-systems", title: "Sistemas IT" },
+        { id: 4, url: "https://www.estelio.com/iot-systems", title: "Sistemas IoT" },
+        { id: 5, url: "https://www.estelio.com/learning", title: "Formación y gestión del conocimiento" },
     ],
     privacyPolicy: {
         privacy: "Política de privacidad",
-        link: "/privacyPolicy",
+        link: "https://www.estelio.com/privacyPolicy",
         copyright: "Copyright © 2023 Corporación Estelio. Todos los derechos reservados."
     }
 }

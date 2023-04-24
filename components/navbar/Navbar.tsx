@@ -1,28 +1,20 @@
-import { en, es } from "@/locale";
-import { ChevronDownIcon, HamburgerIcon, MoonIcon, SunIcon, } from "@chakra-ui/icons";
-import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, Menu, MenuButton, MenuDivider, MenuItem, MenuList, Text, UnorderedList, useColorMode, useDisclosure, Divider, useMediaQuery } from "@chakra-ui/react";
-import { Exo_2 } from "next/font/google";
-import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/router";
+import Link from "next/link";
+import { ChevronDownIcon, MoonIcon, SunIcon, ChevronRightIcon } from "@chakra-ui/icons";
+import { Box, Button, Divider, Flex, List, Menu, MenuButton, MenuDivider, MenuItem, MenuList, Text, UnorderedList, useColorMode, useMediaQuery, Image, ListItem } from '@chakra-ui/react';
 import { ActiveLink } from "./ActiveLink";
-import Idiomas from "./Idiomas";
+import  Idiomas  from "./Idiomas";
+import { en, es } from '../../locale';
+import { NavbarMobile } from "./NavBarMobile";
 
-const exo2 = Exo_2({
-  weight: ['400', '700'],
-  subsets: ['latin'],
-})
-
-const coloroscuro = "#052743";
-const colorMenuNavbar = "rgba(6,39,67,.9)";
 
 export const Navbar = () => {
   const [logo] = useMediaQuery('(min-width: 480px)')
   const { colorMode, toggleColorMode } = useColorMode();
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const coloroscuro = "#052743";
   const { locale } = useRouter();
   const t = locale === "en" ? en : es;
-  const { global: { header: { vinculos } } } = t;
+  const { global: { header: { area, products, vinculos } } } = t;
 
   return (
     <>
@@ -38,22 +30,21 @@ export const Navbar = () => {
           justifyContent="space-between"
           maxW="1320px"
           w="95%"
-          h={{ base: '70px', sm: '75px' }}
           m="auto"
           alignItems="center"
 
         >
-          <Box w={{ base: '70px', sm: '199px' }}>
+          <Box>
             {logo ?
               <Box cursor='pointer'>
                 <Link href='/'>
-                  <Image width={199} height={68} src="/images/logo-2.webp" alt="LogoEstelio" priority />
+                  <Image width='199px' height='68px' src="/images/logo-2.webp" alt="LogoEstelio" />
                 </Link>
               </Box>
               :
               <Box cursor='pointer' m='0 auto' display={{ base: "flex", sm: "none" }}>
                 <Link href='/'>
-                  <Image width={70} height={70} src="/images/icono-1.webp" style={{ padding: '10px' }} alt="IconoEstelio" />
+                  <Image width="70px" height='70px' src="/images/icono-1.webp" className="icono-Nabvar" alt="IconoEstelio" />
                 </Link>
               </Box>
             }
@@ -63,15 +54,14 @@ export const Navbar = () => {
             w="760px"
             display={{ base: "none", xl: "flex" }}
             justifyContent="space-between"
-            // fontFamily="'Exo 2'"
-            className={exo2.className}
+            fontFamily="'Exo 2'"
             color={colorMode === 'light' ? '#fff' : 'white.100'}
           >
             {vinculos.map(
               ({ id, url, title, consultoria, empresariales, sistit, sistiot, learning, noticias }) => {
                 if ((id != 3) && (id != 4)) {
                   return (
-                    <Box px="16px" py="8px" key={id}>
+                    <Box px="16px" py="8px" key={id} fontFamily='heading'>
                       <ActiveLink url={url} title={title} color='#5bfcf3' condition='1' />
                     </Box>
                   );
@@ -82,120 +72,348 @@ export const Navbar = () => {
                         <MenuButton
                           as={Button}
                           rightIcon={<ChevronDownIcon width='2em' height='2em' />}
-                          // bgColor={coloroscuro}
-                          // _hover={{ color: "#5bfcf3" }}
+                          bgColor={coloroscuro}
+                          _hover={{ color: "#5bfcf3" }}
                           _active={{ bgColor: coloroscuro, color: "#5bfcf3" }}
                           fontWeight="700"
+                          fontFamily='heading'
                         >
                           {title}
                         </MenuButton>
                         <MenuList
                           position="absolute"
+                          bg='rgba(6,39,67,.9)'
                           border="none"
-                          bg={colorMenuNavbar}
-                          w="1180px"
-                          left="-521px"
+                          w='530px'
+                          h='380px'
+                          transitionDuration='.3s'
+                          transitionTimingFunction='ease-in'
+                          left="-300px"
                           mt={3}
                           cursor='unset'
+                          className="cajaPadre__Menu"
+                          _hover={{ w: '820px', transitionDuration: '.5s', transitionTimingFunction: 'ease' }}
                         >
-                          <MenuItem
-                            _focus={{ bgColor: "none" }}
-                            _active={{ bgColor: "none" }}
-                            display="flex"
-                            justifyContent="space-evenly"
-                            cursor='unset'
-                            bg='none'
-                          // alignContent='center'
-                          >
-                            <UnorderedList
-                              fontSize="17px"
-                              spacing={2}
-                              h='210px'
-                            >
-                              {consultoria?.map(
-                                ({ id, subtitle, title, url }) => {
-                                  return (
-                                    <Box key={id}>
-                                      {id == 0 ? (
-                                        <ActiveLink url={url} title={subtitle} color={"#F47C20"} darkcolor={"#D76D1D"} condition='2' />
-                                      ) : (
-                                        <ActiveLink url={url} title={title} color={"#F47C20"} darkcolor={"#D76D1D"} condition='3' />
-                                      )}
-                                    </Box>
-                                  );
+                          <Flex w='75%'
+                            justifyContent={'space-between'}>
+                            <Text fontSize='18px' ml='5.2rem' fontFamily='heading'>{area}</Text>
+                            <Text fontSize='18px' opacity={'0'} fontFamily='heading'
+                              sx={{
+                                '.cajaPadre__Menu:hover &': {
+                                  transitionDuration: '.5s',
+                                  transitionTimingFunction: 'ease-in',
+                                  opacity: '1'
                                 }
-                              )}
-                            </UnorderedList>
+                              }}
+                            >
+                              {products}
+                            </Text>
+                          </Flex>
+                          <Divider w='98%' m='0 auto' />
 
-                            <UnorderedList fontSize="17px" spacing={2} h='210px'>
-                              {empresariales?.map(
-                                ({ id, subtitle, title, url }) => {
-                                  return (
-                                    <Box key={id}>
-                                      {id == 0 ? (
-                                        <ActiveLink url={url} title={subtitle} color={"#F47C20"} darkcolor={"#D76D1D"} condition='2' />
-                                      ) : (
-                                        <ActiveLink url={url} title={title} color={"#F47C20"} darkcolor={"#D76D1D"} condition='3' />
-                                      )}
-                                    </Box>
-                                  );
-                                }
-                              )}
-                            </UnorderedList>
-                            <UnorderedList fontSize="17px" spacing={2} h='210px'>
-                              {sistit?.map(({ id, subtitle, title, url }) => {
-                                return (
-                                  <Box key={id}>
-                                    {id == 0 ? (
-                                      <ActiveLink url={url} title={subtitle} color={"#5bfcf3"} darkcolor={"#23bbb3"} condition='2' />
-                                    ) : (
-                                      <ActiveLink url={url} title={title} color={"#5bfcf3"} darkcolor={"#23bbb3"} condition='3' />
-                                    )}
-                                  </Box>
-                                );
-                              })}
-                            </UnorderedList>
-                          </MenuItem>
-                          <MenuDivider color="#5bfcf3" mb='none' />
+                          {/* Menu Areas */}
+
+                          {/* List of Consultancy */}
                           <MenuItem
                             _focus={{ bgColor: "none" }}
                             _active={{ bgColor: "none" }}
-                            display="flex"
-                            justifyContent="space-evenly"
                             cursor='unset'
+                            p='10px'
+                            display='flex'
                             bg='none'
                           >
                             <UnorderedList
-                              h='220px'
                               fontSize="17px"
-                              spacing={3}
+                              display={'flex'}
+                              justifyContent='space-between'
+                              className='consultancy-list'
                             >
-                              {sistiot?.map(({ id, subtitle, title, url }) => {
-                                return (
-                                  <Box key={id}>
-                                    {id == 0 ? (
-                                      <ActiveLink url={url} title={subtitle} color={"#5bfcf3"} darkcolor={"#23bbb3"} condition='2' />
-                                    ) : (
-                                      <ActiveLink url={url} title={title} color={"#5bfcf3"} darkcolor={"#23bbb3"} condition='3' />
-                                    )}
-                                  </Box>
-                                );
-                              })}
-                            </UnorderedList>
-                            <UnorderedList fontSize="17px" spacing={2}>
-                              {learning?.map(({ id, subtitle, title, url }) => {
-                                return (
-                                  <Box key={id}>
-                                    {id == 0 ? (
-                                      <ActiveLink url={url} title={subtitle} color={"#F47C20"} darkcolor={"#D76D1D"} condition='2' />
-                                    ) : (
-                                      <ActiveLink url={url} title={title} color={"#F47C20"} darkcolor={"#D76D1D"} condition='3' />
-                                    )}
-                                  </Box>
-                                );
-                              })}
+                              <Flex key={id} w='100%' justifyContent={'flex-start'}>
+
+                                {/* Icono del Area */}
+                                <Flex h='35px' w='35px' justifyContent='center' alignItems='center' borderRadius='100%' transitionDuration={'.3s'} sx={{ '.consultancy-list:hover &': { transitionDuration: '.3s', bg: '#D76D1D' } }}>
+                                  <Image w='16px' src='/images/navbarIcons/icon-consultoria.svg' sx={{ '.consultancy-list:hover &': { filter: "brightness(0) invert(1)" } }} alt='iconoArea'/>
+                                </Flex>
+
+                                {/* Vinculo del Area  */}
+                                <Flex ml='20px' w='410px' justifyContent={'space-between'}>
+                                  <ActiveLink url={consultoria?.url} title={consultoria?.title} darkcolor={"#D76D1D"} condition='2' />
+                                  <Text fontSize='30px' mt='-10px'>
+                                    <ChevronRightIcon />
+                                  </Text>
+                                </Flex>
+
+                              </Flex>
+                              <UnorderedList
+                                fontSize="17px"
+                                fontFamily='heading'
+                                color={'#D76D1D'}
+                                opacity='0'
+                                transitionDuration={'.5s'}
+                                w='100%'
+                                sx={{
+                                  '.consultancy-list:hover &': {
+                                    transitionDuration: '.5s',
+                                    opacity: '1'
+                                  },
+                                }}
+                                ml='40px'
+                              >
+                                {consultoria?.subtitles?.map(
+                                  ({ id, subtitle, url }) => {
+                                    return (
+                                      <Box key={id}>
+                                        <ActiveLink url={url} title={subtitle} darkcolor={"#D76D1D"} condition='3' />
+                                      </Box>
+                                    );
+                                  }
+                                )}
+
+                              </UnorderedList>
+
                             </UnorderedList>
                           </MenuItem>
+
+                          {/* List of Business */}
+                          <MenuItem
+                            _focus={{ bgColor: "none" }}
+                            _active={{ bgColor: "none" }}
+                            cursor='unset'
+                            p='10px'
+                            display='flex'
+                            bg='none'
+                          >
+                            <UnorderedList
+                              fontSize="17px"
+                              display={'flex'}
+                              justifyContent='space-between'
+                              className='business-list'
+                            >
+                              <Flex key={id} w='100%' justifyContent={'flex-start'}>
+
+                                {/* Icono del Area */}
+                                <Flex h='35px' w='35px' justifyContent='center' alignItems='center' borderRadius='100%' transitionDuration={'.3s'} sx={{ '.business-list:hover &': { transitionDuration: '.3s', bg: '#D76D1D' } }}>
+                                  <Image w='16px' src='/images/navbarIcons/icon-sistemas-empresariales.svg' sx={{ '.business-list:hover &': { filter: "brightness(0) invert(1)" } }} alt='iconoArea'/>
+                                </Flex>
+
+                                {/* Vinculo del Area  */}
+                                <Flex ml='20px' w='410px' justifyContent={'space-between'}>
+                                  <ActiveLink url={empresariales?.url} title={empresariales?.title} darkcolor={"#D76D1D"} condition='2' />
+                                  <Text fontSize='30px' mt='-10px'>
+                                    <ChevronRightIcon />
+                                  </Text>
+                                </Flex>
+
+                              </Flex>
+                              <UnorderedList fontSize="17px"
+                                fontFamily='heading'
+                                w='100%'
+                                color={'#D76D1D'}
+                                opacity='0'
+                                transitionDuration={'.5s'}
+                                sx={{
+                                  '.business-list:hover &': {
+                                    transitionDuration: '.5s',
+                                    opacity: '1'
+                                  },
+                                }}
+                                ml='40px'
+                              >
+                                {empresariales?.subtitles?.map(
+                                  ({ id, subtitle, url }) => {
+                                    return (
+                                      <Box key={id}>
+                                        <ActiveLink url={url} title={subtitle} darkcolor={"#D76D1D"} condition='3' />
+                                      </Box>
+                                    );
+                                  }
+                                )}
+
+                              </UnorderedList>
+
+                            </UnorderedList>
+                          </MenuItem>
+
+                          {/* List of IT Systems */}
+                          <MenuItem
+                            _focus={{ bgColor: "none" }}
+                            _active={{ bgColor: "none" }}
+                            cursor='unset'
+                            p='10px'
+                            display='flex'
+                            bg='none'
+                          >
+                            <UnorderedList
+                              fontSize="17px"
+                              display={'flex'}
+                              justifyContent='space-between'
+                              className='systemIT-list'
+                            >
+                              <Flex key={id} w='100%' justifyContent={'flex-start'}>
+
+                                {/* Icono del Area */}
+                                <Flex h='35px' w='35px' justifyContent='center' alignItems='center' borderRadius='100%' transitionDuration={'.3s'} sx={{ '.systemIT-list:hover &': { transitionDuration: '.3s', bg: 'green.400' } }}>
+                                  <Image w='16px' src='/images/navbarIcons/icon-sistemas-it.svg' sx={{ '.systemIT-list:hover &': { filter: "brightness(0) invert(1)" } }} alt='iconoArea'/>
+                                </Flex>
+
+                                {/* Vinculo del Area  */}
+                                <Flex ml='20px' w='410px' justifyContent={'space-between'}>
+                                  <ActiveLink url={sistit?.url} title={sistit?.title} darkcolor={"green.400"} condition='2' />
+
+                                </Flex>
+
+                              </Flex>
+                              <UnorderedList
+                                fontSize="17px"
+                                fontFamily='heading'
+                                color={'#D76D1D'}
+                                opacity='0'
+                                w='100%'
+                                transitionDuration={'.5s'}
+                                sx={{
+                                  '.systemIT-list:hover &': {
+                                    transitionDuration: '.5s',
+                                    opacity: '1'
+                                  },
+                                }}
+                                ml='-6px'
+                              >
+                                {sistit?.subtitles?.map(
+                                  ({ id, subtitle, url }) => {
+                                    return (
+                                      <Box key={id}>
+                                        <ActiveLink url={url} title={subtitle} darkcolor={"#D76D1D"} condition='3' />
+                                      </Box>
+                                    );
+                                  }
+                                )}
+
+                              </UnorderedList>
+
+                            </UnorderedList>
+                          </MenuItem>
+
+                          {/* List of IoT Systems */}
+                          <MenuItem
+                            _focus={{ bgColor: "none" }}
+                            _active={{ bgColor: "none" }}
+                            cursor='unset'
+                            p='10px'
+                            display='flex'
+                            bg={'none'}
+                          >
+                            <UnorderedList
+                              fontSize="17px"
+                              display={'flex'}
+                              justifyContent='space-between'
+                              className='systemIOT-list'
+                            >
+                              <Flex key={id} w='100%' justifyContent={'flex-start'}>
+
+                                {/* Icono del Area */}
+                                <Flex h='35px' w='35px' justifyContent='center' alignItems='center' borderRadius='100%' transitionDuration={'.3s'} sx={{ '.systemIOT-list:hover &': { transitionDuration: '.3s', bg: 'green.400' } }}>
+                                  <Image w='16px' src='/images/navbarIcons/icon-sistemas-iot.svg' sx={{ '.systemIOT-list:hover &': { filter: "brightness(0) invert(1)" } }} alt='iconoArea'/>
+                                </Flex>
+
+                                {/* Vinculo del Area  */}
+                                <Flex ml='20px' w='410px' justifyContent={'space-between'}>
+                                  <ActiveLink url={sistiot?.url} title={sistiot?.title} darkcolor={"green.400"} condition='2' />
+                                  <Text fontSize='30px' mt='-10px'>
+                                    <ChevronRightIcon />
+                                  </Text>
+                                </Flex>
+
+                              </Flex>
+                              <UnorderedList fontSize="17px"
+                                fontFamily='heading'
+                                color={'green.400'}
+                                transitionDuration={'.5s'}
+                                opacity='0'
+                                w='500px'
+                                sx={{
+                                  '.systemIOT-list:hover &': {
+                                    transitionDuration: '.5s',
+                                    opacity: '1'
+                                  },
+                                }}
+                                ml='-105px'
+                              >
+                                {sistiot?.subtitles?.map(
+                                  ({ id, subtitle, url }) => {
+                                    return (
+                                      <Box key={id}>
+                                        <ActiveLink url={url} title={subtitle} darkcolor={"green.400"} condition='3' />
+                                      </Box>
+                                    );
+                                  }
+                                )}
+
+                              </UnorderedList>
+
+                            </UnorderedList>
+                          </MenuItem>
+
+                          {/* List of Learning */}
+                          <MenuItem
+                            _focus={{ bgColor: "none" }}
+                            _active={{ bgColor: "none" }}
+                            cursor='unset'
+                            p='10px'
+                            display='flex'
+                            bg={'none'}
+                          >
+                            <UnorderedList
+                              fontSize="17px"
+                              display={'flex'}
+                              justifyContent='space-between'
+                              className='learning-list'
+                            >
+                              <Flex key={id} w='100%' justifyContent={'flex-start'}>
+
+                                {/* Icono del Area */}
+                                <Flex h='35px' w='35px' justifyContent='center' alignItems='center' borderRadius='100%' transitionDuration={'.3s'} sx={{ '.learning-list:hover &': { transitionDuration: '.3s', bg: '#D76D1D' } }}>
+                                  <Image w='16px' src='/images/navbarIcons/icon-formacion.svg' sx={{ '.learning-list:hover &': { filter: "brightness(0) invert(1)" } }} alt='iconoArea'/>
+                                </Flex>
+
+                                {/* Vinculo del Area  */}
+                                <Flex ml='20px' w='410px' justifyContent={'space-between'}>
+                                  <ActiveLink url={learning?.url} title={learning?.title} darkcolor={"#D76D1D"} condition='2' />
+                                  <Text fontSize='30px' mt='-10px'>
+                                    <ChevronRightIcon />
+                                  </Text>
+                                </Flex>
+
+                              </Flex>
+                              <UnorderedList fontSize="17px"
+                                fontFamily='heading'
+                                color={'#D76D1D'}
+                                opacity='0'
+                                transitionDuration={'.3s'}
+                                sx={{
+                                  '.learning-list:hover &': {
+                                    transitionDuration: '.5s',
+                                    opacity: '1'
+                                  },
+                                }}
+                                ml='40px'
+                                w={'100%'}
+                              >
+                                {learning?.subtitles?.map(
+                                  ({ id, subtitle, url }) => {
+                                    return (
+                                      <Box key={id}>
+                                        <ActiveLink url={url} title={subtitle} darkcolor={"#D76D1D"} condition='3' />
+                                      </Box>
+                                    );
+                                  }
+                                )}
+
+                              </UnorderedList>
+
+                            </UnorderedList>
+                          </MenuItem>
+
+
                         </MenuList>
                       </Menu>
                     </Box>
@@ -212,17 +430,19 @@ export const Navbar = () => {
                         _hover={{ color: "#F47C20" }}
                         _active={{ bgColor: coloroscuro, color: "#F47C20" }}
                         fontWeight="700"
+                        fontFamily='heading'
                       >
                         {title}
                       </MenuButton>
                       <MenuList
                         position="absolute"
-                        bg={colorMenuNavbar}
+                        bg='rgba(6,39,67,.9)'
                         border="none"
                         w="200px"
                         left="-55px"
                         p="10px"
                         mt={6}
+                        fontFamily='heading'
                       >
                         {noticias?.map(({ id, title, url }) => {
                           return (
@@ -232,7 +452,7 @@ export const Navbar = () => {
                                 _active={{ bgColor: "none" }}
                                 display="flex"
                                 justifyContent="space-evenly"
-                                bg='none'
+                                bg={'none'}
                               >
                                 <Link href={url}>
                                   <Text fontWeight='700' color={colorMode === 'light' ? '#fff' : 'white.100'} _hover={{ color: '#F47C20' }} >{title}</Text>
@@ -270,298 +490,13 @@ export const Navbar = () => {
                 <SunIcon w="18px" h={8} />
               )}
             </Button>
-            <Button
-              onClick={onOpen}
-              display={{ base: 'inline-flex', xl: "none" }}
-              height='40px'
-              variant="link"
-              ml="5px"
-              px="5px"
-              _hover={{ bgColor: "" }}
-              aria-label="menuButton"
-            >
 
-              <HamburgerIcon w='22px' h={10} color={colorMode === 'light' ? '#fff' : 'white.100'} />
-            </Button>
+            <NavbarMobile />
 
           </Flex>
         </Flex>
-      </Box>
+      </Box >
 
-      {/* Menu lateral */}
-      <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
-        <DrawerOverlay />
-        <DrawerContent bgColor="#052743" color={colorMode === 'light' ? '#fff' : 'white.100'}>
-          <DrawerCloseButton />
-          <DrawerHeader boxShadow="0px 0.3px 0.5px gray">
-            <Image
-              width={199}
-              height={68}
-              src="/images/logo-1.webp"
-              alt="LogoEstelio"
-              priority
-            ></Image>
-          </DrawerHeader>
-          <DrawerBody
-            boxShadow="0px 0.3px 0.5px gray"
-            maxH="100%"
-            px="12px"
-            key="a"
-          >
-            <Flex
-              flexDirection="column"
-              className={exo2.className}
-              fontSize="xl"
-              pt="15px"
-            >
-              {vinculos.map(
-                ({ id, url, title, consultoria, empresariales, sistit, sistiot, learning, }) => {
-                  if (id != 3) {
-                    return (
-                      <Box px="16px" py="8px" key={id}>
-                        <Link
-                          href={url}
-                        >
-                          <Box
-                            _hover={{ textDecoration: "none", color: "#1d9e97" }}
-                            cursor="pointer"
-                          >
-                            {title}
-                          </Box>
-                        </Link>
-                      </Box>
-                    );
-                  } else {
-                    return (
-                      <Accordion defaultIndex={[0]} allowMultiple key={id}>
-                        <AccordionItem border="none">
-                          <AccordionButton fontSize="xl">
-                            <Box flex="1" textAlign="left">
-                              {title}
-                            </Box>
-                            <AccordionIcon />
-                          </AccordionButton>
-                          <AccordionPanel
-                            pb={4}
-                            display="flex"
-                            flexDirection="column"
-                          >
-                            <Accordion defaultIndex={[0]} allowMultiple key={id}>
-                              <AccordionItem border="none">
-                                {consultoria?.map(({ id, title, subtitle, url }) => {
-                                  return (
-                                    <Box key={id}>
-                                      {id == 0 ? (
-                                        <AccordionButton fontSize="xl">
-                                          <Box flex="1" textAlign="left" _hover={{ color: "#1d9e97" }}>
-                                            <Link href={url}>
-                                              {subtitle}
-                                            </Link>
-                                          </Box>
-                                          <AccordionIcon />
-                                        </AccordionButton>
-                                      ) : (
-                                        <AccordionPanel
-                                          display="flex"
-                                          flexDirection="column"
-                                          px='0px'
-                                          py='4px'
-                                          pl="15px"
-                                        >
-                                          <Link href={url}>
-                                            <Box
-                                              fontSize='16px'
-                                              _hover={{
-                                                textDecoration: "none",
-                                                color: "#1d9e97",
-                                              }}
-                                              cursor="pointer"
-                                              pl='15px'
-                                            >
-                                              {title}
-                                            </Box>
-                                          </Link>
-                                        </AccordionPanel>
-                                      )}
-                                    </Box>
-                                  )
-                                })}
-                              </AccordionItem>
-                              <Divider height='1px' w='100%' bgColor='#a7a7a7' />
-                              <AccordionItem border="none">
-                                {empresariales?.map(({ id, title, subtitle, url }) => {
-                                  return (
-                                    <Box key={id}>
-                                      {id == 0 ? (
-                                        <AccordionButton fontSize="xl">
-                                          <Box flex="1" textAlign="left" _hover={{ color: "#1d9e97" }}>
-                                            <Link href={url}>
-                                              {subtitle}
-                                            </Link>
-                                          </Box>
-                                          <AccordionIcon />
-                                        </AccordionButton>
-                                      ) : (
-                                        <AccordionPanel
-                                          display="flex"
-                                          flexDirection="column"
-                                          px='0px'
-                                          py='4px'
-                                          pl="15px"
-                                        >
-                                          <Link href={url}>
-                                            <Box
-                                              fontSize='16px'
-                                              _hover={{
-                                                textDecoration: "none",
-                                                color: "#1d9e97",
-                                              }}
-                                              cursor="pointer"
-                                              pl='15px'
-                                            >
-                                              {title}
-                                            </Box>
-                                          </Link>
-                                        </AccordionPanel>
-                                      )}
-                                    </Box>
-                                  )
-                                })}
-                              </AccordionItem>
-                              <Divider height='1px' w='100%' bgColor='#a7a7a7' />
-                              <AccordionItem border="none">
-                                {sistit?.map(({ id, title, subtitle, url }) => {
-                                  return (
-                                    <Box key={id}>
-                                      {id == 0 ? (
-                                        <AccordionButton fontSize="xl">
-                                          <Box flex="1" textAlign="left" _hover={{ color: "#1d9e97" }}>
-                                            <Link href={url}>
-                                              {subtitle}
-                                            </Link>
-                                          </Box>
-                                          <AccordionIcon />
-                                        </AccordionButton>
-                                      ) : (
-                                        <AccordionPanel
-                                          display="flex"
-                                          flexDirection="column"
-                                          px='0px'
-                                          py='4px'
-                                          pl="15px"
-                                        >
-                                          <Link href={url}>
-                                            <Box
-                                              fontSize='16px'
-                                              _hover={{
-                                                textDecoration: "none",
-                                                color: "#1d9e97",
-                                              }}
-                                              cursor="pointer"
-                                              pl='15px'
-                                            >
-                                              {title}
-                                            </Box>
-                                          </Link>
-                                        </AccordionPanel>
-                                      )}
-                                    </Box>
-                                  )
-                                })}
-                              </AccordionItem>
-                              <Divider height='1px' w='100%' bgColor='#a7a7a7' />
-                              <AccordionItem border="none">
-                                {sistiot?.map(({ id, title, subtitle, url }) => {
-                                  return (
-                                    <Box key={id}>
-                                      {id == 0 ? (
-                                        <AccordionButton fontSize="xl">
-                                          <Box flex="1" textAlign="left" _hover={{ color: "#1d9e97" }}>
-                                            <Link href={url}>
-                                              {subtitle}
-                                            </Link>
-                                          </Box>
-                                          <AccordionIcon />
-                                        </AccordionButton>
-                                      ) : (
-                                        <AccordionPanel
-                                          display="flex"
-                                          flexDirection="column"
-                                          px='0px'
-                                          py='4px'
-                                          pl="15px"
-                                        >
-                                          <Link href={url}>
-                                            <Box
-                                              fontSize='16px'
-                                              _hover={{
-                                                textDecoration: "none",
-                                                color: "#1d9e97",
-                                              }}
-                                              cursor="pointer"
-                                              pl='15px'
-                                            >
-                                              {title}
-                                            </Box>
-                                          </Link>
-                                        </AccordionPanel>
-                                      )}
-                                    </Box>
-                                  )
-                                })}
-                              </AccordionItem>
-                              <Divider height='1px' w='100%' bgColor='#a7a7a7' />
-                              <AccordionItem border="none">
-                                {learning?.map(({ id, title, subtitle, url }) => {
-                                  return (
-                                    <Box key={id}>
-                                      {id == 0 ? (
-                                        <AccordionButton fontSize="xl">
-                                          <Box flex="1" textAlign="left" _hover={{ color: "#1d9e97" }}>
-                                            <Link href={url}>
-                                              {subtitle}
-                                            </Link>
-                                          </Box>
-                                          <AccordionIcon />
-                                        </AccordionButton>
-                                      ) : (
-                                        <AccordionPanel
-                                          display="flex"
-                                          flexDirection="column"
-                                          px='0px'
-                                          py='4px'
-                                          pl="15px"
-                                        >
-                                          <Link href={url}>
-                                            <Box
-                                              fontSize='16px'
-                                              _hover={{
-                                                textDecoration: "none",
-                                                color: "#1d9e97",
-                                              }}
-                                              cursor="pointer"
-                                              pl='15px'
-                                            >
-                                              {title}
-                                            </Box>
-                                          </Link>
-                                        </AccordionPanel>
-                                      )}
-                                    </Box>
-                                  )
-                                })}
-                              </AccordionItem>
-                            </Accordion>
-                          </AccordionPanel>
-                        </AccordionItem>
-                      </Accordion>
-                    );
-                  }
-                })}
-            </Flex>
-          </DrawerBody>
-        </DrawerContent>
-      </Drawer>
     </>
   );
 };
