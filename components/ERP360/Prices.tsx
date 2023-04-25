@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, List, ListIcon, ListItem, Text, UnorderedList, useColorMode, Divider, Link } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, List, ListIcon, ListItem, Text, UnorderedList, useColorMode, Divider, Link, Slider, SliderTrack, SliderFilledTrack, SliderThumb, SliderMark } from '@chakra-ui/react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper';
 import Image from "next/image";
@@ -8,11 +8,12 @@ import "swiper/css/pagination";
 import { useRouter } from 'next/router';
 import { en, es } from '@/locale';
 import { CheckIcon } from '@chakra-ui/icons';
+import { useState } from 'react';
 
 /**
  * Component for Prices and Plans from Section in ERP360 page  
  */
-
+let almacen: number = 0
 export const Prices = () => {
 
     const { locale } = useRouter();
@@ -20,6 +21,7 @@ export const Prices = () => {
     const { global: { buttons }, pages: { erp360: { pricesAndPlans: { heading, cards } } } } = t;
 
     const { colorMode } = useColorMode();
+    const [sliderValue, setSliderValue] = useState(0)
 
     return (
         <Box as='section' maxW='1380px' w={{ base: '90%', lg: '80%', xl: '70%', '2xl': '90%' }} h='1750px' m='80px auto' mb={'40px'}>
@@ -127,15 +129,42 @@ export const Prices = () => {
 
                                 {/* Plan and Price */}
 
-                                <Flex flexDirection={'column'} alignItems='center' w='100%' maxH='150px' h='150px' position={'relative'} >
+                                <Flex flexDirection={'column'} alignItems='center' w='100%' maxH='280px' h='280px' position={'relative'} >
                                     <Heading fontFamily='heading' fontSize={{ base: '24px', md: '32px' }} textAlign='center'>
                                         {price}
                                     </Heading>
-                                    <Text display={id === 1 ? 'none' : 'block'}>
+                                    <Text opacity={id === 1 ? '0' : '1'} mb='20px'>
                                         {plan}
                                     </Text>
+
+                                    <Text mb='20px' opacity={id === 1 ? '0' : '1'}>
+                                        Numero de usuarios
+                                    </Text>
+                                    
+                                    <Slider defaultValue={0} step={20} max={60} min={0} onChangeEnd={(val) => console.log(val)} w='95%' opacity={id === 1 ? '0' : '1' } 
+                                    onChange={(val => setSliderValue(val))}>
+                                        <SliderMark value={0} mt='1'  fontSize='sm'>
+                                            3 
+                                        </SliderMark>
+                                        <SliderMark value={20} mt='1' ml={'-1'}  fontSize='sm'>
+                                            5 
+                                        </SliderMark>
+                                        <SliderMark value={40} mt='1' ml={'-1.5'}  fontSize='sm'>
+                                            10 
+                                        </SliderMark>
+                                        <SliderMark value={60} mt='1' ml={'-1.5'}  fontSize='sm'>
+                                            15 
+                                        </SliderMark>
+                                        
+                                        <SliderTrack bg='#F0F0F0'>
+                                            <Box position='relative' right={10}/>
+                                            <SliderFilledTrack bg='green.400' />
+                                        </SliderTrack>
+                                        <SliderThumb />
+                                    </Slider>
+                                    {/* {sliderValue} */}
                                     <Link href={'https://wa.me/message/EA3RA3DJC2NTA1'} position='absolute' bottom={'30px'} _hover={{ textDecoration: 'none' }}>
-                                        <Button size='lg' bgColor='green.400' color='white.100' _hover={{ bgColor: 'green.500' }}>
+                                        <Button size='lg' bgColor='green.400' color={colorMode === 'light' ? '#fff' : 'white.100'} _hover={{ bgColor: 'green.500' }}>
                                             {buttons.button01}
                                         </Button>
                                     </Link>
