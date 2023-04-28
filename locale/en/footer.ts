@@ -18,15 +18,15 @@ export default {
         { id: 4, description: "Data Center" },
     ],
     linksFooter: [
-        { id: 1, url: "/consultancy", title: 'Consultancy' },
-        { id: 2, url: "/businessSystems", title: "Business Systems" },
-        { id: 3, url: "/it-systems", title: "IT Systems" },
-        { id: 4, url: "/iot-systems", title: "IoT systems" },
-        { id: 5, url: "/learning", title: "Training and Knowledge Management" },
+        { id: 1, url: "https://www.estelio.com/en/consultancy", title: 'Consultancy' },
+        { id: 2, url: "https://www.estelio.com/en/businessSystems", title: "Business Systems" },
+        { id: 3, url: "https://www.estelio.com/en/it-systems", title: "IT Systems" },
+        { id: 4, url: "https://www.estelio.com/en/iot-systems", title: "IoT systems" },
+        { id: 5, url: "https://www.estelio.com/en/learning", title: "Training and Knowledge Management" },
     ],
     privacyPolicy: {
         privacy: "Privacy Policy",
-        link: "/en/privacyPolicy",
+        link: "https://www.estelio.com/en/privacyPolicy",
         copyright: "Copyright © 2023 Estelio Corporation. All rights reserved."
     }
 }

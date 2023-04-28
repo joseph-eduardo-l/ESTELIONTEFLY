@@ -21,6 +21,7 @@ export default {
                     { id: 3, text: 'Integración con Impresora Fiscal HKA80' },
                     { id: 4, text: 'Empresa única, un almacén y máximo 25 trasacciones diarias' },
                 ],
+                selection: 'Seleccione la cantidad de usuarios:',
                 price: 'Gratis',
                 plan: 'Mensuales',
                 learMoreText: 'Conocer más',
@@ -50,7 +51,8 @@ export default {
                     { id: 4, text: 'Empresas ilimitadas' },
                     { id: 5, text: 'A partir de 3 usuarios hasta un máximo de 15' },
                 ],
-                price: '$50',
+                selection: 'Seleccione la cantidad de usuarios:',
+                price: 'Desde',
                 plan: 'Mensuales',
                 learMoreText: 'Conocer más',
                 learnMoreList: [
@@ -87,7 +89,8 @@ export default {
                     { id: 4, text: 'Empresas ilimitadas' },
                     { id: 5, text: 'A partir de 20 usuarios en adelante' },
                 ],
-                price: '$150',
+                selection: 'Seleccione la cantidad de usuarios:',
+                price: 'Desde',
                 plan: 'Mensuales',
                 learMoreText: 'Conocer más',
                 learnMoreList: [
