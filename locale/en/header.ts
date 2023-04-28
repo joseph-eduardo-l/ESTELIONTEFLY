@@ -8,7 +8,7 @@ export default {
             id: 3, title: 'Products and Services', url: '',
             consultoria: {
                 title: 'Consultancy',
-                url: 'https://www.estelio.com/en/consultancy',
+                url: "https://www.estelio.com/en/consultancy",
                 subtitles: [
                     // { id: 1, subtitle: 'BI y Analytics', url: '/construccion', },
                     // { id: 2, subtitle: 'Procesos y flujos de trabajo', url: '/construccion', },
