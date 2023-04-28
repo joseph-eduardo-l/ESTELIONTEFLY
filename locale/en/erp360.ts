@@ -21,6 +21,7 @@ export default {
                     { id: 3, text: 'Integration with Fiscal Printer HKA80' },
                     { id: 4, text: 'Single company, one warehouse and a maximum of 25 daily transactions' },
                 ],
+                selection: 'Select the number of users:',
                 price: 'Free',
                 plan: 'Monthly',
                 learMoreText: 'Know more',
@@ -50,7 +51,8 @@ export default {
                     { id: 4, text: 'Unlimited companies' },
                     { id: 5, text: 'Users (variable number) Limit 20, in a ladder of 5.' },
                 ],
-                price: '$150',
+                selection: 'Select the number of users:',
+                price: 'From',
                 plan: 'Monthly',
                 learMoreText: 'Know more',
                 learnMoreList: [
@@ -87,7 +89,8 @@ export default {
                     { id: 4, text: 'Unlimited companies' },
                     { id: 5, text: 'Users (variable number) Limit 20, in a ladder of 5.' }
                 ],
-                price: '$250',
+                selection: 'Select the number of users:',
+                price: 'From',
                 plan: 'Monthly',
                 learMoreText: 'Know more',
                 learnMoreList: [

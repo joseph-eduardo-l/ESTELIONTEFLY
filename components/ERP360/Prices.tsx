@@ -10,10 +10,25 @@ import { en, es } from '@/locale';
 import { CheckIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
 
+interface typesPlansAndPrices {
+    id2: number
+    option_users1: string,
+    option_users2: string,
+    option_users3: string,
+    option_users4: string,
+    option_users5?: string
+}
+
+const plans_pricesProfessional: typesPlansAndPrices[] = [
+    { id2: 1, option_users1: '$50', option_users2: '$75', option_users3: '$100', option_users4: '$125' },
+]
+
+const plans_pricesBusiness: typesPlansAndPrices[] = [
+    { id2: 1, option_users1: '$150', option_users2: '$175', option_users3: '$200', option_users4: '$225', option_users5: '$250' }
+]
 /**
  * Component for Prices and Plans from Section in ERP360 page  
  */
-let almacen: number = 0
 export const Prices = () => {
 
     const { locale } = useRouter();
@@ -21,10 +36,12 @@ export const Prices = () => {
     const { global: { buttons }, pages: { erp360: { pricesAndPlans: { heading, cards } } } } = t;
 
     const { colorMode } = useColorMode();
+
     const [sliderValue, setSliderValue] = useState(0)
+    const [sliderValue2, setSliderValue2] = useState(0)
 
     return (
-        <Box as='section' maxW='1380px' w={{ base: '90%', lg: '80%', xl: '70%', '2xl': '90%' }} h='1750px' m='80px auto' mb={'40px'}>
+        <Box as='section' maxW='1380px' w={{ base: '90%', lg: '80%', xl: '70%', '2xl': '90%' }} h='1840px' m='80px auto' mb={'40px'}>
             {/* Heading of Component */}
             <Box>
                 <Heading as='h1' textAlign='center' fontSize={{ base: '24px', md: '32px' }} fontWeight='bold'>
@@ -59,10 +76,10 @@ export const Prices = () => {
                     },
                 }}
             >
-                {cards.map(({ id, title, advantagesList, price, plan, learMoreText, learnMoreList, iconCard, iconCardDarkMode, iconCardHover }) => {
+                {cards.map(({ id, title, advantagesList, selection, price, plan, learMoreText, learnMoreList, iconCard, iconCardDarkMode, iconCardHover }) => {
                     return (
                         <SwiperSlide className="swiper-slide" key={id}>
-                            <Flex alignItems='center' flexDirection='column' w={{ base: '300px', sm: '420px' }} h={'1660px'} position='relative' boxShadow='0px 0px 3px -2px black' borderRadius={'15px'} m={'30px auto'} p='35px' bgColor={'#f4fbfc40'}
+                            <Flex alignItems='center' flexDirection='column' w={{ base: '300px', sm: '420px' }} h={{base: '1830px', sm:'1790px'}} position='relative' boxShadow='0px 0px 3px -2px black' borderRadius={'15px'} m={'30px auto'} p='35px' bgColor={'#f4fbfc40'}
                                 transitionDuration='400ms'
                                 _hover={colorMode === 'light' ? { boxShadow: '0px 0px 20px -8px #a1a1a1' } : { bgColor: 'white.100', color: '#052743' }} className="cardPrice"
                             >
@@ -129,38 +146,85 @@ export const Prices = () => {
 
                                 {/* Plan and Price */}
 
-                                <Flex flexDirection={'column'} alignItems='center' w='100%' maxH='280px' h='280px' position={'relative'} >
-                                    <Heading fontFamily='heading' fontSize={{ base: '24px', md: '32px' }} textAlign='center'>
-                                        {price}
+                                <Flex flexDirection={'column'} alignItems='center' w='100%' maxH={{base: '320px', sm: '280px'}} h={{base: '320px', sm: '280px'}} position={'relative'} >
+                                    <Text mb='20px' opacity={id === 1 ? '0' : '1'}>
+                                        {selection}
+                                    </Text>
+
+                                    <Heading fontFamily='heading' fontSize={{ base: '24px', md: '32px' }} textAlign='center' display={'flex'}>
+                                        <Text>
+                                            {price}
+                                        </Text>
+                                        {id === 2
+                                            ?
+                                            plans_pricesProfessional.map(({ id2, option_users1, option_users2, option_users3, option_users4 }) => {
+                                                return (
+                                                    <Text key={id2} ml='5px'>
+                                                        {sliderValue === 0 ? option_users1
+                                                            : sliderValue === 20 ? option_users2
+                                                                : sliderValue === 40 ? option_users3
+                                                                    : option_users4
+                                                        }
+                                                    </Text>
+                                                )
+                                            })
+                                            : id === 3 ?
+                                                plans_pricesBusiness.map(({ id2, option_users1, option_users2, option_users3, option_users4, option_users5 }) => {
+                                                    return (
+                                                        <Text key={id2} ml='5px'>
+                                                            {sliderValue2 === 0 ? option_users1
+                                                                : sliderValue2 === 20 ? option_users2
+                                                                    : sliderValue2 === 40 ? option_users3
+                                                                        : sliderValue2 === 60 ? option_users4
+                                                                            : option_users5
+                                                            }
+                                                        </Text>
+                                                    )
+                                                })
+                                                :
+                                                null
+                                        }
                                     </Heading>
                                     <Text opacity={id === 1 ? '0' : '1'} mb='20px'>
                                         {plan}
                                     </Text>
 
-                                    <Text mb='20px' opacity={id === 1 ? '0' : '1'}>
-                                        Numero de usuarios
-                                    </Text>
-                                    
-                                    <Slider defaultValue={0} step={20} max={60} min={0} onChangeEnd={(val) => console.log(val)} w='95%' opacity={id === 1 ? '0' : '1' } 
-                                    onChange={(val => setSliderValue(val))}>
-                                        <SliderMark value={0} mt='1'  fontSize='sm'>
-                                            3 
+                                    <Slider defaultValue={0} step={20} max={id === 2 ? 60 : 80} min={0} onChangeEnd={(val) => console.log(val)} w='95%' opacity={id === 1 ? '0' : '1'}
+                                        onChange={id === 2 ? (val => setSliderValue(val)) : (val => setSliderValue2(val))}>
+
+                                        <SliderMark value={0} mt='3' ml={id === 2 ? '-1' : '-2'} fontSize='sm'>
+                                            {id === 2 ? 3 : 20}
                                         </SliderMark>
-                                        <SliderMark value={20} mt='1' ml={'-1'}  fontSize='sm'>
-                                            5 
+
+                                        <SliderMark value={20} mt='3' ml={id === 2 ? '-1' : '-2'} fontSize='sm'>
+                                            {id === 2 ? 5 : 25}
                                         </SliderMark>
-                                        <SliderMark value={40} mt='1' ml={'-1.5'}  fontSize='sm'>
-                                            10 
+
+                                        <SliderMark value={40} mt='3' ml={id === 2 ? '-7px' : '-2'} fontSize='sm'>
+                                            {id === 2 ? 10 : 30}
                                         </SliderMark>
-                                        <SliderMark value={60} mt='1' ml={'-1.5'}  fontSize='sm'>
-                                            15 
+
+                                        <SliderMark value={60} mt='3' ml={id === 2 ? '-1.5' : '-2'} fontSize='sm'>
+                                            {id === 2 ? 15 : 35}
                                         </SliderMark>
-                                        
-                                        <SliderTrack bg='#F0F0F0'>
-                                            <Box position='relative' right={10}/>
+
+                                        <SliderMark value={80} mt='3' ml={'-1.5'} fontSize='sm' display={id === 3 ? 'block' : 'none'}>
+                                            40
+                                        </SliderMark>
+
+                                        <SliderTrack bg={colorMode === 'light' ? '#F0F0F0' : 'white.100'} sx={{
+                                            '.cardPrice:hover &': {
+                                                transitionDuration: '300ms',
+                                                bg: '#E1E1E1'
+                                            }
+                                        }}>
+                                            <Box position='relative' right={10} />
                                             <SliderFilledTrack bg='green.400' />
                                         </SliderTrack>
-                                        <SliderThumb />
+                                        
+                                        <SliderThumb boxSize={6} _focusVisible={{ boxShadow: 'none' }}>
+                                            <Image src={'/images/icono-usuario.svg'} width={100} height={100} alt='iconUsers' />
+                                        </SliderThumb>
                                     </Slider>
                                     {/* {sliderValue} */}
                                     <Link href={'https://wa.me/message/EA3RA3DJC2NTA1'} position='absolute' bottom={'30px'} _hover={{ textDecoration: 'none' }}>
@@ -198,8 +262,6 @@ export const Prices = () => {
                         </SwiperSlide>
                     )
                 })}
-
-
 
             </Swiper>
         </Box >
