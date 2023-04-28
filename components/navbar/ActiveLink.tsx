@@ -14,7 +14,7 @@ export const ActiveLink = ({ url, title, color, darkcolor, locale2, condition }:
     return (
         <Link href={url} locale={locale2}>
             {condition == '1' ?
-                (<Text fontWeight='700' color={asPath == url ? color : '##FCF7F2'} _hover={{ color: color }} cursor='pointer'>
+                (<Text fontWeight='700' color={asPath == url ? color : '#FCF7F2'} _hover={{ color: color }} cursor='pointer'>
                     {title}
                 </Text>)
                 : condition == "2" ?
@@ -28,13 +28,16 @@ export const ActiveLink = ({ url, title, color, darkcolor, locale2, condition }:
                         _hover={{ color: darkcolor }}
                     >
                         {title}
-                    </Text>) : ((condition == "3") && (asPath != '/construccion')) ?
+                    </Text>) : ((condition == "3") && (title !== 'ERP 360')) ?
+
                         (<ListItem color={color}>
-                            <Text cursor='pointer' w='275px' color={asPath == url ? color : '#FCF7F2'} transitionDuration='.2s' _hover={{ fontWeight: '700', color: darkcolor }}>{title}</Text>
-                        </ListItem>) : ((condition == "3") && (asPath == '/construccion')) ?
+                            <Text cursor='pointer' w='275px' color={(asPath === url) ? color : '#FCF7F2'} transitionDuration='.2s' _hover={{ fontWeight: '700', color: darkcolor }}>{title}</Text>
+                        </ListItem>) : ((condition == "3") && (title === 'ERP 360')) ?
+
                             (<ListItem color={color}>
                                 <Text cursor='pointer' w='245px' transitionDuration='.2s' _hover={{ fontWeight: '700', color: darkcolor }}>{title}</Text>
                             </ListItem>) : locale == locale2 ?
+
                                 (<Button
                                     position={"relative"}
                                     zIndex={10}
@@ -49,6 +52,7 @@ export const ActiveLink = ({ url, title, color, darkcolor, locale2, condition }:
                                     _active={{ bgColor: '#053863' }}
                                     fontSize='18px'
                                 >{title}</Button>) :
+
                                 (<Button
                                     position={"relative"}
                                     zIndex={10}
