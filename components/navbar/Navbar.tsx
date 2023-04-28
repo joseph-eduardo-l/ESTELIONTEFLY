@@ -478,7 +478,7 @@ export const Navbar = () => {
             <Idiomas />
             <Button
               onClick={toggleColorMode}
-              variant="ghost"
+              variant='ghost'
               px="5px"
               _hover={{ bgColor: "none" }}
               _active={{ bgColor: "none" }}
