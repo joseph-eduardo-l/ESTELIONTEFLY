@@ -14,7 +14,7 @@ export default {
                     // { id: 2, subtitle: 'Procesos y flujos de trabajo', url: '/construccion', },
                     // { id: 3, subtitle: 'Gestión de Proyectos', url: '/construccion', },
                     // { id: 4, subtitle: 'Evaluación de Productos', url: '/construccion', },
-                    { id: 0, subtitle: 'Digital Transformation', url: 'https://www.estelio.com/en/construccion', }
+                    // { id: 0, subtitle: 'Digital Transformation', url: 'https://www.estelio.com/en/construccion', }
                 ],
             },
             empresariales: {
@@ -57,7 +57,7 @@ export default {
                     // { id: 3, subtitle: 'Programas Onboarding', url: '/construccion', },
                     // { id: 4, subtitle: 'Catálogo Formativo', url: '/construccion', },
                     // { id: 5, subtitle: 'Learning Analytics', url: '/construccion', },
-                    { id: 0, subtitle: 'Transformate.ai', url: 'https://www.estelio.com/en/construccion', },
+                    { id: 0, subtitle: 'Transformate.ai', url: 'https://www.transformate.ai/login/index.php', },
                 ],
             }
         },

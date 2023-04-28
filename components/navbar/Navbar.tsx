@@ -82,7 +82,7 @@ export const Navbar = () => {
                         </MenuButton>
                         <MenuList
                           position="absolute"
-                          bg='rgba(6,39,67,.9)'
+                          bg='rgba(6,39,67,.95)'
                           border="none"
                           w='530px'
                           h='380px'
@@ -109,7 +109,7 @@ export const Navbar = () => {
                               {products}
                             </Text>
                           </Flex>
-                          <Divider w='98%' m='0 auto' />
+                          <Divider w='90%' m='0 auto' color='#a1a1a1'/>
 
                           {/* Menu Areas */}
 
@@ -138,9 +138,9 @@ export const Navbar = () => {
                                 {/* Vinculo del Area  */}
                                 <Flex ml='20px' w='410px' justifyContent={'space-between'}>
                                   <ActiveLink url={consultoria?.url} title={consultoria?.title} darkcolor={"#D76D1D"} condition='2' />
-                                  <Text fontSize='30px' mt='-10px'>
+                                  {/* <Text fontSize='30px' mt='-10px'>
                                     <ChevronRightIcon />
-                                  </Text>
+                                  </Text> */}
                                 </Flex>
 
                               </Flex>
