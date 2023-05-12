@@ -11,12 +11,12 @@ export const Banner = () => {
     return (
         <Box as='section' position='relative' h='100%' w='100%'  >
             {viewport ?
-                <video height='100%' width="100%" autoPlay playsInline loop muted preload='auto' poster='/images/banners/posters/bannerEspaciosEstelio.webp' className={styles.video__Banners} >
-                    <source src='/images/banners/bannerEspaciosEstelio.webm' type="video/webm" />
-                    <source src='/images/banners/mp4/bannerEspaciosEstelio.mp4' type="video/mp4" />
+                <video height='100%' width="100%" autoPlay playsInline loop muted preload='auto' poster='/images/banners/posters/BannerERP360.webp' className={styles.video__Banners} >
+                    <source src='/images/banners/BannerERP360.webm' type="video/webm" />
+                    <source src='/images/banners/mp4/BannerERP360.mp4' type="video/mp4" />
                 </video>
                 :
-                <Box bgImage='/images/banners/mobile/bannerEspaciosEstelio.webp' w='100%' h='calc(100vh - 110px)' bgPosition='center' bgSize='cover' bgRepeat='no-repeat' />
+                <Box bgImage='/images/banners/mobile/BannerERP360.webp' w='100%' h='calc(100vh - 110px)' bgPosition='center' bgSize='cover' bgRepeat='no-repeat' />
             }
 
             <Flex m='0 auto' justifyContent='center' alignItems='center' position='absolute' w='100%' h='100%' top='0' overflow={{ base: 'hidden', sm: 'unset' }}>
