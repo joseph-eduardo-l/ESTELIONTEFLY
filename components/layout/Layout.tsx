@@ -5,7 +5,6 @@ import Head from "next/head";
 const ButtonWhatsapp = dynamic(() => import('../buttonWhatsapp/ButtonWhatsapp'))
 const Footer = dynamic(() => import("../footer/Footer"));
 
-import '../'
 
 type Props = {
   children?: React.ReactNode;
@@ -19,7 +18,7 @@ type Props = {
   urlTwo?: string
 };
 
-export const Layout: React.FC<Props> = ({ children, title, description, titleBlogOne, titleBlogTwo, dateBlogOne, dateBlogTwo, urlOne, urlTwo  }) => {
+export const Layout: React.FC<Props> = ({ children, title, description, titleBlogOne, titleBlogTwo, dateBlogOne, dateBlogTwo, urlOne, urlTwo }) => {
   return (
     <>
       <Head>
@@ -33,7 +32,7 @@ export const Layout: React.FC<Props> = ({ children, title, description, titleBlo
         <meta property="og:image:width" content='200' />
         <meta property="og:image:height" content='200' /> */}
       </Head>
-      
+
       <PhoneBar />
       <Navbar />
       <div>
