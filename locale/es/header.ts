@@ -62,7 +62,7 @@ export default {
                 ],
             }
         },
-        { id: 4, title: 'Blogs', url: 'https://www.estelio.com/blog'},
+        { id: 4, title: 'Blog', url: 'https://www.estelio.com/blog'},
         { id: 5, title: 'Contáctanos', url: '#vinculoContact' }
     ],
 }
