@@ -15,7 +15,7 @@ export default {
                     // { id: 2, subtitle: 'Procesos y flujos de trabajo', url: '/construccion', },
                     // { id: 3, subtitle: 'Gestión de Proyectos', url: '/construccion', },
                     // { id: 4, subtitle: 'Evaluación de Productos', url: '/construccion', },
-                    // { id: 0, subtitle: 'Transformación Digital', url: 'https://www.estelio.com/construccion', }
+                    { id: 0, subtitle: 'Transformación Digital', url: 'https://www.estelio.com/consultancy/digital-transformation', }
                 ],
             },
             empresariales: {
@@ -62,13 +62,7 @@ export default {
                 ],
             }
         },
-        {
-            id: 4, title: 'Insights', url: '',
-            noticias: [
-                { id: 0, title: 'Blog', url: 'https://www.estelio.com/blog' },
-                // {id: 1, title: 'Research', url: '/construccion'}
-            ]
-        },
+        { id: 4, title: 'Blog', url: 'https://www.estelio.com/blog'},
         { id: 5, title: 'Contáctanos', url: '#vinculoContact' }
     ],
 }

@@ -56,7 +56,7 @@ export const NavbarMobile = () => {
                     >
                         <Flex
                             flexDirection="column"
-                            fontFamily="Montserrat"
+                            fontFamily="heading"
                             fontSize="xl"
                             pt="15px"
                         >

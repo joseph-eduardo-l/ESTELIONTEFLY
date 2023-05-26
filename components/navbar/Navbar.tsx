@@ -58,14 +58,14 @@ export const Navbar = () => {
             color={colorMode === 'light' ? '#fff' : 'white.100'}
           >
             {vinculos.map(
-              ({ id, url, title, consultoria, empresariales, sistit, sistiot, learning, noticias }) => {
-                if ((id != 3) && (id != 4)) {
+              ({ id, url, title, consultoria, empresariales, sistit, sistiot, learning }) => {
+                if ((id != 3)) {
                   return (
                     <Box px="16px" py="8px" key={id} fontFamily='heading'>
                       <ActiveLink url={url} title={title} color='#5bfcf3' condition='1' />
                     </Box>
                   );
-                } else if (id == 3) {
+                } else if (id === 3) {
                   return (
                     <Box key={id}>
                       <Menu autoSelect={false} >
@@ -138,9 +138,9 @@ export const Navbar = () => {
                                 {/* Vinculo del Area  */}
                                 <Flex ml='20px' w='410px' justifyContent={'space-between'}>
                                   <ActiveLink url={consultoria?.url} title={consultoria?.title} darkcolor={"#D76D1D"} condition='2' />
-                                  {/* <Text fontSize='30px' mt='-10px'>
+                                  <Text fontSize='30px' mt='-10px'>
                                     <ChevronRightIcon />
-                                  </Text> */}
+                                  </Text>
                                 </Flex>
 
                               </Flex>
@@ -418,54 +418,6 @@ export const Navbar = () => {
                       </Menu>
                     </Box>
                   );
-                }
-                else if (id == 4) {
-                  return (
-
-                    <Menu autoSelect={false} key={id}>
-                      <MenuButton
-                        as={Button}
-                        rightIcon={<ChevronDownIcon width='2em' height='2em' />}
-                        bgColor={coloroscuro}
-                        _hover={{ color: "#F47C20" }}
-                        _active={{ bgColor: coloroscuro, color: "#F47C20" }}
-                        fontWeight="700"
-                        fontFamily='heading'
-                      >
-                        {title}
-                      </MenuButton>
-                      <MenuList
-                        position="absolute"
-                        bg='rgba(6,39,67,.9)'
-                        border="none"
-                        w="200px"
-                        left="-55px"
-                        p="10px"
-                        mt={6}
-                        fontFamily='heading'
-                      >
-                        {noticias?.map(({ id, title, url }) => {
-                          return (
-                            <Box key={id}>
-                              <MenuItem
-                                _focus={{ bgColor: "none" }}
-                                _active={{ bgColor: "none" }}
-                                display="flex"
-                                justifyContent="space-evenly"
-                                bg={'none'}
-                              >
-                                <Link href={url}>
-                                  <Text fontWeight='700' color={colorMode === 'light' ? '#fff' : 'white.100'} _hover={{ color: '#F47C20' }} >{title}</Text>
-                                </Link>
-                              </MenuItem>
-                              <MenuDivider display={id > 0 ? 'none' : 'block'} color="#5bfcf3" mb='none' />
-                            </Box>
-                          );
-                        })}
-
-                      </MenuList>
-                    </Menu>
-                  )
                 }
               }
             )}
