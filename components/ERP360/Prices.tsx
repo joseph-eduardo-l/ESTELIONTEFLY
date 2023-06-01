@@ -74,11 +74,11 @@ export const Prices = () => {
                     },
                 }}
             > */}
-            <Grid templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)' }} gap={{ base: 0, md: 3, lg: 4 }}>
+            <Grid templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)' }} gap={{ base: 0, md: 3, lg: 8 }}>
                 {cards.map(({ id, title, advantagesList, selection, price, plan, learMoreText, learnMoreList, iconCard, iconCardDarkMode, iconCardHover }) => {
                     return (
                         // <SwiperSlide className="swiper-slide" key={id}>
-                        <GridItem key={id} alignItems='center' flexDirection='column' w={'100%'} position='relative' boxShadow='0px 0px 3px -2px black' borderRadius={'15px'} m={'30px auto'} p={{ base: '35px', md: '20px' }} bgColor={'#f4fbfc40'} h={'95%'}
+                        <GridItem key={id} alignItems='center' flexDirection='column' w={'100%'} position='relative' boxShadow='0px 0px 3px -2px black' borderRadius={'15px'} m={'30px auto'} p={{ base: '35px', md: '25px', lg: '40px' }} bgColor={'#f4fbfc40'} h={'95%'}
                             transitionDuration='400ms' display='flex'
                             _hover={colorMode === 'light' ? { boxShadow: '0px 0px 20px -8px #a1a1a1' } : { bgColor: 'white.100', color: '#052743' }} className="cardPrice"
                         >
@@ -186,7 +186,7 @@ export const Prices = () => {
                                 </Slider>
 
                                 <Heading fontFamily='heading' fontSize={id === 1 ? { base: '34px', md: '38px' } : { base: '24px', md: '30px', lg: '32px' }} textAlign='center' display={'flex'} mt='40px'>
-                                    <Text mt={id === 1 ? '-50px' : '0'} mb={id === 1 ? '50px' : '0'}
+                                    <Text mt={id === 1 ? {base: '-50px', md: '-120px'} : '0'} mb={id === 1 ? '50px' : '0'}
                                     sx={{
                                         '.cardPrice:hover &': {
                                             transformScale: '1.1'
