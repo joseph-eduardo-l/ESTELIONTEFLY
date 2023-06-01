@@ -57,3 +57,15 @@
   background-color: #f4fbfc40 !important;
   backdrop-filter: blur(10px) !important;
 }
+
+@keyframes rodar{
+  0% {
+    margin-left: 100%;
+    width: 300%
+  }
+
+  100% {
+    margin-left: 0%;
+    width: 100%;
+  }
+}

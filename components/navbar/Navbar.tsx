@@ -44,7 +44,7 @@ export const Navbar = () => {
               :
               <Box cursor='pointer' m='0 auto' display={{ base: "flex", sm: "none" }}>
                 <Link href='/'>
-                  <Image width="70px" height='70px' src="/images/icono-1.webp" className="icono-Nabvar" alt="IconoEstelio" />
+                  <Image width="70px" height='70px' src="/images/icono-1.webp" className="icono-Nabvar" alt="IconoEstelio" style={{padding: '10px'}} />
                 </Link>
               </Box>
             }
