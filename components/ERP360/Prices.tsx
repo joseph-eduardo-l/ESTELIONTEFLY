@@ -1,8 +1,5 @@
-import { Box, Button, Flex, Heading, List, ListIcon, ListItem, Text, UnorderedList, useColorMode, Divider, Link, Slider, SliderTrack, SliderFilledTrack, SliderThumb, SliderMark, GridItem, Grid } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, List, ListIcon, ListItem, Text, UnorderedList, useColorMode, Divider, Link, Slider, SliderTrack, SliderFilledTrack, SliderThumb, SliderMark, GridItem, Grid, useMediaQuery } from '@chakra-ui/react';
 import Image from "next/image";
-import 'swiper/css';
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 import { useRouter } from 'next/router';
 import { en, es } from '@/locale';
 import { CheckIcon } from '@chakra-ui/icons';
@@ -38,8 +35,9 @@ export const Prices = () => {
     const [sliderValue, setSliderValue] = useState(0)
     const [sliderValue2, setSliderValue2] = useState(0)
 
+
     return (
-        <Box as='section' maxW={{base: 'auto', md: '1380px'}} w={'90%'} m='80px auto'>
+        <Box as='section' maxW={{ base: 'auto', md: '1380px' }} w={'90%'} m='80px auto'>
             {/* Heading of Component */}
             <Box>
                 <Heading as='h1' textAlign='center' fontSize={{ base: '24px', md: '32px' }} fontWeight='bold'>
@@ -48,34 +46,8 @@ export const Prices = () => {
                 <Divider m="15px auto 35px" w="120px" h="6px" opacity=".8" borderStyle="none" bgColor={colorMode === 'light' ? "odoo" : '#fff'} borderRadius='10px' />
             </Box>
 
-            {/* <Swiper
-                className="swiper-wrapper carouselManage"
-                modules={[Pagination, Navigation, Autoplay]}
-                slidesPerView={1}
-                spaceBetween={40}
-                grabCursor={true}
-                autoplay={{
-                    delay: 5000,
-                    disableOnInteraction: true,
-                }}
-                navigation
-                pagination={{ clickable: true, dynamicBullets: true }}
-                breakpoints={{
-                    0: {
-                        slidesPerView: 1,
-                        spaceBetween: 0
-                    },
-                    1120: {
-                        slidesPerView: 2,
-                        spaceBetween: 10
-                    },
-                    1536: {
-                        slidesPerView: 3,
-                    },
-                }}
-            > */}
             <Grid templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)' }} gap={{ base: 0, md: 3, lg: 8 }}>
-                {cards.map(({ id, title, advantagesList, selection, price, plan, learMoreText, learnMoreList, iconCard, iconCardDarkMode, iconCardHover }) => {
+                {cards.map(({ id, title, advantagesList, selection, price, plan, iconCard, iconCardDarkMode, iconCardHover }) => {
                     return (
                         // <SwiperSlide className="swiper-slide" key={id}>
                         <GridItem key={id} alignItems='center' flexDirection='column' w={'100%'} position='relative' boxShadow='0px 0px 3px -2px black' borderRadius={'15px'} m={'30px auto'} p={{ base: '35px', md: '25px', lg: '40px' }} bgColor={'#f4fbfc40'} h={'95%'}
@@ -132,7 +104,7 @@ export const Prices = () => {
                                                 <ListIcon fontSize={'14px'} mt='8px'>
                                                     <CheckIcon boxSize={3} />
                                                 </ListIcon>
-                                                <Text fontSize={{base: '14px', lg: '16px'}}>
+                                                <Text fontSize={{ base: '14px', lg: '16px' }}>
                                                     {text}
                                                 </Text>
                                             </ListItem>
@@ -186,12 +158,12 @@ export const Prices = () => {
                                 </Slider>
 
                                 <Heading fontFamily='heading' fontSize={id === 1 ? { base: '34px', md: '38px' } : { base: '24px', md: '30px', lg: '32px' }} textAlign='center' display={'flex'} mt='40px'>
-                                    <Text mt={id === 1 ? {base: '-50px', md: '-120px'} : '0'} mb={id === 1 ? '50px' : '0'}
-                                    sx={{
-                                        '.cardPrice:hover &': {
-                                            transformScale: '1.1'
-                                        }
-                                    }}
+                                    <Text mt={id === 1 ? { base: '-50px', md: '-120px' } : '0'} mb={id === 1 ? '50px' : '0'}
+                                        sx={{
+                                            '.cardPrice:hover &': {
+                                                transformScale: '1.1'
+                                            }
+                                        }}
                                     >
                                         {price}
                                     </Text>
@@ -236,15 +208,10 @@ export const Prices = () => {
                                     </Button>
                                 </Link>
                             </Flex>
-
-
                         </GridItem>
-                        // </SwiperSlide>
                     )
                 })}
             </Grid>
-
-            {/* </Swiper> */}
         </Box >
     )
 }
