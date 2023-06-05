@@ -92,6 +92,7 @@ export default {
             { id: 25, text: 'Human resources module' },
             { id: 26, text: 'Accounting module' },
         ],
+        knowmore: 'Know more',
         titles: [
             {id: 1, heading: 'Entrepreneur'},
             {id: 2, heading: 'Professional'},
