@@ -2,12 +2,13 @@ import { en, es } from "@/locale";
 import { CheckIcon } from "@chakra-ui/icons";
 import { Box, Flex, ListItem, Text, UnorderedList, useMediaQuery, useColorMode } from '@chakra-ui/react';
 import { useRouter } from "next/router";
+import { CustomButton } from "../utils";
 
 export const LearnMorePrices = () => {
 
     const { locale } = useRouter();
     const t = locale === "en" ? en : es;
-    const { global: { buttons }, pages: { erp360: { pricesAndPlans: { titles, learnMoreList } } } } = t;
+    const { global: { buttons }, pages: { erp360: { pricesAndPlans: { knowmore, titles, learnMoreList } } } } = t;
 
     const { colorMode } = useColorMode();
 
@@ -15,8 +16,8 @@ export const LearnMorePrices = () => {
 
     return (
         <Box display={{ base: 'none', lg: 'block' }}>
-            <Flex w='100%' h='60px' pt='10px' justifyContent='space-around' boxShadow='0px 10px 25px -15px rgba(0, 0, 0, 0.20)' position={'sticky'} top={'68px'} transition='1s' bgColor={ colorMode === 'light' ? '#fff' : '#a1a1a1'} zIndex='10'>
-                <Text>Conoce mas</Text>
+            <Flex w='100%' h='60px' pt='10px' justifyContent='space-around' boxShadow='0px 10px 25px -15px rgba(0, 0, 0, 0.20)' position={'sticky'} top={'68px'} transition='1s' bgColor={colorMode === 'light' ? '#fff' : '#a1a1a1'} zIndex='10'>
+                <Text>{knowmore}</Text>
                 <Flex gap={6} maxW='644px'>
 
                     {titles.map(({ id, heading }) => {
@@ -35,17 +36,30 @@ export const LearnMorePrices = () => {
             {
                 learnMoreList.map(({ id, text }) => {
                     return (
-                        <Flex w='100%' key={id} justifyContent={'space-around'} mt={id === 1 ? '10px' : '0px'}>
-                            <UnorderedList w={pixels1080 ? '360px' : '280px'} mb='10px'>
-                                <ListItem fontSize={{ base: '14px', md: '16px' }}>{text}</ListItem>
-                            </UnorderedList>
-                            <Flex w='644px' maxW='644px' justifyContent={'space-around'} ml={pixels1080 ? '-280px' : '-200px'} color='odoo' fontSize={'24px'}>
-                                <CheckIcon visibility={id <= 10 ? 'visible' : 'hidden'} />
-                                <CheckIcon visibility={id <= 18 ? 'visible' : 'hidden'} />
-                                <CheckIcon />
-                                
+                        <Box key={id} position='relative'>
+
+                            <Flex w='100%' justifyContent={'space-around'} mt={id === 1 ? '10px' : '0px'}>
+                                <UnorderedList w={pixels1080 ? '360px' : '280px'} mb='10px'>
+                                    <ListItem fontSize={{ base: '14px', md: '16px' }}>{text}</ListItem>
+                                </UnorderedList>
+                                <Flex w='644px' maxW='644px' justifyContent={'space-around'} ml={pixels1080 ? '-280px' : '-200px'} color='odoo' fontSize={'24px'}>
+                                    {id !== 26 ? (
+                                        <>
+                                            <CheckIcon visibility={id <= 10 ? 'visible' : 'hidden'} />
+                                            <CheckIcon visibility={id <= 18 ? 'visible' : 'hidden'} />
+                                            <CheckIcon />
+                                        </>
+                                    ) :
+                                        <>
+                                            <CustomButton bgColor="green.400" bgHover="odoo" text={buttons.button01} margin='40px auto' padding={locale === 'en' ? '60px' : '40px'} />
+                                            <CustomButton bgColor="green.400" bgHover="odoo" text={buttons.button01} margin='40px auto' padding={locale === 'en' ? '60px' : '40px'} />
+                                            <CustomButton bgColor="green.400" bgHover="odoo" text={buttons.button01} margin='40px auto' padding={locale === 'en' ? '60px' : '40px'} />
+                                        </>
+                                    }
+
+                                </Flex>
                             </Flex>
-                        </Flex>
+                        </Box>
                     )
                 })
             }

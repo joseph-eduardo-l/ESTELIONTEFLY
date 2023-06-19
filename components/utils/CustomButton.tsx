@@ -14,11 +14,12 @@ type Custom = {
     text: string,
     margin?: string | object,
     link?: string
+    padding?: string
 }
 
-export const CustomButton = ({ bgColor, color = "#fff", bgHover, text, margin = "20px auto", link = "#" }: Custom) => {
+export const CustomButton = ({ bgColor, color = "#fff", bgHover, text, margin = "20px auto", link = "#", padding = '24px' }: Custom) => {
     return (
-        <Flex justifyContent='center' alignItems='center'>
+        <Flex justifyContent='center' alignItems='center' >
             <Button
                 className={montserrat.className}
                 bgColor={bgColor}
@@ -28,6 +29,7 @@ export const CustomButton = ({ bgColor, color = "#fff", bgHover, text, margin = 
                 m={margin}
                 fontSize={{ base: "15px", md: "18px" }}
                 transition='.3s'
+                px={padding}
             >
                 <Link href={link}>
                     {text}
