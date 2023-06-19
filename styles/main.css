@@ -281,3 +281,8 @@
 .mauticForm-textColor {
   color: #fcf7f2;
 }
+
+.slide {
+  padding-left: 15px;
+  padding-right: 15px;
+}

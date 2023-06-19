@@ -94,9 +94,9 @@ export default {
         ],
         knowmore: 'Know more',
         titles: [
-            {id: 1, heading: 'Entrepreneur'},
-            {id: 2, heading: 'Professional'},
-            {id: 3, heading: 'Business'},
+            { id: 1, heading: 'Entrepreneur' },
+            { id: 2, heading: 'Professional' },
+            { id: 3, heading: 'Business' },
         ]
     },
     manage: {
@@ -119,6 +119,13 @@ export default {
             { id: 2, heading: "Accessible", text: "Login from anywhere with an internet connection.", icon: "/images/erp360/accesible.svg" },
             { id: 3, heading: "Easy", text: "Intuitive and easy-to-use platform; extensive technical knowledge is not necessary.", icon: "/images/erp360/facil.svg" },
             { id: 4, heading: "Scalable", text: "Start with a free plan today and upgrade to professional or enterprise plans as needed", icon: "/images/erp360/escalable.svg" },
+        ]
+    },
+    testimonials: {
+        heading: 'Testimonials',
+        testimonialsMap: [
+            { id: 0, testimony: 'One of the most notable characteristics of Estelio is its high execution capacity, quick understanding of our needs and requirements, they have provided us with a response in a very short time and have resolved the situation effectively.', nameAuthor: 'La Wawa Venezuela 2021 C. A.', image: 'https://website-estelio.s3.amazonaws.com/images/logos/lawawa.webp', imageDark: '/images/casosdeExito/laWawaDark.webp' },
+            { id: 1, testimony: 'We are pleased to express our complete satisfaction with the business relationship we have maintained with Corporación Estelio. It has not impressed with its ability to adapt to our needs and requirements, offering us fast and effective solutions.', nameAuthor: 'Kanji Sushi, C.A.', image: 'https://website-estelio.s3.amazonaws.com/images/logos/kanji.webp', imageDark: '/images/casosdeExito/kanjiDark.webp' }
         ]
     },
     questions: {

@@ -15,12 +15,12 @@ export const LearnMorePricesMobile = () => {
     return (
         <Box display={{base: 'block', lg: 'none'}}>
             <Flex w='100%' h='75px' pt='10px' justifyContent='space-around' boxShadow='0px 10px 25px -15px rgba(0, 0, 0, 0.20)' position={'sticky'} top={'68px'} transition='1s' bgColor={ colorMode === 'light' ? '#fff' : '#a1a1a1'} zIndex='10'>
-                <Flex w="90%" justifyContent='center'>
+                <Flex w="80%" justifyContent='center'>
                         {titles.map(({ id, heading }) => {
                             return (
                                 <Flex key={id} ml={id === 1 ? {base: '0px', sm: '-20px', md: '-40px'} : '0px'} fontSize={{ base: '14px', sm: '16px', md: '18px' }} flexDirection='column' textAlign={'center'} px={{base: '12px',sm: '28px', md: '34px'}}>
                                     <span>Plan</span>
-                                    <Text color='odoo' mt='-3px' fontWeight='700' fontSize={{ base: '16px', sm: '18px', md: '20px' }}>
+                                    <Text color='odoo' mt='-3px' fontWeight='700' fontSize={{ base: '14px', sm: '17px', md: '20px' }}>
                                         {heading}
                                     </Text>
                                 </Flex>
