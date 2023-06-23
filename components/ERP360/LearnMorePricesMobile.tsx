@@ -18,7 +18,7 @@ export const LearnMorePricesMobile = () => {
                 <Flex w="80%" justifyContent='center'>
                         {titles.map(({ id, heading }) => {
                             return (
-                                <Flex key={id} ml={id === 1 ? {base: '0px', sm: '-20px', md: '-40px'} : '0px'} fontSize={{ base: '14px', sm: '16px', md: '18px' }} flexDirection='column' textAlign={'center'} px={{base: '12px',sm: '28px', md: '34px'}}>
+                                <Flex key={id} ml={id === 1 ? {base: '0px', sm: '-20px', md: '-40px'} : '0px'} fontSize={{ base: '14px', sm: '16px', md: '18px' }} flexDirection='column' textAlign={'center'} px={{base: '12px',sm: '24px', md: '34px'}}>
                                     <span>Plan</span>
                                     <Text color='odoo' mt='-3px' fontWeight='700' fontSize={{ base: '14px', sm: '17px', md: '20px' }}>
                                         {heading}
