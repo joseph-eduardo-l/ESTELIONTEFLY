@@ -11,7 +11,7 @@ export const Questions = () => {
     const t = locale === "en" ? en : es;
     const { global: { buttons }, pages: { erp360: { questions: { heading, accordion } } } } = t;
     return (
-        <Box as='section' m="150px auto 80px" width="90%" position='relative' zIndex='5'>
+        <Box as='section' m="80px auto" width="90%" position='relative' zIndex='5'>
             <Heading
                 as='h2'
                 textAlign="center"
