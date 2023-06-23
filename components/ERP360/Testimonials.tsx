@@ -68,8 +68,8 @@ export const Testimonials = () => {
             <Grid templateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(2, 1fr)' }} gap={8}>
                 {testimonialsMap.map(({ id, testimony, nameAuthor, image, imageDark }) => {
                     return (
-                        <GridItem key={id} w='100%' h='100%' boxShadow='6px 6px 20px 0px rgba(0, 0, 0, 0.08)' borderRadius='16px'>
-                            <Flex p='18px' bg={colorMode === 'light' ? '#fff' : 'gray'} borderRadius={'10px'} flexDirection={{ base: 'column', md: 'row' }} justifyContent='center' alignItems={'center'}>
+                        <GridItem key={id} w='100%' boxShadow='6px 6px 20px 0px rgba(0, 0, 0, 0.08)' borderRadius='16px'>
+                            <Flex p='18px' bg={colorMode === 'light' ? '#fff' : 'gray'} borderRadius={'10px'} flexDirection={{ base: 'column', md: 'row' }} justifyContent='center' alignItems={'center'} h='100%'>
                                 <Img w='100px' h='100px' src={colorMode === 'light' ? image : imageDark} />
                                 <Flex ml='20px' flexDirection='column' mt='20px'>
                                     <Text fontSize={{ base: '13px', md: '14px' }} fontStyle={'italic'}>
