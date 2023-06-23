@@ -127,7 +127,7 @@ export default {
         testimonialsMap: [
             { id: 0, testimony: 'Una de las características más destacables de Estelio es su alta capacidad de ejecución, rápido entendimiento de nuestras necesidades y requerimientos, nos han brindado una respuesta en un tiempo muy corto y han resuelto la situación de manera efectiva.', nameAuthor: 'La Wawa Venezuela 2021 C. A.', image: 'https://website-estelio.s3.amazonaws.com/images/logos/lawawa.webp', imageDark: '/images/casosdeExito/laWawaDark.webp' },
 
-            { id: 1, testimony: 'Nos complace expresar nuestra entera satisfacción con la relación comercial que hemos mantenido con Corporación Estelio. No ha impresionado por su capacidad de adaptarse a nuestras necesidades y requerimientos, ofreciéndonos soluciones rápidas y efectivas.', nameAuthor: 'Kanji Sushi, C.A.', image: 'https://website-estelio.s3.amazonaws.com/images/logos/kanji.webp', imageDark: '/images/casosdeExito/kanjiDark.webp' }
+            { id: 1, testimony: 'Nos complace expresar nuestra entera satisfacción con la relación comercial que hemos mantenido con Corporación Estelio. Nos ha impresionado por su capacidad de adaptarse a nuestras necesidades y requerimientos, ofreciéndonos soluciones rápidas y efectivas.', nameAuthor: 'Kanji Sushi, C.A.', image: 'https://website-estelio.s3.amazonaws.com/images/logos/kanji.webp', imageDark: '/images/casosdeExito/kanjiDark.webp' }
         ]
     },
     questions: {
