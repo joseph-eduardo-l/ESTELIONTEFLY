@@ -36,7 +36,11 @@ export const theme = extendTheme({
             700: "#052743",
         },
         orange: "#F97C0B",
-        odoo: "#714B67",
+        odoo: {
+            200: "#714B67",
+            400: "#492241",
+            700: "#59274b"
+        } ,
         gray: "#666C78",
         white: { 100: "#FCF7F2" },
     },

@@ -25,7 +25,7 @@ export const ContactERP360En = () => {
                     </Box>
 
                     <Flex
-                        m={{ base: "20px", md: "40px 0 0 40px" }}
+                        m={{ base: "20px", md: "40px 0 0 10px" }}
                         direction={{ base: "column", md: "row" }}
                         alignItems="center"
                         justifyContent="center"
@@ -41,9 +41,9 @@ export const ContactERP360En = () => {
                                 {text02}
                             </Heading>
 
-                            <Divider m={{ base: "15px auto 30px", md: "15px auto 0px" }} w="120px" h="5px" bgColor={colorMode === 'light' ? "odoo" : '#fff'} opacity={colorMode === 'dark' ? "0.7" : 0.9} borderRadius='10px' />
+                            <Divider m={{ base: "15px auto 30px", md: "15px auto 0px" }} w="120px" h="5px" bgColor={colorMode === 'light' ? "odoo.400" : '#fff'} opacity={colorMode === 'dark' ? "0.7" : 0.9} borderRadius='10px' />
                         </Box>
-                        <NovaImage loading='lazy' h='110px' src='/images/nova.webp' alt='nova' className="nova" />
+                        {/* <NovaImage loading='lazy' h='110px' src='/images/nova.webp' alt='nova' className="nova" /> */}
                     </Flex>
                 </Box>
                 {/* Heading */}
@@ -60,10 +60,10 @@ export const ContactERP360En = () => {
                     h={{ base: "400px", md: "450px" }}
                 >
                     <FormControl
-                        className={bgInput}
+                        className={colorMode === 'light' ? bgInput : ''}
                         p={{ base: "40px 20px", md: "50px" }}
                         fontFamily="'Exo 2'"
-                        bgColor="white"
+                        bgColor="#f4fbfc20"
                         borderRadius="20px"
                     >
 

@@ -13,7 +13,7 @@ export const Solution = () => {
     return (
         <Box as='main' maxW='1280px' width='90%' m='50px auto 0px' >
             <Box>
-                <Heading as='h1' textAlign='center' fontSize={{ base: '24px', md: '32px' }} fontWeight='bold' color={colorMode === 'light' ? 'odoo' : 'white.100'}>
+                <Heading as='h1' textAlign='center' fontSize={{ base: '24px', md: '32px' }} fontWeight='bold' color={colorMode === 'light' ? 'odoo.400' : 'white.100'}>
                     {solution.heading}
                 </Heading>
 
@@ -30,7 +30,7 @@ export const Solution = () => {
                     </span>
                 </Heading>
 
-                <Divider m="15px auto 0px" w="120px" h="6px" opacity={colorMode === 'dark' ? "0.7" : 0.9} borderStyle="none" bgColor={colorMode === 'light' ? "odoo" : '#fff'} borderRadius='10px' />
+                <Divider m="15px auto 0px" w="120px" h="6px" opacity={colorMode === 'dark' ? "0.7" : 0.9} borderStyle="none" bgColor={colorMode === 'light' ? "odoo.400" : '#fff'} borderRadius='10px' />
             </Box>
 
             <Grid templateColumns={{ base: '1fr', lg: '1fr 1fr' }} gap="20px" m='40px auto' maxW="1000px">
@@ -49,7 +49,7 @@ export const Solution = () => {
                         {solution.text}
                     </Text>
 
-                    <CustomButton bgColor="green.400" bgHover="odoo" color="white" text={buttons.button02} link="#vinculoContact" />
+                    <CustomButton bgColor="green.400" bgHover="odoo.400" color="white" text={buttons.button02} link="#vinculoContact" />
                 </GridItem>
             </Grid>
         </Box>

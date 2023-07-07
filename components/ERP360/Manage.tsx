@@ -22,7 +22,7 @@ export const Manage = () => {
                     <span style={{ color: colorMode === 'light' ? '#23BBB3' : 'white.100', display: "inline" }}>{headingSpan}</span>
                 </Heading>
 
-                <Divider m="15px auto 0px" w="120px" h="6px" opacity={colorMode === 'dark' ? "0.7" : 0.9} borderStyle="none" bgColor='odoo' borderRadius='10px' />
+                <Divider m="15px auto 0px" w="120px" h="6px" opacity={colorMode === 'dark' ? "0.7" : 0.9} borderStyle="none" bgColor='odoo.400' borderRadius='10px' />
 
                 <Text fontSize={{ base: "16px", md: "18px" }} textAlign="center" m="20px auto 0" color='blue.700'>
                     {subHeading}
