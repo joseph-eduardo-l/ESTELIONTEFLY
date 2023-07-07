@@ -36,7 +36,7 @@ export default {
                     { id: 2, text: 'Intermediate monitoring reports and dashboard' },
                     { id: 3, text: 'Integration with Fiscal Printer HKA80 and commands' },
                     { id: 4, text: 'Unlimited companies' },
-                    { id: 5, text: 'From 3 users to a maximum of 15' },
+                    { id: 5, text: 'Users (variable number) Limit 20, in ladder of 5' },
                 ],
                 selection: 'Select the number of users:',
                 price: 'From',
@@ -53,7 +53,7 @@ export default {
                     { id: 2, text: 'Advanced reports, dashboard, analytics and automated notifications' },
                     { id: 3, text: 'Integration with Fiscal Printer HKA80, command and other APIs' },
                     { id: 4, text: 'Unlimited companies' },
-                    { id: 5, text: 'From 20 users onwards' }
+                    { id: 5, text: 'Users (variable number) Limit 20, in ladder of 5' }
                 ],
                 selection: 'Select the number of users:',
                 price: 'From',

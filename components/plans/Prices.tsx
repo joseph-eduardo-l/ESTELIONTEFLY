@@ -21,9 +21,11 @@ const plans_pricesProfessional: typesPlansAndPrices[] = [
 const plans_pricesBusiness: typesPlansAndPrices[] = [
     { id2: 1, option_users1: '$150', option_users2: '$175', option_users3: '$200', option_users4: '$225', option_users5: '$250' }
 ]
+
 /**
- * Component for Prices and Plans from Section in ERP360 page  
+ * Component for Prices and Plans from Section in  Plans page  
  */
+
 export const Prices = () => {
 
     const { locale } = useRouter();
@@ -43,18 +45,17 @@ export const Prices = () => {
                 <Heading as='h1' textAlign='center' fontSize={{ base: '24px', md: '32px' }} fontWeight='bold'>
                     {heading}
                 </Heading>
-                <Divider m="15px auto 35px" w="120px" h="6px" opacity=".8" borderStyle="none" bgColor={colorMode === 'light' ? "odoo" : '#fff'} borderRadius='10px' />
+                <Divider m="15px auto 35px" w="120px" h="6px" opacity=".8" borderStyle="none" bgColor={colorMode === 'light' ? "odoo.400" : '#fff'} borderRadius='10px' />
             </Box>
 
             <Grid templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)' }} gap={{ base: 0, md: 3, lg: 8 }}>
                 {cards.map(({ id, title, advantagesList, selection, price, plan, iconCard, iconCardDarkMode, iconCardHover }) => {
                     return (
                         // <SwiperSlide className="swiper-slide" key={id}>
-                        <GridItem key={id} alignItems='center' flexDirection='column' w={'100%'} position='relative' boxShadow='0px 0px 3px -2px black' borderRadius={'15px'} m={'30px auto'} p={{ base: '35px', md: '25px', lg: '40px' }} bgColor={'#f4fbfc40'} h={'95%'}
+                        <GridItem key={id} alignItems='center' flexDirection='column' w={'100%'} position='relative' boxShadow='0px 0px 3px -2px black' borderRadius={'15px'} m={'30px auto'} p={{ base: '35px', md: '25px', lg: '40px' }} bgColor={'#f4fbfc20'} h={'95%'}
                             transitionDuration='400ms' display='flex'
                             _hover={colorMode === 'light' ? { boxShadow: '0px 0px 20px -8px #a1a1a1' } : { bgColor: 'white.100', color: '#052743' }} className="cardPrice"
                         >
-
                             {/* Icons Cards */}
 
                             {/* Image Light Mode */}
@@ -91,7 +92,7 @@ export const Prices = () => {
                             <Box w='100%' mt='30px' h={'65%'}>
                                 <Text textAlign='center' fontSize={{ base: '24px', md: '28px', lg: '32px' }} fontFamily='heading' sx={{
                                     '.cardPrice:hover &': {
-                                        color: 'odoo',
+                                        color: 'odoo.400',
                                     }
                                 }}>
                                     {title}
@@ -113,7 +114,7 @@ export const Prices = () => {
                                 </List>
                             </Box>
 
-                            {/* Plan and Price */}
+                            {/* Plans and Prices */}
                             <Flex flexDirection={'column'} alignItems='center' w='100%' position={'relative'} >
                                 <Text mb='20px' opacity={id === 1 ? '0' : '1'} mt={{ base: '10px', md: '0px' }}>
                                     {selection}
@@ -203,7 +204,7 @@ export const Prices = () => {
                                 </Text>
 
                                 <Link href={'https://wa.me/message/EA3RA3DJC2NTA1'} _hover={{ textDecoration: 'none' }}>
-                                    <Button size='lg' bgColor='green.400' color={colorMode === 'light' ? '#fff' : 'white.100'} _hover={{ bgColor: 'odoo' }}>
+                                    <Button size='lg' bgColor='green.400' color={colorMode === 'light' ? '#fff' : 'white.100'} _hover={{ bgColor: 'odoo.400' }}>
                                         {buttons.button01}
                                     </Button>
                                 </Link>
