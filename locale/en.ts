@@ -1,3 +1,4 @@
+import head from './en/head'
 import header from './en/header'
 import footer from './en/footer'
 import erp360 from './en/erp360'
@@ -6,6 +7,7 @@ import contact from './en/contact'
 
 export const en = {
     global: {
+        head,
         header,
         footer,
         buttons,
