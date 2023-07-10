@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { Box } from "@chakra-ui/react"
-import { Banner, Implement, Manage, Questions, Solution, Prices, LearnMorePrices, LearnMorePricesMobile, Testimonials } from "./"
+import { Banner, Implement, Manage, PricesERP, Questions, Solution, Testimonials } from "./"
 import { ContactERP360, ContactERP360En } from "../Contact";
 
 export const Erp360 = () => {
@@ -13,9 +13,7 @@ export const Erp360 = () => {
                 <Manage />
                 <Implement />
             </Box>
-            <Prices />
-            <LearnMorePrices />
-            <LearnMorePricesMobile />
+            <PricesERP />
             <Testimonials />
             <Questions />
             {locale === 'en' ? <ContactERP360En /> : <ContactERP360 />}

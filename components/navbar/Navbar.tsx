@@ -1,27 +1,50 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { ChevronDownIcon, MoonIcon, SunIcon, ChevronRightIcon } from "@chakra-ui/icons";
-import { Box, Button, Divider, Flex, List, Menu, MenuButton, MenuDivider, MenuItem, MenuList, Text, UnorderedList, useColorMode, useMediaQuery, Image, ListItem } from '@chakra-ui/react';
+import {
+  ChevronDownIcon,
+  MoonIcon,
+  SunIcon,
+  ChevronRightIcon,
+} from "@chakra-ui/icons";
+import {
+  Box,
+  Button,
+  Divider,
+  Flex,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  Text,
+  UnorderedList,
+  useColorMode,
+  useMediaQuery,
+  Image,
+} from "@chakra-ui/react";
 import { ActiveLink } from "./ActiveLink";
-import  Idiomas  from "./Idiomas";
-import { en, es } from '../../locale';
+import Idiomas from "./Idiomas";
+import { en, es } from "../../locale";
 import { NavbarMobile } from "./NavBarMobile";
-
+import { FaInstagram } from "react-icons/fa";
 
 export const Navbar = () => {
-  const [logo] = useMediaQuery('(min-width: 480px)')
+  const [logo] = useMediaQuery("(min-width: 480px)");
   const { colorMode, toggleColorMode } = useColorMode();
-  const coloroscuro = "#052743";
+  const coloroscuro = "odoo";
   const { locale } = useRouter();
   const t = locale === "en" ? en : es;
-  const { global: { header: { area, products, vinculos } } } = t;
+  const {
+    global: {
+      header: { area, products, vinculos },
+    },
+  } = t;
 
   return (
     <>
       <Box
         as="header"
         w="full"
-        bgColor="#052743"
+        bgColor="#492241"
         position="sticky"
         top="0px"
         zIndex="100"
@@ -30,136 +53,194 @@ export const Navbar = () => {
           justifyContent="space-between"
           maxW="1320px"
           w="95%"
-          m="auto"
+          m="0 auto"
+          py="10px"
           alignItems="center"
-
         >
           <Box>
-            {logo ?
-              <Box cursor='pointer'>
-                <Link href='/'>
-                  <Image width='199px' height='68px' src="/images/logo-2.webp" alt="LogoEstelio" />
+            {logo ? (
+              <Box cursor="pointer">
+                <Link href="/">
+                  <Image
+                    width="129px"
+                    height="68px"
+                    src="/images/logo-erp.svg"
+                    alt="LogoEstelio"
+                  />
                 </Link>
               </Box>
-              :
-              <Box cursor='pointer' m='0 auto' display={{ base: "flex", sm: "none" }}>
-                <Link href='/'>
-                  <Image width="70px" height='70px' src="/images/icono-1.webp" className="icono-Nabvar" alt="IconoEstelio" style={{padding: '10px'}} />
+            ) : (
+              <Box
+                cursor="pointer"
+                m="0 auto"
+                display={{ base: "flex", sm: "none" }}
+              >
+                <Link href="/">
+                  <Image
+                    width="140px"
+                    height="70px"
+                    src="/images/logo-erp.svg"
+                    style={{ padding: "10px" }}
+                    alt="IconoEstelio"
+                  />
                 </Link>
               </Box>
-            }
-
+            )}
           </Box>
           <Box
             w="760px"
             display={{ base: "none", xl: "flex" }}
-            justifyContent="space-between"
+            justifyContent="flex-end"
             fontFamily="'Exo 2'"
-            color={colorMode === 'light' ? '#fff' : 'white.100'}
+            color={colorMode === "light" ? "#fff" : "white.100"}
           >
-            {vinculos.map(
-              ({ id, url, title, consultoria, empresariales, sistit, sistiot, learning }) => {
-                if ((id != 3)) {
-                  return (
-                    <Box px="16px" py="8px" key={id} fontFamily='heading'>
-                      <ActiveLink url={url} title={title} color='#5bfcf3' condition='1' />
-                    </Box>
-                  );
-                } else if (id === 3) {
-                  return (
-                    <Box key={id}>
-                      <Menu autoSelect={false} >
-                        <MenuButton
-                          as={Button}
-                          rightIcon={<ChevronDownIcon width='2em' height='2em' />}
-                          bgColor={coloroscuro}
-                          _hover={{ color: "#5bfcf3" }}
-                          _active={{ bgColor: coloroscuro, color: "#5bfcf3" }}
-                          fontWeight="700"
-                          fontFamily='heading'
+            {vinculos.map(({ id, url, title }) => {
+              if (id != 3 && id != 4) {
+                return (
+                  <Box px="16px" py="8px" key={id} fontFamily="heading">
+                    <ActiveLink
+                      url={url}
+                      title={title}
+                      color="#5bfcf3"
+                      condition="1"
+                    />
+                  </Box>
+                );
+              } else if (id == 3) {
+                return (
+                  <Box key={id}>
+                    <Menu autoSelect={false}>
+                      <MenuButton
+                        as={Button}
+                        rightIcon={<ChevronDownIcon width="2em" height="2em" />}
+                        bgColor={coloroscuro}
+                        _hover={{ color: "#5bfcf3" }}
+                        _active={{ bgColor: coloroscuro, color: "#5bfcf3" }}
+                        fontWeight="700"
+                        fontFamily="heading"
+                      >
+                        {title}
+                      </MenuButton>
+                      <MenuList
+                        position="absolute"
+                        bg="rgba(6,39,67,0.97)"
+                        border="none"
+                        w="530px"
+                        h="380px"
+                        transitionDuration=".3s"
+                        transitionTimingFunction="ease-in"
+                        left="-300px"
+                        mt={3}
+                        cursor="unset"
+                        className="cajaPadre__Menu"
+                        _hover={{
+                          w: "820px",
+                          transitionDuration: ".5s",
+                          transitionTimingFunction: "ease",
+                        }}
+                      >
+                        <Flex w="75%" justifyContent={"space-between"}>
+                          <Text
+                            fontSize="18px"
+                            ml="5.2rem"
+                            fontFamily="heading"
+                          >
+                            {area}
+                          </Text>
+                          <Text
+                            fontSize="18px"
+                            opacity={"0"}
+                            fontFamily="heading"
+                            sx={{
+                              ".cajaPadre__Menu:hover &": {
+                                transitionDuration: ".5s",
+                                transitionTimingFunction: "ease-in",
+                                opacity: "1",
+                              },
+                            }}
+                          >
+                            {products}
+                          </Text>
+                        </Flex>
+                        <Divider w="90%" m="0 auto" color="#a1a1a1" />
+
+                        {/* Menu Areas */}
+
+                        {/* List of Consultancy */}
+                        <MenuItem
+                          _focus={{ bgColor: "none" }}
+                          _active={{ bgColor: "none" }}
+                          cursor="unset"
+                          p="10px"
+                          display="flex"
+                          bg="none"
                         >
-                          {title}
-                        </MenuButton>
-                        <MenuList
-                          position="absolute"
-                          bg='rgba(6,39,67,.95)'
-                          border="none"
-                          w='530px'
-                          h='380px'
-                          transitionDuration='.3s'
-                          transitionTimingFunction='ease-in'
-                          left="-300px"
-                          mt={3}
-                          cursor='unset'
-                          className="cajaPadre__Menu"
-                          _hover={{ w: '820px', transitionDuration: '.5s', transitionTimingFunction: 'ease' }}
-                        >
-                          <Flex w='75%'
-                            justifyContent={'space-between'}>
-                            <Text fontSize='18px' ml='5.2rem' fontFamily='heading'>{area}</Text>
-                            <Text fontSize='18px' opacity={'0'} fontFamily='heading'
+                          <UnorderedList
+                            fontSize="17px"
+                            display={"flex"}
+                            justifyContent="space-between"
+                            className="consultancy-list"
+                          >
+                            <Flex
+                              key={id}
+                              w="100%"
+                              justifyContent={"flex-start"}
+                            >
+                              {/* Icono del Area */}
+                              <Flex
+                                h="35px"
+                                w="35px"
+                                justifyContent="center"
+                                alignItems="center"
+                                borderRadius="100%"
+                                transitionDuration={".3s"}
+                                sx={{
+                                  ".consultancy-list:hover &": {
+                                    transitionDuration: ".3s",
+                                    bg: "#D76D1D",
+                                  },
+                                }}
+                              >
+                                <Image
+                                  w="16px"
+                                  src="/images/navbarIcons/icon-consultoria.svg"
+                                  sx={{
+                                    ".consultancy-list:hover &": {
+                                      filter: "brightness(0) invert(1)",
+                                    },
+                                  }}
+                                  alt="iconoArea"
+                                />
+                              </Flex>
+
+                              {/* Vinculo del Area  */}
+                              <Flex
+                                ml="20px"
+                                w="410px"
+                                justifyContent={"space-between"}
+                              >
+                                {/* <ActiveLink url={consultoria?.url} title={consultoria?.title} darkcolor={"#D76D1D"} condition='2' /> */}
+                                {/* <Text fontSize='30px' mt='-10px'>
+                                    <ChevronRightIcon />
+                                  </Text> */}
+                              </Flex>
+                            </Flex>
+                            <UnorderedList
+                              fontSize="17px"
+                              fontFamily="heading"
+                              color={"#D76D1D"}
+                              opacity="0"
+                              transitionDuration={".5s"}
+                              w="100%"
                               sx={{
-                                '.cajaPadre__Menu:hover &': {
-                                  transitionDuration: '.5s',
-                                  transitionTimingFunction: 'ease-in',
-                                  opacity: '1'
-                                }
+                                ".consultancy-list:hover &": {
+                                  transitionDuration: ".5s",
+                                  opacity: "1",
+                                },
                               }}
+                              ml="40px"
                             >
-                              {products}
-                            </Text>
-                          </Flex>
-                          <Divider w='90%' m='0 auto' color='#a1a1a1'/>
-
-                          {/* Menu Areas */}
-
-                          {/* List of Consultancy */}
-                          <MenuItem
-                            _focus={{ bgColor: "none" }}
-                            _active={{ bgColor: "none" }}
-                            cursor='unset'
-                            p='10px'
-                            display='flex'
-                            bg='none'
-                          >
-                            <UnorderedList
-                              fontSize="17px"
-                              display={'flex'}
-                              justifyContent='space-between'
-                              className='consultancy-list'
-                            >
-                              <Flex key={id} w='100%' justifyContent={'flex-start'}>
-
-                                {/* Icono del Area */}
-                                <Flex h='35px' w='35px' justifyContent='center' alignItems='center' borderRadius='100%' transitionDuration={'.3s'} sx={{ '.consultancy-list:hover &': { transitionDuration: '.3s', bg: '#D76D1D' } }}>
-                                  <Image w='16px' src='/images/navbarIcons/icon-consultoria.svg' sx={{ '.consultancy-list:hover &': { filter: "brightness(0) invert(1)" } }} alt='iconoArea'/>
-                                </Flex>
-
-                                {/* Vinculo del Area  */}
-                                <Flex ml='20px' w='410px' justifyContent={'space-between'}>
-                                  <ActiveLink url={consultoria?.url} title={consultoria?.title} darkcolor={"#D76D1D"} condition='2' />
-                                  <Text fontSize='30px' mt='-10px'>
-                                    <ChevronRightIcon />
-                                  </Text>
-                                </Flex>
-
-                              </Flex>
-                              <UnorderedList
-                                fontSize="17px"
-                                fontFamily='heading'
-                                color={'#D76D1D'}
-                                opacity='0'
-                                transitionDuration={'.5s'}
-                                w='100%'
-                                sx={{
-                                  '.consultancy-list:hover &': {
-                                    transitionDuration: '.5s',
-                                    opacity: '1'
-                                  },
-                                }}
-                                ml='40px'
-                              >
-                                {consultoria?.subtitles?.map(
+                              {/* {consultoria?.subtitles?.map(
                                   ({ id, subtitle, url }) => {
                                     return (
                                       <Box key={id}>
@@ -167,59 +248,86 @@ export const Navbar = () => {
                                       </Box>
                                     );
                                   }
-                                )}
-
-                              </UnorderedList>
-
+                                )} */}
                             </UnorderedList>
-                          </MenuItem>
+                          </UnorderedList>
+                        </MenuItem>
 
-                          {/* List of Business */}
-                          <MenuItem
-                            _focus={{ bgColor: "none" }}
-                            _active={{ bgColor: "none" }}
-                            cursor='unset'
-                            p='10px'
-                            display='flex'
-                            bg='none'
+                        {/* List of Business */}
+                        <MenuItem
+                          _focus={{ bgColor: "none" }}
+                          _active={{ bgColor: "none" }}
+                          cursor="unset"
+                          p="10px"
+                          display="flex"
+                          bg="none"
+                        >
+                          <UnorderedList
+                            fontSize="17px"
+                            display={"flex"}
+                            justifyContent="space-between"
+                            className="business-list"
                           >
-                            <UnorderedList
-                              fontSize="17px"
-                              display={'flex'}
-                              justifyContent='space-between'
-                              className='business-list'
+                            <Flex
+                              key={id}
+                              w="100%"
+                              justifyContent={"flex-start"}
                             >
-                              <Flex key={id} w='100%' justifyContent={'flex-start'}>
-
-                                {/* Icono del Area */}
-                                <Flex h='35px' w='35px' justifyContent='center' alignItems='center' borderRadius='100%' transitionDuration={'.3s'} sx={{ '.business-list:hover &': { transitionDuration: '.3s', bg: '#D76D1D' } }}>
-                                  <Image w='16px' src='/images/navbarIcons/icon-sistemas-empresariales.svg' sx={{ '.business-list:hover &': { filter: "brightness(0) invert(1)" } }} alt='iconoArea'/>
-                                </Flex>
-
-                                {/* Vinculo del Area  */}
-                                <Flex ml='20px' w='410px' justifyContent={'space-between'}>
-                                  <ActiveLink url={empresariales?.url} title={empresariales?.title} darkcolor={"#D76D1D"} condition='2' />
-                                  <Text fontSize='30px' mt='-10px'>
-                                    <ChevronRightIcon />
-                                  </Text>
-                                </Flex>
-
-                              </Flex>
-                              <UnorderedList fontSize="17px"
-                                fontFamily='heading'
-                                w='100%'
-                                color={'#D76D1D'}
-                                opacity='0'
-                                transitionDuration={'.5s'}
+                              {/* Icono del Area */}
+                              <Flex
+                                h="35px"
+                                w="35px"
+                                justifyContent="center"
+                                alignItems="center"
+                                borderRadius="100%"
+                                transitionDuration={".3s"}
                                 sx={{
-                                  '.business-list:hover &': {
-                                    transitionDuration: '.5s',
-                                    opacity: '1'
+                                  ".business-list:hover &": {
+                                    transitionDuration: ".3s",
+                                    bg: "#D76D1D",
                                   },
                                 }}
-                                ml='40px'
                               >
-                                {empresariales?.subtitles?.map(
+                                <Image
+                                  w="16px"
+                                  src="/images/navbarIcons/icon-sistemas-empresariales.svg"
+                                  sx={{
+                                    ".business-list:hover &": {
+                                      filter: "brightness(0) invert(1)",
+                                    },
+                                  }}
+                                  alt="iconoArea"
+                                />
+                              </Flex>
+
+                              {/* Vinculo del Area  */}
+                              <Flex
+                                ml="20px"
+                                w="410px"
+                                justifyContent={"space-between"}
+                              >
+                                {/* <ActiveLink url={empresariales?.url} title={empresariales?.title} darkcolor={"#D76D1D"} condition='2' /> */}
+                                <Text fontSize="30px" mt="-10px">
+                                  <ChevronRightIcon />
+                                </Text>
+                              </Flex>
+                            </Flex>
+                            <UnorderedList
+                              fontSize="17px"
+                              fontFamily="heading"
+                              w="100%"
+                              color={"#D76D1D"}
+                              opacity="0"
+                              transitionDuration={".5s"}
+                              sx={{
+                                ".business-list:hover &": {
+                                  transitionDuration: ".5s",
+                                  opacity: "1",
+                                },
+                              }}
+                              ml="40px"
+                            >
+                              {/* {empresariales?.subtitles?.map(
                                   ({ id, subtitle, url }) => {
                                     return (
                                       <Box key={id}>
@@ -227,58 +335,83 @@ export const Navbar = () => {
                                       </Box>
                                     );
                                   }
-                                )}
-
-                              </UnorderedList>
-
+                                )} */}
                             </UnorderedList>
-                          </MenuItem>
+                          </UnorderedList>
+                        </MenuItem>
 
-                          {/* List of IT Systems */}
-                          <MenuItem
-                            _focus={{ bgColor: "none" }}
-                            _active={{ bgColor: "none" }}
-                            cursor='unset'
-                            p='10px'
-                            display='flex'
-                            bg='none'
+                        {/* List of IT Systems */}
+                        <MenuItem
+                          _focus={{ bgColor: "none" }}
+                          _active={{ bgColor: "none" }}
+                          cursor="unset"
+                          p="10px"
+                          display="flex"
+                          bg="none"
+                        >
+                          <UnorderedList
+                            fontSize="17px"
+                            display={"flex"}
+                            justifyContent="space-between"
+                            className="systemIT-list"
                           >
-                            <UnorderedList
-                              fontSize="17px"
-                              display={'flex'}
-                              justifyContent='space-between'
-                              className='systemIT-list'
+                            <Flex
+                              key={id}
+                              w="100%"
+                              justifyContent={"flex-start"}
                             >
-                              <Flex key={id} w='100%' justifyContent={'flex-start'}>
-
-                                {/* Icono del Area */}
-                                <Flex h='35px' w='35px' justifyContent='center' alignItems='center' borderRadius='100%' transitionDuration={'.3s'} sx={{ '.systemIT-list:hover &': { transitionDuration: '.3s', bg: 'green.400' } }}>
-                                  <Image w='16px' src='/images/navbarIcons/icon-sistemas-it.svg' sx={{ '.systemIT-list:hover &': { filter: "brightness(0) invert(1)" } }} alt='iconoArea'/>
-                                </Flex>
-
-                                {/* Vinculo del Area  */}
-                                <Flex ml='20px' w='410px' justifyContent={'space-between'}>
-                                  <ActiveLink url={sistit?.url} title={sistit?.title} darkcolor={"green.400"} condition='2' />
-
-                                </Flex>
-
-                              </Flex>
-                              <UnorderedList
-                                fontSize="17px"
-                                fontFamily='heading'
-                                color={'#D76D1D'}
-                                opacity='0'
-                                w='100%'
-                                transitionDuration={'.5s'}
+                              {/* Icono del Area */}
+                              <Flex
+                                h="35px"
+                                w="35px"
+                                justifyContent="center"
+                                alignItems="center"
+                                borderRadius="100%"
+                                transitionDuration={".3s"}
                                 sx={{
-                                  '.systemIT-list:hover &': {
-                                    transitionDuration: '.5s',
-                                    opacity: '1'
+                                  ".systemIT-list:hover &": {
+                                    transitionDuration: ".3s",
+                                    bg: "green.400",
                                   },
                                 }}
-                                ml='-6px'
                               >
-                                {sistit?.subtitles?.map(
+                                <Image
+                                  w="16px"
+                                  src="/images/navbarIcons/icon-sistemas-it.svg"
+                                  sx={{
+                                    ".systemIT-list:hover &": {
+                                      filter: "brightness(0) invert(1)",
+                                    },
+                                  }}
+                                  alt="iconoArea"
+                                />
+                              </Flex>
+
+                              {/* Vinculo del Area  */}
+                              <Flex
+                                ml="20px"
+                                w="410px"
+                                justifyContent={"space-between"}
+                              >
+                                {/* <ActiveLink url={sistit?.url} title={sistit?.title} darkcolor={"green.400"} condition='2' /> */}
+                              </Flex>
+                            </Flex>
+                            <UnorderedList
+                              fontSize="17px"
+                              fontFamily="heading"
+                              color={"#D76D1D"}
+                              opacity="0"
+                              w="100%"
+                              transitionDuration={".5s"}
+                              sx={{
+                                ".systemIT-list:hover &": {
+                                  transitionDuration: ".5s",
+                                  opacity: "1",
+                                },
+                              }}
+                              ml="-6px"
+                            >
+                              {/* {sistit?.subtitles?.map(
                                   ({ id, subtitle, url }) => {
                                     return (
                                       <Box key={id}>
@@ -286,59 +419,86 @@ export const Navbar = () => {
                                       </Box>
                                     );
                                   }
-                                )}
-
-                              </UnorderedList>
-
+                                )} */}
                             </UnorderedList>
-                          </MenuItem>
+                          </UnorderedList>
+                        </MenuItem>
 
-                          {/* List of IoT Systems */}
-                          <MenuItem
-                            _focus={{ bgColor: "none" }}
-                            _active={{ bgColor: "none" }}
-                            cursor='unset'
-                            p='10px'
-                            display='flex'
-                            bg={'none'}
+                        {/* List of IoT Systems */}
+                        <MenuItem
+                          _focus={{ bgColor: "none" }}
+                          _active={{ bgColor: "none" }}
+                          cursor="unset"
+                          p="10px"
+                          display="flex"
+                          bg={"none"}
+                        >
+                          <UnorderedList
+                            fontSize="17px"
+                            display={"flex"}
+                            justifyContent="space-between"
+                            className="systemIOT-list"
                           >
-                            <UnorderedList
-                              fontSize="17px"
-                              display={'flex'}
-                              justifyContent='space-between'
-                              className='systemIOT-list'
+                            <Flex
+                              key={id}
+                              w="100%"
+                              justifyContent={"flex-start"}
                             >
-                              <Flex key={id} w='100%' justifyContent={'flex-start'}>
-
-                                {/* Icono del Area */}
-                                <Flex h='35px' w='35px' justifyContent='center' alignItems='center' borderRadius='100%' transitionDuration={'.3s'} sx={{ '.systemIOT-list:hover &': { transitionDuration: '.3s', bg: 'green.400' } }}>
-                                  <Image w='16px' src='/images/navbarIcons/icon-sistemas-iot.svg' sx={{ '.systemIOT-list:hover &': { filter: "brightness(0) invert(1)" } }} alt='iconoArea'/>
-                                </Flex>
-
-                                {/* Vinculo del Area  */}
-                                <Flex ml='20px' w='410px' justifyContent={'space-between'}>
-                                  <ActiveLink url={sistiot?.url} title={sistiot?.title} darkcolor={"green.400"} condition='2' />
-                                  <Text fontSize='30px' mt='-10px'>
-                                    <ChevronRightIcon />
-                                  </Text>
-                                </Flex>
-
-                              </Flex>
-                              <UnorderedList fontSize="17px"
-                                fontFamily='heading'
-                                color={'green.400'}
-                                transitionDuration={'.5s'}
-                                opacity='0'
-                                w='500px'
+                              {/* Icono del Area */}
+                              <Flex
+                                h="35px"
+                                w="35px"
+                                justifyContent="center"
+                                alignItems="center"
+                                borderRadius="100%"
+                                transitionDuration={".3s"}
                                 sx={{
-                                  '.systemIOT-list:hover &': {
-                                    transitionDuration: '.5s',
-                                    opacity: '1'
+                                  ".systemIOT-list:hover &": {
+                                    transitionDuration: ".3s",
+                                    bg: "green.400",
                                   },
                                 }}
-                                ml='-105px'
                               >
-                                {sistiot?.subtitles?.map(
+                                <Image
+                                  w="16px"
+                                  src="/images/navbarIcons/icon-sistemas-iot.svg"
+                                  sx={{
+                                    ".systemIOT-list:hover &": {
+                                      filter: "brightness(0) invert(1)",
+                                    },
+                                  }}
+                                  alt="iconoArea"
+                                />
+                              </Flex>
+
+                              {/* Vinculo del Area  */}
+                              <Flex
+                                ml="20px"
+                                w="410px"
+                                justifyContent={"space-between"}
+                              >
+                                {/* <ActiveLink url={sistiot?.url} title={sistiot?.title} darkcolor={"green.400"} condition='2' /> */}
+                                <Text fontSize="30px" mt="-10px">
+                                  <ChevronRightIcon />
+                                </Text>
+                              </Flex>
+                            </Flex>
+                            <UnorderedList
+                              fontSize="17px"
+                              fontFamily="heading"
+                              color={"green.400"}
+                              transitionDuration={".5s"}
+                              opacity="0"
+                              w="500px"
+                              sx={{
+                                ".systemIOT-list:hover &": {
+                                  transitionDuration: ".5s",
+                                  opacity: "1",
+                                },
+                              }}
+                              ml="-105px"
+                            >
+                              {/* {sistiot?.subtitles?.map(
                                   ({ id, subtitle, url }) => {
                                     return (
                                       <Box key={id}>
@@ -346,59 +506,86 @@ export const Navbar = () => {
                                       </Box>
                                     );
                                   }
-                                )}
-
-                              </UnorderedList>
-
+                                )} */}
                             </UnorderedList>
-                          </MenuItem>
+                          </UnorderedList>
+                        </MenuItem>
 
-                          {/* List of Learning */}
-                          <MenuItem
-                            _focus={{ bgColor: "none" }}
-                            _active={{ bgColor: "none" }}
-                            cursor='unset'
-                            p='10px'
-                            display='flex'
-                            bg={'none'}
+                        {/* List of Learning */}
+                        <MenuItem
+                          _focus={{ bgColor: "none" }}
+                          _active={{ bgColor: "none" }}
+                          cursor="unset"
+                          p="10px"
+                          display="flex"
+                          bg={"none"}
+                        >
+                          <UnorderedList
+                            fontSize="17px"
+                            display={"flex"}
+                            justifyContent="space-between"
+                            className="learning-list"
                           >
-                            <UnorderedList
-                              fontSize="17px"
-                              display={'flex'}
-                              justifyContent='space-between'
-                              className='learning-list'
+                            <Flex
+                              key={id}
+                              w="100%"
+                              justifyContent={"flex-start"}
                             >
-                              <Flex key={id} w='100%' justifyContent={'flex-start'}>
-
-                                {/* Icono del Area */}
-                                <Flex h='35px' w='35px' justifyContent='center' alignItems='center' borderRadius='100%' transitionDuration={'.3s'} sx={{ '.learning-list:hover &': { transitionDuration: '.3s', bg: '#D76D1D' } }}>
-                                  <Image w='16px' src='/images/navbarIcons/icon-formacion.svg' sx={{ '.learning-list:hover &': { filter: "brightness(0) invert(1)" } }} alt='iconoArea'/>
-                                </Flex>
-
-                                {/* Vinculo del Area  */}
-                                <Flex ml='20px' w='410px' justifyContent={'space-between'}>
-                                  <ActiveLink url={learning?.url} title={learning?.title} darkcolor={"#D76D1D"} condition='2' />
-                                  <Text fontSize='30px' mt='-10px'>
-                                    <ChevronRightIcon />
-                                  </Text>
-                                </Flex>
-
-                              </Flex>
-                              <UnorderedList fontSize="17px"
-                                fontFamily='heading'
-                                color={'#D76D1D'}
-                                opacity='0'
-                                transitionDuration={'.3s'}
+                              {/* Icono del Area */}
+                              <Flex
+                                h="35px"
+                                w="35px"
+                                justifyContent="center"
+                                alignItems="center"
+                                borderRadius="100%"
+                                transitionDuration={".3s"}
                                 sx={{
-                                  '.learning-list:hover &': {
-                                    transitionDuration: '.5s',
-                                    opacity: '1'
+                                  ".learning-list:hover &": {
+                                    transitionDuration: ".3s",
+                                    bg: "#D76D1D",
                                   },
                                 }}
-                                ml='40px'
-                                w={'100%'}
                               >
-                                {learning?.subtitles?.map(
+                                <Image
+                                  w="16px"
+                                  src="/images/navbarIcons/icon-formacion.svg"
+                                  sx={{
+                                    ".learning-list:hover &": {
+                                      filter: "brightness(0) invert(1)",
+                                    },
+                                  }}
+                                  alt="iconoArea"
+                                />
+                              </Flex>
+
+                              {/* Vinculo del Area  */}
+                              <Flex
+                                ml="20px"
+                                w="410px"
+                                justifyContent={"space-between"}
+                              >
+                                {/* <ActiveLink url={learning?.url} title={learning?.title} darkcolor={"#D76D1D"} condition='2' /> */}
+                                <Text fontSize="30px" mt="-10px">
+                                  <ChevronRightIcon />
+                                </Text>
+                              </Flex>
+                            </Flex>
+                            <UnorderedList
+                              fontSize="17px"
+                              fontFamily="heading"
+                              color={"#D76D1D"}
+                              opacity="0"
+                              transitionDuration={".3s"}
+                              sx={{
+                                ".learning-list:hover &": {
+                                  transitionDuration: ".5s",
+                                  opacity: "1",
+                                },
+                              }}
+                              ml="40px"
+                              w={"100%"}
+                            >
+                              {/* {learning?.subtitles?.map(
                                   ({ id, subtitle, url }) => {
                                     return (
                                       <Box key={id}>
@@ -406,49 +593,99 @@ export const Navbar = () => {
                                       </Box>
                                     );
                                   }
-                                )}
-
-                              </UnorderedList>
-
+                                )} */}
                             </UnorderedList>
-                          </MenuItem>
-
-
-                        </MenuList>
-                      </Menu>
-                    </Box>
-                  );
-                }
+                          </UnorderedList>
+                        </MenuItem>
+                      </MenuList>
+                    </Menu>
+                  </Box>
+                );
+              } else if (id == 4) {
+                return (
+                  <Menu autoSelect={false} key={id}>
+                    <MenuButton
+                      as={Button}
+                      rightIcon={<ChevronDownIcon width="2em" height="2em" />}
+                      bgColor={coloroscuro}
+                      _hover={{ color: "#F47C20" }}
+                      _active={{ bgColor: coloroscuro, color: "#F47C20" }}
+                      fontWeight="700"
+                      fontFamily="heading"
+                    >
+                      {title}
+                    </MenuButton>
+                    <MenuList
+                      position="absolute"
+                      bg="rgba(6,39,67,.9)"
+                      border="none"
+                      w="200px"
+                      left="-55px"
+                      p="10px"
+                      mt={6}
+                      fontFamily="heading"
+                    >
+                      {/* {noticias?.map(({ id, title, url }) => {
+                          return (
+                            <Box key={id}>
+                              <MenuItem
+                                _focus={{ bgColor: "none" }}
+                                _active={{ bgColor: "none" }}
+                                display="flex"
+                                justifyContent="space-evenly"
+                                bg={'none'}
+                              >
+                                <Link href={url}>
+                                  <Text fontWeight='700' color={colorMode === 'light' ? '#fff' : 'white.100'} _hover={{ color: '#F47C20' }} >{title}</Text>
+                                </Link>
+                              </MenuItem>
+                              <MenuDivider display={id > 0 ? 'none' : 'block'} color="#5bfcf3" mb='none' />
+                            </Box>
+                          );
+                        })} */}
+                    </MenuList>
+                  </Menu>
+                );
               }
-            )}
+            })}
           </Box>
-          <Flex
-            justifyContent='center'
-            alignItems="center"
-            width="auto"
-          >
+          <Flex justifyContent="center" alignItems="center" width="auto"></Flex>
+
+          <Flex justifyContent="center" alignItems="center" width="auto">
+            <Button
+              variant="ghost"
+              _hover={{ bgColor: "none" }}
+              _active={{ bgColor: "none" }}
+              color={"#FCF7F2"}
+            >
+              <FaInstagram fontSize={"22px"} />
+            </Button>
+
             <Idiomas />
+
             <Button
               onClick={toggleColorMode}
-              variant='ghost'
+              variant="ghost"
               px="5px"
               _hover={{ bgColor: "none" }}
               _active={{ bgColor: "none" }}
               aria-label="colorChange"
             >
               {colorMode === "light" ? (
-                <MoonIcon w="18px" h={8} color={colorMode === 'light' ? '#fff' : 'white.100'} />
+                <MoonIcon
+                  w="18px"
+                  h={8}
+                  color={colorMode === "light" ? "#fff" : "white.100"}
+                />
               ) : (
                 <SunIcon w="18px" h={8} />
               )}
             </Button>
 
             <NavbarMobile />
-
           </Flex>
         </Flex>
-      </Box >
-
+      </Box>
     </>
   );
 };

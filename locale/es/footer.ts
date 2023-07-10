@@ -1,9 +1,9 @@
 export default {
-    headings: {
-        corp: "Corporación Estelio",
-        consul: "Consultoría",
-        access: "Acceso Rápido"
-    },
+    // headings: {
+    //     corp: "Corporación Estelio",
+    //     consul: "Consultoría",
+    //     access: "Acceso Rápido"
+    // },
     countryPhone: [
         { id: 1, country: "Caracas - Venezuela", phone: "+58 212 265 32 55" },
         { id: 2, country: "", phone: "+58 412 317 27 65" },
@@ -17,13 +17,13 @@ export default {
         { id: 3, description: "CoolTrack" },
         { id: 4, description: "Data Center" },
     ],
-    linksFooter: [
-        { id: 1, url: "https://www.estelio.com/consultancy", title: 'Consultoría' },
-        { id: 2, url: "https://www.estelio.com/businessSystems", title: "Sistemas empresariales" },
-        { id: 3, url: "https://www.estelio.com/it-systems", title: "Sistemas IT" },
-        { id: 4, url: "https://www.estelio.com/iot-systems", title: "Sistemas IoT" },
-        { id: 5, url: "https://www.estelio.com/learning", title: "Formación y gestión del conocimiento" },
-    ],
+    // linksFooter: [
+    //     { id: 1, url: "https://www.estelio.com/consultancy", title: 'Consultoría' },
+    //     { id: 2, url: "https://www.estelio.com/businessSystems", title: "Sistemas empresariales" },
+    //     { id: 3, url: "https://www.estelio.com/it-systems", title: "Sistemas IT" },
+    //     { id: 4, url: "https://www.estelio.com/iot-systems", title: "Sistemas IoT" },
+    //     { id: 5, url: "https://www.estelio.com/learning", title: "Formación y gestión del conocimiento" },
+    // ],
     privacyPolicy: {
         privacy: "Política de privacidad",
         link: "https://www.estelio.com/privacyPolicy",

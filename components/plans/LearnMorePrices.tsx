@@ -15,8 +15,8 @@ export const LearnMorePrices = () => {
     const [pixels1080] = useMediaQuery('(min-width: 1080px)');
 
     return (
-        <Box display={{ base: 'none', lg: 'block' }}>
-            <Flex w='100%' h='60px' pt='10px' justifyContent='space-around' boxShadow='0px 10px 25px -15px rgba(0, 0, 0, 0.20)' position={'sticky'} top={'68px'} transition='1s' bgColor={colorMode === 'light' ? '#fff' : '#a1a1a1'} zIndex='10'>
+        <Box display={{ base: 'none', lg: 'block' }} mb='40px'>
+            <Flex w='100%' h='60px' pt='10px' justifyContent='space-around' boxShadow='0px 10px 25px -15px rgba(0, 0, 0, 0.20)' position={'sticky'} top={'88px'} transition='1s' bgColor={colorMode === 'light' ? '#fff' : '#121e2c'} zIndex='10'>
                 <Text>{knowmore}</Text>
                 <Flex gap={6} maxW='644px'>
 
@@ -24,7 +24,7 @@ export const LearnMorePrices = () => {
                         return (
                             <Flex key={id} ml={id === 1 ? { base: '0px', sm: '-20px', md: '-40px' } : '0px'} fontSize={{ base: '16px', md: '18px' }} textAlign={'center'} px='10px'>
                                 <span>Plan:</span>
-                                <Text color='odoo' ml='5px' mt='-3px' fontWeight='700' fontSize={{ base: '18px', md: '20px' }}>
+                                <Text color={colorMode === 'light' ? 'odoo.400' : 'white.100'} ml='5px' mt='-3px' fontWeight='700' fontSize={{ base: '18px', md: '20px' }}>
                                     {heading}
                                 </Text>
                             </Flex>
@@ -42,7 +42,7 @@ export const LearnMorePrices = () => {
                                 <UnorderedList w={pixels1080 ? '360px' : '280px'} mb='10px'>
                                     <ListItem fontSize={{ base: '14px', md: '16px' }}>{text}</ListItem>
                                 </UnorderedList>
-                                <Flex w='644px' maxW='644px' justifyContent={'space-around'} ml={pixels1080 ? '-280px' : '-200px'} color='odoo' fontSize={'24px'}>
+                                <Flex w='644px' maxW='644px' justifyContent={'space-around'} ml={pixels1080 ? '-280px' : '-200px'} color={colorMode === 'light' ? 'odoo.400' : 'white.100'} fontSize={'24px'}>
                                     {id !== 26 ? (
                                         <>
                                             <CheckIcon visibility={id <= 10 ? 'visible' : 'hidden'} />
@@ -51,9 +51,9 @@ export const LearnMorePrices = () => {
                                         </>
                                     ) :
                                         <>
-                                            <CustomButton bgColor="green.400" bgHover="odoo" text={buttons.button01} margin='40px auto' padding={locale === 'en' ? '60px' : '40px'} />
-                                            <CustomButton bgColor="green.400" bgHover="odoo" text={buttons.button01} margin='40px auto' padding={locale === 'en' ? '60px' : '40px'} />
-                                            <CustomButton bgColor="green.400" bgHover="odoo" text={buttons.button01} margin='40px auto' padding={locale === 'en' ? '60px' : '40px'} />
+                                            <CustomButton bgColor="green.400" bgHover="odoo.400" text={buttons.button01} margin='40px auto' padding={locale === 'en' ? '60px' : '40px'} />
+                                            <CustomButton bgColor="green.400" bgHover="odoo.400" text={buttons.button01} margin='40px auto' padding={locale === 'en' ? '60px' : '40px'} />
+                                            <CustomButton bgColor="green.400" bgHover="odoo.400" text={buttons.button01} margin='40px auto' padding={locale === 'en' ? '60px' : '40px'} />
                                         </>
                                     }
 
