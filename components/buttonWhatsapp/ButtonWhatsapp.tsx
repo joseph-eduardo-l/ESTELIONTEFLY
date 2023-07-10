@@ -7,7 +7,7 @@ const ButtonWhatsapp = () => {
         <Link href='https://wa.me/message/EA3RA3DJC2NTA1'>
             <Flex
                 alignItems='center'
-                bottom='100px'
+                bottom='120px'
                 bgColor='#029B79'
                 boxShadow='0px 1px 10px rgba(0,0,0,0.3)'
                 borderRadius={{ base: '60px', md: '100px' }}

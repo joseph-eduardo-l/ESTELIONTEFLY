@@ -20,7 +20,7 @@ export const Questions = () => {
             >
                 {heading}
             </Heading>
-            <Divider m="15px auto 50px" w="120px" h="6px" bgColor={colorMode === 'light' ? "odoo" : '#fff'} opacity={colorMode === 'dark' ? "0.7" : 0.9} borderStyle='none' borderRadius='10px' />
+            <Divider m="15px auto 50px" w="120px" h="6px" bgColor={colorMode === 'light' ? "odoo.400" : '#fff'} opacity={colorMode === 'dark' ? "0.7" : 0.9} borderStyle='none' borderRadius='10px' />
 
             <Box maxW="1024px" m="0 auto">
                 {accordion.map(({ id, heading, text }) => {

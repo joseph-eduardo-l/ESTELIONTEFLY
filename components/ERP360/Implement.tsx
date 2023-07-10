@@ -16,11 +16,11 @@ export const Implement = () => {
             <Box>
                 <Heading as='h2' textAlign='center' fontSize={{ base: '24px', md: '32px' }} fontWeight={400} color='blue.700' maxW={{ base: '370px', md: '100%' }} m='0 auto'>
                     {heading}
-                    <span style={{ fontWeight: 700, color: '#714B67', display: "inline" }}>{headingSpan}</span>
+                    <span style={{ fontWeight: 700, color: '#492241', display: "inline" }}>{headingSpan}</span>
                     ?
                 </Heading>
 
-                <Divider m="15px auto 0px" w="120px" h="6px" opacity={colorMode === 'dark' ? "0.7" : 0.9} borderStyle="none" bgColor='odoo' borderRadius='10px' />
+                <Divider m="15px auto 0px" w="120px" h="6px" opacity={colorMode === 'dark' ? "0.7" : 0.9} borderStyle="none" bgColor='odoo.400' borderRadius='10px' />
 
                 <Text
                     fontSize={{ base: "16px", md: "18px" }}
@@ -57,7 +57,7 @@ export const Implement = () => {
 
             </Grid>
 
-            <CustomButton bgColor="green.400" bgHover="odoo" color="#fff" text={buttons.button03} margin={{ base: "30px auto", sm: '50px auto' }} link="#vinculoContact" />
+            <CustomButton bgColor="green.400" bgHover="odoo.400" color="#fff" text={buttons.button03} margin={{ base: "30px auto", sm: '50px auto' }} link="#vinculoContact" />
 
         </Box>
     )

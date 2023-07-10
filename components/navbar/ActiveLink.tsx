@@ -45,11 +45,11 @@ export const ActiveLink = ({ url, title, color, darkcolor, locale2, condition }:
                                     className={exo2.className}
                                     fontWeight={700}
                                     variant='outline'
-                                    mr="10px"
+                                    mr={{base: '0px', lg: '10px'}}
                                     w="31px"
                                     border='none'
-                                    _hover={{ bgColor: '#052f52', }}
-                                    _active={{ bgColor: '#053863' }}
+                                    _hover={{ bgColor: 'odoo.700', }}
+                                    _active={{ bgColor: 'odoo.200' }}
                                     fontSize='18px'
                                 >{title}</Button>) :
 
@@ -60,11 +60,11 @@ export const ActiveLink = ({ url, title, color, darkcolor, locale2, condition }:
                                     className={exo2.className}
                                     fontWeight={400}
                                     variant='outline'
-                                    mr="10px"
+                                    mr={{base: '0px', lg: '10px'}}
                                     w="31px"
                                     border='none'
-                                    _hover={{ bgColor: '#052f52', }}
-                                    _active={{ bgColor: '#053863' }}
+                                    _hover={{ bgColor: 'odoo.700', }}
+                                    _active={{ bgColor: 'odoo.200' }}
                                     fontSize='18px'
                                 >{title}</Button>)
 
