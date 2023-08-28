@@ -225,9 +225,10 @@ export const PricesERP = () => {
 
                 {/* Card Button  */}
                 <Link
-                  href={"https://wa.me/message/EA3RA3DJC2NTA1"}
+                  // href={"https://wa.me/message/EA3RA3DJC2NTA1"}
+                  href={"/plans"}
                   _hover={{ textDecoration: "none" }}
-                  position={'absolute'}
+                  position={"absolute"}
                   bottom={5}
                 >
                   <Button
@@ -236,7 +237,7 @@ export const PricesERP = () => {
                     color={colorMode === "light" ? "#fff" : "white.100"}
                     _hover={{ bgColor: "odoo.400" }}
                   >
-                    {buttons.button01}
+                    {buttons.button04}
                   </Button>
                 </Link>
               </GridItem>
