@@ -34,7 +34,13 @@ export const LearnMorePricesMobile = () => {
         bgColor={colorMode === "light" ? "#fff" : "#121e2c"}
         zIndex="10"
       >
-        <Flex w="80%" justifyContent="center">
+        <Flex
+          w="100%"
+          maxW={{ base: "300px", sm: "65%", md: "500px" }}
+          m="0 auto"
+          justifyContent="space-between"
+          alignItems="center"
+        >
           {titles.map(({ id, heading }) => {
             return (
               <Flex
@@ -91,21 +97,21 @@ export const LearnMorePricesMobile = () => {
             >
               {id !== 26 ? (
                 <>
-                  <Box w="33.33%">
+                  {/* <Box w="33.33%">
                     <CheckIcon
                       m="0 auto"
                       display="block"
                       visibility={id <= 10 ? "visible" : "hidden"}
                     />
-                  </Box>
-                  <Box w="33.33%">
+                  </Box> */}
+                  <Box w="50%">
                     <CheckIcon
                       m="0 auto"
                       display="block"
                       visibility={id <= 18 ? "visible" : "hidden"}
                     />
                   </Box>
-                  <Box w="33.33%">
+                  <Box w="50%">
                     <CheckIcon m="0 auto" display="block" />
                   </Box>
                 </>
