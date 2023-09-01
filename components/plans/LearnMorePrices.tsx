@@ -42,9 +42,16 @@ export const LearnMorePrices = () => {
         transition="1s"
         bgColor={colorMode === "light" ? "#fff" : "#121e2c"}
         zIndex="10"
+        mb="20px"
       >
         <Text>{knowmore}</Text>
-        <Flex gap={6} maxW="644px">
+        <Flex
+          gap={"10px"}
+          maxW="480px"
+          w="100%"
+          justifyContent="space-between"
+          mr="3%"
+        >
           {titles.map(({ id, heading }) => {
             return (
               <Flex
@@ -94,20 +101,20 @@ export const LearnMorePrices = () => {
               >
                 {id !== 26 ? (
                   <>
-                    <CheckIcon visibility={id <= 10 ? "visible" : "hidden"} />
+                    {/* <CheckIcon visibility={id <= 10 ? "visible" : "hidden"} /> */}
                     <CheckIcon visibility={id <= 18 ? "visible" : "hidden"} />
                     <CheckIcon />
                   </>
                 ) : (
                   <>
-                    {Array.from({ length: 3 }).map((_, index) => (
+                    {Array.from({ length: 2 }).map((_, index) => (
                       <React.Fragment key={index}>
                         <CustomButton
                           bgColor="green.400"
                           bgHover="odoo.400"
                           link="https://wa.me/message/EA3RA3DJC2NTA1"
                           text={buttons.button01}
-                          margin="0px auto"
+                          margin="20px auto "
                           padding={locale === "en" ? "28px" : "6px"}
                         />
                       </React.Fragment>

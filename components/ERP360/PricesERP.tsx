@@ -94,7 +94,7 @@ export const PricesERP = () => {
       </Box>
 
       <Grid
-        templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
+        templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
         gap={{ base: 12, md: 3, lg: 4 }}
       >
         {cards.map(
