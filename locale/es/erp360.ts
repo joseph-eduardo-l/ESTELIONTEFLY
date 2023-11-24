@@ -2,6 +2,7 @@ export default {
   banner: {
     heading01: "Simplifica la gestión empresarial de tu negocio con ERP 360 ",
     heading02: "Un producto basado en Odoo",
+    buttonText01: "Solicitar demo",
   },
   solution: {
     heading: "ERP 360",
@@ -32,7 +33,7 @@ export default {
         id: 2,
         title: "Profesional",
         advantagesList: [
-          { id: 1, text: "Acceso a 11 módulos de Odoo" },
+          { id: 1, text: "Acceso a 5 módulos de Odoo" },
           { id: 2, text: "Reportes de seguimiento intermedios y dashboard" },
           { id: 3, text: "Integración con Impresora Fiscal HKA80 y comanda" },
           { id: 4, text: "Empresas ilimitadas" },
@@ -52,7 +53,7 @@ export default {
         id: 3,
         title: "Empresarial",
         advantagesList: [
-          { id: 1, text: "Acceso a 14 módulos de Odoo" },
+          { id: 1, text: "Acceso a 7 módulos de Odoo" },
           {
             id: 2,
             text: "Reportes avanzados, dashboard, analítica y notificaciones automatizadas",

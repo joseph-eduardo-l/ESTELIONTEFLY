@@ -3,6 +3,7 @@ export default {
     heading01:
       "Simplify the business management of your business with ERP 360 ",
     heading02: "A product based on Odoo",
+    buttonText01: "Request demo",
   },
   solution: {
     heading: "ERP 360",
@@ -33,7 +34,7 @@ export default {
         id: 2,
         title: "Professional",
         advantagesList: [
-          { id: 1, text: "Access to 11 Odoo modules" },
+          { id: 1, text: "Access to 5 Odoo modules" },
           { id: 2, text: "Intermediate monitoring reports and dashboard" },
           { id: 3, text: "Integration with Fiscal Printer HKA80 and commands" },
           { id: 4, text: "Unlimited companies" },
@@ -50,7 +51,7 @@ export default {
         id: 3,
         title: "Business",
         advantagesList: [
-          { id: 1, text: "Access to 14 Odoo modules" },
+          { id: 1, text: "Access to 7 Odoo modules" },
           {
             id: 2,
             text: "Advanced reports, dashboard, analytics and automated notifications",
