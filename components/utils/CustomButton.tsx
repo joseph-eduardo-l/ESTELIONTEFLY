@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { Exo_2 } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import { Button, Flex } from "@chakra-ui/react";
 
-const montserrat = Exo_2({
+const montserrat = Montserrat({
   weight: ["400"],
   subsets: ["latin"],
 });
