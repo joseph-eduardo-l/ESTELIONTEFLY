@@ -1,11 +1,11 @@
 import { extendTheme, type ThemeConfig } from "@chakra-ui/react";
-import { Montserrat } from "next/font/google";
+// import { Montserrat } from "next/font/google";
 
 //fonts
-const montserrat = Montserrat({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-});
+// const montserrat = Montserrat({
+//   weight: ["400", "700"],
+//   subsets: ["latin"],
+// });
 // const exo2 = Exo_2({
 //     weight: ['400', '700'],
 //     subsets: ['latin'],
@@ -22,7 +22,7 @@ export const theme = extendTheme({
 
   fonts: {
     // heading: exo2.style.fontFamily,
-    body: montserrat.style.fontFamily,
+    // body: montserrat.style.fontFamily,
   },
 
   colors: {

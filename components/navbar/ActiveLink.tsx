@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { ListItem, Text, Button, useColorMode } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-import { Montserrat } from "next/font/google";
+// import { Montserrat } from "next/font/google";
 
-const montserrat = Montserrat({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-});
+// const montserrat = Montserrat({
+//   weight: ["400", "700"],
+//   subsets: ["latin"],
+// });
 
 export const ActiveLink = ({
   url,
@@ -33,7 +33,7 @@ export const ActiveLink = ({
         <Text
           display="inline-flex"
           fontSize="2xl"
-          className={montserrat.className}
+          //   className={montserrat.className}
           fontWeight="bold"
           color={asPath == url ? darkcolor : color}
           cursor="pointer"
@@ -69,7 +69,7 @@ export const ActiveLink = ({
           position={"relative"}
           zIndex={10}
           color="#5BFCF3"
-          className={montserrat.className}
+          //   className={montserrat.className}
           fontWeight={700}
           variant="outline"
           mr={{ base: "0px", lg: "10px" }}
@@ -86,7 +86,7 @@ export const ActiveLink = ({
           position={"relative"}
           zIndex={10}
           color={colorMode === "light" ? "#fff" : "#FCF7F2"}
-          className={montserrat.className}
+          //   className={montserrat.className}
           fontWeight={400}
           variant="outline"
           mr={{ base: "0px", lg: "10px" }}

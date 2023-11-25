@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { Montserrat } from "next/font/google";
+// import { Montserrat } from "next/font/google";
 import { Button, Flex } from "@chakra-ui/react";
 
-const montserrat = Montserrat({
-  weight: ["400"],
-  subsets: ["latin"],
-});
+// const montserrat = Montserrat({
+//   weight: ["400"],
+//   subsets: ["latin"],
+// });
 
 type Custom = {
   bgColor: string;
@@ -29,7 +29,7 @@ export const CustomButton = ({
   return (
     <Flex justifyContent="center" alignItems="center">
       <Button
-        className={montserrat.className}
+        // className={montserrat.className}
         bgColor={bgColor}
         color={color}
         _hover={{ bg: bgHover }}
