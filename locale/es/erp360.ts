@@ -2,7 +2,6 @@ export default {
   banner: {
     heading01: "Simplifica la gestión empresarial de tu negocio con ERP 360 ",
     heading02: "Un producto basado en Odoo",
-    buttonText01: "Solicitar demo",
   },
   solution: {
     heading: "ERP 360",
@@ -215,39 +214,97 @@ export default {
     accordion: [
       {
         id: 0,
-        heading:
-          "¿Cuáles son las diferencias entre las ediciones de Odoo y por qué debería elegir ERP 360?",
-        text:
-          "Las ediciones de Odoo incluyen Community y Enterprise. La edición Community ofrece una solución ERP completa, flexible y de código abierto, con soporte, documentación disponible en línea y bajo costo, mientras que la Enterprise es de pago y tiene características adicionales como: integraciones avanzadas de aplicaciones, personalizaciones y actualizaciones regulares, esto hace que sea una solución más costosa. \n\n" +
-          "ERP 360 es una solución alojada en la nube que se basa en la edición Community de Odoo, lo que significa que no necesita preocuparse por configurar, mantener y actualizar la plataforma, ya que todo esto se maneja desde Corporación Estelio. Podrá acceder a funcionalidades completas y personalizadas a un costo menor que se adapten a sus necesidades.",
+        heading: "¿Cuál es la diferencia entre ERP 360 y Odoo Enterprise?",
+        content: {
+          title01: "ERP360",
+          title02: "Odoo Enterprise",
+          text01erp:
+            "Solución integral que incluye servicio de hosting junto con un número variable de usuarios según las necesidades de la empresa.",
+          text02erp:
+            "Contiene un máximo de 7 módulos estándar, esto según el plan de elección.",
+          text03erp: "Software de fácil y rápida instalación.",
+          text01odooEnterprise:
+            "El modelo de licenciamiento se basa en el número de usuarios.",
+          text02odooEnterprise:
+            "El servicio de hosting tiene un costo adicional.",
+          text03odooEnterprise:
+            "El costo de la solución varía según la implementación de cada módulo.",
+          text04odooEnterprise: "Ofrece beneficios adicionales.",
+        },
       },
       {
         id: 1,
-        heading:
-          "¿Cómo puedo asegurarme de que mis datos estén seguros y protegidos en ERP 360?",
-        text: "ERP 360 utiliza medidas de seguridad avanzadas, como el cifrado de datos, la autenticación de dos factores y el control de acceso basado en roles, para proteger sus datos. Además, en Corporación Estelio implementamos medidas de seguridad física y lógica para garantizar que los servidores y los datos estén protegidos.",
+        heading: "¿Cuáles son los módulos que abarca Erp 360?",
+        content: {
+          isTitle: true,
+          title: "La solución ERP 360 abarca los siguientes módulos:",
+          text01: "Fabricación",
+          text02: "Contabilidad y facturación.",
+          text03: "Puntos de venta.",
+          text04: "Inventario",
+          text05: "Compras.",
+          text06: "Ventas.",
+          text07: "CRM",
+        },
       },
       {
         id: 2,
         heading:
-          "¿Puedo integrar ERP 360 con otras herramientas y sistemas que utilizo en mi empresa?",
-        text:
-          "ERP 360 admite una variedad de integraciones y API. Puede integrarla con herramientas de terceros empleando conectores de integración disponibles en la tienda de aplicaciones de Odoo o utilizando una API personalizada. \n\n" +
-          "Para más detalle, puede comunicarse con el equipo técnico de ERP 360 y le brindarán información más detallada al respecto.",
+          "¿Qué datos debo suministrar para configurar mi instancia en ERP 360?",
+        content: {
+          isTitle: true,
+          title: "Los datos a suministrar son los siguientes:",
+          text01: "Nombre de la empresa.",
+          text02: "RIF.",
+          text03: "Número de teléfono.",
+          text04: "Correo electrónico.",
+          text05: "Nombre de usuarios.",
+          text06: "Centros de producción.",
+          text07: "Plan de cuentas.",
+        },
       },
       {
         id: 3,
-        heading:
-          "¿Qué datos debo suministrar para configurar mi instancia en ERP 360?",
-        text: "Nombre de la empresa o del cliente, nombre del contacto principal, un correo electrónico, número de teléfono.",
+        heading: "¿Qué pasa si quiero algún módulo adicional?",
+        content: {
+          text: "Para la incorporación de módulos adicionales más allá de la solución ERP estándar, se recomienda contactar a nuestro equipo de ejecutivos de ventas. Esta implementación aplicará un costo adicional.",
+        },
       },
       {
         id: 4,
         heading:
-          "¿Cómo puedo importar datos desde mi sistema anterior a ERP 360?",
-        text: "ERP 360 ofrece varias opciones para importar datos desde sistemas anteriores, incluidos archivos CSV, Excel y XML. Puede usar la herramienta de importación de Odoo para mapear e importar datos desde estos formatos. También puede utilizar una herramienta de migración de terceros para ayudarlo con la importación de datos.",
+          "¿Puedo integrar ERP 360 con otras herramientas y sistemas que utilizo en mi empresa?",
+        content: {
+          text:
+            "ERP 360 admite una variedad de integraciones y API. Puede integrarse con herramientas de terceros empleando conectores de integración disponibles en la tienda de aplicaciones de Odoo o utilizando una API personalizada.\n\n" +
+            "Para información más detallada,  se recomienda contactar a nuestro equipo técnico de ERP 360.",
+        },
       },
-      { id: 5, heading: "¿Puedo exportar mis datos?", text: "Si." },
+      {
+        id: 5,
+        heading:
+          "¿Cómo puedo asegurarme de que mis datos estén seguros y protegidos en ERP 360?",
+        content: {
+          text:
+            "ERP 360 utiliza medidas de seguridad avanzadas, como el cifrado de datos, la autenticación de dos factores y el control de acceso basado en roles, para proteger sus datos. Además, en Corporación Estelio implementamos medidas de seguridad física y lógica para garantizar que los servidores y los datos estén protegidos.\n\n" +
+            "*Corporación Estelio se compromete a NO hacer uso de los datos de terceros para beneficio propio.",
+        },
+      },
+      {
+        id: 6,
+        heading:
+          "¿Cómo puedo importar mis datos desde mi sistema anterior a ERP 360?",
+        content: {
+          text: "ERP 360 ofrece varias opciones para importar datos desde sistemas anteriores, incluidos archivos CSV, Excel y XML. Puede usar la herramienta de importación de Odoo para mapear e importar datos desde estos formatos. También puede utilizar una herramienta de migración de terceros para ayudarlo con la importación de datos.",
+        },
+      },
+      {
+        id: 7,
+        heading: "¿Puedo exportar mis datos?",
+        content: {
+          text: "Sí.",
+        },
+      },
     ],
   },
 };

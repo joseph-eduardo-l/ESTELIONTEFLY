@@ -18,9 +18,10 @@ export const Banner = () => {
   const { colorMode } = useColorMode();
   const t = locale === "en" ? en : es;
   const {
+    global: { buttons },
     pages: {
       erp360: {
-        banner: { heading01, heading02, buttonText01 },
+        banner: { heading01, heading02 },
       },
     },
   } = t;
@@ -85,7 +86,7 @@ export const Banner = () => {
               color={colorMode === "light" ? "#fff" : "white.100"}
               _hover={{ bgColor: "odoo.400" }}
             >
-              {buttonText01}
+              {buttons.button05}
             </Button>
           </Link>
         </Stack>
