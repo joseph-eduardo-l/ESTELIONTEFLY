@@ -3,6 +3,7 @@ export default {
     heading01:
       "Simplify the business management of your business with ERP 360 ",
     heading02: "A product based on Odoo",
+    buttonText01: "Request demo",
   },
   solution: {
     heading: "ERP 360",
@@ -33,7 +34,7 @@ export default {
         id: 2,
         title: "Professional",
         advantagesList: [
-          { id: 1, text: "Access to 11 Odoo modules" },
+          { id: 1, text: "Access to 5 Odoo modules" },
           { id: 2, text: "Intermediate monitoring reports and dashboard" },
           { id: 3, text: "Integration with Fiscal Printer HKA80 and commands" },
           { id: 4, text: "Unlimited companies" },
@@ -50,7 +51,7 @@ export default {
         id: 3,
         title: "Business",
         advantagesList: [
-          { id: 1, text: "Access to 14 Odoo modules" },
+          { id: 1, text: "Access to 7 Odoo modules" },
           {
             id: 2,
             text: "Advanced reports, dashboard, analytics and automated notifications",
@@ -204,37 +205,94 @@ export default {
     accordion: [
       {
         id: 0,
-        heading:
-          "What are the differences between the Odoo editions and why should I choose ERP 360?",
-        text:
-          "Odoo editions include Community and Enterprise. The Community edition offers a complete, flexible ERP solution and open source, with support, documentation available online and low cost, while the Enterprise is paid and has additional features such as: advanced application integrations, customizations and regular updates, this makes it a more expensive solution.\n\n " +
-          "ERP 360 is a cloud-hosted solution that is based on the Community edition of Odoo, which means that you do not need to worry about configuring, maintaining and updating the platform, since all this is handled from Corporación Estelio. You will be able to access to complete and customized functionalities at a lower cost that adapt to your needs.",
+        heading: "What is the difference between ERP 360 and Odoo Enterprise?",
+        content: {
+          title01: "ERP360",
+          title02: "Odoo Enterprise",
+          text01erp:
+            "Comprehensive solution that includes hosting service along with a variable number of users depending on the company's needs.",
+          text02erp:
+            "It contains a maximum of 7 standard modules, depending on the plan of choice.",
+          text03erp: "Quick and easy installation software.",
+          text01odooEnterprise:
+            "The licensing model is based on the number of users.",
+          text02odooEnterprise: "The hosting service has an additional cost.",
+          text03odooEnterprise:
+            "The cost of the solution varies depending on the implementation of each module.",
+          text04odooEnterprise: "Offers additional benefits.",
+        },
       },
       {
         id: 1,
-        heading: "How can I make sure my data is safe and secure in ERP 360?",
-        text: "ERP 360 uses advanced security measures such as data encryption, two-factor authentication, and role-based access control, to protect your data. In addition, at Corporación Estelio we implement physical and logical security measures to ensure that servers and data are protected.",
+        heading: "What are the modules covered by Erp 360?",
+        content: {
+          isTitle: true,
+          title: "The ERP 360 solution covers the following modules:",
+          text01: "Manufacturing.",
+          text02: "Accounting and billing.",
+          text03: "Points of sale.",
+          text04: "Inventory.",
+          text05: "Shopping.",
+          text06: "Sales.",
+          text07: "CRM.",
+        },
       },
       {
         id: 2,
         heading:
-          "Can I integrate ERP 360 with other tools and systems I use in my company?",
-        text:
-          "ERP 360 supports a variety of integrations and APIs. You can integrate with third-party tools using available integration connectors in the Odoo app store or using a custom API.\n\n" +
-          "For more details, you can contact the ERP 360 technical team and they will provide you with more detailed information about it.",
+          "What data do I need to provide to configure my instance in ERP 360?",
+        content: {
+          isTitle: true,
+          title: "The data to be provided is the following:",
+          text01: "Company name.",
+          text02: "RIF.",
+          text03: "Phone number.",
+          text04: "Email.",
+          text05: "Users name.",
+          text06: "Production centers.",
+          text07: "Chart of accounts.",
+        },
       },
       {
         id: 3,
-        heading:
-          "What data do I need to provide to configure my instance in ERP 360?",
-        text: "Company or customer name, primary contact name, email, phone number.",
+        heading: "What if I want some additional module?",
+        content: {
+          text: "For the incorporation of additional modules beyond the standard ERP solution, it is recommended to contact our team of sales executives. This implementation will apply an additional cost.",
+        },
       },
       {
         id: 4,
-        heading: "How can I import data from my legacy system into ERP 360?",
-        text: "ERP 360 offers several options for importing data from legacy systems, including CSV, Excel, and XML files. You can use the tool Odoo import tool to map and import data from these formats. You can also use a third-party migration tool to help you with data import.",
+        heading:
+          "Can I integrate ERP 360 with other tools and systems that I use in my company?",
+        content: {
+          text:
+            "ERP 360 supports a variety of integrations and APIs. It can be integrated with third-party tools using integration connectors available in the Odoo app store or using a custom API.\n\n" +
+            "For more detailed information, it is recommended to contact our ERP 360 technical team.",
+        },
       },
-      { id: 5, heading: "Can I export my data?", text: "Yes." },
+      {
+        id: 5,
+        heading: "How can I ensure my data is safe and secure in ERP 360?",
+        content: {
+          text:
+            "ERP 360 uses advanced security measures, such as data encryption, two-factor authentication, and role-based access control, to protect your data. In addition, at Corporación Estelio we implement physical and logical security measures to guarantee that servers and data are protected.\n\n" +
+            "*Corporación Estelio undertakes NOT to use third party data for its own benefit.",
+        },
+      },
+      {
+        id: 6,
+        heading: "How can I import my data from my previous system to ERP 360?",
+        content: {
+          text: "ERP 360 offers several options for importing data from legacy systems, including CSV, Excel, and XML files. You can use the Odoo import tool to map and import data from these formats. You can also use a third-party migration tool to help you import data.",
+        },
+      },
+      {
+        id: 7,
+        heading: "Can I export my data?",
+        content: {
+          text: "Yes.",
+        },
+      },
     ],
   },
 };
