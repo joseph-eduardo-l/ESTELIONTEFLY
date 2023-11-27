@@ -38,7 +38,7 @@ export default {
           { id: 4, text: "Máximo hasta 3 empresas" },
           {
             id: 5,
-            text: "Mínimo hasta 3 usuarios y máximo hasta 15 usuarios",
+            text: "Hasta un mínimo de 3 usuarios y un máximo de 15 usuarios",
           },
         ],
         selection: "Seleccione la cantidad de usuarios:",

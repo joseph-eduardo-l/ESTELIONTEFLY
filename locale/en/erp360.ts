@@ -38,7 +38,10 @@ export default {
           { id: 2, text: "Intermediate monitoring reports and dashboard" },
           { id: 3, text: "Integration with Fiscal Printer HKA80 and commands" },
           { id: 4, text: "Maximum up to 3 companies" },
-          { id: 5, text: "Minimum up to 3 users and maximum up to 15 users" },
+          {
+            id: 5,
+            text: "Up to a minimum of 3 users and a maximum of 15 users",
+          },
         ],
         selection: "Select the number of users:",
         price: "From",
@@ -224,7 +227,7 @@ export default {
       },
       {
         id: 1,
-        heading: "What are the modules covered by Erp 360?",
+        heading: "What are the modules covered by ERP 360?",
         content: {
           isTitle: true,
           title: "The ERP 360 solution covers the following modules:",
