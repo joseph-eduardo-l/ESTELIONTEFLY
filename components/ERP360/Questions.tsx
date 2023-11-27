@@ -105,7 +105,7 @@ export const Questions = () => {
                       )}
                       {content.isTitle === true ? (
                         <UnorderedList>
-                          <h1>{content.title} :</h1>
+                          <h1>{content.title}</h1>
                           <ListItem>{content.text01}</ListItem>
                           <ListItem>{content.text02}</ListItem>
                           <ListItem>{content.text03}</ListItem>
