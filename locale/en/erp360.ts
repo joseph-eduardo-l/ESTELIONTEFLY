@@ -210,7 +210,7 @@ export default {
         id: 0,
         heading: "What is the difference between ERP 360 and Odoo Enterprise?",
         content: {
-          title01: "ERP360",
+          title01: "ERP 360",
           title02: "Odoo Enterprise",
           text01erp:
             "Comprehensive solution that includes hosting service along with a variable number of users depending on the company's needs",
