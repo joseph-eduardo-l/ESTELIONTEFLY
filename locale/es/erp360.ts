@@ -64,7 +64,7 @@ export default {
           { id: 4, text: "Empresas ilimitadas" },
           {
             id: 5,
-            text: "Apartir de 20 usuarios, en escalera de 5",
+            text: "A partir de 20 usuarios, en escalera de 5",
           },
         ],
         selection: "Seleccione la cantidad de usuarios:",
@@ -216,7 +216,7 @@ export default {
         id: 0,
         heading: "¿Cuál es la diferencia entre ERP 360 y Odoo Enterprise?",
         content: {
-          title01: "ERP360",
+          title01: "ERP 360",
           title02: "Odoo Enterprise",
           text01erp:
             "Solución integral que incluye servicio de hosting junto con un número variable de usuarios según las necesidades de la empresa",
