@@ -64,7 +64,7 @@ export default {
           { id: 4, text: "Empresas ilimitadas" },
           {
             id: 5,
-            text: "Apartir de 20 usuarios, en escalera de 5",
+            text: "A partir de 20 usuarios, en escalera de 5",
           },
         ],
         selection: "Seleccione la cantidad de usuarios:",
@@ -188,18 +188,18 @@ export default {
   testimonials: {
     heading: "Testimonios",
     testimonialsMap: [
-      {
-        id: 0,
-        testimony:
-          "Una de las características más destacables de Estelio es su alta capacidad de ejecución, rápido entendimiento de nuestras necesidades y requerimientos, nos han brindado una respuesta en un tiempo muy corto y han resuelto la situación de manera efectiva.",
-        nameAuthor: "La Wawa Venezuela 2021 C. A.",
-        image:
-          "https://website-estelio.s3.amazonaws.com/images/logos/lawawa.webp",
-        imageDark: "/images/casosdeExito/laWawaDark.webp",
-      },
+      // {
+      //   id: 0,
+      //   testimony:
+      //     "Una de las características más destacables de Estelio es su alta capacidad de ejecución, rápido entendimiento de nuestras necesidades y requerimientos, nos han brindado una respuesta en un tiempo muy corto y han resuelto la situación de manera efectiva.",
+      //   nameAuthor: "La Wawa Venezuela 2021 C. A.",
+      //   image:
+      //     "https://website-estelio.s3.amazonaws.com/images/logos/lawawa.webp",
+      //   imageDark: "/images/casosdeExito/laWawaDark.webp",
+      // },
 
       {
-        id: 1,
+        id: 0,
         testimony:
           "Nos complace expresar nuestra entera satisfacción con la relación comercial que hemos mantenido con Corporación Estelio. Nos ha impresionado por su capacidad de adaptarse a nuestras necesidades y requerimientos, ofreciéndonos soluciones rápidas y efectivas.",
         nameAuthor: "Kanji Sushi, C.A.",
@@ -216,7 +216,7 @@ export default {
         id: 0,
         heading: "¿Cuál es la diferencia entre ERP 360 y Odoo Enterprise?",
         content: {
-          title01: "ERP360",
+          title01: "ERP 360",
           title02: "Odoo Enterprise",
           text01erp:
             "Solución integral que incluye servicio de hosting junto con un número variable de usuarios según las necesidades de la empresa",

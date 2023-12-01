@@ -183,17 +183,17 @@ export default {
   testimonials: {
     heading: "Testimonials",
     testimonialsMap: [
+      // {
+      //   id: 0,
+      //   testimony:
+      //     "One of the most notable characteristics of Estelio is its high execution capacity, quick understanding of our needs and requirements, they have provided us with a response in a very short time and have resolved the situation effectively.",
+      //   nameAuthor: "La Wawa Venezuela 2021 C. A.",
+      //   image:
+      //     "https://website-estelio.s3.amazonaws.com/images/logos/lawawa.webp",
+      //   imageDark: "/images/casosdeExito/laWawaDark.webp",
+      // },
       {
         id: 0,
-        testimony:
-          "One of the most notable characteristics of Estelio is its high execution capacity, quick understanding of our needs and requirements, they have provided us with a response in a very short time and have resolved the situation effectively.",
-        nameAuthor: "La Wawa Venezuela 2021 C. A.",
-        image:
-          "https://website-estelio.s3.amazonaws.com/images/logos/lawawa.webp",
-        imageDark: "/images/casosdeExito/laWawaDark.webp",
-      },
-      {
-        id: 1,
         testimony:
           "We are pleased to express our complete satisfaction with the business relationship we have maintained with Corporación Estelio. It has impressed us with its ability to adapt to our needs and requirements, offering us fast and effective solutions.",
         nameAuthor: "Kanji Sushi, C.A.",
@@ -210,7 +210,7 @@ export default {
         id: 0,
         heading: "What is the difference between ERP 360 and Odoo Enterprise?",
         content: {
-          title01: "ERP360",
+          title01: "ERP 360",
           title02: "Odoo Enterprise",
           text01erp:
             "Comprehensive solution that includes hosting service along with a variable number of users depending on the company's needs",
