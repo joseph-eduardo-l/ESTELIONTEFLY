@@ -82,7 +82,7 @@ export const Questions = () => {
                       lineHeight={1.8}
                       whiteSpace="pre-wrap"
                     >
-                      {content?.title01 === "ERP360" &&
+                      {content?.title01 === "ERP 360" &&
                       content.title02 === "Odoo Enterprise" ? (
                         <UnorderedList>
                           <h1>
