@@ -67,7 +67,7 @@ export const LearnMorePricesMobile = () => {
           })}
         </Flex>
       </Flex>
-      {learnMoreList.map(({ id, text }) => {
+      {learnMoreList.map(({ id, header, content }) => {
         return (
           <Flex
             w="90%"
@@ -86,7 +86,7 @@ export const LearnMorePricesMobile = () => {
               ml="16px"
               mb="10px"
             >
-              {text}
+              {header}
             </Text>
             <Flex
               maxW="644px"
