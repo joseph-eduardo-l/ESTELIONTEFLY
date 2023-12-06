@@ -118,15 +118,7 @@ export const LearnMorePrices = () => {
                 {id !== 26 ? (
                   <>
                     {/* <CheckIcon visibility={id <= 10 ? "visible" : "hidden"} /> */}
-                    <CheckIcon
-                      visibility={
-                        content.map((i) => {
-                          return i[0];
-                        })
-                          ? "visible"
-                          : "hidden"
-                      }
-                    />
+                    <CheckIcon visibility={id <= 4 ? "visible" : "hidden"} />
                     <CheckIcon />
                   </>
                 ) : (
