@@ -101,7 +101,11 @@ export const LearnMorePrices = () => {
                 <br />
                 {content.map((i) => {
                   return (
-                    <ListItem fontSize={{ base: "16px", md: "18px" }} ml="40px">
+                    <ListItem
+                      key={i}
+                      fontSize={{ base: "16px", md: "18px" }}
+                      ml="40px"
+                    >
                       {i}
                     </ListItem>
                   );
