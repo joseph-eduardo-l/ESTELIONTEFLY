@@ -55,10 +55,7 @@ const Footer = () => {
   const t = locale === "en" ? en : es;
   const {
     global: {
-      footer: {
-        countryPhone,
-        privacyPolicy,
-      },
+      footer: { countryPhone, privacyPolicy },
     },
   } = t;
 
@@ -86,46 +83,53 @@ const Footer = () => {
           m="0 auto"
         >
           <Box>
-            <Image
-              m="0 auto 20px"
-              src={"/images/logo-2.webp"}
-              w="190px"
-              h="60px"
-              alt="Logo EstelioFooter"
-              loading="lazy"
-            />
+            <a href="https://www.estelio.com/" target="_blank">
+              <Image
+                m="0 auto 20px"
+                src={"/images/logo-2.webp"}
+                w="190px"
+                h="60px"
+                alt="Logo EstelioFooter"
+                loading="lazy"
+              />
+            </a>
           </Box>
 
           <Divider
-          orientation="horizontal"
-          w={"90%"}
-          m="0px auto 10px"
-          opacity={0.2}
-          display={{base: 'block', lg: 'none'}}
-          borderColor={colorMode === "light" ? "inherit" : ""}
-        />
+            orientation="horizontal"
+            w={"90%"}
+            m="0px auto 10px"
+            opacity={0.2}
+            display={{ base: "block", lg: "none" }}
+            borderColor={colorMode === "light" ? "inherit" : ""}
+          />
 
           {/* Phones */}
           <Flex
             m="0 auto 25px"
-            gap={{ base: '30px', lg: '20px' }}
-            justifyContent='center'
-            alignItems='center'
-            direction={{ base: 'column', lg: 'row' }}
+            gap={{ base: "30px", lg: "20px" }}
+            justifyContent="center"
+            alignItems="center"
+            direction={{ base: "column", lg: "row" }}
           >
             {/* Numeros de Venezuela */}
 
-            <Flex gap='10px' textAlign='center' justifyContent='center' direction={{ base: 'column', lg: 'row' }}>
+            <Flex
+              gap="10px"
+              textAlign="center"
+              justifyContent="center"
+              direction={{ base: "column", lg: "row" }}
+            >
               {numerosVenezuela.map(({ country, phone, id }) => {
                 return (
                   <>
-                    <Box display={'inline-block'}>
+                    <Box display={"inline-block"}>
                       <Text fontSize={"15px"} fontWeight="700">
                         {country}
                       </Text>
                     </Box>
 
-                    <Box display='inline-block'>
+                    <Box display="inline-block">
                       <Link
                         href={`tel:${phone}`}
                         display="flex"
@@ -145,7 +149,12 @@ const Footer = () => {
 
             {/* Numeros de Panama */}
 
-            <Flex gap='10px' textAlign='center' justifyContent='center' direction={{ base: 'column', lg: 'row' }}>
+            <Flex
+              gap="10px"
+              textAlign="center"
+              justifyContent="center"
+              direction={{ base: "column", lg: "row" }}
+            >
               {numerosPanama.map(({ country, phone, id }) => {
                 return (
                   <React.Fragment key={id}>
