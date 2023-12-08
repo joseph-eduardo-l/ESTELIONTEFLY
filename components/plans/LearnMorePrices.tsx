@@ -44,7 +44,15 @@ export const LearnMorePrices = () => {
         zIndex="10"
         mb="20px"
       >
-        <Text>{knowmore}</Text>
+        <Text
+          color={colorMode === "light" ? "odoo.400" : "white.100"}
+          ml="5px"
+          mt="-3px"
+          // fontWeight="700"
+          fontSize={{ base: "20px", md: "22px" }}
+        >
+          {knowmore}
+        </Text>
         <Flex
           gap={"10px"}
           maxW="480px"
@@ -63,13 +71,13 @@ export const LearnMorePrices = () => {
                 textAlign={"center"}
                 px="10px"
               >
-                <span>Plan:</span>
+                {/* <span>Plan:</span> */}
                 <Text
                   color={colorMode === "light" ? "odoo.400" : "white.100"}
                   ml="5px"
                   mt="-3px"
                   fontWeight="700"
-                  fontSize={{ base: "18px", md: "20px" }}
+                  fontSize={{ base: "22px", md: "24px" }}
                 >
                   {heading}
                 </Text>
@@ -84,10 +92,10 @@ export const LearnMorePrices = () => {
             <Flex
               w="100%"
               justifyContent={"space-around"}
-              mt={id === 1 ? "10px" : "0px"}
+              mt={id === 1 ? "10px" : "10px"}
             >
               <UnorderedList w={pixels1080 ? "360px" : "280px"} mb="10px">
-                <ListItem fontSize={{ base: "14px", md: "16px" }}>
+                <ListItem fontSize={{ base: "18px", md: "20px" }}>
                   {text}
                 </ListItem>
               </UnorderedList>
@@ -97,12 +105,12 @@ export const LearnMorePrices = () => {
                 justifyContent={"space-around"}
                 ml={pixels1080 ? "-280px" : "-200px"}
                 color={colorMode === "light" ? "odoo.400" : "white.100"}
-                fontSize={"24px"}
+                fontSize={"20px"}
               >
-                {id !== 26 ? (
+                {id !== 25 ? (
                   <>
                     {/* <CheckIcon visibility={id <= 10 ? "visible" : "hidden"} /> */}
-                    <CheckIcon visibility={id <= 18 ? "visible" : "hidden"} />
+                    <CheckIcon visibility={id <= 5 ? "visible" : "hidden"} />
                     <CheckIcon />
                   </>
                 ) : (
