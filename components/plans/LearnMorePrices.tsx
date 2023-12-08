@@ -86,16 +86,16 @@ export const LearnMorePrices = () => {
           })}
         </Flex>
       </Flex>
-      {learnMoreList.map(({ id, text }) => {
+      {learnMoreList.map(({ id, header, content }) => {
         return (
           <Box key={id} position="relative">
             <Flex
               w="100%"
               justifyContent={"space-around"}
-              mt={id === 1 ? "10px" : "10px"}
+              mt={id === 1 ? "10px" : "0px"}
             >
               <UnorderedList w={pixels1080 ? "360px" : "280px"} mb="10px">
-                <ListItem fontSize={{ base: "18px", md: "20px" }}>
+                <ListItem fontSize={{ base: "14px", md: "16px" }}>
                   {text}
                 </ListItem>
               </UnorderedList>
@@ -110,7 +110,7 @@ export const LearnMorePrices = () => {
                 {id !== 25 ? (
                   <>
                     {/* <CheckIcon visibility={id <= 10 ? "visible" : "hidden"} /> */}
-                    <CheckIcon visibility={id <= 5 ? "visible" : "hidden"} />
+                    <CheckIcon visibility={id <= 18 ? "visible" : "hidden"} />
                     <CheckIcon />
                   </>
                 ) : (
