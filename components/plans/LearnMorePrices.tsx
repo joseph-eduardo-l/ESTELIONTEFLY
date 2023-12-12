@@ -8,6 +8,8 @@ import {
   UnorderedList,
   useMediaQuery,
   useColorMode,
+  Heading,
+  Divider,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { CustomButton } from "../utils";
@@ -20,7 +22,12 @@ export const LearnMorePrices = () => {
     global: { buttons },
     pages: {
       erp360: {
-        pricesAndPlans: { knowmore, titles, learnMoreList },
+        pricesAndPlans: {
+          knowmore,
+          titles,
+          learnMoreList,
+          defaultFunctionalities: { heading, concept },
+        },
       },
     },
   } = t;
@@ -31,6 +38,32 @@ export const LearnMorePrices = () => {
 
   return (
     <Box display={{ base: "none", lg: "block" }} mb="40px">
+      <Heading
+        as="h1"
+        textAlign="center"
+        fontSize={{ base: "24px", md: "32px" }}
+        fontWeight="bold"
+      >
+        {heading}
+      </Heading>
+      <Divider
+        m="15px auto 35px"
+        w="120px"
+        h="6px"
+        opacity=".8"
+        borderStyle="none"
+        bgColor={colorMode === "light" ? "odoo.400" : "#fff"}
+        borderRadius="10px"
+      />
+      <Flex w="100%" flexDirection="column">
+        <Text
+          fontSize={{ base: "20px", md: "22px" }}
+          textAlign="center"
+          mb="20px"
+        >
+          {concept}
+        </Text>
+      </Flex>
       <Flex
         w="100%"
         h="60px"
@@ -107,7 +140,7 @@ export const LearnMorePrices = () => {
                 color={colorMode === "light" ? "odoo.400" : "white.100"}
                 fontSize={"20px"}
               >
-                {id !== 25 ? (
+                {id !== 8 ? (
                   <>
                     {/* <CheckIcon visibility={id <= 10 ? "visible" : "hidden"} /> */}
                     <CheckIcon visibility={id <= 5 ? "visible" : "hidden"} />
