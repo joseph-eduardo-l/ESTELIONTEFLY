@@ -190,7 +190,7 @@ export const ExtraFeatures = () => {
                   position={"relative"}
                 >
                   <Text mt={{ base: "10px", md: "80px" }} fontSize={"16px"}>
-                    Estos servicios tienen cargos adicionales.
+                    {text}
                   </Text>
                 </Flex>
               </GridItem>

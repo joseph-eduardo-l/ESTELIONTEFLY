@@ -141,7 +141,7 @@ export default {
         item8: "Plataforma e-Learning Odoo",
       },
     ],
-    text: "Estos servicios tienen un cargo adicional.",
+    text: "Estos servicios tienen cargos adicionales.",
   },
   manage: {
     heading: "Administra tu negocio con ",
