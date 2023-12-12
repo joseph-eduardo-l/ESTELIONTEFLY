@@ -142,7 +142,7 @@ export default {
         item8: "Odoo e-Learning Platform",
       },
     ],
-    text: "These services have an additional charge.",
+    text: "These services have additional charges.",
   },
   manage: {
     heading: "Manage your business with ",
