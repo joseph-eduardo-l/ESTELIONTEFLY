@@ -80,7 +80,7 @@ export const Prices = () => {
   return (
     <Box
       as="section"
-      maxW={{ base: "auto", md: "1380px" }}
+      maxW={{ base: "auto", md: "1720px" }}
       w={"90%"}
       m="80px auto"
     >
@@ -230,7 +230,7 @@ export const Prices = () => {
                           <ListIcon fontSize={"14px"} mt="8px">
                             <CheckIcon boxSize={3} />
                           </ListIcon>
-                          <Text fontSize={{ base: "14px", lg: "16px" }}>
+                          <Text fontSize={{ base: "18px", lg: "20px" }}>
                             {text}
                           </Text>
                         </ListItem>
