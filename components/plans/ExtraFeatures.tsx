@@ -177,7 +177,7 @@ export const ExtraFeatures = () => {
                       <ListIcon fontSize={"14px"} mt="8px">
                         <CheckIcon boxSize={3} />
                       </ListIcon>
-                      <Text fontSize={{ base: "14px", lg: "16px" }}>
+                      <Text fontSize={{ base: "16px", lg: "18px" }}>
                         {item8}
                       </Text>
                     </ListItem>
