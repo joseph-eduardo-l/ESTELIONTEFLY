@@ -46,7 +46,11 @@ export const LearnMorePricesMobile = () => {
               <Flex
                 key={id}
                 ml={
-                  id === 1 ? { base: "0px", sm: "-20px", md: "-40px" } : "0px"
+                  id === 1
+                    ? { base: "0px", sm: "100px", md: "-40px" }
+                    : id === 2
+                    ? "20px"
+                    : "20px"
                 }
                 fontSize={{ base: "14px", sm: "16px", md: "18px" }}
                 flexDirection="column"
@@ -72,18 +76,19 @@ export const LearnMorePricesMobile = () => {
           <Flex
             w="90%"
             m="0 auto"
+            pr={id === 4 ? "370px" : "auto"}
             key={id}
             justifyContent={"center"}
             alignItems="center"
-            mt={id === 1 ? "20px" : "0px"}
+            mt={id === 1 ? "30px" : "0px"}
             flexDirection="column"
-            mb="20px"
+            mb="10px"
           >
             <Text
-              fontSize={{ base: "14px", md: "16px" }}
+              fontSize={{ base: "15px", md: "16px" }}
               w="100%"
               maxW="644px"
-              ml="16px"
+              ml="1px"
               mb="10px"
             >
               {text}
@@ -91,24 +96,24 @@ export const LearnMorePricesMobile = () => {
             <Flex
               maxW="644px"
               w="100%"
-              justifyContent="space-between"
+              justifyContent="space-center"
               color={colorMode === "light" ? "odoo.400" : "white.100"}
               fontSize={{ base: "20px", md: "24px" }}
             >
-              {id !== 26 ? (
+              {/* {id !== 8 ? (
                 <>
-                  {/* <Box w="33.33%">
+                  <Box w="33.33%">
                     <CheckIcon
                       m="0 auto"
                       display="block"
                       visibility={id <= 10 ? "visible" : "hidden"}
                     />
-                  </Box> */}
+                  </Box>
                   <Box w="50%">
                     <CheckIcon
                       m="0 auto"
                       display="block"
-                      visibility={id <= 18 ? "visible" : "hidden"}
+                      visibility={id <= 5 ? "visible" : "hidden"}
                     />
                   </Box>
                   <Box w="50%">
@@ -130,7 +135,17 @@ export const LearnMorePricesMobile = () => {
                     </React.Fragment>
                   ))}
                 </Flex>
-              )}
+              )} */}
+              {[4, 5, 8].map((index) => (
+                <React.Fragment key={index}>
+                  <CheckIcon
+                    visibility={id <= index ? "visible" : "hidden"}
+                    ml={index === 4 ? "210px" : index === 5 ? "120px" : "135px"}
+                    mt="-30px"
+                    fontSize={15}
+                  />
+                </React.Fragment>
+              ))}
             </Flex>
           </Flex>
         );

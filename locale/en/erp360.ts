@@ -14,22 +14,32 @@ export default {
   pricesAndPlans: {
     heading: "Plans and prices",
     cards: [
-      // {
-      //     id: 1,
-      //     title: "Entrepreneur",
-      //     advantagesList: [
-      //         { id: 1, text: 'Access to 7 Odoo modules' },
-      //         { id: 2, text: 'Basic monitoring reports' },
-      //         { id: 3, text: 'Integration with Fiscal Printer HKA80' },
-      //         { id: 4, text: 'Single company, one warehouse and a maximum of 25 daily transactions' },
-      //     ],
-      //     selection: 'Select the number of users:',
-      //     price: 'Free',
-      //     plan: 'Monthly',
-      //     iconCard: '/images/erp360/icono-emprendedor-azul.svg',
-      //     iconCardDarkMode: '/images/erp360/icono-emprendedor-darkMode.svg',
-      //     iconCardHover: '/images/erp360/icono-emprendedor-morado.svg'
-      // },
+      {
+        id: 1,
+        title: "Lite",
+        advantagesList: [
+          { id: 1, text: "Access to 5 Odoo modules" },
+          {
+            id: 2,
+            text: "Integration with HKA80 fiscal printer and order ticket",
+          },
+          { id: 3, text: "Exclusively for a single company" },
+          {
+            id: 4,
+            text: "Up to a maximum of 5 users",
+          },
+          {
+            id: 5,
+            text: "No additional features are accepted",
+          },
+        ],
+        selection: "Select the number of users:",
+        price: "From",
+        plan: "Monthly",
+        iconCard: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardDarkMode: "/images/erp360/icono-emprendedor-darkMode.svg",
+        iconCardHover: "/images/erp360/icono-emprendedor-morado.svg",
+      },
       {
         id: 2,
         title: "Professional",
@@ -88,14 +98,14 @@ export default {
       { id: 1, text: "Shopping Module" },
       { id: 2, text: "Inventory Module" },
       { id: 3, text: "Sales Module" },
-      { id: 4, text: "CRM Module" },
-      { id: 5, text: "Point of Sale (POS) Module" },
+      { id: 4, text: "Point of Sale (POS) and Invoicing Module" },
+      { id: 5, text: "CRM Module" },
       { id: 6, text: "Manufacturing Module" },
-      { id: 7, text: "Accounting and Billing Module" },
+      { id: 7, text: "Accounting Module" },
     ],
     knowmore: "Know more",
     titles: [
-      //   { id: 1, heading: "Entrepreneur" },
+      { id: 1, heading: "Lite" },
       { id: 2, heading: "Professional" },
       { id: 3, heading: "Business" },
     ],

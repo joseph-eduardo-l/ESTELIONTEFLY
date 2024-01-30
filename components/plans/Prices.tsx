@@ -35,6 +35,18 @@ interface typesPlansAndPrices {
   option_users5?: string;
 }
 
+interface typeLite {
+  id2: number;
+  option_user: string;
+}
+
+const plans_pricesLite: typeLite[] = [
+  {
+    id2: 1,
+    option_user: "$25",
+  },
+];
+
 const plans_pricesProfessional: typesPlansAndPrices[] = [
   {
     id2: 1,
@@ -106,7 +118,7 @@ export const Prices = () => {
       </Box>
 
       <Grid
-        templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
+        templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
         gap={{ base: 0, md: 3, lg: 8 }}
       >
         {cards.map(
@@ -342,18 +354,18 @@ export const Prices = () => {
 
                   <Heading
                     fontFamily="heading"
-                    fontSize={
-                      id === 1
-                        ? { base: "34px", md: "38px" }
-                        : { base: "24px", md: "30px", lg: "32px" }
-                    }
+                    // fontSize={
+                    //   id === 1
+                    //     ? { base: "34px", md: "38px" }
+                    //     : { base: "24px", md: "30px", lg: "32px" }
+                    // }
                     textAlign="center"
                     display={"flex"}
                     mt="40px"
                   >
                     <Text
-                      mt={id === 1 ? { base: "-50px", md: "-120px" } : "0"}
-                      mb={id === 1 ? "50px" : "0"}
+                      // mt={id === 1 ? { base: "-50px", md: "-120px" } : "0"}
+                      // mb={id === 1 ? "50px" : "0"}
                       sx={{
                         ".cardPrice:hover &": {
                           transformScale: "1.1",
@@ -409,11 +421,17 @@ export const Prices = () => {
                             );
                           }
                         )
+                      : id === 1
+                      ? plans_pricesLite.map(({ id2, option_user }) => {
+                          return (
+                            <Text key={id2} ml="5px">
+                              {option_user}
+                            </Text>
+                          );
+                        })
                       : null}
                   </Heading>
-                  <Text opacity={id === 1 ? "0" : "1"} mb="20px">
-                    {plan}
-                  </Text>
+                  <Text mb="20px">{plan}</Text>
 
                   <Link
                     href={"https://wa.me/message/EA3RA3DJC2NTA1"}

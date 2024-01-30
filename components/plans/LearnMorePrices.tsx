@@ -97,17 +97,17 @@ export const LearnMorePrices = () => {
             return (
               <Flex
                 key={id}
-                ml={
-                  id === 1 ? { base: "0px", sm: "-20px", md: "-40px" } : "0px"
-                }
+                // ml={
+                //   id === 1 ? { base: "0px", sm: "-20px", md: "-40px" } : "0px"
+                // }
                 fontSize={{ base: "16px", md: "18px" }}
                 textAlign={"center"}
-                px="10px"
+                px="5px"
               >
                 {/* <span>Plan:</span> */}
                 <Text
                   color={colorMode === "light" ? "odoo.400" : "white.100"}
-                  ml="5px"
+                  ml={id === 1 ? "30px" : id === 2 ? "100px" : "80px"}
                   mt="-3px"
                   fontWeight="700"
                   fontSize={{ base: "22px", md: "24px" }}
@@ -125,7 +125,7 @@ export const LearnMorePrices = () => {
             <Flex
               w="100%"
               justifyContent={"space-around"}
-              mt={id === 1 ? "10px" : "0px"}
+              // mt={id === 1 ? "10px" : "0px"}
             >
               <UnorderedList w={pixels1080 ? "360px" : "280px"} mb="10px">
                 <ListItem fontSize={{ base: "18px", md: "20px" }}>
@@ -133,17 +133,17 @@ export const LearnMorePrices = () => {
                 </ListItem>
               </UnorderedList>
               <Flex
-                w="644px"
+                w="630px"
                 maxW="644px"
                 justifyContent={"space-around"}
-                ml={pixels1080 ? "-280px" : "-200px"}
+                ml={pixels1080 ? "-150px" : "-200px"}
                 color={colorMode === "light" ? "odoo.400" : "white.100"}
                 fontSize={"20px"}
               >
-                {id !== 8 ? (
+                {/* {id !== 8 ? (
                   <>
-                    {/* <CheckIcon visibility={id <= 10 ? "visible" : "hidden"} /> */}
-                    <CheckIcon visibility={id <= 5 ? "visible" : "hidden"} />
+                    <CheckIcon visibility={id <= 10 ? "visible" : "hidden"} />
+                    <CheckIcon visibility={id <= 4 ? "visible" : "hidden"} />
                     <CheckIcon />
                   </>
                 ) : (
@@ -161,7 +161,14 @@ export const LearnMorePrices = () => {
                       </React.Fragment>
                     ))}
                   </>
-                )}
+                )} */}
+                {[4, 5, 8].map((index) => (
+                  <React.Fragment key={index}>
+                    <CheckIcon
+                      visibility={id <= index ? "visible" : "hidden"}
+                    />
+                  </React.Fragment>
+                ))}
               </Flex>
             </Flex>
           </Box>
