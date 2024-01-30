@@ -12,22 +12,29 @@ export default {
   pricesAndPlans: {
     heading: "Planes y Servicios",
     cards: [
-      // {
-      //     id: 1,
-      //     title: "Emprendedor",
-      //     advantagesList: [
-      //         { id: 1, text: 'Acceso a 7 módulos de Odoo' },
-      //         { id: 2, text: 'Reportes de seguimiento básicos' },
-      //         { id: 3, text: 'Integración con Impresora Fiscal HKA80' },
-      //         { id: 4, text: 'Empresa única, un almacén y máximo 25 trasacciones diarias' },
-      //     ],
-      //     selection: 'Seleccione la cantidad de usuarios:',
-      //     price: 'Gratis',
-      //     plan: 'Mensuales',
-      //     iconCard: '/images/erp360/icono-emprendedor-azul.svg',
-      //     iconCardDarkMode: '/images/erp360/icono-emprendedor-azul.svg',
-      //     iconCardHover: '/images/erp360/icono-emprendedor-morado.svg'
-      // },
+      {
+        id: 1,
+        title: "Lite",
+        advantagesList: [
+          { id: 1, text: "Acceso a 5 módulos de Odoo" },
+          { id: 2, text: "Integración con Impresora Fiscal HKA80 y comanda" },
+          { id: 3, text: "Exclusivamente para una sola empresa" },
+          {
+            id: 4,
+            text: "Hasta un máximo de 5 usuarios",
+          },
+          {
+            id: 5,
+            text: "No se aceptan funcionalidades extra",
+          },
+        ],
+        selection: "Seleccione la cantidad de usuarios:",
+        price: "Desde",
+        plan: "Mensuales",
+        iconCard: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardDarkMode: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardHover: "/images/erp360/icono-emprendedor-morado.svg",
+      },
       {
         id: 2,
         title: "Profesional",
@@ -90,14 +97,14 @@ export default {
       { id: 1, text: "Módulo de Compras" },
       { id: 2, text: "Módulo de Inventario" },
       { id: 3, text: "Módulo de Ventas" },
-      { id: 4, text: "Módulo CRM" },
-      { id: 5, text: "Módulo de Punto de Venta (POS)" },
+      { id: 4, text: "Módulo de Punto de Venta (POS) y Facturación" },
+      { id: 5, text: "Módulo CRM" },
       { id: 6, text: "Módulo de Fabricación" },
-      { id: 7, text: "Módulo de Contabilidad y Facturación" },
+      { id: 7, text: "Módulo de Contabilidad" },
     ],
     knowmore: "Conoce más",
     titles: [
-      //   { id: 1, heading: "Emprendedor" },
+      { id: 1, heading: "Lite" },
       { id: 2, heading: "Profesional" },
       { id: 3, heading: "Empresarial" },
     ],

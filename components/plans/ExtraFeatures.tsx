@@ -189,7 +189,7 @@ export const ExtraFeatures = () => {
                   w="100%"
                   position={"relative"}
                 >
-                  <Text mt={{ base: "10px", md: "80px" }} fontSize={"16px"}>
+                  <Text mt={{ base: "80px", md: "80px" }} fontSize={"16px"}>
                     {text}
                   </Text>
                 </Flex>
