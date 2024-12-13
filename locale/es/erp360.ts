@@ -245,6 +245,7 @@ export default {
       },
     ],
   },
+  
   questions: {
     heading: "Preguntas Frecuentes",
     accordion: [

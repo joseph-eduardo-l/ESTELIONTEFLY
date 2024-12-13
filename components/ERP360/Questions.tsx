@@ -28,7 +28,7 @@ export const Questions = () => {
     },
   } = t;
   return (
-    <Box as="section" m="80px auto" width="90%" position="relative" zIndex="5">
+    <Box as="section" id="FAQ" m="80px auto" width="90%" position="relative" zIndex="5" >
       <Heading
         as="h2"
         textAlign="center"
@@ -47,7 +47,7 @@ export const Questions = () => {
         borderRadius="10px"
       />
 
-      <Box maxW="1024px" m="0 auto">
+      <Box maxW="1024px" m="0 auto" >
         {accordion.map(({ id, heading, content }) => {
           return (
             <Accordion key={id} allowMultiple>

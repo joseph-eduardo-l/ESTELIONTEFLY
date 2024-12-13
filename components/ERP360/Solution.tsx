@@ -98,7 +98,7 @@ export const Solution = () => {
           <Text textAlign="center" lineHeight="1.8" maxW="500px">
             {solution.text}
           </Text>
-          <Link href="https://wa.me/message/EA3RA3DJC2NTA1">
+          <Link href="https://wa.me/message/584123172765">
             <CustomButton
               bgColor="green.400"
               bgHover="odoo.400"

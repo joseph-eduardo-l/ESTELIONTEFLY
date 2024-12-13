@@ -38,7 +38,7 @@ const icons = [
   {
     id: 2,
     icon: <GrInstagram fontSize="18px" />,
-    link: "https://www.instagram.com/estelio_corp",
+    link: "https://www.instagram.com/erp360.ai/",
     text: "instagram",
   },
   {
