@@ -1,3 +1,6 @@
+// import CuadroModulo from 'public/images/CuadroModulo.svg';
+import { useColorMode } from '@chakra-ui/react';
+
 export default {
   banner: {
     heading01: "Simplifica la gestión empresarial de tu negocio con ERP 360 ",
@@ -9,26 +12,22 @@ export default {
     subHeading02: "gestión empresarial todo en uno",
     text: "Permite a las empresas de todos los tamaños optimizar sus operaciones, ahorrar tiempo y aumentar la productividad.",
   },
+  
   pricesAndPlans: {
     heading: "Planes y Servicios",
     cards: [
       {
         id: 1,
-        title: "Lite",
+        title: "ERP 360 Iniciativa",
         advantagesList: [
-          { id: 1, text: "Acceso a 5 módulos de Odoo" },
-          { id: 2, text: "Integración con Impresora Fiscal HKA80 y comanda" },
-          { id: 3, text: "Exclusivamente para una sola empresa" },
-          {
-            id: 4,
-            text: "Hasta un máximo de 5 usuarios",
-          },
-          {
-            id: 5,
-            text: "No se aceptan funcionalidades extra",
-          },
+          { id: 1, text: "Primeros 3 meses paga 29$ mensuales" },
+          { id: 2, text: "Incluye 5 usuarios" },
+          { id: 3, text: "Rapidez en la instalación de los módulos (Máx 4 horas)" },
+          { id: 4, text: "Servicio de hosting con AWS" },
+          { id: 5, text: "Hasta un máximo de 5 usuarios"},
+          { id: 6,  text: "2 horas gratuitas de inducción al inicio del contrato"},
         ],
-        selection: "Seleccione la cantidad de usuarios:",
+        // selection: "Seleccione la cantidad de usuarios:",
         price: "Desde",
         plan: "Mensuales",
         iconCard: "/images/erp360/icono-emprendedor-azul.svg",
@@ -37,49 +36,37 @@ export default {
       },
       {
         id: 2,
-        title: "Profesional",
+        title: "ERP 360 Evolución",
         advantagesList: [
-          { id: 1, text: "Acceso a 5 módulos de Odoo" },
-          { id: 2, text: "Reportes de seguimiento intermedios y dashboard" },
-          { id: 3, text: "Integración con Impresora Fiscal HKA80 y comanda" },
-          { id: 4, text: "Máximo hasta 3 empresas" },
-          {
-            id: 5,
-            text: "Hasta un mínimo de 3 usuarios y un máximo de 15 usuarios",
-          },
-          { id: 6, text: "No se aceptan funcionalidades extra" },
+          { id: 1, text: "36 módulos estándar basados en Odoo Community" },
+          { id: 2, text: "1 módulo Premium: -	Localización Contable Venezolana" },
+          { id: 3, text: "Incluye 7 usuarios" },
+          { id: 4, text: "Servicio de hosting con AWS" },
+          { id: 5, text: "Rapidez en la instalación de los módulos (Máx 4 horas)"},
+          { id: 6, text: "7 horas gratuitas de inducción inicial" },
+          { id: 7, text: "2 horas mensuales de soporte en la implementación x 3 meses " },
         ],
-        selection: "Seleccione la cantidad de usuarios:",
+        // selection: "Seleccione la cantidad de usuarios:",
         price: "Desde",
         plan: "Mensuales",
-        iconCard: "/images/erp360/icono-profesional-azul.svg",
+         iconCard: "/images/erp360/icono-profesional-azul.svg",
         iconCardDarkMode: "/images/erp360/icono-profesional-azul.svg",
         iconCardHover: "/images/erp360/icono-profesional-morado.svg",
       },
       {
         id: 3,
-        title: "Empresarial",
+        title: "ERP 360 Servicios",
         advantagesList: [
-          { id: 1, text: "Acceso a 7 módulos de Odoo" },
-          {
-            id: 2,
-            text: "Reportes avanzados, dashboard, analítica y notificaciones automatizadas",
-          },
-          {
-            id: 3,
-            text: "Integración con Impresora Fiscal HKA80, comanda y otras APIs",
-          },
-          { id: 4, text: "Empresas ilimitadas" },
-          {
-            id: 5,
-            text: "A partir de 20 usuarios, en escalera de 5",
-          },
-          {
-            id: 6,
-            text: "Se aceptan funcionalidades extra",
-          },
+          { id: 1, text: "36 módulos estándar basados en Odoo Community" },
+          { id: 2, text: "2 módulos Premium: *Localización Contable Venezolana *Proyecto Pro/Helpdesk Pro"},
+          { id: 3, text: "Incluye 7 usuarios"},
+          { id: 4, text: "Servicio de hosting con AWS" },
+          { id: 5, text: "Rapidez en la instalación de los módulos (Máx 4 horas)"},
+          { id: 6, text: "10 horas gratuitas de inducción al inicio del contrato"},          
+          { id: 7, text: "2 horas mensuales de soporte en la implementación x 3 meses"},          
+          // { id: 8, text: "No incluye horas de desarrollo"},          
         ],
-        selection: "Seleccione la cantidad de usuarios:",
+        // selection: "Seleccione la cantidad de usuarios:",
         price: "Desde",
         plan: "Mensuales",
         iconCard: "/images/erp360/icono-empresarial-azul.svg",
@@ -104,9 +91,9 @@ export default {
     ],
     knowmore: "Conoce más",
     titles: [
-      { id: 1, heading: "Lite" },
-      { id: 2, heading: "Profesional" },
-      { id: 3, heading: "Empresarial" },
+      { id: 1, heading: "Iniciativa" },
+      { id: 2, heading: "Evolución" },
+      { id: 3, heading: "Servicios" },
     ],
   },
   extraFeatures: {
@@ -221,28 +208,66 @@ export default {
       },
     ],
   },
+
+  
   testimonials: {
-    heading: "Testimonios",
+    heading: "Ellos Creyeron en Nuestra Visión",
     testimonialsMap: [
-      // {
+ // {
       //   id: 0,
-      //   testimony:
-      //     "Una de las características más destacables de Estelio es su alta capacidad de ejecución, rápido entendimiento de nuestras necesidades y requerimientos, nos han brindado una respuesta en un tiempo muy corto y han resuelto la situación de manera efectiva.",
+      //     testimony:
+      //     "One of the most notable characteristics of Estelio is its high execution capacity, quick understanding of our needs and requirements, they have provided us with a response in a very short time and have resolved the situation effectively.",
       //   nameAuthor: "La Wawa Venezuela 2021 C. A.",
       //   image:
       //     "https://website-estelio.s3.amazonaws.com/images/logos/lawawa.webp",
       //   imageDark: "/images/casosdeExito/laWawaDark.webp",
       // },
-
       {
-        id: 0,
-        testimony:
-          "Nos complace expresar nuestra entera satisfacción con la relación comercial que hemos mantenido con Corporación Estelio. Nos ha impresionado por su capacidad de adaptarse a nuestras necesidades y requerimientos, ofreciéndonos soluciones rápidas y efectivas.",
+        id: 1,
+        // testimony:
+        //   "We are pleased to express our complete satisfaction with the business relationship we have maintained with Corporación Estelio. It has impressed us with its ability to adapt to our needs and requirements, offering us fast and effective solutions.",
         nameAuthor: "Kanji Sushi, C.A.",
         image:
           "https://website-estelio.s3.amazonaws.com/images/logos/kanji.webp",
         imageDark: "/images/casosdeExito/kanjiDark.webp",
       },
+      {
+        id: 2,
+        // testimony:
+        //   "We are pleased to express our complete satisfaction with the business relationship we have maintained with Corporación Estelio. It has impressed us with its ability to adapt to our needs and requirements, offering us fast and effective solutions.",
+        nameAuthor: "Kanji Sushi, C.A.",
+        image:
+          "https://website-estelio.s3.amazonaws.com/images/logos/kanji.webp",
+        imageDark: "/images/casosdeExito/kanjiDark.webp",
+      },
+      {
+        id: 3,
+        // testimony:
+        //   "We are pleased to express our complete satisfaction with the business relationship we have maintained with Corporación Estelio. It has impressed us with its ability to adapt to our needs and requirements, offering us fast and effective solutions.",
+        nameAuthor: "Kanji Sushi, C.A.",
+        image:
+          "https://website-estelio.s3.amazonaws.com/images/logos/kanji.webp",
+        imageDark: "/images/casosdeExito/kanjiDark.webp",
+      },
+      {
+        id: 4,
+        // testimony:
+        //   "We are pleased to express our complete satisfaction with the business relationship we have maintained with Corporación Estelio. It has impressed us with its ability to adapt to our needs and requirements, offering us fast and effective solutions.",
+        nameAuthor: "Kanji Sushi, C.A.",
+        image:
+          "https://website-estelio.s3.amazonaws.com/images/logos/kanji.webp",
+        imageDark: "/images/casosdeExito/kanjiDark.webp",
+      },
+      {
+        id: 5,
+        // testimony:
+        //   "We are pleased to express our complete satisfaction with the business relationship we have maintained with Corporación Estelio. It has impressed us with its ability to adapt to our needs and requirements, offering us fast and effective solutions.",
+        nameAuthor: "Kanji Sushi, C.A.",
+        image:
+          "https://website-estelio.s3.amazonaws.com/images/logos/kanji.webp",
+        imageDark: "/images/casosdeExito/kanjiDark.webp",
+      },
+
     ],
   },
   
@@ -255,33 +280,49 @@ export default {
         content: {
           title01: "ERP 360",
           title02: "Odoo Enterprise",
+          title03: "Resumen",
           text01erp:
-            "Solución integral que incluye servicio de hosting junto con un número variable de usuarios según las necesidades de la empresa",
+            "Contiene 36 módulos estándar, con algunos planes premium, esto según el plan de elección.",
           text02erp:
             "Contiene un máximo de 7 módulos estándar, esto según el plan de elección",
-          text03erp: "Software de fácil y rápida instalación",
+          text03erp:             
+           "ERP 360 se presenta como una solución integral que incluye un servicio de hosting y permite un número variable de usuarios, según las necesidades específicas de cada empresa. Esta flexibilidad es ideal para adaptarse al crecimiento y cambios en la organización. Además, ERP 360 ofrece hasta 36 módulos estándar incluidos en cada plan, lo que facilita una implementación rápida y efectiva, sin costos adicionales por el hosting.",
           text01odooEnterprise:
             "El modelo de licenciamiento se basa en el número de usuarios",
           text02odooEnterprise:
             "El servicio de hosting tiene un costo adicional",
-          text03odooEnterprise:
-            "El costo de la solución varía según la implementación de cada módulo",
-          text04odooEnterprise: "Ofrece beneficios adicionales",
+            text03odooEnterprise: 
+            "Odoo Enterprise opera con un modelo de licenciamiento basado en el número de usuarios, lo que puede incrementar significativamente los costos, a medida que la empresa crece. Además, el servicio de hosting no está incluido en la licencia básica y tiene un costo adicional, lo que puede complicar la planificación financiera.",  
+            // text04odooEnterprise: "Ofrece beneficios adicionales",
+            text04odooEnterprise: "En resumen, ERP 360 no sólo simplifica la implementación con su estructura de precios clara y módulos incluidos, sino que también ofrece un soporte integral desde el inicio, permitiendo a las empresas concentrarse en su crecimiento, sin preocuparse por costos ocultos o complicaciones adicionales.",
+           
         },
       },
       {
         id: 1,
         heading: "¿Cuáles son los módulos que abarca ERP 360?",
         content: {
-          isTitle: true,
-          title: "La solución ERP 360 abarca los siguientes módulos:",
-          text01: "Fabricación",
-          text02: "Contabilidad y facturación",
-          text03: "Puntos de venta",
-          text04: "Inventario",
-          text05: "Compras",
-          text06: "Ventas",
-          text07: "CRM",
+          ModuleTitle: true,
+          title2: "La solución ERP 360 abarca los siguientes 36 módulos estándar:",
+          // text01: "Fabricación",
+          // text02: "Contabilidad y facturación",
+          // text03: "Puntos de venta",
+          // text04: "Inventario",
+          // text05: "Compras",
+          // text06: "Ventas",
+          // text07: "CRM",
+          // text07: "CRM",
+          // imageModule: "https://website-estelio.s3.amazonaws.com/images/logos/kanji.webp", // URL de la imagen
+          // imageDark: "/images/casosdeExito/kanjiDark.webp",
+          Module1: "Finanzas: Contabilidad, Facturación, Gastos, Documentos, Firma electrónica",
+          Module2: "Ventas: CRM, Ventas, Punto de tienda, Punto de venta restaurante, (Nuestra versión de suscriptores)",
+          Module3: "Sitios Web: Creador de sitios web, Comercio electrónico, Blog, Foro, Chat en vivo, E-learning ",
+          Module4: "Cadena de suministros: Inventario, Fabricación, Compra, Mantenimiento ",
+          Module5: "Recursos Humanos: Empleados, Reclutamiento, Tiempo personal, Evaluación, Referencias, Flota",
+          Module6: "Marketing: Marketing por correo electrónico, Marketing por msm, Eventos, Encuestas ",
+          Module7: "Servicios: Proyecto, Hojas de horas, Servicio de asistencia",
+          Module8: "Productividad: conversaciones, Arrobaciones, Información ",
+          
         },
       },
       {
@@ -296,7 +337,7 @@ export default {
           text03: "Número de teléfono",
           text04: "Correo electrónico",
           text05: "Nombre de usuarios",
-          text06: "Centros de producción",
+          // text06: "Centros de producción",
           text07: "Plan de cuentas",
         },
       },
@@ -304,11 +345,20 @@ export default {
         id: 3,
         heading: "¿Qué pasa si quiero algún módulo adicional?",
         content: {
-          text: "Para la incorporación de módulos adicionales más allá de la solución ERP estándar, se recomienda contactar a nuestro equipo de ejecutivos de ventas. Esta implementación aplicará un costo adicional.",
+          text: "Cada uno de nuestros planes incluyen los 36 módulos estándar, que forman parte de nuestra solución ERP 360. Para aquellos interesados en incorporar módulos premium adicionales, les recomendamos contactar a nuestro equipo de ejecutivos de ventas; tenga en cuenta que estos módulos premium, conllevan costos adicionales.",
         },
       },
       {
         id: 4,
+        heading:
+          "¿Qué es la localización Contable Venezolana en Odoo?",
+        content: {
+          text:
+            "La localización contable venezolana, son módulos específicos que instalan impuestos, posiciones fiscales, plan de cuentas y declaraciones legales, preconfiguradas en su base de datos.",
+        },
+      },
+      {
+        id: 5,
         heading:
           "¿Puedo integrar ERP 360 con otras herramientas y sistemas que utilizo en mi empresa?",
         content: {
@@ -317,8 +367,9 @@ export default {
             "Para información más detallada,  se recomienda contactar a nuestro equipo técnico de ERP 360.",
         },
       },
+      
       {
-        id: 5,
+        id: 6,
         heading:
           "¿Cómo puedo asegurarme de que mis datos estén seguros y protegidos en ERP 360?",
         content: {
@@ -328,7 +379,7 @@ export default {
         },
       },
       {
-        id: 6,
+        id: 7,
         heading:
           "¿Cómo puedo importar mis datos desde mi sistema anterior a ERP 360?",
         content: {
@@ -336,7 +387,7 @@ export default {
         },
       },
       {
-        id: 7,
+        id: 8,
         heading: "¿Puedo exportar mis datos?",
         content: {
           text: "Sí.",

@@ -12,7 +12,7 @@ import {
   useColorModeValue,
   UnorderedList,
   ListItem,
-} from "@chakra-ui/react";
+  } from "@chakra-ui/react";
 import { en, es } from "@/locale";
 
 export const Questions = () => {
@@ -76,12 +76,14 @@ export const Questions = () => {
                       )}
                     </AccordionButton>
 
+
+
                     <AccordionPanel
                       py={4}
                       fontSize="16px"
                       lineHeight={1.8}
                       whiteSpace="pre-wrap"
-                    >
+                     >
                       {content?.title01 === "ERP 360" &&
                       content.title02 === "Odoo Enterprise" ? (
                         <UnorderedList>
@@ -98,7 +100,13 @@ export const Questions = () => {
                           <ListItem>{content.text01odooEnterprise}</ListItem>
                           <ListItem>{content.text02odooEnterprise}</ListItem>
                           <ListItem>{content.text03odooEnterprise}</ListItem>
-                          <ListItem>{content.text04odooEnterprise}</ListItem>
+                          {/* <ListItem>{content.text04odooEnterprise}</ListItem> */}
+                          {/* <ListItem>{content.summary}</ListItem> */}
+                          <br />
+                          <h1>
+                            <b>{content.title03} :</b>
+                          </h1>
+                          <h1>{content.text04odooEnterprise}</h1>
                         </UnorderedList>
                       ) : (
                         ""
@@ -111,13 +119,31 @@ export const Questions = () => {
                           <ListItem>{content.text03}</ListItem>
                           <ListItem>{content.text04}</ListItem>
                           <ListItem>{content.text05}</ListItem>
-                          <ListItem>{content.text06}</ListItem>
-                          <ListItem>{content.text07}</ListItem>
+                          {/* <ListItem>{content.text06}</ListItem> */}
+                          <ListItem>{content.text07}</ListItem>                     
                         </UnorderedList>
                       ) : (
                         content.text
                       )}
+                      {content.ModuleTitle === true ? (
+                        <UnorderedList>
+                           <h1><b>{content.title2}</b></h1><br></br>
+                           <ListItem>{content.Module1}</ListItem>
+                           <ListItem>{content.Module2}</ListItem>
+                           <ListItem>{content.Module3}</ListItem>
+                           <ListItem>{content.Module4}</ListItem>
+                           <ListItem>{content.Module5}</ListItem>
+                           <ListItem>{content.Module6}</ListItem>
+                           <ListItem>{content.Module7}</ListItem>
+                           <ListItem>{content.Module8}</ListItem>
+                        </UnorderedList>
+                       
+                      ): null }
+                      
                     </AccordionPanel>
+
+
+
                   </>
                 )}
               </AccordionItem>

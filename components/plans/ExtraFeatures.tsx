@@ -206,7 +206,7 @@ export const ExtraFeatures = () => {
         position={"relative"}
       >
         <Link
-          href={"https://wa.me/message/EA3RA3DJC2NTA1"}
+         target="blank" href={"https://wa.me/message/584123172765"}
           _hover={{ textDecoration: "none" }}
         >
           <Button

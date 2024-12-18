@@ -69,53 +69,47 @@ export const Testimonials = () => {
           opacity={colorMode === "dark" ? "0.7" : 0.9}
         />
       </Box>
-      <Grid templateColumns={{ base: "repeat(1, 1fr)" }} gap={8}>
+      <Flex flexDirection={"row"} justifyContent="space-around" alignItems="center" flexWrap="wrap">
         {testimonialsMap.map(
-          ({ id, testimony, nameAuthor, image, imageDark }) => {
+          ({ id,  nameAuthor, image, imageDark }) => {
+            // agregar testimonio arriba para poner testimonio dentro testimony,
             return (
-              <GridItem
+              <Box
                 key={id}
-                maxW="800px"
-                // w='100%'
-                m="0 auto"
+                maxW="300px"
+                m="10px"
                 boxShadow="6px 6px 20px 0px rgba(0, 0, 0, 0.08)"
                 borderRadius="16px"
+                p="18px"
+                bg={colorMode === "light" ? "#fff" : "#f4fbfc20"}
+                textAlign="center"
               >
-                <Flex
-                  p="18px"
-                  bg={colorMode === "light" ? "#fff" : "#f4fbfc20"}
-                  borderRadius={"10px"}
-                  flexDirection={{ base: "column", md: "row" }}
-                  justifyContent="center"
-                  alignItems={"center"}
-                  h="100%"
+                <Img
+                  w="100px"
+                  h="100px"
+                  src={colorMode === "light" ? image : imageDark}
+                  alt={`Logo ${nameAuthor}`}
+                  m="0 auto"
+                />
+                <Text
+                  mt="10px"
+                  fontSize={{ base: "13px", md: "14px" }}
+                  fontStyle={"italic"}
                 >
-                  <Img
-                    w="100px"
-                    h="100px"
-                    src={colorMode === "light" ? image : imageDark}
-                  />
-                  <Flex ml="20px" flexDirection="column" mt="20px">
-                    <Text
-                      fontSize={{ base: "13px", md: "14px" }}
-                      fontStyle={"italic"}
-                    >
-                      {`"${testimony}"`}
-                    </Text>
-                    <Heading
-                      mt="10px"
-                      fontWeight={"400"}
-                      fontSize={{ base: "18px", md: "20px" }}
-                    >
-                      {nameAuthor}
-                    </Heading>
-                  </Flex>
-                </Flex>
-              </GridItem>
+                  {/* {`"${testimony}"`} */}
+                </Text>
+                <Heading
+                  mt="10px"
+                  fontWeight={"400"}
+                  fontSize={{ base: "18px", md: "20px" }}
+                >
+                  {nameAuthor}
+                </Heading>
+              </Box>
             );
           }
         )}
-      </Grid>
+      </Flex>
     </Flex>
   );
 };
