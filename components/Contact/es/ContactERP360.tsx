@@ -6,7 +6,7 @@ import { en, es } from "@/locale";
 export const ContactERP360 = () => {
     const { colorMode } = useColorMode()
     const bgInput = useColorModeValue("blur-contact", "blur-dark");
-    const manosRobot = useColorModeValue("/images/manosrobot.webp", "/images/manosRobotDark.webp");
+    const manosRobot = useColorModeValue("/images/manosrobot2.webp", "/images/manosrobot2.webp");
     const { locale } = useRouter();
     const t = locale === "en" ? en : es;
     const { global: { buttons }, pages: { contact: { heading: { text01, text02 }, form: { name, lastName, email, phone, message } } } } = t;

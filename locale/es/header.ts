@@ -6,8 +6,8 @@ export default {
     vinculos: [
         { id: 1, title: 'Home', url: '/' },
         { id: 2, title: 'Planes', url: '/plans' },
-        { id: 9, title: 'FAQ', url: '#FAQ'},
-        { id: 0, title: 'Contacto',url: '#vinculoContact'},
+        { id: 9, title: 'FAQ', url: '//#FAQ'},
+        { id: 0, title: 'Contacto',url: '//#vinculoContact'},
         // { id: 2, title: '¿Quiénes somos?', url: 'https://www.estelio.com/about' },
         // {
         //     id: 3, title: 'Productos y Servicios', url: '',

@@ -94,6 +94,8 @@ export default {
       { id: 3, heading: " Services" },
     ],
   },
+
+  
   extraFeatures: {
     heading: "Extra Features",
     concept:
@@ -136,8 +138,22 @@ export default {
         item8: "Odoo e-Learning Platform",
       },
     ],
+    cards: [
+      {
+        id: 1,
+        title: "ERP 360 Initiative",
+        advantagesList: [
+          { id: 1, text: "First 3 months pay $29 per month" },
+          { id: 2, text: "Includes 5 users" },
+          { id: 3, text: "Fast installation of modules (Max 4 hours)" },
+          { id: 4, text: "Hosting service with AWS" },
+          { id: 5, text: "Up to a maximum of 5 users" },
+          { id: 6, text: "2 free hours of induction at the start of the contract" },
+        ],
+     }
+    ],
     text: "These services have additional charges.",
-  },
+  }, 
   manage: {
     heading: "Manage your business with ",
     headingSpan: "efficiency and ease",
@@ -367,17 +383,33 @@ export default {
         },
       },
       {
-        id: 7,
+        id:7,
+        heading: "Where will my data be stored?",
+        content: {
+          text:
+            "Your information is hosted on Amazon Web Services (AWS), one of the most secure and trusted cloud platforms in the world. AWS implements rigorous security measures to protect your data, including encryption, access management, and constant monitoring to prevent unauthorized access. By choosing AWS, we guarantee that your information is safeguarded in highly secure data centers, meeting the highest standards of protection and privacy. This not only ensures the integrity of your data, but also gives you the peace of mind of knowing that your information is in safe hands.\n\n" +
+            "*Corporación Estelio undertakes NOT to use third party data for its own benefit.",
+        },
+      },
+      {
+        id: 8,
         heading: "How can I import my data from my previous system to ERP 360?",
         content: {
           text: "ERP 360 offers several options for importing data from legacy systems, including CSV, Excel, and XML files. You can use the Odoo import tool to map and import data from these formats. You can also use a third-party migration tool to help you import data.",
         },
       },
       {
-        id: 8,
-        heading: "Can I export my data?",
+        id: 9,
+        heading: "Can I get a backup of my data at any time?",
         content: {
-          text: "Yes.",
+          text: "Yes, your instance's database data can be exported for backup purposes. You can request it once a month, in case you want to periodically keep a backup.",
+        },
+      },
+      {
+        id: 10,
+        heading: "If I cancel my ERP 360 subscription, can I get my data back?",
+        content: {
+          text: "Yes, if you cancel your ERP 360 subscription, the database will be delivered to you so that the technical team that will manage the new service can migrate it.",
         },
       },
     ],

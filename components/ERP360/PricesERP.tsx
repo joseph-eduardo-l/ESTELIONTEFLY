@@ -58,7 +58,7 @@ export const PricesERP = () => {
     global: { buttons },
     pages: {
       erp360: {
-        pricesAndPlans: { heading, cards },
+        pricesAndPlans: { heading, cards }, 
       },
     },
   } = t;

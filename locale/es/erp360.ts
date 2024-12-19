@@ -366,8 +366,7 @@ export default {
             "ERP 360 admite una variedad de integraciones y API. Puede integrarse con herramientas de terceros empleando conectores de integración disponibles en la tienda de aplicaciones de Odoo o utilizando una API personalizada.\n\n" +
             "Para información más detallada,  se recomienda contactar a nuestro equipo técnico de ERP 360.",
         },
-      },
-      
+      },      
       {
         id: 6,
         heading:
@@ -378,8 +377,18 @@ export default {
             "*Corporación Estelio se compromete a NO hacer uso de los datos de terceros para beneficio propio.",
         },
       },
+        {
+          id: 7,
+          heading:
+            "¿Dónde estará alojada mi data?",
+          content: {
+            text:
+              "Su información está alojada en Amazon Web Services (AWS), una de las plataformas de nube más seguras y confiables del mundo. AWS implementa rigurosas medidas de seguridad para proteger sus datos, incluyendo cifrado, gestión de acceso y monitoreo constante para prevenir accesos no autorizados. Al elegir AWS, garantizamos que su información esté resguardada en centros de datos de alta seguridad, cumpliendo con los estándares más exigentes de protección y privacidad. Esto no solo asegura la integridad de sus datos, sino que también le brinda la tranquilidad de saber que su información está en manos seguras.\n\n" +
+              "*Corporación Estelio se compromete a NO hacer uso de los datos de terceros para beneficio propio.",
+          },
+        },
       {
-        id: 7,
+        id: 8,
         heading:
           "¿Cómo puedo importar mis datos desde mi sistema anterior a ERP 360?",
         content: {
@@ -387,12 +396,19 @@ export default {
         },
       },
       {
-        id: 8,
-        heading: "¿Puedo exportar mis datos?",
+        id: 9,
+        heading: "¿Puedo obtener un respaldo de mi data en cualquier momento?",
         content: {
-          text: "Sí.",
+          text: "Si, la data de la base de datos de tu instancia, puede ser exportada, para propósitos de respaldo, la puedes solicitar 1 vez al mes, en caso de que desees conservar periódicamente un respaldo.",
         },
       },
+      {
+        id: 10,
+        heading: "¿Si cancelo mi suscripción de ERP 360, puedo obtener mi data?",
+        content: {
+          text: "Si, si cancelas tu suscripción de ERP 360, se te entrega la base de datos, para que el equipo técnico que manejará el nuevo servicio, la pueda migrar.",
+        },
+      },      
     ],
   },
 };

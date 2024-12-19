@@ -4,8 +4,8 @@ export default {
     vinculos: [
         { id: 1, title: 'Home', url: '/' },
         { id: 2, title: 'Plans', url: '/plans' },
-        { id: 9, title: 'FAQ', url: '#FAQ'},
-        { id: 0, title: 'Contact',url: '#vinculoContact'},
+        { id: 9, title: 'FAQ', url: '//#FAQ'},
+        { id: 0, title: 'Contact',url: '//#vinculoContact'},
         // { id: 2, title: 'About us', url: 'https://www.estelio.com/en/about' },
         // {
         //     id: 3, title: 'Products and Services', url: '',

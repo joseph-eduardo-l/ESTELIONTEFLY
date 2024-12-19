@@ -79,7 +79,7 @@ export const Banner = () => {
           <span style={{ display: "block" }}>{heading02}</span>
         </Heading>
         <Stack mt="10" direction="row" align="center">
-          <Link href="#vinculoContact">
+          <Link href="//#vinculoContact">
             <Button
               size="lg"
               bgColor="green.400"
