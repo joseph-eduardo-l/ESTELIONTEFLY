@@ -94,7 +94,7 @@ export const PricesERP = () => {
       </Box>
 
       <Grid
-        templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
+        templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(4, 1fr)" }}
         gap={{ base: 12, md: 3, lg: 4 }}
       >
         {cards.map(
@@ -210,7 +210,7 @@ export const PricesERP = () => {
                   <List spacing={2} mt="14px">
                     {advantagesList.map(({ id, text }) => {
                       return (
-                        <ListItem key={id} display="flex">
+                          <ListItem key={id} display="flex">
                           <ListIcon fontSize={"14px"} mt="8px">
                             <CheckIcon boxSize={3} />
                           </ListIcon>

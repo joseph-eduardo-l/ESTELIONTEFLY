@@ -1,3 +1,4 @@
+import { FeaturesPremium } from '@/components/plans';
 import { useColorMode } from '@chakra-ui/react';
 
 export default {
@@ -72,11 +73,31 @@ export default {
         iconCardDarkMode: "/images/erp360/icono-empresarial-darkMode.svg",
         iconCardHover: "/images/erp360/icono-empresarial-morado.svg",
       },
+      {
+        id: 4,
+        title: "ERP 360 Servicios",
+        advantagesList: [
+          { id: 1, text: "36 módulos estándar basados en Odoo Community" },
+          { id: 2, text: "2 módulos Premium: *Localización Contable Venezolana *Proyecto Pro/Helpdesk Pro"},
+          { id: 3, text: "Incluye 7 usuarios"},
+          { id: 4, text: "Servicio de hosting con AWS" },
+          { id: 5, text: "Rapidez en la instalación de los módulos (Máx 4 horas)"},
+          { id: 6, text: "10 horas gratuitas de inducción al inicio del contrato"},          
+          { id: 7, text: "2 horas mensuales de soporte en la implementación x 3 meses"},          
+          // { id: 8, text: "No incluye horas de desarrollo"},          
+        ],
+        // selection: "Seleccione la cantidad de usuarios:",
+        price: "Desde",
+        plan: "Mensuales",
+        iconCard: "/images/erp360/icono-empresarial-azul.svg",
+        iconCardDarkMode: "/images/erp360/icono-empresarial-azul.svg",
+        iconCardHover: "/images/erp360/icono-empresarial-morado.svg",
+      },
     ],
     learMoreText: "Know more",
     defaultFunctionalities: {
-      heading: "Default Functionalities",
-      concept: "These features are included with the available plans",
+      heading: "Premium Features",//"Default Functionalities",
+      concept: "These features are included with the available payments",
     },
     learnMoreList: [
       { id: 1, text: "Shopping Module" },
@@ -87,14 +108,13 @@ export default {
       { id: 6, text: "Manufacturing Module" },
       { id: 7, text: "Accounting Module" },
     ],
-    knowmore: "Know more",
+    knowmore: "", //Know more
     titles: [
-      { id: 1, heading: " Initiative" },
-      { id: 2, heading: " Evolution" },
-      { id: 3, heading: " Services" },
-    ],
+      // { id: 1, heading: " Initiative" },
+      { id: "2", heading: "One-time " },
+      { id: 3, heading: "Monthly " },
+    ],titleP: [],
   },
-
   
   extraFeatures: {
     heading: "Extra Features",
@@ -112,6 +132,7 @@ export default {
         item6: "Electronic Invoicing Panama",
         item7: "Barcode Reader",
         item8: "APIs",
+
       },
       {
         id: 2,
@@ -186,6 +207,92 @@ export default {
       },
     ],
   },
+
+  featuresPremium: {
+    heading: "Payment Features",
+    subHeading:
+      "These features are included with available payments.",
+    cards: [
+      {
+        id: 1,
+        title: "Single Payment",
+        advantagesList: [
+          { id: 1, text: "Biometric Integration " },
+          { id: 2, text: "Fiscal Printer Integration " },
+          // { id: 3, text: "Fast installation of modules (Max 4 hours)" },
+          // { id: 4, text: "Hosting service with AWS" },
+          // { id: 5, text: "Up to a maximum of 5 users" },
+          // { id: 6, text: "2 free hours of induction at the start of the contract" },
+        ],
+        selection: "Select the number of users:",
+        price: "From",
+        plan: "Monthly",
+        iconCard: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardDarkMode: "/images/erp360/icono-emprendedor-darkMode.svg",
+        iconCardHover: "/images/erp360/icono-emprendedor-morado.svg",
+      },
+      {
+        id: 2,
+        title: "Monthly Payment",
+        advantagesList: [
+          { id: 1, text: "Venezuelan Accounting Location" },
+          { id: 2, text: "HelpDesk Pro" },
+          { id: 3, text: "Restaurant POS" },
+          { id: 4, text: "WhatsApp Integration" },
+          { id: 5, text: "Commissions" },
+          { id: 6, text: "Subscription Management" },
+          { id: 7, text: "Timesheet" },
+        ],
+        selection: "Select the number of users:",
+        price: "From",
+        plan: "Monthly",
+        iconCard: "/images/erp360/icono-profesional-azul.svg",
+        iconCardDarkMode: "/images/erp360/icono-profesional-darkMode.svg",
+        iconCardHover: "/images/erp360/icono-profesional-morado.svg",
+      },
+      // {
+      //   id: 3,
+      //   title: "ERP 360 Services",
+      //   advantagesList: [
+      //     { id: 1, text: "36 standard modules based on Odoo Community" },
+      //     { id: 2, text: "2 Premium modules: *Venezuelan Accounting Localization *Pro Project/Helpdesk Pro" },
+      //     { id: 3, text: "Includes 7 users" },
+      //     { id: 4, text: "Hosting service with AWS" },
+      //     { id: 5, text: "Fast installation of modules (Max 4 hours)" },
+      //     { id: 6, text: "10 free hours of induction at the start of the contract" },
+      //     { id: 7, text: "2 monthly hours of support in the implementation x 3 months" },
+      //   ],
+      //   selection: "Select the number of users:",
+      //   price: "From",
+      //   plan: "Monthly",
+      //   iconCard: "/images/erp360/icono-empresarial-azul.svg",
+      //   iconCardDarkMode: "/images/erp360/icono-empresarial-darkMode.svg",
+      //   iconCardHover: "/images/erp360/icono-empresarial-morado.svg",
+      // },
+    ],
+    learMoreText: "Know more",
+    defaultFunctionalities: {
+      heading: "Premium Features",//"Default Functionalities",
+      concept: "These features are included with the available payments",
+    },
+    learnMoreList: [
+      { id: 1, text: "Shopping Module" },
+      { id: 2, text: "Inventory Module" },
+      { id: 3, text: "Sales Module" },
+      { id: 4, text: "Point of Sale (POS) and Invoicing Module" },
+      { id: 5, text: "CRM Module" },
+      { id: 6, text: "Manufacturing Module" },
+      { id: 7, text: "Accounting Module" },
+    ],
+    knowmore: "", //Know more
+    titles: [
+      // { id: 1, heading: " Initiative" },
+      { id: "2", heading: "One-time " },
+      { id: 3, heading: "Monthly " },
+    ],titleP: [],
+  },
+
+
   WhyimplementERP360: {
     heading: "Why implement ",
     headingSpan: "ERP 360",
@@ -225,7 +332,7 @@ export default {
     ],
   },
   testimonials: {
-    heading: "Testimonials",
+    heading: "They Believed in Our Vision",
     testimonialsMap: [
       // {
       //   id: 0,
@@ -249,37 +356,37 @@ export default {
         id: 2,
         // testimony:
         //   "We are pleased to express our complete satisfaction with the business relationship we have maintained with Corporación Estelio. It has impressed us with its ability to adapt to our needs and requirements, offering us fast and effective solutions.",
-        nameAuthor: "Kanji Sushi, C.A.",
+        nameAuthor: "Atlantic Reposteria",
         image:
-          "https://website-estelio.s3.amazonaws.com/images/logos/kanji.webp",
-        imageDark: "/images/casosdeExito/kanjiDark.webp",
+          "/images/casosdeExito/Atlantic.webp",
+        imageDark: "/images/casosdeExito/Atlantic.webp",
       },
       {
         id: 3,
         // testimony:
         //   "We are pleased to express our complete satisfaction with the business relationship we have maintained with Corporación Estelio. It has impressed us with its ability to adapt to our needs and requirements, offering us fast and effective solutions.",
-        nameAuthor: "Kanji Sushi, C.A.",
+        nameAuthor: "   Blue   Medical  ",
         image:
-          "https://website-estelio.s3.amazonaws.com/images/logos/kanji.webp",
-        imageDark: "/images/casosdeExito/kanjiDark.webp",
+          "/images/casosdeExito/Blue-Medical.webp",
+        imageDark: "/images/casosdeExito/Blue-Medical.webp",
       },
       {
         id: 4,
         // testimony:
         //   "We are pleased to express our complete satisfaction with the business relationship we have maintained with Corporación Estelio. It has impressed us with its ability to adapt to our needs and requirements, offering us fast and effective solutions.",
-        nameAuthor: "Kanji Sushi, C.A.",
+        nameAuthor: "La WaWa",
         image:
-          "https://website-estelio.s3.amazonaws.com/images/logos/kanji.webp",
-        imageDark: "/images/casosdeExito/kanjiDark.webp",
+          "https://website-estelio.s3.amazonaws.com/images/logos/lawawa.webp",
+        imageDark: "/images/casosdeExito/laWawaDark.webp",
       },
       {
         id: 5,
         // testimony:
         //   "We are pleased to express our complete satisfaction with the business relationship we have maintained with Corporación Estelio. It has impressed us with its ability to adapt to our needs and requirements, offering us fast and effective solutions.",
-        nameAuthor: "Kanji Sushi, C.A.",
+        nameAuthor: "Mallorca",
         image:
-          "https://website-estelio.s3.amazonaws.com/images/logos/kanji.webp",
-        imageDark: "/images/casosdeExito/kanjiDark.webp",
+          "/images/casosdeExito/Mallorca.webp",
+        imageDark: "/images/casosdeExito/Mallorca.webp",
       },
       
     ],
@@ -414,4 +521,13 @@ export default {
       },
     ],
   },
+
+  // defaultFunctionalities: {
+  //   heading: "Premium Features",//"Default Functionalities",
+  //   concept: "These features are included with the available payments",
+  // },
+  FormDemo:{
+    heading: "Request a demo",
+   
+  }
 };

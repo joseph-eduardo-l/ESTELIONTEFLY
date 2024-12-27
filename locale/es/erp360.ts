@@ -1,5 +1,7 @@
 // import CuadroModulo from 'public/images/CuadroModulo.svg';
+import { FeaturesPremium } from '@/components/plans';
 import { useColorMode } from '@chakra-ui/react';
+import { title } from 'process';
 
 export default {
   banner: {
@@ -73,28 +75,50 @@ export default {
         iconCardDarkMode: "/images/erp360/icono-empresarial-azul.svg",
         iconCardHover: "/images/erp360/icono-empresarial-morado.svg",
       },
+      {
+        id: 4,
+        title: "ERP 360 Servicios",
+        advantagesList: [
+          { id: 1, text: "36 módulos estándar basados en Odoo Community" },
+          { id: 2, text: "2 módulos Premium: *Localización Contable Venezolana *Proyecto Pro/Helpdesk Pro"},
+          { id: 3, text: "Incluye 7 usuarios"},
+          { id: 4, text: "Servicio de hosting con AWS" },
+          { id: 5, text: "Rapidez en la instalación de los módulos (Máx 4 horas)"},
+          { id: 6, text: "10 horas gratuitas de inducción al inicio del contrato"},          
+          { id: 7, text: "2 horas mensuales de soporte en la implementación x 3 meses"},          
+          // { id: 8, text: "No incluye horas de desarrollo"},          
+        ],
+        // selection: "Seleccione la cantidad de usuarios:",
+        price: "Desde",
+        plan: "Mensuales",
+        iconCard: "/images/erp360/icono-empresarial-azul.svg",
+        iconCardDarkMode: "/images/erp360/icono-empresarial-azul.svg",
+        iconCardHover: "/images/erp360/icono-empresarial-morado.svg",
+      },
     ],
     learMoreText: "Conocer más",
-    defaultFunctionalities: {
-      heading: "Funcionalidades Predeterminadas",
-      concept:
-        "Estas funcionalidades vienen incluidas con los planes disponibles",
-    },
-    learnMoreList: [
-      { id: 1, text: "Módulo de Compras" },
-      { id: 2, text: "Módulo de Inventario" },
-      { id: 3, text: "Módulo de Ventas" },
-      { id: 4, text: "Módulo de Punto de Venta (POS) y Facturación" },
-      { id: 5, text: "Módulo CRM" },
-      { id: 6, text: "Módulo de Fabricación" },
-      { id: 7, text: "Módulo de Contabilidad" },
-    ],
-    knowmore: "Conoce más",
-    titles: [
-      { id: 1, heading: "Iniciativa" },
-      { id: 2, heading: "Evolución" },
-      { id: 3, heading: "Servicios" },
-    ],
+    // defaultFunctionalities: {
+    //   heading: "Funcionalidades Premium",//"Funcionalidades Predeterminadas",
+    //   concept:
+    //     "Estas funcionalidades vienen incluidas con los pagos disponibles",
+    // },   
+    // learnMoreList: [
+    //   { id: 1, text: "Integración Biometrico" },
+    //   { id: 2, text: "Integración Impresora Fiscal" },
+    //   { id: 3, text: "Localizacion Contable Venezolana" },
+    //   { id: 4, text: "HelpDesk Pro" },
+    //   { id: 5, text: "POS restaurantes" },
+    //   { id: 6, text: "Integración WhatsApp" },
+    //   { id: 7, text: "Comisiones" },
+    //   { id: 8, text: "Gestion de suscripciones" },
+    //   { id: 9, text: "Parte de Horas" },
+    // ],
+    knowmore: "",
+    // titles: [
+    //   // { id: 1, heading: "Iniciativa" },
+    //   { id: 2, heading: "Único" },
+    //   { id: 3, heading: "Mensual" },
+    // ],
   },
   extraFeatures: {
     heading: "Funcionalidades Extra",
@@ -111,6 +135,7 @@ export default {
         item6: "Facturación Electrónica Panamá",
         item7: "Lector de Código de Barras",
         item8: "APIs",
+        
       },
       {
         title: "Módulos",
@@ -137,6 +162,7 @@ export default {
     ],
     text: "Estos servicios tienen cargos adicionales.",
   },
+  
   manage: {
     heading: "Administra tu negocio con ",
     headingSpan: "eficiencia y facilidad",
@@ -170,6 +196,97 @@ export default {
     ],
     alt: "",
   },
+
+  featuresPremium: {
+    heading: "Funcionalidades de pago",
+    subHeading:
+      "Estas funcionalidades vienen incluidas con los pagos disponibles",
+    cards: [
+      {
+        id: 1,
+        title: "Pago Único",
+        advantagesList: [
+          { id: 1, text: "Integración Biometrico " },
+          { id: 2, text: "Incluye 5 usuarios" },
+          // { id: 3, text: "Rapidez en la instalación de los módulos (Máx 4 horas)" },
+          // { id: 4, text: "Servicio de hosting con AWS" },
+          // { id: 5, text: "Hasta un máximo de 5 usuarios"},
+          // { id: 6,  text: "2 horas gratuitas de inducción al inicio del contrato"},
+        ],
+        // selection: "Seleccione la cantidad de usuarios:",
+        price: "Desde",
+        plan: "Mensuales",
+        iconCard: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardDarkMode: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardHover: "/images/erp360/icono-emprendedor-morado.svg",
+      },
+      {
+        
+ 
+        id: 2,
+        title: "Pago Mensual",
+        advantagesList: [
+          { id: 1, text: "Localizacion Contable Venezolana" },
+          { id: 2, text: "HelpDesk Pro" },
+          { id: 3, text: "POS restaurantes" },
+          { id: 4, text: "Integración WhatsApp" },
+          { id: 5, text: "Comisiones"},
+          { id: 6, text: "Gestion de suscripciones" },
+          { id: 7, text: "Parte de Horas " },
+        ],
+        // selection: "Seleccione la cantidad de usuarios:",
+        price: "Desde",
+        plan: "Mensuales",
+         iconCard: "/images/erp360/icono-profesional-azul.svg",
+        iconCardDarkMode: "/images/erp360/icono-profesional-azul.svg",
+        iconCardHover: "/images/erp360/icono-profesional-morado.svg",
+      },
+      // {
+      //   id: 3,
+      //   title: "ERP 360 Servicios",
+      //   advantagesList: [
+      //     { id: 1, text: "36 módulos estándar basados en Odoo Community" },
+      //     { id: 2, text: "2 módulos Premium: *Localización Contable Venezolana *Proyecto Pro/Helpdesk Pro"},
+      //     { id: 3, text: "Incluye 7 usuarios"},
+      //     { id: 4, text: "Servicio de hosting con AWS" },
+      //     { id: 5, text: "Rapidez en la instalación de los módulos (Máx 4 horas)"},
+      //     { id: 6, text: "10 horas gratuitas de inducción al inicio del contrato"},          
+      //     { id: 7, text: "2 horas mensuales de soporte en la implementación x 3 meses"},          
+      //     // { id: 8, text: "No incluye horas de desarrollo"},          
+      //   ],
+      //   // selection: "Seleccione la cantidad de usuarios:",
+      //   price: "Desde",
+      //   plan: "Mensuales",
+      //   iconCard: "/images/erp360/icono-empresarial-azul.svg",
+      //   iconCardDarkMode: "/images/erp360/icono-empresarial-azul.svg",
+      //   iconCardHover: "/images/erp360/icono-empresarial-morado.svg",
+      // },
+    ],
+    learMoreText: "Conocer más",
+    // defaultFunctionalities: {
+    //   heading: "Funcionalidades Premium",//"Funcionalidades Predeterminadas",
+    //   concept:
+    //     "Estas funcionalidades vienen incluidas con los pagos disponibles",
+    // },   
+    learnMoreList: [
+      { id: 1, text: "Integración Biometrico" },
+      { id: 2, text: "Integración Impresora Fiscal" },
+      { id: 3, text: "Localizacion Contable Venezolana" },
+      { id: 4, text: "HelpDesk Pro" },
+      { id: 5, text: "POS restaurantes" },
+      { id: 6, text: "Integración WhatsApp" },
+      { id: 7, text: "Comisiones" },
+      { id: 8, text: "Gestion de suscripciones" },
+      { id: 9, text: "Parte de Horas" },
+    ],
+    knowmore: "",
+    titles: [
+      // { id: 1, heading: "Iniciativa" },
+      { id: 2, heading: "Único" },
+      { id: 3, heading: "Mensual" },
+    ],
+  },
+
   WhyimplementERP360: {
     heading: "¿Por qué implementar ",
     headingSpan: "ERP 360",
@@ -235,37 +352,37 @@ export default {
         id: 2,
         // testimony:
         //   "We are pleased to express our complete satisfaction with the business relationship we have maintained with Corporación Estelio. It has impressed us with its ability to adapt to our needs and requirements, offering us fast and effective solutions.",
-        nameAuthor: "Kanji Sushi, C.A.",
+        nameAuthor: "Atlantic Reposteria",
         image:
-          "https://website-estelio.s3.amazonaws.com/images/logos/kanji.webp",
-        imageDark: "/images/casosdeExito/kanjiDark.webp",
+          "/images/casosdeExito/Atlantic.webp",
+        imageDark: "/images/casosdeExito/Atlantic.webp",
       },
       {
         id: 3,
         // testimony:
         //   "We are pleased to express our complete satisfaction with the business relationship we have maintained with Corporación Estelio. It has impressed us with its ability to adapt to our needs and requirements, offering us fast and effective solutions.",
-        nameAuthor: "Kanji Sushi, C.A.",
+        nameAuthor: "   Blue   Medical  ",
         image:
-          "https://website-estelio.s3.amazonaws.com/images/logos/kanji.webp",
-        imageDark: "/images/casosdeExito/kanjiDark.webp",
+          "/images/casosdeExito/Blue-Medical.webp",
+        imageDark: "/images/casosdeExito/Blue-Medical.webp",
       },
       {
         id: 4,
         // testimony:
         //   "We are pleased to express our complete satisfaction with the business relationship we have maintained with Corporación Estelio. It has impressed us with its ability to adapt to our needs and requirements, offering us fast and effective solutions.",
-        nameAuthor: "Kanji Sushi, C.A.",
+        nameAuthor: "La WaWa",
         image:
-          "https://website-estelio.s3.amazonaws.com/images/logos/kanji.webp",
-        imageDark: "/images/casosdeExito/kanjiDark.webp",
+          "https://website-estelio.s3.amazonaws.com/images/logos/lawawa.webp",
+        imageDark: "/images/casosdeExito/laWawaDark.webp",
       },
       {
         id: 5,
         // testimony:
         //   "We are pleased to express our complete satisfaction with the business relationship we have maintained with Corporación Estelio. It has impressed us with its ability to adapt to our needs and requirements, offering us fast and effective solutions.",
-        nameAuthor: "Kanji Sushi, C.A.",
+        nameAuthor: "Mallorca",
         image:
-          "https://website-estelio.s3.amazonaws.com/images/logos/kanji.webp",
-        imageDark: "/images/casosdeExito/kanjiDark.webp",
+          "/images/casosdeExito/Mallorca.webp",
+        imageDark: "/images/casosdeExito/Mallorca.webp",
       },
 
     ],

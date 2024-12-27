@@ -78,7 +78,7 @@ export const ExtraFeatures = () => {
             item5,
             item6,
             item7,
-            item8,
+            item8,         
           }) => {
             return (
               <GridItem
@@ -206,7 +206,7 @@ export const ExtraFeatures = () => {
         position={"relative"}
       >
         <Link
-         target="blank" href={"https://wa.me/message/584123172765"}
+         target="blank" href={"https://wa.me/584123172765"}
           _hover={{ textDecoration: "none" }}
         >
           <Button
