@@ -73,26 +73,7 @@ export default {
         iconCardDarkMode: "/images/erp360/icono-empresarial-darkMode.svg",
         iconCardHover: "/images/erp360/icono-empresarial-morado.svg",
       },
-      {
-        id: 4,
-        title: "ERP 360 Servicios",
-        advantagesList: [
-          { id: 1, text: "36 módulos estándar basados en Odoo Community" },
-          { id: 2, text: "2 módulos Premium: *Localización Contable Venezolana *Proyecto Pro/Helpdesk Pro"},
-          { id: 3, text: "Incluye 7 usuarios"},
-          { id: 4, text: "Servicio de hosting con AWS" },
-          { id: 5, text: "Rapidez en la instalación de los módulos (Máx 4 horas)"},
-          { id: 6, text: "10 horas gratuitas de inducción al inicio del contrato"},          
-          { id: 7, text: "2 horas mensuales de soporte en la implementación x 3 meses"},          
-          // { id: 8, text: "No incluye horas de desarrollo"},          
-        ],
-        // selection: "Seleccione la cantidad de usuarios:",
-        price: "Desde",
-        plan: "Mensuales",
-        iconCard: "/images/erp360/icono-empresarial-azul.svg",
-        iconCardDarkMode: "/images/erp360/icono-empresarial-azul.svg",
-        iconCardHover: "/images/erp360/icono-empresarial-morado.svg",
-      },
+      
     ],
     learMoreText: "Know more",
     defaultFunctionalities: {
@@ -211,18 +192,16 @@ export default {
   featuresPremium: {
     heading: "Payment Features",
     subHeading:
-      "These features are included with available payments.",
+    "These features are included with the",
+    headingSpan:" Monthly Payment",
+    headingSpan1:" one-time payment.",
     cards: [
       {
         id: 1,
         title: "Single Payment",
         advantagesList: [
-          { id: 1, text: "Biometric Integration " },
-          { id: 2, text: "Fiscal Printer Integration " },
-          // { id: 3, text: "Fast installation of modules (Max 4 hours)" },
-          // { id: 4, text: "Hosting service with AWS" },
-          // { id: 5, text: "Up to a maximum of 5 users" },
-          // { id: 6, text: "2 free hours of induction at the start of the contract" },
+          { id: 1, text: "In a world where art is often a mirror of society’s complexities, Carl Cozier—better known as Holy Moly—uses his craft to create something profoundly different: a burst of optimism and a call to action" },
+          
         ],
         selection: "Select the number of users:",
         price: "From",
@@ -235,61 +214,109 @@ export default {
         id: 2,
         title: "Monthly Payment",
         advantagesList: [
-          { id: 1, text: "Venezuelan Accounting Location" },
-          { id: 2, text: "HelpDesk Pro" },
-          { id: 3, text: "Restaurant POS" },
-          { id: 4, text: "WhatsApp Integration" },
-          { id: 5, text: "Commissions" },
-          { id: 6, text: "Subscription Management" },
-          { id: 7, text: "Timesheet" },
+          { id: 1, text: "In a world where art is often a mirror of society’s complexities, Carl Cozier—better known as Holy Moly—uses his craft to create something profoundly different: a burst of optimism and a call to action", },
+       
         ],
         selection: "Select the number of users:",
         price: "From",
         plan: "Monthly",
-        iconCard: "/images/erp360/icono-profesional-azul.svg",
-        iconCardDarkMode: "/images/erp360/icono-profesional-darkMode.svg",
-        iconCardHover: "/images/erp360/icono-profesional-morado.svg",
+        iconCard: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardDarkMode: "/images/erp360/icono-emprendedor-darkMode.svg",
+        iconCardHover: "/images/erp360/icono-emprendedor-morado.svg",
       },
-      // {
-      //   id: 3,
-      //   title: "ERP 360 Services",
-      //   advantagesList: [
-      //     { id: 1, text: "36 standard modules based on Odoo Community" },
-      //     { id: 2, text: "2 Premium modules: *Venezuelan Accounting Localization *Pro Project/Helpdesk Pro" },
-      //     { id: 3, text: "Includes 7 users" },
-      //     { id: 4, text: "Hosting service with AWS" },
-      //     { id: 5, text: "Fast installation of modules (Max 4 hours)" },
-      //     { id: 6, text: "10 free hours of induction at the start of the contract" },
-      //     { id: 7, text: "2 monthly hours of support in the implementation x 3 months" },
-      //   ],
-      //   selection: "Select the number of users:",
-      //   price: "From",
-      //   plan: "Monthly",
-      //   iconCard: "/images/erp360/icono-empresarial-azul.svg",
-      //   iconCardDarkMode: "/images/erp360/icono-empresarial-darkMode.svg",
-      //   iconCardHover: "/images/erp360/icono-empresarial-morado.svg",
-      // },
+      {
+        id: 3,
+        title: "Single Payment",
+        advantagesList: [
+          { id: 1, text: "In a world where art is often a mirror of society’s complexities, Carl Cozier—better known as Holy Moly—uses his craft to create something profoundly different: a burst of optimism and a call to action " },
+
+          
+        ],
+        selection: "Select the number of users:",
+        price: "From",
+        plan: "Monthly",
+        iconCard: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardDarkMode: "/images/erp360/icono-emprendedor-darkMode.svg",
+        iconCardHover: "/images/erp360/icono-emprendedor-morado.svg",
+      },
+      {
+        id: 4,
+        title: "Single Payment",
+        advantagesList: [
+          { id: 1, text: "In a world where art is often a mirror of society’s complexities, Carl Cozier—better known as Holy Moly—uses his craft to create something profoundly different: a burst of optimism and a call to action" },
+     
+          
+        ],
+        selection: "Select the number of users:",
+        price: "From",
+        plan: "Monthly",
+        iconCard: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardDarkMode: "/images/erp360/icono-emprendedor-darkMode.svg",
+        iconCardHover: "/images/erp360/icono-emprendedor-morado.svg",
+      },
+      {
+        id: 5,
+        title: "Single Payment",
+        advantagesList: [
+          { id: 1, text: "In a world where art is often a mirror of society’s complexities, Carl Cozier—better known as Holy Moly—uses his craft to create something profoundly different: a burst of optimism and a call to action " },
+          
+        ],
+        selection: "Select the number of users:",
+        price: "From",
+        plan: "Monthly",
+        iconCard: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardDarkMode: "/images/erp360/icono-emprendedor-darkMode.svg",
+        iconCardHover: "/images/erp360/icono-emprendedor-morado.svg",
+      },
+      {
+        id: 6,
+        title: "Single Payment",
+        advantagesList: [
+          { id: 1, text: "In a world where art is often a mirror of society’s complexities, Carl Cozier—better known as Holy Moly—uses his craft to create something profoundly different: a burst of optimism and a call to action" },
+        
+        ],
+        selection: "Select the number of users:",
+        price: "From",
+        plan: "Monthly",
+        iconCard: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardDarkMode: "/images/erp360/icono-emprendedor-darkMode.svg",
+        iconCardHover: "/images/erp360/icono-emprendedor-morado.svg",
+      },
+      
     ],
-    learMoreText: "Know more",
-    defaultFunctionalities: {
-      heading: "Premium Features",//"Default Functionalities",
-      concept: "These features are included with the available payments",
-    },
-    learnMoreList: [
-      { id: 1, text: "Shopping Module" },
-      { id: 2, text: "Inventory Module" },
-      { id: 3, text: "Sales Module" },
-      { id: 4, text: "Point of Sale (POS) and Invoicing Module" },
-      { id: 5, text: "CRM Module" },
-      { id: 6, text: "Manufacturing Module" },
-      { id: 7, text: "Accounting Module" },
+    cards1: [
+      {
+        id: 1,
+        title: "Biometric integration",
+        advantagesList: [
+          { id: 1, text: "In a world where art is often a mirror of society’s complexities, Carl Cozier—better known as Holy Moly—uses his craft to create something profoundly different: a burst of optimism and a call to action" },
+          
+        ],
+        selection: "Select the number of users:",
+        price: "From",
+        plan: "Monthly",
+        iconCard: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardDarkMode: "/images/erp360/icono-emprendedor-darkMode.svg",
+        iconCardHover: "/images/erp360/icono-emprendedor-morado.svg",
+      },
+      {
+        id: 2,
+        title: "Fiscal Printer Integration",
+        advantagesList: [
+          { id: 1, text: "In a world where art is often a mirror of society’s complexities, Carl Cozier—better known as Holy Moly—uses his craft to create something profoundly different: a burst of optimism and a call to action" },
+          
+        ],
+        selection: "Select the number of users:",
+        price: "From",
+        plan: "Monthly",
+        iconCard: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardDarkMode: "/images/erp360/icono-emprendedor-darkMode.svg",
+        iconCardHover: "/images/erp360/icono-emprendedor-morado.svg",
+      },
     ],
-    knowmore: "", //Know more
-    titles: [
-      // { id: 1, heading: " Initiative" },
-      { id: "2", heading: "One-time " },
-      { id: 3, heading: "Monthly " },
-    ],titleP: [],
+
+    
+    
   },
 
 
