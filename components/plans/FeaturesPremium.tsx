@@ -16,31 +16,31 @@ import {
     AccordionButton,
     AccordionPanel,
     AccordionIcon,
-  } from "@chakra-ui/react";
-  import Image from "next/image";
-  import { useRouter } from "next/router";
-  import { en, es } from "@/locale";
-  import { CheckIcon } from "@chakra-ui/icons";
-  
-  
-  /**
-   * Component for payment mode
-   */
-  
-  export const FeaturesPremium = () => {
+} from "@chakra-ui/react";
+import Image from "next/image";
+import { useRouter } from "next/router";
+import { en, es } from "@/locale";
+import { CheckIcon } from "@chakra-ui/icons";
+
+
+/**
+ * Component for payment mode
+ */
+
+export const FeaturesPremium = () => {
     const { locale } = useRouter();
     const t = locale === "en" ? en : es;
     const {
-      global: { buttons },
-      pages: {
-        erp360: {
-          featuresPremium: { heading, cards1, cards, subHeading, headingSpan, headingSpan1 }, 
+        global: { buttons },
+        pages: {
+            erp360: {
+                featuresPremium: { heading, cards1, cards, subHeading, headingSpan, headingSpan1 },
+            },
         },
-      },
     } = t;
-  
+
     const { colorMode } = useColorMode();
-  
+
     return (
         <Box
             as="section"
@@ -73,19 +73,25 @@ import {
                     bgColor={colorMode === "light" ? "odoo.200" : "#fff"}
                     borderRadius="10px"
                 />
-                <Text fontSize={{ base: "16px", md: "18px" }} textAlign="center" m="20px auto 0" >
+                <Text fontSize={{ base: "16px", md: "18px" }} textAlign="center" m="40px auto 0" >
                     {subHeading}
-                    <span style={{ color: colorMode === 'light' ? '#23BBB3' : 'white.100', display: "inline" }}>{headingSpan}</span>
+                    <span style={{ color: colorMode === 'light' ? '#23BBB3' : 'white.100', textAlign: "center", display: "inline" }}>{headingSpan}</span>
                 </Text>
-                
+                <br></br>
+                <br></br>
+
+
             </Box>
 
 
 
+            {/* templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)", lg: "repeat(3, 1fr)" }} // Ajusta las columnas para pantallas medianas gap={{ base: 6, md: 4, lg: 4 }} // Ajusta el espacio entre los elementos > */}
+
             <Grid
                 templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
-                gap={{ base: 12, md: 3, lg: 4 }}
+                gap={{ base: 1, md: 3, lg: 1 }}
             >
+
                 {cards.map(
                     ({
                         id,
@@ -100,14 +106,14 @@ import {
                                 key={id}
                                 alignItems="center"
                                 flexDirection="column"
-                                w={"100%"}
+                                w={{ base: "90%", md: "90%", lg: "90%" }} //w={"100%"} //
                                 position="relative"
                                 boxShadow="0px 0px 3px -2px black"
                                 borderRadius={"15px"}
-                                m={"30px auto"}
-                                p={{ base: "35px", md: "25px", lg: "40px" }}
+                                m={"30px auto"} //m={"30px auto"} //
+                                p={{ base: "20px", md: "auto", lg: "10px" }} // p={{ base: "35px", md: "25px", lg: "40px" }} //
                                 bgColor={"#f4fbfc20"}
-                                h={"100%"}
+                                h={"auto"} //h={"100%"} //
                                 transitionDuration="400ms"
                                 display="flex"
                                 _hover={
@@ -117,6 +123,9 @@ import {
                                 }
                                 className="cardPrice"
                             >
+
+
+
                                 {/* Icons Cards */}
 
                                 {/* Image Light Mode */}
@@ -182,7 +191,8 @@ import {
                                 </Box>
 
                                 {/* Advantages of each plan */}
-                                <Box w="100%" mt="30px" h={"65%"}>
+                                {/* w="100%" mt="20px" h={"auto"}> */}
+                                <Box w="100%" mt="30px" h={"105%"} >
                                     <Text
                                         textAlign="center"
                                         fontSize={{ base: "24px", md: "28px", lg: "32px" }}
@@ -196,41 +206,17 @@ import {
                                         {title}
                                     </Text>
 
-                                    <List spacing={1} mt="1px">
+                                    <List spacing={0} mt="1px">
                                         {advantagesList.map(({ id, text }) => {
                                             return (
-                                                <ListItem key={id} display="flex" alignItems="center" justifyContent="space-between">
-                                                    <Box display="flex" alignItems="center" justifyContent="center" width="100%">
-                                                        {/* <ListIcon fontSize={"14px"} mt="8px">
-                                <CheckIcon boxSize={3} />
-                              </ListIcon> */}
-                                                        <Box
-                                                            // border="1px solid"
-                                                            // borderColor="blue.200"
-                                                            // borderRadius="md"
-                                                            p={2}
-                                                            // _hover={{ backgroundColor: "blue.100" }}
-                                                            // transitionDuration="400ms"
-                                                            width="300px"
-                                                            display="flex"
-                                                            alignItems="center"
-                                                            justifyContent="center"
-                                                        >
-                                                            <Text fontSize={{ base: "14px", lg: "16px" }} textAlign="justify">
-                                                                {text}
-                                                            </Text>
-                                                        </Box>
+                                                <ListItem key={id} display="flex" alignItems="center"> {id !== 1 && id !== 9 && (// Agrega el ícono de check solo si el id no es 1 
+                                                    <ListIcon fontSize={"14px"} mt="8px"> <CheckIcon boxSize={3} />
+                                                    </ListIcon>)}
+                                                    <Box  borderColor="gray.200" borderRadius="md" p={2} _hover={{ backgroundColor: "gray.100", color: "blue.700" }} width="100%" >
+                                                        <Text fontSize={{ base: "14px", lg: "16px" }} fontWeight={id === 9 ? "bold" : "normal"} textAlign={id === 9 ? "center" : "left"}>
+                                                            {text}
+                                                        </Text>
                                                     </Box>
-                                                    {/* <Accordion allowToggle width="30%" ml={2}>
-                              <AccordionItem  width="100%">
-                                <AccordionButton justifyContent="space-between">
-                                  <AccordionIcon />
-                                </AccordionButton>
-                                <AccordionPanel pb={4} textAlign="left">
-                                    {details}
-                                </AccordionPanel>
-                              </AccordionItem>
-                            </Accordion> */}
                                                 </ListItem>
                                             );
                                         })}
@@ -255,9 +241,9 @@ import {
                                         {buttons.button04}
                                     </Button>
                                 </Link> */}
-                                
+
                             </GridItem>
-                                            
+
 
                         );
                     }
@@ -267,13 +253,16 @@ import {
 
 
             <Text fontSize={{ base: "16px", md: "18px" }} textAlign="center" m="100px auto 0" >
-                    {subHeading}
-                    <span style={{ color: colorMode === 'light' ? '#23BBB3' : 'white.100', display: "inline" }}>{headingSpan1}</span>
-                </Text>
+                {subHeading}
+                <span style={{ color: colorMode === 'light' ? '#23BBB3' : 'white.100', display: "inline" }}>{headingSpan1}</span>
+
+            </Text>
+            <br></br>
+
 
             <Grid
                 templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
-                gap={{ base: 12, md: 3, lg: 4 }}
+                gap={{ base: 1, md: 3, lg: 1 }}
             >
                 {cards1.map(
                     ({
@@ -289,14 +278,14 @@ import {
                                 key={id}
                                 alignItems="center"
                                 flexDirection="column"
-                                w={"100%"}
+                                w={{ base: "90%", md: "90%", lg: "90%" }} //w={"100%"} //
                                 position="relative"
                                 boxShadow="0px 0px 3px -2px black"
                                 borderRadius={"15px"}
-                                m={"30px auto"}
-                                p={{ base: "35px", md: "25px", lg: "40px" }}
+                                m={"30px auto"} //m={"30px auto"} //
+                                p={{ base: "20px", md: "auto", lg: "10px" }} // p={{ base: "35px", md: "25px", lg: "40px" }} //
                                 bgColor={"#f4fbfc20"}
-                                h={"100%"}
+                                h={"auto"} //h={"100%"} //
                                 transitionDuration="400ms"
                                 display="flex"
                                 _hover={
@@ -385,41 +374,17 @@ import {
                                         {title}
                                     </Text>
 
-                                    <List spacing={1} mt="1px">
+                                    <List spacing={0} mt="1px">
                                         {advantagesList.map(({ id, text }) => {
                                             return (
-                                                <ListItem key={id} display="flex" alignItems="center" justifyContent="space-between">
-                                                    <Box display="flex" alignItems="center" justifyContent="center" width="100%">
-                                                        {/* <ListIcon fontSize={"14px"} mt="8px">
-                                <CheckIcon boxSize={3} />
-                              </ListIcon> */}
-                                                        <Box
-                                                            // border="1px solid"
-                                                            // borderColor="blue.200"
-                                                            // borderRadius="md"
-                                                            p={2}
-                                                            // _hover={{ backgroundColor: "blue.100" }}
-                                                            // transitionDuration="400ms"
-                                                            width="300px"
-                                                            display="flex"
-                                                            alignItems="center"
-                                                            justifyContent="center"
-                                                        >
-                                                            <Text fontSize={{ base: "14px", lg: "16px" }} textAlign="justify">
-                                                                {text}
-                                                            </Text>
-                                                        </Box>
+                                                <ListItem key={id} display="flex" alignItems="center"> {id !== 1 && id !== 9 && ( // Agrega el ícono de check solo si el id no es 1 
+                                                    <ListIcon fontSize={"14px"} mt="8px"> <CheckIcon boxSize={3} />
+                                                    </ListIcon>)}
+                                                    <Box  borderColor="gray.200" borderRadius="md" p={2} _hover={{ backgroundColor: "gray.100", color: "blue.700" }} width="100%" >
+                                                        <Text fontSize={{ base: "14px", lg: "16px" }}fontWeight={id === 9 ? "bold" : "normal"} textAlign={id === 9 ? "center" : "left"}>
+                                                            {text}
+                                                        </Text>
                                                     </Box>
-                                                    {/* <Accordion allowToggle width="30%" ml={2}>
-                              <AccordionItem  width="100%">
-                                <AccordionButton justifyContent="space-between">
-                                  <AccordionIcon />
-                                </AccordionButton>
-                                <AccordionPanel pb={4} textAlign="left">
-                                    {details}
-                                </AccordionPanel>
-                              </AccordionItem>
-                            </Accordion> */}
                                                 </ListItem>
                                             );
                                         })}
@@ -444,9 +409,9 @@ import {
                                         {buttons.button04}
                                     </Button>
                                 </Link> */}
-                                
+
                             </GridItem>
-                                            
+
 
                         );
                     }
@@ -456,8 +421,8 @@ import {
 
 
 
-                
-            
+
+
         </Box>
 
     );

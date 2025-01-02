@@ -79,6 +79,7 @@ export const ExtraFeatures = () => {
             item6,
             item7,
             item8,         
+                    
           }) => {
             return (
               <GridItem

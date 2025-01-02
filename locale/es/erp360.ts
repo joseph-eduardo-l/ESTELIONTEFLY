@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 // import CuadroModulo from 'public/images/CuadroModulo.svg';
 import { FeaturesPremium } from '@/components/plans';
 import { useColorMode } from '@chakra-ui/react';
@@ -186,9 +187,9 @@ export default {
     cards: [
       {
         id: 1,
-        title: "Localizacion Contable Venezolana",
+        title: "Localizacion Venezolana",
         advantagesList: [
-          { id: 1, text: "In a world where art is often a mirror of society’s complexities, Carl Cozier—better known as Holy Moly—uses his craft to create something profoundly different: a burst of optimism and a call to action " },
+          { id: 1, text: "Nuestro módulo de localización venezolana en Odoo te permite generar automáticamente los reportes del SENIAT en doble moneda. Genera retenciones de IVA e ISRL, cálculos automáticos de la U.T establecida por ley para determinar bases imponibles. Así como tambén la conversión de monedas al facturar y al generar los libros de ventas/compras." },
         ],
         // selection: "Seleccione la cantidad de usuarios:",
         price: "Desde",
@@ -201,7 +202,11 @@ export default {
         id: 2,
         title: "HelpDesk Pro",
         advantagesList: [
-          { id: 1, text: "In a world where art is often a mirror of society’s complexities, Carl Cozier—better known as Holy Moly—uses his craft to create something profoundly different: a burst of optimism and a call to action" },     
+          { id: 9, text: "Simplifica la gestión de tus tickets de soporte. Permite:" },     
+          { id: 2, text: "Organizar por equipos: Asigna tickets de manera eficiente a los equipos adecuados." },     
+          { id: 3, text: "Personalizar flujos de trabajo: Define etapas y tipos de tickets para cada proceso." },     
+          { id: 3, text: "Gestionar equipos de soporte: Monitorea el desempeño de tu equipo y asigna tareas de forma efectiva." },     
+          { id: 3, text: "Controlar paquetes de horas: Realiza un seguimiento preciso del tiempo invertido en cada ticket y garantiza la satisfacción del cliente." },     
         ],
         // selection: "Seleccione la cantidad de usuarios:",
         price: "Desde",
@@ -215,7 +220,7 @@ export default {
         id: 3,
         title: "POS restaurantes",
         advantagesList: [
-          { id: 1, text: "In a world where art is often a mirror of society’s complexities, Carl Cozier—better known as Holy Moly—uses his craft to create something profoundly different: a burst of optimism and a call to action" },   
+          { id: 1, text: "Automatiza tus ventas con nuestro POS. Gestiona productos, pagos, clientes y genera reportes detallados. Integración con HKA para cumplimiento fiscal. Personalización de impresión de comandas por categoría de productos. " },   
         ],
         // selection: "Seleccione la cantidad de usuarios:",
         price: "Desde",
@@ -228,20 +233,7 @@ export default {
         id: 4,
         title: "Integración WhatsApp",
         advantagesList: [
-          { id: 1, text: "In a world where art is often a mirror of society’s complexities, Carl Cozier—better known as Holy Moly—uses his craft to create something profoundly different: a burst of optimism and a call to action" },      
-        ],
-        // selection: "Seleccione la cantidad de usuarios:",
-        price: "Desde",
-        plan: "Mensuales",
-        iconCard: "/images/erp360/icono-emprendedor-azul.svg",
-        iconCardDarkMode: "/images/erp360/icono-emprendedor-azul.svg",
-        iconCardHover: "/images/erp360/icono-emprendedor-morado.svg",
-      },
-      {
-        id: 5,
-        title: "Gestion de suscripciones",
-        advantagesList: [
-          { id: 1, text: "In a world where art is often a mirror of society’s complexities, Carl Cozier—better known as Holy Moly—uses his craft to create something profoundly different: a burst of optimism and a call to action" },  
+          { id: 1, text: "En un mundo donde el arte es a menudo un espejo de las complejidades de la sociedad, Carl Cozier, más conocido como Holy Moly, utiliza su arte para crear algo profundamente diferente: una explosión de optimismo y un llamado a la acción. " },      
         ],
         // selection: "Seleccione la cantidad de usuarios:",
         price: "Desde",
@@ -254,7 +246,25 @@ export default {
         id: 6,
         title: "Parte de Horas",
         advantagesList: [
-          { id: 1, text: "In a world where art is often a mirror of society’s complexities, Carl Cozier—better known as Holy Moly—uses his craft to create something profoundly different: a burst of optimism and a call to action" },      
+          { id: 9, text: "Nuestro módulo permite:" },      
+          { id: 2, text: "Generar reportes personalizados: Obtén informes detallados por usuario, proyecto, mes o tarea." },      
+          { id: 3, text: "Gestionar paquetes de horas contratados: Realiza un seguimiento preciso del consumo de horas de tus clientes." },      
+        ],
+        // selection: "Seleccione la cantidad de usuarios:",
+        price: "Desde",
+        plan: "Mensuales",
+        iconCard: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardDarkMode: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardHover: "/images/erp360/icono-emprendedor-morado.svg",
+      },
+      {
+        id: 5,
+        title: "Gestion de suscripciones",
+        advantagesList: [
+          { id: 9, text: "Simplifica la gestión de tus suscripciones. Nuestro módulo te permite:" },  
+          { id: 2, text: "Gestionar el estado de las suscripciones: Realiza un seguimiento detallado de las suscripciones activas, suspendidas y canceladas." },  
+          { id: 3, text: "Enviar notificaciones personalizadas: Envía recordatorios de renovación, avisos de vencimiento y ofertas especiales a tus suscriptores." },  
+          { id: 3, text: "Registrar pagos: Lleva un control preciso de los pagos realizados por tus clientes." },  
         ],
         // selection: "Seleccione la cantidad de usuarios:",
         price: "Desde",
@@ -264,14 +274,18 @@ export default {
         iconCardHover: "/images/erp360/icono-emprendedor-morado.svg",
       },
       
+      
     ],
     headingSpan1:" Pago Mensual",
     cards1: [
       {
-        id: 1,
+        id: 3,
         title: "Integración de Biometrico ",
         advantagesList: [
-          { id: 1, text: "In a world where art is often a mirror of society’s complexities, Carl Cozier—better known as Holy Moly—uses his craft to create something profoundly different: a burst of optimism and a call to action" },
+          { id: 9, text: "Simplifica la gestión de asistencia con la integración de Odoo y Hikvision. Nuestra solución te permite:" },
+          { id: 3, text: "Sincronización automática: Las marcaciones registradas en los dispositivos biométricos Hikvision se transfieren automáticamente a Odoo, eliminando la necesidad de introducir datos manualmente." },
+          { id: 3, text: "Reportes personalizados: Genera reportes detallados sobre la asistencia de tus empleados, incluyendo horas extras, faltas, permisos y más." },
+          { id: 4, text: "Flexibilidad: Configura la integración para que se adapte a tus necesidades específicas, definiendo horarios de trabajo, permisos y reglas de cálculo de horas" },
           
         ],
         selection: "Select the number of users:",
@@ -285,7 +299,10 @@ export default {
         id: 2,
         title: "Integración Impresora Fiscal ",
         advantagesList: [
-          { id: 1, text: "In a world where art is often a mirror of society’s complexities, Carl Cozier—better known as Holy Moly—uses his craft to create something profoundly different: a burst of optimism and a call to action" },
+          { id: 9, text: "Integra tu sistema contable con tu impresora fiscal. Nuestra integración te permite:" },
+          { id: 2, text: "Emitir facturas fiscales directamente desde Odoo: Genera facturas y otros documentos fiscales con un solo clic." },
+          { id: 3, text: "Imprimir tickets en la HKA80: Imprime tickets y facturas de manera rápida y precisa." },
+          { id: 4, text: "Cumplir con las normativas fiscales: Asegúrate de que todos tus documentos cumplan con los requisitos legales." },
           
         ],
         selection: "Select the number of users:",
