@@ -20,7 +20,9 @@ export const MessageContact = () => {
                 </Heading>
             </Box>
             <Image h='160px' src='/images/nova.webp' alt='nova' mb='80px' className="nova" />
+           
         </Flex>
+        
     )
 }
 
