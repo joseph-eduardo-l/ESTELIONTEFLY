@@ -9,7 +9,7 @@ export const Erp360 = () => {
         <>
             <Banner />
             <Solution />
-            <Box bgImage={'/images/erp360/background-odoo-saas.webp'} bgSize='cover' bgPosition='center' className="" h={{ base: '2360px', md: '1800px', xl: '1280px' }}>
+            <Box bgImage={'/images/erp360/background-odoo-saas.webp'} id="" bgSize='cover' bgPosition='center' className="" h={{ base: '2360px', md: '1800px', xl: '1280px' }}>
                 <Manage />
                 <Implement />
             </Box>

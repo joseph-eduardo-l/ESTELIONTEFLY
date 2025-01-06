@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { Box, Flex, Heading, Image } from "@chakra-ui/react";
 import { en, es } from "@/locale";
 
-export const MessageContact = () => {
+export const MessageContact1 = () => {
     const { locale } = useRouter();
     const t = locale === "en" ? en : es;
     const { pages: { contact: { message: { maxW, heading, headingSpan } } } } = t;
@@ -20,11 +20,9 @@ export const MessageContact = () => {
                 </Heading>
             </Box>
             <Image h='160px' src='/images/nova.webp' alt='nova' mb='80px' className="nova" />
-           
         </Flex>
-        
     )
 }
 
-export default MessageContact
+export default MessageContact1;
 

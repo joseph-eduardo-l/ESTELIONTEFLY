@@ -29,30 +29,42 @@ import { useState } from "react";
 interface typesPlansAndPrices {
   id2: number;
   option_users1: string;
-  option_users2: string;
-  option_users3: string;
-  option_users4: string;
+  option_users2?: string;
+  option_users3?: string;
+  option_users4?: string;
   option_users5?: string;
 }
+
+interface typeLite {
+  id2: number;
+  option_user: string;
+}
+
+const plans_pricesLite: typeLite[] = [
+  {
+    id2: 1,
+    option_user: "$39",
+  },
+];
 
 const plans_pricesProfessional: typesPlansAndPrices[] = [
   {
     id2: 1,
-    option_users1: "$50",
-    option_users2: "$75",
-    option_users3: "$100",
-    option_users4: "$125",
+    option_users1: "$150",
+    // option_users2: "$150",
+    // option_users3: "$150",
+    // option_users4: "$150",
   },
 ];
 
 const plans_pricesBusiness: typesPlansAndPrices[] = [
   {
     id2: 1,
-    option_users1: "$150",
-    option_users2: "$175",
-    option_users3: "$200",
-    option_users4: "$225",
-    option_users5: "$250",
+    option_users1: "$215",
+    // option_users2: "$215",
+    // option_users3: "$215",
+    // option_users4: "$215",
+    // option_users5: "$215",
   },
 ];
 
@@ -67,7 +79,7 @@ export const Prices = () => {
     global: { buttons },
     pages: {
       erp360: {
-        pricesAndPlans: { heading, cards },
+        pricesAndPlans: { heading, cards }, 
       },
     },
   } = t;
@@ -80,7 +92,7 @@ export const Prices = () => {
   return (
     <Box
       as="section"
-      maxW={{ base: "auto", md: "1380px" }}
+      maxW={{ base: "auto", md: "1720px" }}
       w={"90%"}
       m="80px auto"
     >
@@ -106,7 +118,7 @@ export const Prices = () => {
       </Box>
 
       <Grid
-        templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
+        templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
         gap={{ base: 0, md: 3, lg: 8 }}
       >
         {cards.map(
@@ -114,7 +126,7 @@ export const Prices = () => {
             id,
             title,
             advantagesList,
-            selection,
+            // selection,
             price,
             plan,
             iconCard,
@@ -230,7 +242,7 @@ export const Prices = () => {
                           <ListIcon fontSize={"14px"} mt="8px">
                             <CheckIcon boxSize={3} />
                           </ListIcon>
-                          <Text fontSize={{ base: "14px", lg: "16px" }}>
+                          <Text fontSize={{ base: "18px", lg: "20px" }}>
                             {text}
                           </Text>
                         </ListItem>
@@ -251,10 +263,10 @@ export const Prices = () => {
                     opacity={id === 1 ? "0" : "1"}
                     mt={{ base: "10px", md: "0px" }}
                   >
-                    {selection}
+                    {/* {selection} */}
                   </Text>
 
-                  <Slider
+                  {/* <Slider
                     defaultValue={0}
                     step={20}
                     max={id === 2 ? 60 : 80}
@@ -338,22 +350,22 @@ export const Prices = () => {
                         alt="iconUsers"
                       />
                     </SliderThumb>
-                  </Slider>
+                  </Slider> */}
 
                   <Heading
                     fontFamily="heading"
-                    fontSize={
-                      id === 1
-                        ? { base: "34px", md: "38px" }
-                        : { base: "24px", md: "30px", lg: "32px" }
-                    }
+                    // fontSize={
+                    //   id === 1
+                    //     ? { base: "34px", md: "38px" }
+                    //     : { base: "24px", md: "30px", lg: "32px" }
+                    // }
                     textAlign="center"
                     display={"flex"}
                     mt="40px"
                   >
                     <Text
-                      mt={id === 1 ? { base: "-50px", md: "-120px" } : "0"}
-                      mb={id === 1 ? "50px" : "0"}
+                      // mt={id === 1 ? { base: "-50px", md: "-120px" } : "0"}
+                      // mb={id === 1 ? "50px" : "0"}
                       sx={{
                         ".cardPrice:hover &": {
                           transformScale: "1.1",
@@ -409,14 +421,20 @@ export const Prices = () => {
                             );
                           }
                         )
+                      : id === 1
+                      ? plans_pricesLite.map(({ id2, option_user }) => {
+                          return (
+                            <Text key={id2} ml="5px">
+                              {option_user}
+                            </Text>
+                          );
+                        })
                       : null}
                   </Heading>
-                  <Text opacity={id === 1 ? "0" : "1"} mb="20px">
-                    {plan}
-                  </Text>
+                  <Text mb="20px">{plan}</Text>
 
                   <Link
-                    href={"https://wa.me/message/EA3RA3DJC2NTA1"}
+                    target="blank" href={"https://wa.me/584123172765"}
                     _hover={{ textDecoration: "none" }}
                   >
                     <Button
