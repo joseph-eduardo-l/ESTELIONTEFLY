@@ -31,7 +31,7 @@ export const ContactERP360 = () => {
     };
     
     return (
-        <Box as='section' position="relative" zIndex="5" overflow="hidden" id="vinculoContact">
+        <Box w={{ base: "100%", md: "95%" }} m="0 auto" as='section' position="relative" zIndex="5" overflow="hidden" id="vinculoContact">
             <Box w="95%" m="0 auto" position="relative" zIndex="5">
                 <Box maxW="1200px" m="0 auto" lineHeight={1.2}>
                     <Box ml={{ md: "15px" }}>
@@ -84,7 +84,7 @@ export const ContactERP360 = () => {
                         p={{ base: "40px 20px", md: "50px" }}
                         fontFamily="'Exo 2'"
                         bgColor="#f4fbfc20"
-                        borderRadius="20px" 
+                        borderRadius="20px"
                     >
 
                         <div id="mauticform_wrapper_formerp360es" className="mauticform_wrapper">
