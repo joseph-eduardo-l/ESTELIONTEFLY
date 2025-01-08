@@ -41,7 +41,7 @@ export default {
         id: 2,
         title: "ERP 360 Evolución",
         advantagesList: [
-          { id: 1, text: "In a world where art is often a mirror of society’s complexities, Carl Cozier—better known as Holy Moly—uses his craft to create something profoundly different: a burst of optimism and a call to action" },
+          { id: 1, text: "36 módulos estándar basados ​​en la comunidad Odoo" },
           { id: 2, text: "1 módulo Premium: -	Localización Contable Venezolana" },
           { id: 3, text: "Incluye 7 usuarios" },
           { id: 4, text: "Servicio de hosting con AWS" },
@@ -60,7 +60,7 @@ export default {
         id: 3,
         title: "ERP 360 Servicios",
         advantagesList: [
-          { id: 1, text: "In a world where art is often a mirror of society’s complexities, Carl Cozier—better known as Holy Moly—uses his craft to create something profoundly different: a burst of optimism and a call to action" },
+          { id: 1, text: "36 módulos estándar basados ​​en la comunidad Odoo" },
           { id: 2, text: "2 módulos Premium: *Localización Contable Venezolana *Proyecto Pro/Helpdesk Pro"},
           { id: 3, text: "Incluye 7 usuarios"},
           { id: 4, text: "Servicio de hosting con AWS" },
