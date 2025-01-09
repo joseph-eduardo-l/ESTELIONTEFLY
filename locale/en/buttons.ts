@@ -1,8 +1,9 @@
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   button: "Start now!",
   button01: "Start!",
   button02: "Find out how we can help you!",
   button03: "Start today for free!",
-  button04: "See more!",
+  button04: "Know more!",
   button05: "Request demo",
 };

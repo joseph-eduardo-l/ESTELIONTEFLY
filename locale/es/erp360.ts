@@ -1,5 +1,8 @@
+/* eslint-disable import/no-anonymous-default-export */
 // import CuadroModulo from 'public/images/CuadroModulo.svg';
+import { FeaturesPremium } from '@/components/plans';
 import { useColorMode } from '@chakra-ui/react';
+import { title } from 'process';
 
 export default {
   banner: {
@@ -38,7 +41,7 @@ export default {
         id: 2,
         title: "ERP 360 Evolución",
         advantagesList: [
-          { id: 1, text: "36 módulos estándar basados en Odoo Community" },
+          { id: 1, text: "36 módulos estándar basados ​​en la comunidad Odoo" },
           { id: 2, text: "1 módulo Premium: -	Localización Contable Venezolana" },
           { id: 3, text: "Incluye 7 usuarios" },
           { id: 4, text: "Servicio de hosting con AWS" },
@@ -57,7 +60,7 @@ export default {
         id: 3,
         title: "ERP 360 Servicios",
         advantagesList: [
-          { id: 1, text: "36 módulos estándar basados en Odoo Community" },
+          { id: 1, text: "36 módulos estándar basados ​​en la comunidad Odoo" },
           { id: 2, text: "2 módulos Premium: *Localización Contable Venezolana *Proyecto Pro/Helpdesk Pro"},
           { id: 3, text: "Incluye 7 usuarios"},
           { id: 4, text: "Servicio de hosting con AWS" },
@@ -73,28 +76,31 @@ export default {
         iconCardDarkMode: "/images/erp360/icono-empresarial-azul.svg",
         iconCardHover: "/images/erp360/icono-empresarial-morado.svg",
       },
+      
     ],
     learMoreText: "Conocer más",
-    defaultFunctionalities: {
-      heading: "Funcionalidades Predeterminadas",
-      concept:
-        "Estas funcionalidades vienen incluidas con los planes disponibles",
-    },
-    learnMoreList: [
-      { id: 1, text: "Módulo de Compras" },
-      { id: 2, text: "Módulo de Inventario" },
-      { id: 3, text: "Módulo de Ventas" },
-      { id: 4, text: "Módulo de Punto de Venta (POS) y Facturación" },
-      { id: 5, text: "Módulo CRM" },
-      { id: 6, text: "Módulo de Fabricación" },
-      { id: 7, text: "Módulo de Contabilidad" },
-    ],
-    knowmore: "Conoce más",
-    titles: [
-      { id: 1, heading: "Iniciativa" },
-      { id: 2, heading: "Evolución" },
-      { id: 3, heading: "Servicios" },
-    ],
+    // defaultFunctionalities: {
+    //   heading: "Funcionalidades Premium",//"Funcionalidades Predeterminadas",
+    //   concept:
+    //     "Estas funcionalidades vienen incluidas con los pagos disponibles",
+    // },   
+    // learnMoreList: [
+    //   { id: 1, text: "Integración Biometrico" },
+    //   { id: 2, text: "Integración Impresora Fiscal" },
+    //   { id: 3, text: "Localizacion Contable Venezolana" },
+    //   { id: 4, text: "HelpDesk Pro" },
+    //   { id: 5, text: "POS restaurantes" },
+    //   { id: 6, text: "Integración WhatsApp" },
+    //   { id: 7, text: "Comisiones" },
+    //   { id: 8, text: "Gestion de suscripciones" },
+    //   { id: 9, text: "Parte de Horas" },
+    // ],
+    knowmore: "",
+    // titles: [
+    //   // { id: 1, heading: "Iniciativa" },
+    //   { id: 2, heading: "Único" },
+    //   { id: 3, heading: "Mensual" },
+    // ],
   },
   extraFeatures: {
     heading: "Funcionalidades Extra",
@@ -111,6 +117,7 @@ export default {
         item6: "Facturación Electrónica Panamá",
         item7: "Lector de Código de Barras",
         item8: "APIs",
+        
       },
       {
         title: "Módulos",
@@ -137,6 +144,7 @@ export default {
     ],
     text: "Estos servicios tienen cargos adicionales.",
   },
+  
   manage: {
     heading: "Administra tu negocio con ",
     headingSpan: "eficiencia y facilidad",
@@ -170,6 +178,143 @@ export default {
     ],
     alt: "",
   },
+
+  featuresPremium: {
+    heading: "Funcionalidades por tipos de pago",
+    subHeading:
+      "Estas funcionalidades vienen incluidas con el",
+      headingSpan:" Pago Mensual",
+    cards: [
+      {
+        id: 1,
+        title: "Localizacion Venezolana",
+        advantagesList: [
+          { id: 1, text: "Nuestro módulo de localización venezolana en Odoo te permite generar automáticamente los reportes del SENIAT en doble moneda. Genera retenciones de IVA e ISRL, cálculos automáticos de la U.T establecida por ley para determinar bases imponibles. Así como tambén la conversión de monedas al facturar y al generar los libros de ventas/compras." },
+        ],
+        // selection: "Seleccione la cantidad de usuarios:",
+        price: "Desde",
+        plan: "Mensuales",
+        iconCard: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardDarkMode: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardHover: "/images/erp360/icono-emprendedor-morado.svg",
+      },
+      {   
+        id: 2,
+        title: "HelpDesk Pro",
+        advantagesList: [
+          { id: 9, text: "Simplifica la gestión de tus tickets de soporte. Permite:" },     
+          { id: 2, text: "Organizar por equipos: Asigna tickets de manera eficiente a los equipos adecuados." },     
+          { id: 3, text: "Personalizar flujos de trabajo: Define etapas y tipos de tickets para cada proceso." },     
+          { id: 3, text: "Gestionar equipos de soporte: Monitorea el desempeño de tu equipo y asigna tareas de forma efectiva." },     
+          { id: 3, text: "Controlar paquetes de horas: Realiza un seguimiento preciso del tiempo invertido en cada ticket y garantiza la satisfacción del cliente." },     
+        ],
+        // selection: "Seleccione la cantidad de usuarios:",
+        price: "Desde",
+        plan: "Mensuales",
+        iconCard: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardDarkMode: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardHover: "/images/erp360/icono-emprendedor-morado.svg",
+      },
+      
+      {
+        id: 3,
+        title: "POS restaurantes",
+        advantagesList: [
+          { id: 1, text: "Automatiza tus ventas con nuestro POS. Gestiona productos, pagos, clientes y genera reportes detallados. Integración con HKA para cumplimiento fiscal. Personalización de impresión de comandas por categoría de productos. " },   
+        ],
+        // selection: "Seleccione la cantidad de usuarios:",
+        price: "Desde",
+        plan: "Mensuales",
+        iconCard: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardDarkMode: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardHover: "/images/erp360/icono-emprendedor-morado.svg",
+      },
+      {
+        id: 4,
+        title: "Integración WhatsApp",
+        advantagesList: [
+          { id: 1, text: "En un mundo donde el arte es a menudo un espejo de las complejidades de la sociedad, Carl Cozier, más conocido como Holy Moly, utiliza su arte para crear algo profundamente diferente: una explosión de optimismo y un llamado a la acción. " },      
+        ],
+        // selection: "Seleccione la cantidad de usuarios:",
+        price: "Desde",
+        plan: "Mensuales",
+        iconCard: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardDarkMode: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardHover: "/images/erp360/icono-emprendedor-morado.svg",
+      },
+      {
+        id: 6,
+        title: "Parte de Horas",
+        advantagesList: [
+          { id: 9, text: "Nuestro módulo permite:" },      
+          { id: 2, text: "Generar reportes personalizados: Obtén informes detallados por usuario, proyecto, mes o tarea." },      
+          { id: 3, text: "Gestionar paquetes de horas contratados: Realiza un seguimiento preciso del consumo de horas de tus clientes." },      
+        ],
+        // selection: "Seleccione la cantidad de usuarios:",
+        price: "Desde",
+        plan: "Mensuales",
+        iconCard: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardDarkMode: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardHover: "/images/erp360/icono-emprendedor-morado.svg",
+      },
+      {
+        id: 5,
+        title: "Gestion de suscripciones",
+        advantagesList: [
+          { id: 9, text: "Simplifica la gestión de tus suscripciones. Nuestro módulo te permite:" },  
+          { id: 2, text: "Gestionar el estado de las suscripciones: Realiza un seguimiento detallado de las suscripciones activas, suspendidas y canceladas." },  
+          { id: 3, text: "Enviar notificaciones personalizadas: Envía recordatorios de renovación, avisos de vencimiento y ofertas especiales a tus suscriptores." },  
+          { id: 3, text: "Registrar pagos: Lleva un control preciso de los pagos realizados por tus clientes." },  
+        ],
+        // selection: "Seleccione la cantidad de usuarios:",
+        price: "Desde",
+        plan: "Mensuales",
+        iconCard: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardDarkMode: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardHover: "/images/erp360/icono-emprendedor-morado.svg",
+      },
+      
+      
+    ],
+    headingSpan1:" Pago Mensual",
+    cards1: [
+      {
+        id: 3,
+        title: "Integración de Biometrico ",
+        advantagesList: [
+          { id: 9, text: "Simplifica la gestión de asistencia con la integración de Odoo y Hikvision. Nuestra solución te permite:" },
+          { id: 3, text: "Sincronización automática: Las marcaciones registradas en los dispositivos biométricos Hikvision se transfieren automáticamente a Odoo, eliminando la necesidad de introducir datos manualmente." },
+          { id: 3, text: "Reportes personalizados: Genera reportes detallados sobre la asistencia de tus empleados, incluyendo horas extras, faltas, permisos y más." },
+          { id: 4, text: "Flexibilidad: Configura la integración para que se adapte a tus necesidades específicas, definiendo horarios de trabajo, permisos y reglas de cálculo de horas" },
+          
+        ],
+        selection: "Select the number of users:",
+        price: "From",
+        plan: "Monthly",
+        iconCard: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardDarkMode: "/images/erp360/icono-emprendedor-darkMode.svg",
+        iconCardHover: "/images/erp360/icono-emprendedor-morado.svg",
+      },
+      {
+        id: 2,
+        title: "Integración Impresora Fiscal ",
+        advantagesList: [
+          { id: 9, text: "Integra tu sistema contable con tu impresora fiscal. Nuestra integración te permite:" },
+          { id: 2, text: "Emitir facturas fiscales directamente desde Odoo: Genera facturas y otros documentos fiscales con un solo clic." },
+          { id: 3, text: "Imprimir tickets en la HKA80: Imprime tickets y facturas de manera rápida y precisa." },
+          { id: 4, text: "Cumplir con las normativas fiscales: Asegúrate de que todos tus documentos cumplan con los requisitos legales." },
+          
+        ],
+        selection: "Select the number of users:",
+        price: "From",
+        plan: "Monthly",
+        iconCard: "/images/erp360/icono-emprendedor-azul.svg",
+        iconCardDarkMode: "/images/erp360/icono-emprendedor-darkMode.svg",
+        iconCardHover: "/images/erp360/icono-emprendedor-morado.svg",
+      },
+    ],
+  },
+
   WhyimplementERP360: {
     heading: "¿Por qué implementar ",
     headingSpan: "ERP 360",
@@ -235,37 +380,37 @@ export default {
         id: 2,
         // testimony:
         //   "We are pleased to express our complete satisfaction with the business relationship we have maintained with Corporación Estelio. It has impressed us with its ability to adapt to our needs and requirements, offering us fast and effective solutions.",
-        nameAuthor: "Kanji Sushi, C.A.",
+        nameAuthor: "Atlantic Reposteria",
         image:
-          "https://website-estelio.s3.amazonaws.com/images/logos/kanji.webp",
-        imageDark: "/images/casosdeExito/kanjiDark.webp",
+          "/images/casosdeExito/Atlantic.webp",
+        imageDark: "/images/casosdeExito/Atlantic.webp",
       },
       {
         id: 3,
         // testimony:
         //   "We are pleased to express our complete satisfaction with the business relationship we have maintained with Corporación Estelio. It has impressed us with its ability to adapt to our needs and requirements, offering us fast and effective solutions.",
-        nameAuthor: "Kanji Sushi, C.A.",
+        nameAuthor: "   Blue   Medical  ",
         image:
-          "https://website-estelio.s3.amazonaws.com/images/logos/kanji.webp",
-        imageDark: "/images/casosdeExito/kanjiDark.webp",
+          "/images/casosdeExito/Blue-Medical.webp",
+        imageDark: "/images/casosdeExito/Blue-Medical.webp",
       },
       {
         id: 4,
         // testimony:
         //   "We are pleased to express our complete satisfaction with the business relationship we have maintained with Corporación Estelio. It has impressed us with its ability to adapt to our needs and requirements, offering us fast and effective solutions.",
-        nameAuthor: "Kanji Sushi, C.A.",
+        nameAuthor: "La WaWa",
         image:
-          "https://website-estelio.s3.amazonaws.com/images/logos/kanji.webp",
-        imageDark: "/images/casosdeExito/kanjiDark.webp",
+          "https://website-estelio.s3.amazonaws.com/images/logos/lawawa.webp",
+        imageDark: "/images/casosdeExito/laWawaDark.webp",
       },
       {
         id: 5,
         // testimony:
         //   "We are pleased to express our complete satisfaction with the business relationship we have maintained with Corporación Estelio. It has impressed us with its ability to adapt to our needs and requirements, offering us fast and effective solutions.",
-        nameAuthor: "Kanji Sushi, C.A.",
+        nameAuthor: "Mallorca",
         image:
-          "https://website-estelio.s3.amazonaws.com/images/logos/kanji.webp",
-        imageDark: "/images/casosdeExito/kanjiDark.webp",
+          "/images/casosdeExito/Mallorca.webp",
+        imageDark: "/images/casosdeExito/Mallorca.webp",
       },
 
     ],

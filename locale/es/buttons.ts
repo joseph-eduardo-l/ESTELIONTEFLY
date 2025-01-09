@@ -3,6 +3,6 @@ export default {
   button01: "¡Comenzar!",
   button02: "¡Descubre cómo podemos ayudarte!",
   button03: "¡Empieza hoy Gratis!",
-  button04: "¡Ver más!",
+  button04: "¡Saber más!",
   button05: "Solicitar demo",
 };
