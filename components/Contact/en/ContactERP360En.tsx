@@ -1,16 +1,39 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
-import { Box, Divider, Flex, Heading, Text, FormControl, useColorModeValue, Image as NovaImage, useColorMode } from '@chakra-ui/react';
+import { Box, Divider, Flex, Heading, Text, FormControl, useColorModeValue, Image as NovaImage, useColorMode, FormLabel, Input } from '@chakra-ui/react';
 import { en, es } from "@/locale";
+import { useState } from "react";
+import DatePicker from "react-datepicker";
 
 export const ContactERP360En = () => {
     const { colorMode } = useColorMode()
     const bgInput = useColorModeValue("blur-contact", "blur-dark");
-    const manosRobot = useColorModeValue("/images/manosrobot.webp", "/images/manosRobotDark.webp");
+    const manosRobot = useColorModeValue("/images/manosrobot2.webp", "/images/manosrobot2.webp");
     const { locale, pathname } = useRouter();
     const t = locale === "en" ? en : es;
-    const { global: { buttons }, pages: { contact: { heading: { text01, text02 }, form: { name, lastName, email, phone, message } } } } = t;
-    return (
+    const { global: { buttons }, pages: { contact: { heading: { text01, text02 }, form: { name, companytipe, email, Date1, phone, message } } } } = t;
+   
+    const [selectedSector, setSelectedSector] = useState<string>('');
+    //Varaiables de sectores
+    const sectors = ["Health", "Beauty", "Technology", "Education", "Finance", "Manufacturing", "Retail", "Transportation", "Food"];
+     //manejo de chack box de sectores
+    const handleCheckboxChange = (sector: string) => {
+        setSelectedSector(sector);
+    };
+     //variables de calendario 
+     const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+     const handleDateChange = (date: Date | null) => {
+         if (date && date > new Date()) {
+             setSelectedDate(date);
+         } else {
+             alert("Please select a future date.");
+         }
+     };
+
+     //validar fecha 
+
+     
+        return (
         <Box as='section' position="relative" zIndex="5" overflow="hidden" id="vinculoContact">
             <Box w="95%" m="0 auto" position="relative" zIndex="5">
                 <Box maxW="1200px" m="0 auto" lineHeight={1.2}>
@@ -68,50 +91,90 @@ export const ContactERP360En = () => {
                     >
 
                         <div id="mauticform_wrapper_formerp360en" className="mauticform_wrapper">
-                            <form autoComplete="false" role="form" method="post" action="https://info.estelio.com/form/submit?formId=44" id="mauticform_formerp360en" data-mautic-form="formerp360en" encType="multipart/form-data" className="form-content">
-                                <div className="mauticform-error" id="mauticform_formerp360en_error"></div>
-                                <div className="mauticform-message" id="mauticform_formerp360en_message"></div>
-                                <div className="mauticform-innerform">
+                                <form autoComplete="false" role="form" method="post" action="https://info.estelio.com/form/submit?formId=44" id="mauticform_formerp360en" data-mautic-form="formerp360en" encType="multipart/form-data" className="form-content">
+                                    {/* <div className="mauticform-error" id="mauticform_formerp360en_error"></div> */}
+                                    {/* <div className="mauticform-message" id="mauticform_formerp360en_message"></div> */}
+                                    {/* <div className="mauticform-innerform"> */}
 
-                                    <div className="mauticform-page-wrapper mauticform-page-1" data-mautic-form-page="1">
+                                        <div className="mauticform-page-wrapper mauticform-page-1" data-mautic-form-page="1">
 
-                                        <div id="mauticform_formerp360en_nombre" data-validate="nombre" data-validation-type="text" className="mauticform-row mauticform-text mauticform-field-1 mauticform-required form-inputs-content">
-                                            <label id="mauticform_label_formerp360en_nombre" htmlFor="mauticform_input_formerp360en_nombre" style={{ color: colorMode === 'light' ? "#23BBB3" : "#FCF7F2" }} className="mauticform-label label-required">{name}</label>
-                                            <input id="mauticform_input_formerp360en_nombre" name="mauticform[nombre]" className="mauticform-input form-inputs" type="text" required />
+                                            <div id="mauticform_formerp360en_nombre" data-validate="nombre" data-validation-type="text" className="mauticform-row mauticform-text mauticform-field-1 mauticform-required form-inputs-content">
+                                                <label id="mauticform_label_formerp360en_nombre" htmlFor="mauticform_input_formerp360en_nombre" style={{ color: colorMode === 'light' ? "#23BBB3" : "#FCF7F2" }} className="mauticform-label label-required">{name}</label>
+                                                <input id="mauticform_input_formerp360en_nombre" name="mauticform[nombre]" className="mauticform-input form-inputs" type="text" required />
+                                            </div>
+
+                                            <div id="mauticform_formerp360en_corre_electronico" data-validate="corre_electronico" data-validation-type="email" className="mauticform-row mauticform-email mauticform-field-3 mauticform-required form-inputs-content">
+                                                <label id="mauticform_label_formerp360en_corre_electronico" htmlFor="mauticform_input_formerp360en_corre_electronico" style={{ color: colorMode === 'light' ? "#23BBB3" : "#FCF7F2" }} className="mauticform-label label-required">{email}</label>
+                                                <input id="mauticform_input_formerp360en_corre_electronico" name="mauticform[corre_electronico]" className="mauticform-input form-inputs" type="email" required />
+                                            </div>
+
+                                            <div id="mauticform_formerp360en_companytipe" data-validate="true" data-validation-type="text" className="mauticform-row mauticform-text mauticform-field-2 mauticform-required form-inputs-content">
+                                                {/* <FormLabel color={colorMode === 'light' ? "#23BBB3" : "#FCF7F2"} className="mauticform-label label-required">{companytipe}</FormLabel> */}
+                                                <label id="mauticform_input_formerp360en_companytipe" htmlFor="mauticform_input_formerp360en_companytipe" style={{ color: colorMode === 'light' ? "#23BBB3" : "#FCF7F2" }} className="mauticform-label label-required">{companytipe}</label>
+
+                                                <input id="mauticform_input_formerp360en_companytipe" name="mauticform[companytipe]" style={{ color: colorMode === 'light' ? "#444444" : "#444444" }} className="mauticform-input form-inputs" type="text" value={selectedSector} readOnly required />
+                                                <Box display="grid" gridTemplateColumns={{ base: "repeat(2, 1fr)", md: "repeat(3, 1fr)" }} gap={4} mt={4} style={{ color: colorMode === 'light' ? "#23BBB3" : "#FCF7F2" }} >
+                                                    {sectors.map((sector, index) => (
+                                                        <Box key={index} display="flex" alignItems="center">
+                                                            <input
+                                                                type="checkbox"
+                                                                id={`sector-${index}`}
+                                                                name="mauticform[sector]"
+                                                                value={sector}
+                                                                checked={selectedSector === sector}
+                                                                onChange={() => handleCheckboxChange(sector)}
+                                                            />
+                                                            <label htmlFor={`sector-${index}`} style={{ marginLeft: '8px' }}>{sector}</label>
+                                                        </Box>
+                                                    ))}
+                                                </Box>
+                                            </div>
+
+                                                    {/* //calendario */}
+                                            <div id="mauticform_formerp360en_date" data-validate="date" data-validation-type="date" className="mauticform-row mauticform-tel mauticform-field-4 mauticform-required form-inputs-content">
+                                                <label id="mauticform_label_formerp360en_date" htmlFor="mauticform_input_formerp360en_date" style={{ color: colorMode === 'light' ? "#23BBB3" : "#FCF7F2" }} className="mauticform-label label-required">{Date1}</label>
+                                                <input
+                                                    type="date"
+                                                    autoComplete="false"
+                                                    id="mauticform_input_formerp360en_date"
+                                                    name="mauticform[date]"
+                                                    style={{ color: colorMode === 'light' ? "#23BBB3" : "#444444" }}
+                                                    className="mauticform-input form-inputs"
+                                                    required
+                                                    value={selectedDate ? selectedDate.toISOString().split('T')[0] : ''}
+                                                    onChange={(e) => {
+                                                        const selectedDate = new Date(e.target.value);
+                                                        const currentDate = new Date();
+                                                        if (selectedDate >= currentDate) {
+                                                            setSelectedDate(selectedDate);
+                                                        } else {
+                                                            alert("Please select a date that is today or in the future.");
+                                                            setSelectedDate(null);
+                                                            
+                                                        }
+                                                    }}
+                                                />
+                                            </div>
+
+
+                                            <div id="mauticform_formerp360en_mensaje" className="mauticform-row mauticform-text mauticform-field-5 form-inputs-content">
+                                                <label id="mauticform_label_formerp360en_mensaje" htmlFor="mauticform_input_formerp360en_mensaje" style={{ color: colorMode === 'light' ? "#23BBB3" : "#FCF7F2" }} className="mauticform-label label-required">{message}</label>
+                                                <textarea id="mauticform_input_formerp360en_mensaje" name="mauticform[mensaje]" className="mauticform-textarea textArea-form"></textarea>
+                                            </div>
+
+                                            <div id="mauticform_formerp360en_submit" className="mauticform-row mauticform-button-wrapper mauticform-field-6 form-button-content">
+                                                <button type="submit" name="mauticform[submit]" id="mauticform_input_formerp360en_submit" className="mauticform-button form-button">{buttons.button}</button>
+                                            </div>
                                         </div>
+                                    {/* </div> */}
 
-                                        <div id="mauticform_formerp360en_apellido" data-validate="apellido" data-validation-type="text" className="mauticform-row mauticform-text mauticform-field-2 mauticform-required form-inputs-content">
-                                            <label id="mauticform_label_formerp360en_apellido" htmlFor="mauticform_input_formerp360en_apellido" style={{ color: colorMode === 'light' ? "#23BBB3" : "#FCF7F2" }} className="mauticform-label label-required">{lastName}</label>
-                                            <input id="mauticform_input_formerp360en_apellido" name="mauticform[apellido]" className="mauticform-input form-inputs" type="text" required />
-                                        </div>
+                                    <input type="hidden" name="mauticform[formId]" id="mauticform_formerp360en_id" value="44" />
+                                    <input type="hidden" name="mauticform[return]" id="mauticform_formerp360en_return" />
+                                    <input type="hidden" name="mauticform[formName]" id="mauticform_formerp360en_name" value="formerp360en" />
 
-                                        <div id="mauticform_formerp360en_corre_electronico" data-validate="corre_electronico" data-validation-type="email" className="mauticform-row mauticform-email mauticform-field-3 mauticform-required form-inputs-content">
-                                            <label id="mauticform_label_formerp360en_corre_electronico" htmlFor="mauticform_input_formerp360en_corre_electronico" style={{ color: colorMode === 'light' ? "#23BBB3" : "#FCF7F2" }} className="mauticform-label label-required">{email}</label>
-                                            <input id="mauticform_input_formerp360en_corre_electronico" name="mauticform[corre_electronico]" className="mauticform-input form-inputs" type="email" required />
-                                        </div>
-
-                                        <div id="mauticform_formerp360en_telefono" data-validate="telefono" data-validation-type="tel" className="mauticform-row mauticform-tel mauticform-field-4 mauticform-required form-inputs-content">
-                                            <label id="mauticform_label_formerp360en_telefono" htmlFor="mauticform_input_formerp360en_telefono" style={{ color: colorMode === 'light' ? "#23BBB3" : "#FCF7F2" }} className="mauticform-label label-required">{phone}</label>
-                                            <input id="mauticform_input_formerp360en_telefono" name="mauticform[telefono]" className="mauticform-input form-inputs" type="tel" required />
-                                        </div>
-
-                                        <div id="mauticform_formerp360en_mensaje" className="mauticform-row mauticform-text mauticform-field-5 form-inputs-content">
-                                            <label id="mauticform_label_formerp360en_mensaje" htmlFor="mauticform_input_formerp360en_mensaje" style={{ color: colorMode === 'light' ? "#23BBB3" : "#FCF7F2" }} className="mauticform-label label-required">{message}</label>
-                                            <textarea id="mauticform_input_formerp360en_mensaje" name="mauticform[mensaje]" className="mauticform-textarea textArea-form"></textarea>
-                                        </div>
-
-                                        <div id="mauticform_formerp360en_submit" className="mauticform-row mauticform-button-wrapper mauticform-field-6 form-button-content">
-                                            <button type="submit" name="mauticform[submit]" id="mauticform_input_formerp360en_submit" className="mauticform-button form-button">{buttons.button}</button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <input type="hidden" name="mauticform[formId]" id="mauticform_formerp360en_id" value="44" />
-                                <input type="hidden" name="mauticform[return]" id="mauticform_formerp360en_return" />
-                                <input type="hidden" name="mauticform[formName]" id="mauticform_formerp360en_name" value="formerp360en" />
-
-                            </form>
+                                </form>
                         </div>
+                        
 
 
                     </FormControl>
@@ -122,4 +185,5 @@ export const ContactERP360En = () => {
             </Box>
         </Box>
     )
+ 
 }

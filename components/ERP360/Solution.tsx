@@ -104,7 +104,7 @@ export const Solution = () => {
               bgHover="odoo.400"
               color="white"
               text={buttons.button02}
-              link="#vinculoContact"
+              link="//#vinculoContact"
             />
           </Link>
         </GridItem>

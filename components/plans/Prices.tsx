@@ -29,9 +29,9 @@ import { useState } from "react";
 interface typesPlansAndPrices {
   id2: number;
   option_users1: string;
-  option_users2: string;
-  option_users3: string;
-  option_users4: string;
+  option_users2?: string;
+  option_users3?: string;
+  option_users4?: string;
   option_users5?: string;
 }
 
@@ -43,28 +43,28 @@ interface typeLite {
 const plans_pricesLite: typeLite[] = [
   {
     id2: 1,
-    option_user: "$25",
+    option_user: "$39",
   },
 ];
 
 const plans_pricesProfessional: typesPlansAndPrices[] = [
   {
     id2: 1,
-    option_users1: "$50",
-    option_users2: "$75",
-    option_users3: "$100",
-    option_users4: "$125",
+    option_users1: "$150",
+    // option_users2: "$150",
+    // option_users3: "$150",
+    // option_users4: "$150",
   },
 ];
 
 const plans_pricesBusiness: typesPlansAndPrices[] = [
   {
     id2: 1,
-    option_users1: "$150",
-    option_users2: "$175",
-    option_users3: "$200",
-    option_users4: "$225",
-    option_users5: "$250",
+    option_users1: "$215",
+    // option_users2: "$215",
+    // option_users3: "$215",
+    // option_users4: "$215",
+    // option_users5: "$215",
   },
 ];
 
@@ -79,7 +79,7 @@ export const Prices = () => {
     global: { buttons },
     pages: {
       erp360: {
-        pricesAndPlans: { heading, cards },
+        pricesAndPlans: { heading, cards }, 
       },
     },
   } = t;
@@ -126,7 +126,7 @@ export const Prices = () => {
             id,
             title,
             advantagesList,
-            selection,
+            // selection,
             price,
             plan,
             iconCard,
@@ -263,10 +263,10 @@ export const Prices = () => {
                     opacity={id === 1 ? "0" : "1"}
                     mt={{ base: "10px", md: "0px" }}
                   >
-                    {selection}
+                    {/* {selection} */}
                   </Text>
 
-                  <Slider
+                  {/* <Slider
                     defaultValue={0}
                     step={20}
                     max={id === 2 ? 60 : 80}
@@ -350,7 +350,7 @@ export const Prices = () => {
                         alt="iconUsers"
                       />
                     </SliderThumb>
-                  </Slider>
+                  </Slider> */}
 
                   <Heading
                     fontFamily="heading"
