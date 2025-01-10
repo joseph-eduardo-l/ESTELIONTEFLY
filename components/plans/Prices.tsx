@@ -433,8 +433,8 @@ export const Prices = () => {
                   </Heading>
                   <Text mb="20px">{plan}</Text>
 
-                  <Link
-                    href={"https://wa.me/message/EA3RA3DJC2NTA1"}
+                  <Link//wa.me/584123172765
+                    href={""}
                     _hover={{ textDecoration: "none" }}
                   >
                     <Button
