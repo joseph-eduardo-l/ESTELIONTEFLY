@@ -5,9 +5,9 @@ export default {
     },
     form: {
         name: "Nombre",
-        // lastName: "Apellido",
-        companytipe: "Tipo de Empresa",
         email: "Correo Electrónico",
+        lastName: "Apellido",
+        companytipe: "Tipo de Empresa",
         phone: "Teléfono",
         Date1: "Fecha",
         message: "Mensaje",

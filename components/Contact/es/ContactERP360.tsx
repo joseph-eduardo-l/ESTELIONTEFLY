@@ -87,13 +87,13 @@ export const ContactERP360 = () => {
                         borderRadius="20px"
                     >
 
-                        <div id="mauticform_wrapper_formerp360es" className="mauticform_wrapper">
-                            <form autoComplete="false" role="form" method="post" action="https://info.estelio.com/form/submit?formId=43" id="mauticform_formerp360es" data-mautic-form="formerp360es" encType="multipart/form-data" className="form-content">
-                                {/* <div className="mauticform-error" id="mauticform_formerp360es_error"></div> */}
-                                {/* <div className="mauticform-message" id="mauticform_formerp360es_message"></div> */}
-                                {/* <div className="mauticform-innerform"> */}
+                        <div id="mauticform_wrapper_formerp360nuevoes" className="mauticform_wrapper">
+                            <form autoComplete="false" role="form" method="post" action="https://info.estelio.com/form/submit?formId=58" id="mauticform_formerp360nuevoes" data-mautic-form="formerp360nuevoes" encType="multipart/form-data" >
+                                <div className="mauticform-error" id="mauticform_formerp360nuevoes_error"></div>
+                                <div className="mauticform-message" id="mauticform_formerp360nuevoes_message"></div>
+                                <div className="mauticform-innerform">
 
-                                    {/* <div className="mauticform-page-wrapper mauticform-page-1" data-mautic-form-page="1"> */}
+                                    <div className="mauticform-page-wrapper mauticform-page-1" data-mautic-form-page="1">
 
                                         <div id="mauticform_formerp360es_nombre" data-validate="nombre" data-validation-type="text" className="mauticform-row mauticform-text mauticform-field-1 mauticform-required form-inputs-content">
                                             <label id="mauticform_label_formerp360es_nombre" htmlFor="mauticform_input_formerp360es_nombre" style={{ color: colorMode === 'light' ? "#23BBB3" : "#FCF7F2" }} className="mauticform-label label-required">{name}</label>
@@ -127,8 +127,8 @@ export const ContactERP360 = () => {
                                                     </Box>
                                                 ))}
                                             </Box>
+                                        {/* Fecha */}
                                         </div>
-   
                                             <div id="mauticform_formerp360en_date" data-validate="date" data-validation-type="date" className="mauticform-row mauticform-tel mauticform-field-4 mauticform-required form-inputs-content">
                                                 <label id="mauticform_label_formerp360en_date" htmlFor="mauticform_input_formerp360en_date" style={{ color: colorMode === 'light' ? "#23BBB3" : "#FCF7F2" }} className="mauticform-label label-required">{Date1}</label>
                                                 <input
@@ -152,22 +152,33 @@ export const ContactERP360 = () => {
                                                         }
                                                     }}
                                                 />
-                                            </div>
+                                        </div>
 
-                                        <div  id="mauticform_formerp360es_mensaje" className="mauticform-row mauticform-text mauticform-field-5 form-inputs-content">
+                                        <div id="mauticform_formerp360nuevoes_telefono" className="mauticform-row mauticform-tel mauticform-field-5 mauticform-required">
+                                            <label id="mauticform_label_formerp360nuevoes_telefono" htmlFor="mauticform_input_formerp360nuevoes_telefono" style={{ color: colorMode === 'light' ? "#23BBB3" : "#FCF7F2" }} className="mauticform-label">{phone}</label>
+                                            <input id="mauticform_input_formerp360nuevoes_telefono" name="mauticform[telefono]" className="mauticform-input" type="tel" />
+                                        </div>
+
+                                        {/* <div id="mauticform_formerp360es_mensaje" className="mauticform-row mauticform-text mauticform-field-5 form-inputs-content">
                                             <label id="mauticform_label_formerp360es_mensaje" htmlFor="mauticform_input_formerp360es_mensaje" style={{ color: colorMode === 'light' ? "#23BBB3" : "#FCF7F2" }} className="mauticform-label label-required">{message}</label>
                                             <textarea id="mauticform_input_formerp360es_mensaje" name="mauticform[mensaje]" className="mauticform-textarea textArea-form"></textarea>
+                                        </div>                                     */}
+
+                                        <div id="mauticform_formerp360nuevoes_mensaje" className="mauticform-row mauticform-text mauticform-field-6">
+                                            <label id="mauticform_label_formerp360nuevoes_mensaje" htmlFor="mauticform_input_formerp360nuevoes_mensaje" style={{ color: colorMode === 'light' ? "#23BBB3" : "#FCF7F2" }} className="mauticform-label">{message}</label>
+                                            <textarea id="mauticform_input_formerp360nuevoes_mensaje" name="mauticform[mensaje]" className="mauticform-textarea"></textarea>
+                                            <span className="mauticform-errormsg"  ></span>
                                         </div>
 
-                                        <div id="mauticform_formerp360es_submit" className="mauticform-row mauticform-button-wrapper mauticform-field-6 form-button-content">
-                                            <button type="submit" name="mauticform[submit]" id="mauticform_input_formerp360es_submit" className="mauticform-button form-button">{buttons.button}</button>
+                                        <div id="mauticform_formerp360nuevoes_submit"  className="mauticform-row mauticform-button-wrapper mauticform-field-7 form-button-content">
+                                            <button type="submit" name="mauticform[submit]" id="mauticform_input_formerp360nuevoes_submit" className="mauticform-button form-button">{buttons.button}</button>
                                         </div>
-                                    {/* </div> */}
-                                {/* </div> */}
+                                    </div>
+                                </div>
 
-                                <input type="hidden" name="mauticform[formId]" id="mauticform_formerp360es_id" value="43" />
-                                <input type="hidden" name="mauticform[return]" id="mauticform_formerp360es_return" />
-                                <input type="hidden" name="mauticform[formName]" id="mauticform_formerp360es_name" value="formerp360es" />
+                                <input type="hidden" name="mauticform[formId]" id="mauticform_formerp360nuevoes_id" value="58" />
+                                <input type="hidden" name="mauticform[return]" id="mauticform_formerp360nuevoes_return" value="" />
+                                <input type="hidden" name="mauticform[formName]" id="mauticform_formerp360nuevoes_name" value="formerp360nuevoes" />
 
                             </form>
                             
