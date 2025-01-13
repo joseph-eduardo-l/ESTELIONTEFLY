@@ -4,4 +4,4 @@ export * from "./Prices";
 // export * from "./LearnMorePrices";
 export * from "./ExtraFeatures";
 export * from "./FeaturesPremium";
-export * from "./Contact/index";
+// export * from "./Contact/index";

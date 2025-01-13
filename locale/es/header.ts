@@ -1,5 +1,5 @@
+/* eslint-disable import/no-anonymous-default-export */
 import { title } from "process";
-
 export default {
     area: 'Áreas',
     products: 'Productos',
@@ -70,6 +70,4 @@ export default {
         // { id: 4, title: 'Blog', url: 'https://www.estelio.com/blog'},
         // { id: 5, title: 'Contáctanos', url: '#vinculoContact' }
     ],
- 
  }
- 

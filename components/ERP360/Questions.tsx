@@ -12,7 +12,7 @@ import {
   useColorModeValue,
   UnorderedList,
   ListItem,
-  } from "@chakra-ui/react";
+} from "@chakra-ui/react";
 import { en, es } from "@/locale";
 
 export const Questions = () => {
@@ -47,7 +47,7 @@ export const Questions = () => {
         borderRadius="10px"
       />
 
-      <Box maxW="1024px" m="0 auto" >
+      <Box maxW="1024px" m="0 auto">
         {accordion.map(({ id, heading, content }) => {
           return (
             <Accordion key={id} allowMultiple>
@@ -76,14 +76,12 @@ export const Questions = () => {
                       )}
                     </AccordionButton>
 
-
-
                     <AccordionPanel
                       py={4}
                       fontSize="16px"
                       lineHeight={1.8}
                       whiteSpace="pre-wrap"
-                     >
+                    >
                       {content?.title01 === "ERP 360" &&
                       content.title02 === "Odoo Enterprise" ? (
                         <UnorderedList>
@@ -119,8 +117,8 @@ export const Questions = () => {
                           <ListItem>{content.text03}</ListItem>
                           <ListItem>{content.text04}</ListItem>
                           <ListItem>{content.text05}</ListItem>
-                          {/* <ListItem>{content.text06}</ListItem> */}
-                          <ListItem>{content.text07}</ListItem>                     
+                          {/* <ListItem>{content.text06}</ListItem>*/}
+                          <ListItem>{content.text07}</ListItem>
                         </UnorderedList>
                       ) : (
                         content.text
@@ -137,13 +135,8 @@ export const Questions = () => {
                            <ListItem>{content.Module7}</ListItem>
                            <ListItem>{content.Module8}</ListItem>
                         </UnorderedList>
-                       
-                      ): null }
-                      
+                      ): null }                     
                     </AccordionPanel>
-
-
-
                   </>
                 )}
               </AccordionItem>

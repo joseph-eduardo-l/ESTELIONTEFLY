@@ -203,7 +203,6 @@ const Footer = () => {
           <Text>{privacyPolicy.copyright}</Text>
         </Flex>
       </Box>
-     
     </>
   );
 };

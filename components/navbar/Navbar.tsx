@@ -652,7 +652,7 @@ export const Navbar = () => {
           <Flex justifyContent="center" alignItems="center" width="auto"></Flex>
           {/* https://www.instagram.com/panoramic.group/ */}
           <Flex justifyContent="center" alignItems="center" width="auto">
-            <a href="https://www.instagram.com/panoramic.group/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/erp360.ai/" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="ghost"
                 _hover={{ bgColor: "#D43089" }}
