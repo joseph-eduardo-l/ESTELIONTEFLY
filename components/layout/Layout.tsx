@@ -27,7 +27,7 @@ export const Layout: React.FC<Props> = ({ children, title, description }) => {
         <meta property="og:image:height" content='200' /> */}
       </Head>
 
-      <PhoneBar />
+      {/* <PhoneBar /> */}
       <Navbar />
       <div>
         <ButtonWhatsapp />
