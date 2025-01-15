@@ -58,7 +58,7 @@ export const PricesERP = () => {
     global: { buttons },
     pages: {
       erp360: {
-        pricesAndPlans: { heading, cards },
+        pricesAndPlans: { heading, cards }, 
       },
     },
   } = t;
@@ -210,7 +210,7 @@ export const PricesERP = () => {
                   <List spacing={2} mt="14px">
                     {advantagesList.map(({ id, text }) => {
                       return (
-                        <ListItem key={id} display="flex">
+                          <ListItem key={id} display="flex">
                           <ListIcon fontSize={"14px"} mt="8px">
                             <CheckIcon boxSize={3} />
                           </ListIcon>

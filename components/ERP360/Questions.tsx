@@ -28,7 +28,7 @@ export const Questions = () => {
     },
   } = t;
   return (
-    <Box as="section" m="80px auto" width="90%" position="relative" zIndex="5">
+    <Box as="section" id="FAQ" m="80px auto" width="90%" position="relative" zIndex="5" >
       <Heading
         as="h2"
         textAlign="center"
@@ -98,7 +98,13 @@ export const Questions = () => {
                           <ListItem>{content.text01odooEnterprise}</ListItem>
                           <ListItem>{content.text02odooEnterprise}</ListItem>
                           <ListItem>{content.text03odooEnterprise}</ListItem>
-                          <ListItem>{content.text04odooEnterprise}</ListItem>
+                          {/* <ListItem>{content.text04odooEnterprise}</ListItem> */}
+                          {/* <ListItem>{content.summary}</ListItem> */}
+                          <br />
+                          <h1>
+                            <b>{content.title03} :</b>
+                          </h1>
+                          <h1>{content.text04odooEnterprise}</h1>
                         </UnorderedList>
                       ) : (
                         ""
@@ -111,12 +117,25 @@ export const Questions = () => {
                           <ListItem>{content.text03}</ListItem>
                           <ListItem>{content.text04}</ListItem>
                           <ListItem>{content.text05}</ListItem>
-                          <ListItem>{content.text06}</ListItem>
+                          {/* <ListItem>{content.text06}</ListItem>*/}
                           <ListItem>{content.text07}</ListItem>
                         </UnorderedList>
                       ) : (
                         content.text
                       )}
+                      {content.ModuleTitle === true ? (
+                        <UnorderedList>
+                           <h1><b>{content.title2}</b></h1><br></br>
+                           <ListItem>{content.Module1}</ListItem>
+                           <ListItem>{content.Module2}</ListItem>
+                           <ListItem>{content.Module3}</ListItem>
+                           <ListItem>{content.Module4}</ListItem>
+                           <ListItem>{content.Module5}</ListItem>
+                           <ListItem>{content.Module6}</ListItem>
+                           <ListItem>{content.Module7}</ListItem>
+                           <ListItem>{content.Module8}</ListItem>
+                        </UnorderedList>
+                      ): null }                     
                     </AccordionPanel>
                   </>
                 )}

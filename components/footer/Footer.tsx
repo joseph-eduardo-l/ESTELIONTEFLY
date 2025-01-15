@@ -38,7 +38,7 @@ const icons = [
   {
     id: 2,
     icon: <GrInstagram fontSize="18px" />,
-    link: "https://www.instagram.com/estelio_corp",
+    link: "https://www.instagram.com/erp360.ai/",
     text: "instagram",
   },
   {
@@ -85,10 +85,10 @@ const Footer = () => {
           <Box>
             <a href="https://www.estelio.com/" target="_blank">
               <Image
-                m="0 auto 20px"
+                m="0 auto 10px"
                 src={"/images/logo-2.webp"}
                 w="190px"
-                h="60px"
+                h="55px"
                 alt="Logo EstelioFooter"
                 loading="lazy"
               />

@@ -650,16 +650,19 @@ export const Navbar = () => {
             })}
           </Box>
           <Flex justifyContent="center" alignItems="center" width="auto"></Flex>
-
+          {/* https://www.instagram.com/panoramic.group/ */}
           <Flex justifyContent="center" alignItems="center" width="auto">
-            <Button
-              variant="ghost"
-              _hover={{ bgColor: "none" }}
-              _active={{ bgColor: "none" }}
-              color={"#FCF7F2"}
-            >
-              <FaInstagram fontSize={"22px"} />
-            </Button>
+            <a href="https://www.instagram.com/erp360.ai/" target="_blank" rel="noopener noreferrer">
+              <Button
+                variant="ghost"
+                _hover={{ bgColor: "#D43089" }}
+                _active={{ bgColor: "none" }}
+                color={"#FCF7F2"}
+              >
+                <FaInstagram fontSize={"22px"} />
+              </Button>
+            </a>
+
 
             <Idiomas />
 

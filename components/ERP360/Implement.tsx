@@ -118,7 +118,7 @@ export const Implement = () => {
         color="#fff"
         text={buttons.button}
         margin={{ base: "30px auto", sm: "50px auto" }}
-        link="#vinculoContact"
+        link="//#vinculoContact"
       />
     </Box>
   );
