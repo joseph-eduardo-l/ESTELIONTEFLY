@@ -15,7 +15,8 @@
 // import { CustomButton } from "../utils";
 // import React from "react";
 
-// export const LearnMorePrices = () => {
+export const LearnMorePrices = () => {
+}
 //   const { locale } = useRouter();
 //   const t = locale === "en" ? en : es;
 //   const {

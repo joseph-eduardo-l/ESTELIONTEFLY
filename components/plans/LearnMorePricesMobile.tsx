@@ -5,7 +5,8 @@
 // import { CustomButton } from "../utils";
 // import React from "react";
 
-// export const LearnMorePricesMobile = () => {
+export const LearnMorePricesMobile = () => {
+}
 //   const colormode = useColorMode();
 //   const { locale } = useRouter();
 //   const t = locale === "en" ? en : es;
