@@ -1,3 +1,3 @@
-// export * from "./es"
-// export * from "./en"
-// export * from "./MessageContact"
+export * from "./es"
+export * from "./en"
+export * from "./MessageContact"
