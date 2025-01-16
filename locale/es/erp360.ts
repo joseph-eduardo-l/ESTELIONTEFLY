@@ -383,7 +383,7 @@ export default {
         nameAuthor: "Atlantic Reposteria",
         image:
           "/images/casosdeExito/Atlantic.webp",
-        imageDark: "/images/casosdeExito/Atlantic.webp",
+        imageDark: "/images/casosdeExito/Atlanticw.webp",
       },
       {
         id: 3,
@@ -392,7 +392,7 @@ export default {
         nameAuthor: "   Blue   Medical  ",
         image:
           "/images/casosdeExito/Blue-Medical.webp",
-        imageDark: "/images/casosdeExito/Blue-Medical.webp",
+        imageDark: "/images/casosdeExito/Blue-Medicalw.webp",
       },
       {
         id: 4,
@@ -410,7 +410,7 @@ export default {
         nameAuthor: "Mallorca",
         image:
           "/images/casosdeExito/Mallorca.webp",
-        imageDark: "/images/casosdeExito/Mallorca.webp",
+        imageDark: "/images/casosdeExito/Mallorcaw.webp",
       },
 
     ],
