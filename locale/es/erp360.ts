@@ -382,8 +382,8 @@ export default {
         //   "We are pleased to express our complete satisfaction with the business relationship we have maintained with Corporación Estelio. It has impressed us with its ability to adapt to our needs and requirements, offering us fast and effective solutions.",
         nameAuthor: "Atlantic Reposteria",
         image:
-          "/images/casosdeExito/Atlantic.webp",
-        imageDark: "/images/casosdeExito/Atlantic.webp",
+          "/images/casosdeExito/Atlanticw.webp",
+        imageDark: "/images/casosdeExito/Atlanticw.webp",
       },
       {
         id: 3,
@@ -391,8 +391,8 @@ export default {
         //   "We are pleased to express our complete satisfaction with the business relationship we have maintained with Corporación Estelio. It has impressed us with its ability to adapt to our needs and requirements, offering us fast and effective solutions.",
         nameAuthor: "   Blue   Medical  ",
         image:
-          "/images/casosdeExito/Blue-Medical.webp",
-        imageDark: "/images/casosdeExito/Blue-Medical.webp",
+          "/images/casosdeExito/Blue-Medicalw.webp",
+        imageDark: "/images/casosdeExito/Blue-Medicalw.webp",
       },
       {
         id: 4,
@@ -409,8 +409,8 @@ export default {
         //   "We are pleased to express our complete satisfaction with the business relationship we have maintained with Corporación Estelio. It has impressed us with its ability to adapt to our needs and requirements, offering us fast and effective solutions.",
         nameAuthor: "Mallorca",
         image:
-          "/images/casosdeExito/Mallorca.webp",
-        imageDark: "/images/casosdeExito/Mallorca.webp",
+          "/images/casosdeExito/Mallorcaw.webp",
+        imageDark: "/images/casosdeExito/Mallorcaw.webp",
       },
 
     ],
