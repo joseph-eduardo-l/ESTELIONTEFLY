@@ -29,6 +29,7 @@ export default {
           { id: 5, text: "Up to a maximum of 5 users" },
           { id: 6, text: "2 free hours of induction at the start of the contract" },
         ],
+        // text1:"Does not include development hours",
         selection: "Select the number of users:",
         price: "From",
         plan: "Monthly",
@@ -48,6 +49,7 @@ export default {
           { id: 6, text: "7 free hours of initial induction" },
           { id: 7, text: "2 monthly hours of support in the implementation x 3 months" },
         ],
+        text1:"Does not include development hours",
         selection: "Select the number of users:",
         price: "From",
         plan: "Monthly",
@@ -67,6 +69,7 @@ export default {
           { id: 6, text: "10 free hours of induction at the start of the contract" },
           { id: 7, text: "2 monthly hours of support in the implementation x 3 months" },
         ],
+        text1:"Does not include development hours",
         selection: "Select the number of users:",
         price: "From",
         plan: "Monthly",
@@ -356,7 +359,7 @@ export default {
       {
         id: 2,
         heading: "Accessible",
-        text: "Login from anywhere with an internet connection.",
+        text: "Access from anywhere with an internet connection and enjoy cloud services that support multiple users.",
         icon: "/images/erp360/accesible.svg",
       },
       {
@@ -447,7 +450,7 @@ export default {
           text01erp:
             "Comprehensive solution that includes hosting service along with a variable number of users depending on the company's needs",
           text02erp:
-            "It contains a maximum of 7 standard modules, depending on the plan of choice",
+            "It contains a maximum of 36 standard modules, depending on the plan of choice",
           text03erp: "ERP 360 is presented as a comprehensive solution that includes a hosting service and allows for a variable number of users, depending on the specific needs of each company. This flexibility is ideal for adapting to growth and changes in the organization. In addition, ERP 360 offers up to 36 standard modules included in each plan, facilitating a quick and effective implementation, without additional costs for hosting.",
           text01odooEnterprise:
             "The licensing model is based on the number of users",

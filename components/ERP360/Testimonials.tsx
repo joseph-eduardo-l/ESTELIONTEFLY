@@ -59,14 +59,13 @@ export const Testimonials = () => {
           {}
         </Text>
         <Divider
-          m="auto"
-          w="100px"
-          h="5px"
+          m="15px auto 50px"
+          w="120px"
+          h="6px"
           bgColor={colorMode === "light" ? "odoo.400" : "#fff"}
-          mb="60px"
+          opacity={colorMode === "dark" ? "0.7" : 0.9}
           borderStyle="none"
           borderRadius="10px"
-          opacity={colorMode === "dark" ? "0.7" : 0.9}
         />
       </Box>
       <Flex flexDirection={"row"} justifyContent="space-around" alignItems="center" flexWrap="wrap">
