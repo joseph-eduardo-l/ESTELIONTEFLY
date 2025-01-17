@@ -470,7 +470,7 @@ export default {
           Module5: "Recursos Humanos: Empleados, Reclutamiento, Tiempo personal, Evaluación, Referencias, Flota",
           Module6: "Marketing: Marketing por correo electrónico, Marketing por msm, Eventos, Encuestas ",
           Module7: "Servicios: Proyecto, Hojas de horas, Servicio de asistencia",
-          Module8: "Productividad: conversaciones, Arrobaciones, Información ",
+          Module8: "Productividad: conversaciones, Aprobaciones, Información ",
           
         },
       },

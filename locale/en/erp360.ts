@@ -483,7 +483,7 @@ export default {
           Module5: "Human Resources: Employees, Recruiting, Personal Time, Evaluation, Referrals, Fleet",
           Module6: "Marketing: Email Marketing, Msm Marketing, Events, Surveys",
           Module7: "Services: Project, Timesheets, Help Desk",
-          Module8: "Productivity: Conversations, Attunements, Information",
+          Module8: "Productivity: Conversations, Approvals, Information",
         },
       },
       {
