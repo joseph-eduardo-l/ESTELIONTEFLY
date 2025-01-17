@@ -99,6 +99,7 @@ export const Prices = () => {
       {/* Heading of Component */}
       <Box>
         <Heading
+          id="plans"
           as="h1"
           textAlign="center"
           fontSize={{ base: "24px", md: "32px" }}
@@ -126,6 +127,7 @@ export const Prices = () => {
             id,
             title,
             advantagesList,
+            text1,
             // selection,
             price,
             plan,
@@ -351,7 +353,9 @@ export const Prices = () => {
                       />
                     </SliderThumb>
                   </Slider> */}
-
+                  <Text mt={{ base: "80px", md: "80px" }} color="" fontSize={"16px"}>
+                    {text1}
+                  </Text>
                   <Heading
                     fontFamily="heading"
                     // fontSize={

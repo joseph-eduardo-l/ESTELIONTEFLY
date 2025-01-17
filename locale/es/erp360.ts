@@ -31,6 +31,7 @@ export default {
           { id: 6,  text: "2 horas gratuitas de inducción al inicio del contrato"},
         ],
         // selection: "Seleccione la cantidad de usuarios:",
+        // text1:"asdasdada",
         price: "Desde",
         plan: "Mensuales",
         iconCard: "/images/erp360/icono-emprendedor-azul.svg",
@@ -48,8 +49,10 @@ export default {
           { id: 5, text: "Rapidez en la instalación de los módulos (Máx 4 horas)"},
           { id: 6, text: "7 horas gratuitas de inducción inicial" },
           { id: 7, text: "2 horas mensuales de soporte en la implementación x 3 meses " },
+          { id: 0, text: "No incluye horas de desarrollo"},          
         ],
         // selection: "Seleccione la cantidad de usuarios:",
+        text1:"No incluye horas de desarrollo",
         price: "Desde",
         plan: "Mensuales",
          iconCard: "/images/erp360/icono-profesional-azul.svg",
@@ -67,8 +70,9 @@ export default {
           { id: 5, text: "Rapidez en la instalación de los módulos (Máx 4 horas)"},
           { id: 6, text: "10 horas gratuitas de inducción al inicio del contrato"},          
           { id: 7, text: "2 horas mensuales de soporte en la implementación x 3 meses"},          
-          // { id: 8, text: "No incluye horas de desarrollo"},          
+          { id: 0, text: "No incluye horas de desarrollo"},          
         ],
+        text1:"No incluye horas de desarrollo",
         // selection: "Seleccione la cantidad de usuarios:",
         price: "Desde",
         plan: "Mensuales",
@@ -276,7 +280,7 @@ export default {
       
       
     ],
-    headingSpan1:" Pago Mensual",
+    headingSpan1:" Pago Único",
     cards1: [
       {
         id: 3,
@@ -336,7 +340,7 @@ export default {
       {
         id: 2,
         heading: "Accesible",
-        text: "Ingresa desde cualquier lugar con una conexión a internet.",
+        text: "Accede desde cualquier lugar con una conexión a internet y disfruta de servicios en la nube que soportan múltiples usuarios.",
         icon: "/images/erp360/accesible.svg",
       },
       {
@@ -429,7 +433,7 @@ export default {
           text01erp:
             "Contiene 36 módulos estándar, con algunos planes premium, esto según el plan de elección.",
           text02erp:
-            "Contiene un máximo de 7 módulos estándar, esto según el plan de elección",
+            "Contiene un máximo de 36 módulos estándar, esto según el plan de elección",
           text03erp:             
            "ERP 360 se presenta como una solución integral que incluye un servicio de hosting y permite un número variable de usuarios, según las necesidades específicas de cada empresa. Esta flexibilidad es ideal para adaptarse al crecimiento y cambios en la organización. Además, ERP 360 ofrece hasta 36 módulos estándar incluidos en cada plan, lo que facilita una implementación rápida y efectiva, sin costos adicionales por el hosting.",
           text01odooEnterprise:
@@ -448,7 +452,7 @@ export default {
         heading: "¿Cuáles son los módulos que abarca ERP 360?",
         content: {
           ModuleTitle: true,
-          title2: "La solución ERP 360 abarca los siguientes 36 módulos estándar:",
+          title2:  "La solución ERP 360 abarca los siguientes 36 módulos estándar:",
           // text01: "Fabricación",
           // text02: "Contabilidad y facturación",
           // text03: "Puntos de venta",
@@ -466,7 +470,7 @@ export default {
           Module5: "Recursos Humanos: Empleados, Reclutamiento, Tiempo personal, Evaluación, Referencias, Flota",
           Module6: "Marketing: Marketing por correo electrónico, Marketing por msm, Eventos, Encuestas ",
           Module7: "Servicios: Proyecto, Hojas de horas, Servicio de asistencia",
-          Module8: "Productividad: conversaciones, Arrobaciones, Información ",
+          Module8: "Productividad: conversaciones, Aprobaciones, Información ",
           
         },
       },

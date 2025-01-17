@@ -14,7 +14,7 @@ export const IpApiContext = createContext({ country: "United States", link: "tel
  */
 export function IpApiContextProvider({children} : Props) : any{
      if (typeof window !== "undefined") {
-          if ((("Venezuela" || "Panama" || "United States") == window.sessionStorage.getItem("country")) && (("tel:+584123172765" || "tel:+5078339384" || "tel:+1(305)9653550") == window.sessionStorage.getItem("link")) && (("+58(412)3172765" || "+507(833)9384" || "+1(305)9653550") == window.sessionStorage.getItem("phone"))) {
+          if ((["Venezuela", "Panama", "United States"].includes(window.sessionStorage.getItem("country") || "")) && (["tel:+584123172765", "tel:+5078339384", "tel:+1(305)9653550"].includes(window.sessionStorage.getItem("link") || "")) && (["+58(412)3172765", "+507(833)9384", "+1(305)9653550"].includes(window.sessionStorage.getItem("phone") || ""))) {
                
                const link: any = window.sessionStorage.getItem("link")
                const country: any = window.sessionStorage.getItem("country")
@@ -58,4 +58,3 @@ export function IpApiContextProvider({children} : Props) : any{
           }
      }
 }
-

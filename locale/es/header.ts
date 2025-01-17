@@ -5,9 +5,10 @@ export default {
     products: 'Productos',
     vinculos: [
         { id: 1, title: 'Home', url: '/' },
-        { id: 2, title: 'Planes', url: '/plans' },
+        { id: 2, title: 'Planes', url: '/plans/#plans' },
         { id: 9, title: 'FAQ', url: '//#FAQ'},
         { id: 0, title: 'Contacto',url: '//#vinculoContact'},
+        // { id: 0, title: '¿Como nuestro sistema se adapta?',url: '//#ModulosAbarca'},
         // { id: 2, title: '¿Quiénes somos?', url: 'https://www.estelio.com/about' },
         // {
         //     id: 3, title: 'Productos y Servicios', url: '',

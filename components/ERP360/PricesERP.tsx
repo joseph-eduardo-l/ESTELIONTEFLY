@@ -75,6 +75,7 @@ export const PricesERP = () => {
       {/* Heading of Component */}
       <Box>
         <Heading
+          id="plans"
           as="h1"
           textAlign="center"
           fontSize={{ base: "24px", md: "32px" }}
@@ -102,6 +103,7 @@ export const PricesERP = () => {
             id,
             title,
             advantagesList,
+            text1,
             iconCard,
             iconCardDarkMode,
             iconCardHover,
@@ -210,7 +212,7 @@ export const PricesERP = () => {
                   <List spacing={2} mt="14px">
                     {advantagesList.map(({ id, text }) => {
                       return (
-                          <ListItem key={id} display="flex">
+                        <ListItem key={id} display="flex">
                           <ListIcon fontSize={"14px"} mt="8px">
                             <CheckIcon boxSize={3} />
                           </ListIcon>
@@ -222,7 +224,9 @@ export const PricesERP = () => {
                     })}
                   </List>
                 </Box>
-
+                <Text mt={{ base: "80px", md: "80px" }} color="" fontSize={"16px"}>
+                  {text1}
+                </Text>
                 {/* Card Button  */}
                 <Link
                   // href={"https://wa.me/message/EA3RA3DJC2NTA1"}
