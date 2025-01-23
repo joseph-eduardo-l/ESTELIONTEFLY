@@ -5,7 +5,7 @@ export default {
     //     access: "Acceso Rápido"
     // },
     countryPhone: [
-        { id: 1, country: "Caracas - Venezuela", phone: "+58 212 265 32 55" },
+        { id: 1, country: "Caracas - Venezuela", phone: "+58 412 0319468" },
         { id: 2, country: "", phone: "+58 412 317 27 65" },
         // { id: 3, country: "Ciudad de Panamá - Panamá", phone: "+507 833 9384" },
     ],

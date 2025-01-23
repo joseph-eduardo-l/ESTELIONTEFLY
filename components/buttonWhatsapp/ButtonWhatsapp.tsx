@@ -4,7 +4,7 @@ import { FaWhatsapp } from "react-icons/fa"
 
 const ButtonWhatsapp = () => {
     return (
-        <Link href='https://wa.me/584123172765'>
+        <Link href='https://wa.me/584120319468'>
             <Flex
                 alignItems='center'
                 bottom='120px'
