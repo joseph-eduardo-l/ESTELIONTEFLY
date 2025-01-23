@@ -207,7 +207,7 @@ export const ExtraFeatures = () => {
         position={"relative"}
       >
         <Link
-          href={"https://wa.me/584123172765"}
+          href={"https://wa.me/584120319468"}
           _hover={{ textDecoration: "none" }}
         >
           <Button
