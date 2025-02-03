@@ -94,7 +94,7 @@ export const Prices = () => {
       as="section"
       maxW={{ base: "auto", md: "1720px" }}
       w={"90%"}
-      m="80px auto"
+      m="1px auto"
     >
       {/* Heading of Component */}
       <Box>
@@ -172,7 +172,7 @@ export const Prices = () => {
                       opacity: "0",
                     },
                   }}
-                >
+                 >
                   <Image
                     src={iconCard}
                     alt="iconoCardPrices"
@@ -441,14 +441,15 @@ export const Prices = () => {
                     href={""}
                     _hover={{ textDecoration: "none" }}
                   >
-                    <Button
-                      size="lg"
-                      bgColor="green.400"
-                      color={colorMode === "light" ? "#fff" : "white.100"}
-                      _hover={{ bgColor: "odoo.400" }}
-                    >
-                      {buttons.button01}
-                    </Button>
+                      <Button
+                        size="lg"
+                        bgColor="green.400"
+                        color={colorMode === "light" ? "#fff" : "white.100"}
+                        _hover={{ bgColor: "odoo.400" }}
+                      >
+                        {buttons.button01}
+
+                      </Button>
                   </Link>
                 </Flex>
               </GridItem>

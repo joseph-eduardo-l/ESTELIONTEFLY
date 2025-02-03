@@ -4,3 +4,4 @@ export * from "./LearnMorePricesMobile";
 export * from "./LearnMorePrices";
 export * from "./ExtraFeatures";
 export * from "./FeaturesPremium";
+export * from "./PaypalPayment";

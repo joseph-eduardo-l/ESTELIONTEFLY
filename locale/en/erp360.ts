@@ -193,6 +193,14 @@ export default {
     ],
   },
 
+  PaypalPayment:{
+    heading: "Pay whit paypal",
+    subHeading:
+      "el",
+      headingSpan:" asda",
+  },
+
+
   featuresPremium: {
     heading: "Payment Features",
     subHeading:

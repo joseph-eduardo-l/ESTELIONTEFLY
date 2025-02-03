@@ -1,6 +1,7 @@
 /* eslint-disable import/no-anonymous-default-export */
 // import CuadroModulo from 'public/images/CuadroModulo.svg';
 import { FeaturesPremium } from '@/components/plans';
+import { PaypalPayment } from '@/components/plans/PaypalPayment';
 import { useColorMode } from '@chakra-ui/react';
 import { title } from 'process';
 
@@ -181,6 +182,13 @@ export default {
       },
     ],
     alt: "",
+  },
+
+  PaypalPayment:{
+    heading: "Paga con PayPal",
+    subHeading:
+      "Realiza tu pago de forma segura y rápida con PayPal",
+      headingSpan:" Pago Mensual",
   },
 
   featuresPremium: {
