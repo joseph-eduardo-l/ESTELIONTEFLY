@@ -428,6 +428,35 @@ export default {
     ],
   },
   
+  Blogs: {
+    Blogtitle: "Blogs ",
+    heading: "Administra tu negocio con ",
+    headingSpan: "Posts",
+    subHeading:"",
+    blogcontent: [
+      {
+        children: [
+          {
+            text:
+              "The importance of a good ERP for your business",
+            bold: true,
+            italic: false,
+          },
+          {
+            text:
+              "The importance of a good ERP for your business",
+            bold: false,
+            italic: false,
+          },
+        ],
+        
+      },
+    ],
+    coverimage: "/images/erp360/blog.webp",
+    publishedDate: "2021-08-10",
+    author : 'Estelio',
+  },
+
   questions: {
     heading: "Preguntas Frecuentes",
     accordion: [

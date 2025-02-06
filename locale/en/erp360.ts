@@ -1,4 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
+import Blogs from '@/components/ERP360/Blogs';
 import { FeaturesPremium } from '@/components/plans';
 import { useColorMode } from '@chakra-ui/react';
 
@@ -199,6 +200,8 @@ export default {
       "el",
       headingSpan:" asda",
   },
+
+  
 
 
   featuresPremium: {
@@ -444,7 +447,36 @@ export default {
       
     ],
   },
-  
+
+  Blogs: {
+    Blogtitle: "Blogs ",
+    heading: "Administra tu negocio con ",
+    headingSpan: "Posts",
+    subHeading:"",
+    blogcontent: [
+      {
+        children: [
+          {
+            text:
+              "The importance of a good ERP for your business",
+            bold: true,
+            italic: false,
+          },
+          {
+            text:
+              "The importance of a good ERP for your business",
+            bold: false,
+            italic: false,
+          },
+        ],
+        
+      },
+    ],
+    coverimage: "/images/erp360/blog.webp",
+    publishedDate: "2021-08-10",
+    author : 'Estelio',
+  },
+
   questions: {
     heading: " Frequently Asked Questions",
     accordion: [
