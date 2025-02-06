@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   banner: {
     heading01:
@@ -154,6 +155,36 @@ export default {
     ],
     text: "These services have additional charges.",
   },
+
+  Blogs: {
+          Blogtitle: "Blogs ",
+          heading: "Administra tu negocio con ",
+          headingSpan: "Posts",
+          subHeading:"",
+          blogcontent: [
+            {
+              children: [
+                {
+                  text:
+                    "The importance of a good ERP for your business",
+                  bold: true,
+                  italic: false,
+                },
+                {
+                  text:
+                    "The importance of a good ERP for your business",
+                  bold: false,
+                  italic: false,
+                },
+              ],
+              
+            },
+          ],
+          coverimage: "/images/erp360/blog.webp",
+          publishedDate: "2021-08-10",
+        author : 'Estelio',
+     },
+    
   manage: {
     heading: "Manage your business with ",
     headingSpan: "efficiency and ease",
@@ -313,8 +344,7 @@ export default {
           "Can I integrate ERP 360 with other tools and systems that I use in my company?",
         content: {
           text:
-            "ERP 360 supports a variety of integrations and APIs. It can be integrated with third-party tools using integration connectors available in the Odoo app store or using a custom API.\n\n" +
-            "For more detailed information, it is recommended to contact our ERP 360 technical team.",
+            "ERP 360 supports a variety of integrations and APIs. It can be integrated with third-party tools using integration connectors available in the Odoo app store or using a custom API.\n\n"   
         },
       },
       {
@@ -322,8 +352,7 @@ export default {
         heading: "How can I ensure my data is safe and secure in ERP 360?",
         content: {
           text:
-            "ERP 360 uses advanced security measures, such as data encryption, two-factor authentication, and role-based access control, to protect your data. In addition, at Corporación Estelio we implement physical and logical security measures to guarantee that servers and data are protected.\n\n" +
-            "*Corporación Estelio undertakes NOT to use third party data for its own benefit.",
+            "ERP 360 uses advanced security measures, such as data encryption, two-factor authentication, and role-based access control, to protect your data. In addition, at Corporación Estelio we implement physical and logical security measures to guarantee that servers and data are protected.\n\n"   
         },
       },
       {

@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
     heading: {
         text01: "Ready to simplify your business management?",
