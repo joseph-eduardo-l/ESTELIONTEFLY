@@ -3,7 +3,7 @@ interface Env {
   bool(key: string, defaultValue?: boolean): boolean;
 }
 
-export default ({ env }) => ({
+export default ({ env }: { env: Env }) => ({
   auth: {
     secret: env('ADMIN_JWT_SECRET'),
   },

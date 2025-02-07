@@ -6,28 +6,36 @@ interface ICountryState {
 }
 
 /**
- * useIpApi is a custom hook for the geolocation using two apis
+ * useIpApi is a custom hook for geolocation using two APIs
  */
 export const useIpApi = () => {
-  const [ipApi, setipApi] = useState<ICountryState>();
+  const [ipApi, setIpApi] = useState<ICountryState>({ country: "", city: "" });
+
   useEffect(() => {
-    fetch(`https://api.ipify.org/?format=json`)
-      .then((results) => results.json())
-      .then((data) => {
-        fetch(`https://ipapi.co/${data.ip}/json/`)
-          .then((results) => results.json())
-          .then((data) => {
-            console.log(data.country_name),
-              setipApi({
-                ...ipApi,
-                country: data.country_name,
-                city: data.country_capital,
-              });
-            localStorage.setItem("country", data.country_name);
-            localStorage.setItem("city", data.country_capital);
-          });
-      })
-      .catch((err) => console.error(err));
-  }, []);
+    const fetchIpData = async () => {
+      try {
+        const ipRes = await fetch("https://api.ipify.org/?format=json");
+        const ipData = await ipRes.json();
+        
+        const geoRes = await fetch(`https://ipapi.co/${ipData.ip}/json/`);
+        const geoData = await geoRes.json();
+
+        console.log(geoData.country_name);
+
+        setIpApi(() => ({
+          country: geoData.country_name,
+          city: geoData.country_capital,
+        }));
+
+        localStorage.setItem("country", geoData.country_name);
+        localStorage.setItem("city", geoData.country_capital);
+      } catch (error) {
+        console.error("Error fetching IP data:", error);
+      }
+    };
+
+    fetchIpData();
+  }, []); // Dependencias vacías ya que `setIpApi` usa función de actualización
+
   return { ipApi };
 };
