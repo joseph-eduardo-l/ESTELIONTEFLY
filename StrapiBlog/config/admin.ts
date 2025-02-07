@@ -3,7 +3,15 @@ interface Env {
   bool(key: string, defaultValue?: boolean): boolean;
 }
 
-const config = ({ env }: { env: Env }) => ({
+const config = ({ env }: { env: Env }) => {
+
+  // Imprimir las variables de entorno para verificar que se cargan correctamente
+  console.log('API_TOKEN_SALT:', env("API_TOKEN_SALT"));
+  console.log('ADMIN_JWT_SECRET:', env("ADMIN_JWT_SECRET"));
+  console.log('TRANSFER_TOKEN_SALT:', env("TRANSFER_TOKEN_SALT"));
+
+  return {
+
   auth: {
     secret: env("ADMIN_JWT_SECRET"),
   },
@@ -17,8 +25,9 @@ const config = ({ env }: { env: Env }) => ({
   },
   flags: {
     nps: env.bool("FLAG_NPS", true),
-    promoteEE: env.bool("FLAG_PROMOTE_EE", true),
   },
-});
+};
+  }
+
 
 export default config;
