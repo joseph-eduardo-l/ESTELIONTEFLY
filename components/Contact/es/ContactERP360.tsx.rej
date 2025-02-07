@@ -1,0 +1,10 @@
+diff a/components/Contact/es/ContactERP360.tsx b/components/Contact/es/ContactERP360.tsx	(rejected hunks)
+@@ -3,7 +3,7 @@ import Image from "next/image";
+ import { Box, Divider, Flex, Heading, Text, FormControl, useColorModeValue, Image as NovaImage, useColorMode, FormLabel, Input } from '@chakra-ui/react';
+ import { en, es } from "@/locale";
+ import { useState } from "react";
+-import DatePicker from "react-datepicker";
++// import DatePicker from "react-datepicker";
+ 
+ export const ContactERP360 = () => {
+     const { colorMode } = useColorMode()

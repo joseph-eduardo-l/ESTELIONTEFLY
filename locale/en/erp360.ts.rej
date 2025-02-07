@@ -1,0 +1,54 @@
+diff a/locale/en/erp360.ts b/locale/en/erp360.ts	(rejected hunks)
+@@ -1,4 +1,5 @@
+ /* eslint-disable import/no-anonymous-default-export */
++import Blogs from '@/components/ERP360/Blogs';
+ import { FeaturesPremium } from '@/components/plans';
+ import { useColorMode } from '@chakra-ui/react';
+ 
+@@ -200,6 +201,8 @@ export default {
+       headingSpan:" asda",
+   },
+ 
++  
++
+ 
+   featuresPremium: {
+     heading: "Payment Features",
+@@ -444,7 +447,36 @@ export default {
+       
+     ],
+   },
+-  
++
++  Blogs: {
++    Blogtitle: "Blogs ",
++    heading: "Administra tu negocio con ",
++    headingSpan: "Posts",
++    subHeading:"",
++    blogcontent: [
++      {
++        children: [
++          {
++            text:
++              "The importance of a good ERP for your business",
++            bold: true,
++            italic: false,
++          },
++          {
++            text:
++              "The importance of a good ERP for your business",
++            bold: false,
++            italic: false,
++          },
++        ],
++        
++      },
++    ],
++    coverimage: "/images/erp360/blog.webp",
++    publishedDate: "2021-08-10",
++    author : 'Estelio',
++  },
++
+   questions: {
+     heading: " Frequently Asked Questions",
+     accordion: [
