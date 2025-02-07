@@ -1033,6 +1033,11 @@
   resolved "https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
+"@netlify/plugin-nextjs@^5.9.4":
+  version "5.9.4"
+  resolved "https://registry.npmjs.org/@netlify/plugin-nextjs/-/plugin-nextjs-5.9.4.tgz"
+  integrity sha512-Q9qyhGUxFuM3kuWmoaj4yHPUfHhOsZmwdsQv4kIXkBWVu8FOe0RFHRP0A0EXciSVFGwq+XAo3H5jEtVSANAOWw==
+
 "@next/env@13.2.4":
   version "13.2.4"
   resolved "https://registry.npmjs.org/@next/env/-/env-13.2.4.tgz"
