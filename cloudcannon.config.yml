@@ -1,0 +1,12 @@
+collections_config:
+  strapi_blog_src_api_blog_content_types_blog:
+    path: StrapiBlog/src/api/blog/content-types/blog
+    name: Strapi Blog Src Api Blog Content Types Blog
+    icon: local_convenience_store
+paths:
+  static: ''
+  uploads: uploads
+timezone: America/Bogota
+markdown:
+  engine: commonmark
+  options: {}
